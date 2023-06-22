@@ -31,7 +31,7 @@ const groups = [
       <div>
         <p>
           D’un point de vue des collectivités, conformément aux dispositions de l’article
-          L.2321-2-27° du CGCT, l’application de la mise en place des amortissements est définie
+          L.2321-2-27° du CGCT, l’application de la mise en place des amortissements est adaptée
           comme suit :
         </p>
         <ul role="list" class="mt-2 space-y-2">
