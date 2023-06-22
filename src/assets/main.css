@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Lato', ui-sans-serif, system-ui;
+  }
+  h2 {
+    @apply text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl;
+  }
+  h3 {
+    @apply text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl;
+  }
+  h4 {
+    @apply text-2xl font-bold tracking-tight text-gray-900;
+  }
+  h5 {
+    @apply text-lg font-semibold leading-8 text-gray-900;
+  }
+  p {
+    @apply text-gray-600 text-base;
+  }
+  a {
+    @apply text-gray-600 transition-all hover:text-emerald-500;
+  }
+  section {
+    @apply mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32;
+  }
+}
+
+@layer components {
+  .tooltip {
+    @apply text-base font-semibold leading-7 text-emerald-500;
+  }
+  .button-primary {
+    @apply rounded-xl bg-emerald-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+  }
+  .button-primary-small {
+    @apply rounded-xl bg-emerald-500 px-2.5 py-1.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+  }
+  .link {
+    @apply text-sm font-semibold leading-6 text-gray-900;
+  }
+  .methodology__section_header {
+    @apply pb-4 bg-white space-y-2;
+  }
+  .methodology__section {
+    @apply space-y-8 mt-4;
+  }
+  .header-link {
+    @apply text-sm font-semibold leading-6 border-b-2 border-transparent text-gray-900 hover:border-emerald-400 hover:text-gray-900 transition-all;
+  }
+}
+
+@layer utilities {
+  .section-small {
+    @apply !py-12 sm:!py-16;
+  }
+  .section-top-0 {
+    @apply !pt-0 sm:!pt-0;
+  }
+  .leading-text {
+    @apply text-lg leading-8;
+  }
+}
+
+#methodology p {
+  @apply text-justify text-gray-800;
+}
+#methodology span {
+  @apply text-justify;
+}

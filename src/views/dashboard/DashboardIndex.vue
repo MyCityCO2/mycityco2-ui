@@ -1,0 +1,312 @@
+<script setup>
+import { useCityStore } from '@/stores/city'
+import { computed, onMounted, ref, watch } from 'vue'
+
+import { QUERY_CITY_DASHBOARD } from '@/api/query/co2'
+import VLoading from '@/components/VLoading.vue'
+import { ChartBarIcon, CloudIcon, UsersIcon } from '@heroicons/vue/24/outline'
+import { useLazyQuery } from '@vue/apollo-composable'
+import {
+  ArcElement,
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  Title,
+  Tooltip
+} from 'chart.js'
+import ChartDataLabels from 'chartjs-plugin-datalabels'
+import { Bar, Doughnut } from 'vue-chartjs'
+import VHeader from './components/VHeader.vue'
+
+ChartJS.register(
+  Title,
+  Tooltip,
+  Legend,
+
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  ArcElement,
+  ChartDataLabels
+)
+
+const cityStore = useCityStore()
+const sidebarOpen = ref(false)
+const { result, load, loading, error, forceDisabled } = useLazyQuery(
+  QUERY_CITY_DASHBOARD,
+  cityStore.dashboardVariables
+)
+
+onMounted(() => {
+  if (cityStore.dashboardVariables.cityId && forceDisabled.value) load()
+})
+
+watch(cityStore.dashboardVariables, (newVars) => {
+  if (newVars.cityId && forceDisabled.value) {
+    console.log('trigger')
+    load()
+  }
+})
+const stats = computed(() => {
+  if (!result.value || !result.value?.city) return []
+  return [
+    {
+      id: 1,
+      name: 'Population en 2021',
+      stat: result.value.city.population,
+      change: '1%',
+      icon: UsersIcon,
+      changeType: 'decrease'
+    },
+    {
+      id: 2,
+      name: 'Emissions en 2021',
+      stat: `${result.value.city.co2EmissionsPerHab.toFixed(0)}`,
+      statUom: 'kgCO2eq/hab',
+      change: '5.4%',
+      icon: CloudIcon,
+      changeType: 'increase'
+    },
+    {
+      id: 3,
+      name: 'Evol. emissions 2016-2021',
+      stat: `${result.value.city.co2EmissionsEvolution}`,
+      statUom: '%',
+      statIsChange: true,
+      change: '3.2%',
+      icon: ChartBarIcon,
+      changeType: 'decrease'
+    }
+  ]
+})
+
+const colors = ['rgba(45,196,237, 0.5)', 'rgba(16,185,169, 0.5)']
+
+const emissionByCateg = computed(() => {
+  if (!result.value || !result.value?.city) return []
+  return {
+    labels: result.value.city.co2EmissionByCategory.map((item) => item.name),
+    datasets: [
+      {
+        backgroundColor: 'rgba(16,185,129, 0.5)',
+        data: result.value.city.co2EmissionByCategory.map((item) => item.sum)
+      }
+    ]
+  }
+})
+
+const emissionByJournal = computed(() => {
+  if (!result.value || !result.value?.city) return []
+  return {
+    labels: result.value.city.co2EmissionsEvolutionByJournal.map((item) => item.name),
+    datasets: [
+      {
+        data: result.value.city.co2EmissionsEvolutionByJournal.map((item) => item.sum)
+      }
+    ]
+  }
+})
+
+const emissionByJournalYearly = computed(() => {
+  if (!result.value || !result.value?.city) return []
+  let data = result.value.city.co2EmissionsEvolutionByJournalYearly
+  const years = [...new Set(data.map((item) => item.year))]
+
+  const datasets = data.reduce((result, item, idx) => {
+    const { name, sum, year } = item
+    const existingDataset = result.find((dataset) => dataset.label === name)
+
+    if (existingDataset) {
+      const existingData = existingDataset.data.find((dataItem) => dataItem.x === year)
+      if (existingData) {
+        existingData.y += sum
+      } else {
+        existingDataset.data.push({ x: year, y: sum })
+      }
+    } else {
+      result.push({
+        label: name,
+        backgroundColor: colors[idx % colors.length],
+        data: [{ x: year, y: sum }],
+        borderWidth: 1
+      })
+    }
+
+    return result
+  }, [])
+
+  return {
+    labels: years,
+    datasets: datasets
+  }
+})
+
+const emissionByJournalYearlyChartOptions = {
+  element: {
+    bar: {
+      backgroundColor: 'rgba(45,196,237, 0.5)'
+    }
+  },
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    x: {
+      stacked: true,
+      grid: {
+        display: false
+      }
+    },
+    y: {
+      stacked: true
+    }
+  },
+  plugins: {
+    legend: {
+      onClick: null,
+      position: 'bottom'
+    },
+    datalabels: {
+      display: false
+    }
+  }
+}
+
+const emissionByJournalChartOptions = {
+  backgroundColor: colors,
+  responsive: true,
+  maintainAspectRatio: false,
+  cutout: 90,
+  plugins: {
+    legend: {
+      onClick: null,
+      position: 'bottom'
+    },
+    datalabels: {
+      font: {
+        weight: 'bold'
+      },
+      formatter: (value) => {
+        let newValue = Math.floor(value)
+        return newValue.toString()
+      }
+    }
+  }
+}
+
+const emissionByCategChartOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  indexAxis: 'y',
+  scales: {
+    y: {
+      grid: {
+        display: false
+      }
+    }
+  },
+  plugins: {
+    title: {
+      display: false
+    },
+    legend: {
+      display: false
+    },
+    datalabels: {
+      anchor: 'end',
+      align: 'end',
+      font: {
+        weight: 'bold'
+      },
+      formatter: (value) => {
+        let newValue = Math.floor(value)
+        return newValue.toString()
+      }
+    }
+  }
+}
+</script>
+
+<template>
+  <div>
+    <section class="section-small">
+      <VHeader @opensidebar="sidebarOpen = true" v-if="cityStore.currentCity" />
+
+      <main class="mt-10">
+        <div v-if="!cityStore.currentCity">
+          <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Aucune commune sélectionnée !
+              </h2>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Veuillez sélectionner votre commune pour continuer. Vous pouvez la trouvez par son
+                nom ou son code postal.
+              </p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                <button @click="cityStore.openSelector()" class="button-primary">
+                  Sélectionner
+                </button>
+                <a href="#" class="link">Demander une commune <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else-if="loading">
+          <VLoading />
+        </div>
+        <div v-else-if="result && result.city">
+          <dl class="mx-auto grid grid-cols-1 gap-4 sm:gap-y-0 sm:grid-cols-3">
+            <div
+              v-for="stat in stats"
+              :key="stat.name"
+              class="flex space-x-4 sm:space-x-6 xl:space-x-8 items-center border rounded-xl border-gray-100 bg-white px-4 py-10 sm:px-6 xl:px-8"
+            >
+              <div>
+                <component :is="stat.icon" class="h-6 w-6 text-emerald-400" aria-hidden="true" />
+              </div>
+              <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+                <dt class="text-sm font-medium leading-6 text-gray-500">{{ stat.name }}</dt>
+                <dd
+                  :class="[
+                    stat.changeType === 'decrease' ? 'text-rose-600' : 'text-gray-700',
+                    'text-xs font-medium'
+                  ]"
+                >
+                  {{ stat.change }}
+                </dd>
+                <dd class="w-full flex-none text-3xl font-semibold leading-10 text-gray-900">
+                  {{ stat.stat }} <span class="text-xl">{{ stat.statUom }}</span>
+                </dd>
+              </div>
+            </div>
+          </dl>
+          <div class="mt-10 grid grid-cols-1 gap-4 gap-y-2 sm:gap-y-0 lg:grid-cols-3">
+            <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
+              <h5 class="pb-4">Evolution des émissions entre 2016 et 2021 en kgCO2eq/hab</h5>
+              <div class="flex-1">
+                <Bar
+                  :options="emissionByJournalYearlyChartOptions"
+                  :data="emissionByJournalYearly"
+                />
+              </div>
+            </div>
+            <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
+              <h5 class="pb-4">Répartition des émissions en 2021</h5>
+              <div class="flex-1">
+                <Doughnut :data="emissionByJournal" :options="emissionByJournalChartOptions" />
+              </div>
+            </div>
+            <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
+              <h5 class="pb-4">Emissions par poste en 2021 en kgCO2eq/hab</h5>
+              <div class="flex-1">
+                <Bar :options="emissionByCategChartOptions" :data="emissionByCateg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </div>
+</template>
