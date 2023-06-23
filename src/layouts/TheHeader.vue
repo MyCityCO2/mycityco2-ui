@@ -3,11 +3,7 @@ import { navigation } from '@/constant'
 import { socials } from '@/svg'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { computed, onBeforeMount, ref } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-const isHome = computed(() => route.path == '/')
+import { onBeforeMount, ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
 const stickyHeader = ref(false)
@@ -27,8 +23,7 @@ function handleScroll() {
 </script>
 
 <template>
-  <!--backdrop-blur-md backdrop-filter bg-opacity-10 sticky  -->
-  <header :class="['z-50', isHome ? 'absolute inset-x-0 top-0 ' : 'relative']">
+  <header :class="['z-50 absolute inset-x-0 top-0']">
     <div
       class="mx-auto flex flex-col sm:flex-row max-w-7xl items-center justify-between pt-2 px-6 lg:px-8"
     >

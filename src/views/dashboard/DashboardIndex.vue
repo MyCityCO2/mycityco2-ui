@@ -229,7 +229,7 @@ const emissionByCategChartOptions = {
 </script>
 
 <template>
-  <div>
+  <div class="top-padding">
     <section class="section-small">
       <VHeader @opensidebar="sidebarOpen = true" v-if="cityStore.currentCity" />
 

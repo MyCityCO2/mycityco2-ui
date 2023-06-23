@@ -5,15 +5,10 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
-  <div>
-    <!-- <VHeading
-      title="Contact"
-      tooltip="let's disscuss"
-      text="Remplissez le formulaire ci dessous ou utiliser l'une des informations de contact pour engager une disscution avec nos spécialistes"
-    /> -->
-    <div class="relative isolate">
-      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+  <div class="top-padding">
+    <section class="relative isolate">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="relative lg:static">
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h3>Contactez nous</h3>
             <p class="mt-6 text-lg leading-8">
@@ -21,22 +16,6 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
               signaler un problème technique ou autre ? Contactez-nous en complétant ce formulaire
             </p>
             <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <!-- <div class="flex gap-x-4">
-                <dt class="flex-none">
-                  <span class="sr-only">Addresse</span>
-                  <BuildingOffice2Icon class="h-7 w-6 text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>Rue de Genève 77<br />1004 Lausanne</dd>
-              </div>
-              <div class="flex gap-x-4">
-                <dt class="flex-none">
-                  <span class="sr-only">Téléphone</span>
-                  <PhoneIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>
-                  <a href="tel:+41 21 701 42 45">+41 21 701 42 45</a>
-                </dd>
-              </div> -->
               <div class="flex gap-x-4">
                 <dt class="flex-none">
                   <span class="sr-only">Email</span>
@@ -49,7 +28,7 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
             </dl>
           </div>
         </div>
-        <form class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <form>
           <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
@@ -86,6 +65,6 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
           </div>
         </form>
       </div>
-    </div>
+    </section>
   </div>
 </template>

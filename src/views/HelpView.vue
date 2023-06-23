@@ -151,14 +151,8 @@ const currentGlossary = ref(0)
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="lg:col-span-5">
           <h3>Foire aux questions</h3>
-          <p class="mt-4 text-base leading-7 text-gray-600">
-            Vous ne trouvez pas la réponse à votre question ? N’hésitez pas à
-            <router-link
-              :to="{ name: 'contact' }"
-              class="font-semibold text-primary hover:text-primary"
-              >nous contacter</router-link
-            >
-          </p>
+          <p class="my-6 leading-text">Vous ne trouvez pas la réponse à votre question ?</p>
+          <router-link :to="{ name: 'contact' }" class="button-primary">nous contacter</router-link>
         </div>
         <div class="mt-10 lg:col-span-7 lg:mt-0">
           <dl class="space-y-10">
@@ -173,10 +167,6 @@ const currentGlossary = ref(0)
     <section>
       <div class="max-w-4xl mx-auto text-left">
         <h3>Glossaire</h3>
-        <!-- <p class="mt-6 leading-text">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate
-          veritatis in accusamus quisquam.
-        </p> -->
       </div>
       <div class="grid grid-cols-3 gap-x-10 mt-2 sm:mt-4 max-w-4xl mx-auto">
         <div class="flex">

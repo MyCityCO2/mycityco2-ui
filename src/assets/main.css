@@ -64,6 +64,9 @@
   .leading-text {
     @apply text-lg leading-8;
   }
+  .top-padding {
+    @apply pt-32;
+  }
 }
 
 #methodology p {

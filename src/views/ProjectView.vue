@@ -101,10 +101,8 @@ const thanks = [
         class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
       >
         <div>
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Comment contribuer ?
-          </h2>
-          <p class="text-base my-6">
+          <h3>Comment contribuer ?</h3>
+          <p class="my-6 leading-text">
             MyCityCO2 est développée par une équipe de volontaires. Nous sommes à la recherche de
             tous types de contributeurs.
           </p>
