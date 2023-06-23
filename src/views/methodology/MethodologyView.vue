@@ -37,7 +37,7 @@ const navigation = [
     to: { name: 'methodologyDataSources' }
   },
   {
-    name: "License d'utilisiation",
+    name: "License d'utilisation",
     to: { name: 'methodologyLicense' },
     // children: [
     //   { name: 'Contenus', to: { name: 'methodologyLicenseContent' } },
