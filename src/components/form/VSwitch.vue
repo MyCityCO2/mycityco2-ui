@@ -23,7 +23,7 @@ const emit = defineEmits(['update:modelValue'])
     <Switch
       :modelValue="props.modelValue"
       @update:modelValue="(newValue) => emit('update:modelValue', newValue)"
-      class="group relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+      class="group relative inline-flex h-5 w-10 flex-shrink-0 cursor-pointer items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
     >
       <span
         aria-hidden="true"
@@ -32,7 +32,7 @@ const emit = defineEmits(['update:modelValue'])
       <span
         aria-hidden="true"
         :class="[
-          props.modelValue == true ? 'bg-emerald-500' : 'bg-gray-200',
+          props.modelValue == true ? 'bg-primary' : 'bg-gray-200',
           'pointer-events-none absolute mx-auto h-4 w-9 rounded-full transition-colors duration-200 ease-in-out'
         ]"
       />

@@ -37,12 +37,12 @@ const moduloCheck = (idx) => {
         <div class="relative wrap overflow-hidden px-4 py-8 h-full">
           <div
             :class="[
-              'border-emerald-400 absolute h-full border rounded-[1%] right-1/2',
+              'border-primary absolute h-full border rounded-[1%] right-1/2',
               props.dashed ? 'border-dashed' : ''
             ]"
           ></div>
           <!-- <div
-            class="border-emerald-400 absolute h-full border border-dashed rounded-[1%] left-1/2"
+            class="border-primary absolute h-full border border-dashed rounded-[1%] left-1/2"
           ></div> -->
           <div
             v-for="(item, idx) in history"
@@ -56,7 +56,7 @@ const moduloCheck = (idx) => {
             <div
               :class="['order-1 w-5/12 px-1 py-4', moduloCheck(idx) ? 'text-left' : 'text-right']"
             >
-              <p class="mb-3 text-base text-emerald-400">{{ item.date }}</p>
+              <p class="mb-3 text-base text-primary">{{ item.date }}</p>
               <h4 class="mb-1">{{ item.title }}</h4>
               <p>
                 {{ item.text }}

@@ -264,7 +264,7 @@ const emissionByCategChartOptions = {
               class="flex space-x-4 sm:space-x-6 xl:space-x-8 items-center border rounded-xl border-gray-100 bg-white px-4 py-10 sm:px-6 xl:px-8"
             >
               <div>
-                <component :is="stat.icon" class="h-6 w-6 text-emerald-400" aria-hidden="true" />
+                <component :is="stat.icon" class="h-6 w-6 text-primary" aria-hidden="true" />
               </div>
               <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
                 <dt class="text-sm font-medium leading-6 text-gray-500">{{ stat.name }}</dt>

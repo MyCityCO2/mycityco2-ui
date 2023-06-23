@@ -54,7 +54,7 @@ function handleScroll() {
     >
       <div class="flex lg:flex-1">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/mycityco2logo.png" class="h-24 w-auto text-emerald-500" alt="" />
+          <img src="@/assets/image.png" class="h-24 w-auto text-primary" alt="" />
         </router-link>
       </div>
       <div class="flex lg:hidden">
@@ -72,7 +72,7 @@ function handleScroll() {
           v-for="item in navigation"
           :key="item.name"
           :to="item.href"
-          active-class="!text-emerald-500 !border-emerald-400"
+          active-class="!text-primary !border-primary"
           class="header-link"
           >{{ item.name }}</router-link
         >
@@ -111,7 +111,7 @@ function handleScroll() {
                   <div class="flex h-full flex-col overflow-y-auto bg-white px-6 py-6 shadow-xl">
                     <div class="flex items-center justify-between">
                       <router-link to="/" class="-m-1.5 p-1.5 ring-0 outline-none">
-                        <img src="@/assets/logo.svg" class="h-8 w-auto text-emerald-500" alt="" />
+                        <img src="@/assets/image.png" class="h-8 w-auto text-primary" alt="" />
                       </router-link>
                       <button
                         type="button"

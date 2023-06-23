@@ -56,7 +56,7 @@ const onSelect = (item) => {
           placeholder="Rechercher une ville..."
           @change="doLazySearch($event.target.value)"
         />
-        <VSpin v-if="loading" class="absolute right-4 top-3.5 text-emerald-400" />
+        <VSpin v-if="loading" class="absolute right-4 top-3.5 text-primary" />
       </div>
 
       <ComboboxOptions

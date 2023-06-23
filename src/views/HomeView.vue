@@ -89,7 +89,7 @@ const onSelect = (item) => {
   <div>
     <div class="relative isolate overflow-hidden bg-gradient-to-b from-emerald-100/20 pt-14">
       <div
-        class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-emerald-500/10 ring-1 ring-emerald-50 sm:-mr-80 lg:-mr-96"
+        class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-primary/10 ring-1 ring-emerald-50 sm:-mr-80 lg:-mr-96"
         aria-hidden="true"
       />
       <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
@@ -225,7 +225,7 @@ const onSelect = (item) => {
                   name="first-name"
                   id="first-name"
                   autocomplete="given-name"
-                  class="block w-full border-0 rounded-md shadow-sm pl-10 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-500 sm:text-sm sm:leading-6"
+                  class="block w-full border-0 rounded-md shadow-sm pl-10 py-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -247,7 +247,7 @@ const onSelect = (item) => {
                     <div
                       :class="[
                         checked ? 'border-transparent' : 'border-gray-300',
-                        active ? 'border-emerald-500 ring-2 ring-emerald-500' : '',
+                        active ? 'border-primary ring-2 ring-primary' : '',
                         'relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none'
                       ]"
                     >
@@ -271,13 +271,13 @@ const onSelect = (item) => {
                         </span>
                       </span>
                       <CheckCircleIcon
-                        :class="[!checked ? 'invisible' : '', 'h-5 w-5 text-emerald-500']"
+                        :class="[!checked ? 'invisible' : '', 'h-5 w-5 text-primary']"
                         aria-hidden="true"
                       />
                       <span
                         :class="[
                           active ? 'border' : 'border-2',
-                          checked ? 'border-emerald-500' : 'border-transparent',
+                          checked ? 'border-primary' : 'border-transparent',
                           'pointer-events-none absolute -inset-px rounded-lg'
                         ]"
                         aria-hidden="true"
@@ -301,7 +301,7 @@ const onSelect = (item) => {
           </div>
           <p class="mt-4 text-sm leading-6 text-gray-500">
             En soumettant ce formulaire, j'accepte la
-            <a href="#" class="font-semibold text-emerald-500">politique de confidentialité</a>.
+            <a href="#" class="font-semibold text-primary">politique de confidentialité</a>.
           </p>
         </form>
         <div class="lg:mt-6 lg:w-80 lg:flex-none">
@@ -346,14 +346,14 @@ const onSelect = (item) => {
           <div v-for="feature in features2" :key="feature.name" class="flex flex-col">
             <dt class="text-base font-semibold leading-7 text-gray-900">
               <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg">
-                <component :is="feature.icon" class="h-6 w-6 text-emerald-500" aria-hidden="true" />
+                <component :is="feature.icon" class="h-6 w-6 text-primary" aria-hidden="true" />
               </div>
               {{ feature.name }}
             </dt>
             <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
               <p class="flex-auto">{{ feature.description }}</p>
               <p class="mt-6">
-                <a :href="feature.href" class="text-sm font-semibold leading-6 text-emerald-500"
+                <a :href="feature.href" class="text-sm font-semibold leading-6 text-primary"
                   >Learn more <span aria-hidden="true">→</span></a
                 >
               </p>

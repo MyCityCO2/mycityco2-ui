@@ -23,7 +23,7 @@
     @apply text-gray-600 text-base;
   }
   a {
-    @apply text-gray-600 transition-all hover:text-emerald-500;
+    @apply text-gray-600 transition-all hover:text-primary;
   }
   section {
     @apply mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32;
@@ -32,13 +32,13 @@
 
 @layer components {
   .tooltip {
-    @apply text-base font-semibold leading-7 text-emerald-500;
+    @apply text-base font-semibold leading-7 text-primary;
   }
   .button-primary {
-    @apply rounded-xl bg-emerald-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+    @apply rounded-xl bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
   .button-primary-small {
-    @apply rounded-xl bg-emerald-500 px-2.5 py-1.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500;
+    @apply rounded-xl bg-primary px-2.5 py-1.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
   .link {
     @apply text-sm font-semibold leading-6 text-gray-900;
@@ -50,7 +50,7 @@
     @apply space-y-8 mt-4;
   }
   .header-link {
-    @apply text-sm font-semibold leading-6 border-b-2 border-transparent text-gray-900 hover:border-emerald-400 hover:text-gray-900 transition-all;
+    @apply text-sm font-semibold leading-6 border-b-2 border-transparent text-gray-900 hover:border-primary hover:text-gray-900 transition-all;
   }
 }
 

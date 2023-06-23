@@ -155,7 +155,7 @@ const currentGlossary = ref(0)
             Vous ne trouvez pas la réponse à votre question ? N’hésitez pas à
             <router-link
               :to="{ name: 'contact' }"
-              class="font-semibold text-emerald-500 hover:text-emerald-400"
+              class="font-semibold text-primary hover:text-primary"
               >nous contacter</router-link
             >
           </p>
@@ -187,8 +187,8 @@ const currentGlossary = ref(0)
                 @click=";(ccurrentGlossary = null), (currentGlossary = idx)"
                 :key="idx"
                 :class="[
-                  idx == currentGlossary ? 'text-emerald-500 text-lg' : 'text-gray-400 text-xs',
-                  'cursor-pointer hover:text-emerald-500 py-1 transition-all transform'
+                  idx == currentGlossary ? 'text-primary text-lg' : 'text-gray-400 text-xs',
+                  'cursor-pointer hover:text-primary py-1 transition-all transform'
                 ]"
               >
                 {{ item.name }}
