@@ -24,7 +24,7 @@ const currentHash = computed(() => route.hash)
           <router-link
             :to="item.to"
             :class="[
-              item.to.hash == currentHash ? 'bg-gray-50 text-emerald-500' : 'hover:bg-gray-50',
+              item.to.hash == currentHash ? 'bg-gray-50 text-primary' : 'hover:bg-gray-50',
               props.parent ? 'font-semibold' : 'font-normal',
               'block rounded-md py-2 pr-2 pl-10 text-sm leading-6  text-gray-700'
             ]"
@@ -34,7 +34,7 @@ const currentHash = computed(() => route.hash)
         <template v-else>
           <router-link
             :to="item.to"
-            exact-active-class="bg-gray-50 !text-emerald-500"
+            exact-active-class="bg-gray-50 !text-primary"
             :class="[
               props.parent ? 'font-semibold' : 'font-normal',
               'block rounded-md py-2 pr-2 pl-10 text-sm leading-6  text-gray-700'
@@ -47,7 +47,7 @@ const currentHash = computed(() => route.hash)
       <div v-else>
         <router-link
           :to="item.to"
-          exact-active-class="bg-gray-50 !text-emerald-500"
+          exact-active-class="bg-gray-50 !text-primary"
           class="hover:bg-gray-50 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
         >
           <ChevronRightIcon

@@ -82,7 +82,7 @@ const navigation = [
                 class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500"
               >
                 <ArrowLongLeftIcon
-                  class="mr-3 h-5 w-5 text-gray-400 group-hover:text-emerald-400 transition-colors"
+                  class="mr-3 h-5 w-5 text-gray-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
                 Précédent
@@ -97,7 +97,7 @@ const navigation = [
               >
                 Suivant
                 <ArrowLongRightIcon
-                  class="ml-3 h-5 w-5 text-gray-400 group-hover:text-emerald-400 transition-colors"
+                  class="ml-3 h-5 w-5 text-gray-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
               </RouterLink>

@@ -21,7 +21,7 @@ const props = defineProps({
         ]"
       >
         <div>
-          <p class="text-base font-semibold leading-7 text-emerald-500">{{ props.tooltip }}</p>
+          <p class="text-base font-semibold leading-7 text-primary">{{ props.tooltip }}</p>
           <h2 class="mt-2">
             {{ props.title }}
           </h2>
@@ -39,7 +39,7 @@ const props = defineProps({
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex justify-between items-center space-x-32">
         <div>
-          <p class="text-base font-semibold leading-7 text-emerald-500">{{ props.tooltip }}</p>
+          <p class="text-base font-semibold leading-7 text-primary">{{ props.tooltip }}</p>
           <h2 class="mt-2">
             {{ props.title }}
           </h2>

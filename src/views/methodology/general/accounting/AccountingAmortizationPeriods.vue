@@ -24,7 +24,7 @@ const rules = [
         </p>
         <ul role="list" class="mt-2 space-y-2">
           <li class="flex gap-x-3" v-for="(item, idx) in rules" :key="idx">
-            <CheckCircleIcon class="mt-1 h-5 w-5 flex-none text-emerald-500" aria-hidden="true" />
+            <CheckCircleIcon class="mt-1 h-5 w-5 flex-none text-primary" aria-hidden="true" />
             <span>{{ item }}</span>
           </li>
         </ul>

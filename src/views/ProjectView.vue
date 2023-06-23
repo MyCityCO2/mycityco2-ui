@@ -118,7 +118,7 @@ const thanks = [
             ></div>
             <dt class="text-base font-semibold leading-7 text-gray-900">
               <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg">
-                <component :is="feature.icon" class="h-6 w-6 text-emerald-500" aria-hidden="true" />
+                <component :is="feature.icon" class="h-6 w-6 text-primary" aria-hidden="true" />
               </div>
               {{ feature.name }}
             </dt>
@@ -155,10 +155,7 @@ const thanks = [
           <div class="mx-4">
             <ul role="list" class="mt-2 space-y-2">
               <li class="flex gap-x-3" v-for="(item, idx) in thanks" :key="idx">
-                <CheckCircleIcon
-                  class="mt-1 h-5 w-5 flex-none text-emerald-500"
-                  aria-hidden="true"
-                />
+                <CheckCircleIcon class="mt-1 h-5 w-5 flex-none text-primary" aria-hidden="true" />
                 <span class="text-gray-600">{{ item }}</span>
               </li>
             </ul>
