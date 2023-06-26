@@ -13,7 +13,7 @@ export const QUERY_CITIES = gql`
 export const QUERY_CITY_DASHBOARD = gql`
   query getCityDashboard($cityId: Int!, $year: Int!) {
     city(cityId: $cityId) {
-      co2EmissionByCategory {
+      co2EmissionByCategory(year: $year) {
         name
         sum
       }
