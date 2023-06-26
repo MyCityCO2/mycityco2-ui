@@ -83,6 +83,7 @@ const roadmapHistory = [
 const thanks = [
   'les membres d’Open Net qui se sont intensément investis pour sortir une première version',
   'les membres bénévoles de Carbones sur factures qui définissent les comptes carbones de demain',
+  'Pierre Chassany (Vocables) pour la création du logo MyCityCO2',
   'les experts qui ont contribué au développement de la solution',
   'les représentants des collectivités qui participent au test de la solution et nous aiguillent sur les besoins à couvrir',
   'les fournisseurs de données qui font l’effort de rendre publiques leurs données et ainsi faire la promotion de l’open-data',
