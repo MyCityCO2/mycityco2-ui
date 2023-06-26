@@ -35,8 +35,9 @@
       </p>
       <p>
         L’association entre les comptes du plan comptable et les catégories de postes d’émissions
-        est réalisée via une table de correspondance qui est librement accessible en suivant ce lien
-        (TODO)
+        est réalisée via une table de correspondance qui est librement accessible en suivant 
+        pour les dépenses de fonctionnement <a href="https://github.com/MyCityCO2/mycityco2-data-processing/blob/main/mycityco2_data_process/data/fr/fr_mapping_coa_exiobase.csv">ce lien</a> 
+        et pour les dépenses d'investissement <a href="https://github.com/MyCityCO2/mycityco2-data-processing/blob/main/mycityco2_data_process/data/fr/fr_mapping_immo_exiobase.csv">ce lien</a>
       </p>
     </div>
   </div>
