@@ -1,23 +1,23 @@
 <script setup>
-import { computed, toRefs } from "vue"
+import { computed, toRefs } from 'vue'
 
 const props = defineProps({
   animationDuration: {
     type: Number,
-    default: 1000,
+    default: 1000
   },
   dotSize: {
     type: Number,
-    default: 15,
+    default: 15
   },
   dotsNum: {
     type: Number,
-    default: 3,
+    default: 3
   },
   color: {
     type: String,
-    default: "rgb(66, 184, 131)",
-  },
+    default: 'rgb(66, 184, 131)'
+  }
 })
 
 const { animationDuration, dotSize, dotsNum, color } = toRefs(props)
@@ -27,7 +27,7 @@ const horizontalMargin = computed(() => dotSize.value)
 const spinnerStyle = computed(() => {
   return {
     height: `${dotSize.value}px`,
-    width: `${(dotSize.value + horizontalMargin.value * 2) * dotsNum.value}px`,
+    width: `${(dotSize.value + horizontalMargin.value * 2) * dotsNum.value}px`
   }
 })
 
@@ -38,7 +38,7 @@ const dotStyle = computed(() => {
     height: `${dotSize.value}px`,
     margin: `0 ${horizontalMargin.value}px`,
     borderWidth: `${dotSize.value / 5}px`,
-    borderColor: color.value,
+    borderColor: color.value
   }
 })
 
@@ -49,7 +49,7 @@ const dotsStyles = computed(() => {
   for (let i = 1; i <= dotsNum.value; i++) {
     const style = Object.assign(
       {
-        animationDelay: `${basicDelay * i * delayModifier}ms`,
+        animationDelay: `${basicDelay * i * delayModifier}ms`
       },
       dotStyle.value
     )
@@ -61,12 +61,7 @@ const dotsStyles = computed(() => {
 
 <template>
   <div class="hollow-dots-spinner mx-auto" :style="spinnerStyle">
-    <div
-      v-for="(ds, index) in dotsStyles"
-      :key="index"
-      class="dot"
-      :style="ds"
-    ></div>
+    <div v-for="(ds, index) in dotsStyles" :key="index" class="dot" :style="ds"></div>
   </div>
 </template>
 

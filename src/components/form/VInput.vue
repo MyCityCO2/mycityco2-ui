@@ -17,14 +17,10 @@ const props = defineProps({
   placeholder: {
     type: String,
     default: ''
-  },
-  val: {
-    type: String,
-    default: ''
   }
 })
 
-const { label, type, identifier, disabled, required, placeholder, val } = toRefs(props)
+const { label, type, identifier, disabled, required, placeholder } = toRefs(props)
 const isRequired = (value) => {
   if (value) {
     if (type.value != 'number' && value.trim()) return true

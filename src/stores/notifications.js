@@ -1,7 +1,7 @@
-import { acceptHMRUpdate, defineStore } from "pinia"
-import { ref } from "vue"
+import { acceptHMRUpdate, defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useNotificationStore = defineStore("notifications", () => {
+export const useNotificationStore = defineStore('notifications', () => {
   const notifications = ref([])
 
   const remove = (notificationId) => {
@@ -18,14 +18,14 @@ export const useNotificationStore = defineStore("notifications", () => {
     notifications.value.push({
       raw: notification,
       id: id,
-      timeout: timeout,
+      timeout: timeout
     })
   }
 
   return {
     notifications,
     add,
-    remove,
+    remove
   }
 })
 

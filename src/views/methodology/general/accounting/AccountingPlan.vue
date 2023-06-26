@@ -70,11 +70,22 @@ const accountClasses2 = [
     </div>
     <div class="methodology__section">
       <p>
-        Différentes comptabilités sont applicables au secteur public local selon le type de collectivités (communes, départements, régions) et selon la nature de l'activité exercée (service public administratif ou service public à caractère industriel et commercial). Ces différents types de comptabilités se déclinaient jusqu’à présent au sein d’instructions comptables différentes selon les catégories de collectivités : M14 pour les communes, M52 pour les départements, M71 pour les régions, M4 pour les services à caractère industriel et commercial, M22 pour les ESMS, M31 pour les OPH, etc. A compter du 1er janvier 2024, les communes, intercommunalités, départements et régions utiliseront une seule instruction comptable, l’instruction M57, déjà utilisée par les métropoles. Toutefois, l’instruction M4 (utilisée pour les services publics industriels et commerciaux) et l’instruction M22 (établissements sociaux et médico sociaux) seront conservées.
+        Différentes comptabilités sont applicables au secteur public local selon le type de
+        collectivités (communes, départements, régions) et selon la nature de l'activité exercée
+        (service public administratif ou service public à caractère industriel et commercial). Ces
+        différents types de comptabilités se déclinaient jusqu’à présent au sein d’instructions
+        comptables différentes selon les catégories de collectivités : M14 pour les communes, M52
+        pour les départements, M71 pour les régions, M4 pour les services à caractère industriel et
+        commercial, M22 pour les ESMS, M31 pour les OPH, etc. A compter du 1er janvier 2024, les
+        communes, intercommunalités, départements et régions utiliseront une seule instruction
+        comptable, l’instruction M57, déjà utilisée par les métropoles. Toutefois, l’instruction M4
+        (utilisée pour les services publics industriels et commerciaux) et l’instruction M22
+        (établissements sociaux et médico sociaux) seront conservées.
       </p>
       <div>
         <p>
-          MyCityCO2 s’appuie aujourd’hui sur l’instruction M14 et exploitera à compter de 2024 l’instruction M57. Dans les deux cas, les classes de comptes sont les suivantes :
+          MyCityCO2 s’appuie aujourd’hui sur l’instruction M14 et exploitera à compter de 2024
+          l’instruction M57. Dans les deux cas, les classes de comptes sont les suivantes :
         </p>
         <ul role="list" class="mt-2 space-y-2">
           <li class="flex gap-x-3" v-for="(item, idx) in accountClasses" :key="idx">
@@ -90,7 +101,9 @@ const accountClasses2 = [
 
       <div>
         <p>
-          MyCityCO2 ne retient que les classes 2 et 6 représentant les dépenses réelles de fonctionnement et d’investissement, génératrices d’émissions de CO2. Les classes suivantes sont exclues pour les raisons ci-dessous :
+          MyCityCO2 ne retient que les classes 2 et 6 représentant les dépenses réelles de
+          fonctionnement et d’investissement, génératrices d’émissions de CO2. Les classes suivantes
+          sont exclues pour les raisons ci-dessous :
         </p>
         <ul role="list" class="mt-2 space-y-2">
           <li class="flex gap-x-3" v-for="(item, idx) in accountClasses2" :key="idx">

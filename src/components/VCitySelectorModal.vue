@@ -9,7 +9,7 @@ const params = reactive({
   search: ''
 })
 
-const onSelect = (item) => {
+const onSelect = () => {
   cityStore.closeSelector()
 }
 </script>

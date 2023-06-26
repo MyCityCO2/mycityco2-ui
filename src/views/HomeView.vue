@@ -80,7 +80,7 @@ const features2 = [
 
 const enabled = ref(false)
 
-const onSelect = (item) => {
+const onSelect = () => {
   router.push({ name: 'dashboard' })
 }
 </script>

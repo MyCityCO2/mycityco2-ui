@@ -1,7 +1,7 @@
-import { acceptHMRUpdate, defineStore } from "pinia"
-import { ref } from "vue"
+import { acceptHMRUpdate, defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useModalStore = defineStore("modal", () => {
+export const useModalStore = defineStore('modal', () => {
   const data = ref({})
   const open = ref(false)
 
@@ -26,7 +26,7 @@ export const useModalStore = defineStore("modal", () => {
     open,
     openModal,
     closeModal,
-    runCallbackModal,
+    runCallbackModal
   }
 })
 
