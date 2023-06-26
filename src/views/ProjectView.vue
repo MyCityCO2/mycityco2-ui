@@ -12,7 +12,8 @@ import {
 const features = [
   {
     name: 'Développer',
-    description: 'Développeurs en travaillant directement sur le code (TODO lien projet github).',
+    description:
+      'Développeurs en travaillant directement sur le code (<a href="https://github.com/MyCityCO2" target="_blank" class="text-link">projet github</a>).',
     icon: CodeBracketIcon
   },
   {
@@ -121,7 +122,7 @@ const thanks = [
               </div>
               {{ feature.name }}
             </dt>
-            <dd class="mt-1 text-base leading-7 text-gray-600">{{ feature.description }}</dd>
+            <dd class="mt-1 text-base leading-7 text-gray-600" v-html="feature.description" />
           </div>
         </dl>
       </div>
