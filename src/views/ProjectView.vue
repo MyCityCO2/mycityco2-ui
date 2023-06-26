@@ -12,7 +12,7 @@ import {
 const features = [
   {
     name: 'Développer',
-    description: 'Développeurs en travaillant directement sur le code (TODO lien projet github).',
+    description: 'Développeurs en travaillant directement sur le code (<a href="https://github.com/MyCityCO2">projet github</a>).',
     icon: CodeBracketIcon
   },
   {
