@@ -48,7 +48,6 @@ const expenseRules = [
           </li>
         </ul>
       </div>
-      <p>Voir la configuration complète du module en suivant ce lien (TODO).</p>
     </div>
   </div>
 </template>
