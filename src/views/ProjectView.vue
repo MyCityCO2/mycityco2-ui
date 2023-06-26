@@ -259,21 +259,21 @@ const thanks = [
             <li>
               Le code de nombreux modules utilisés par MyCityCO2 provient de l’Odoo Community
               Association (OCA) organisation à but non lucratif qui aide ses membres à créer plus
-              rapidement des solution Odoo moins coûteuses et plus performantes, avec un accès
+              rapidement des solutions Odoo moins coûteuses et plus performantes, avec un accès
               facile à des applications de haute qualité et à des mises à jour ouvertes.
             </li>
             <li>
-              Le framework javascript VueJS ainsi que ces composants core tel que Vue-Router et
-              Pinia ont été utilsé pour réalisé l'application web
+              Le framework javascript VueJS ainsi que ses composants core tel que Vue-Router et
+              Pinia ont été utilsés pour réaliser l'application web
             </li>
-            <li>Le framework TailwindCSS a été utilisé pour réalisé la partie graphique</li>
+            <li>Le framework TailwindCSS a été utilisé pour réaliser la partie graphique</li>
             <li>
               La bibliothèque graphique Chart.js utilisée dans le tableau de bord de chaque commune
             </li>
             <li>Les icones utilisées proviennent de heroicons</li>
             <li>
               Une partie de l’arborescence et du contenu général du site de « Les Greniers
-              d'Abondance, Calculateur pour la Résilience Alimentaire des Territoires (CRATer)
+              d'Abondance, Calculateur pour la Résilience Alimentaire des Territoires (CRATer)»
             </li>
           </ul>
         </div>
