@@ -14,8 +14,14 @@
             </figcaption>
             <blockquote class="mt-10 text-lg leading-8 text-gray-900">
               <p>
-                Co-créateur de l'initiative à but non lucratif "Carbones sur factures"<br />Membre
-                du conseil d'administration de Team for the Planet<br />Co-créateur de MyCercle
+                Co-créateur de l'initiative à but non lucratif <a href="https://carbones-factures.org/" target="_blank" class="text-link"
+                  >"Carbones sur factures"</a
+                ><br />Membre
+                du conseil de surveillance de <a href="https://team-planet.com/fr" target="_blank" class="text-link"
+                  >Team for the Planet</a
+                ><br />Co-créateur de <a href="https://www.mycercle.online/" target="_blank" class="text-link"
+                  >MyCercle</a
+                >
               </p>
             </blockquote>
           </figure>
