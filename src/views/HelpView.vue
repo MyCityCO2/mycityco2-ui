@@ -152,7 +152,7 @@ const currentGlossary = ref(0)
         <div class="lg:col-span-5">
           <h3>Foire aux questions</h3>
           <p class="my-6 leading-text">Vous ne trouvez pas la réponse à votre question ?</p>
-          <router-link :to="{ name: 'contact' }" class="button-primary">nous contacter</router-link>
+          <router-link :to="{ name: 'contact' }" class="button-primary">Contactez-nous</router-link>
         </div>
         <div class="mt-10 lg:col-span-7 lg:mt-0">
           <dl class="space-y-10">
