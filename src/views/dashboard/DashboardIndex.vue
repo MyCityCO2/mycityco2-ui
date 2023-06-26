@@ -82,7 +82,7 @@ const stats = computed(() => {
   ]
 })
 
-const colors = ['rgba(45,196,237, 0.5)', 'rgba(16,185,169, 0.5)']
+const colors = ['rgba(50, 202, 175, 0.5)', 'rgba(108, 199, 222, 0.5)']
 
 const emissionByCateg = computed(() => {
   if (!result.value || !result.value?.city) return []
@@ -90,7 +90,7 @@ const emissionByCateg = computed(() => {
     labels: result.value.city.co2EmissionByCategory.map((item) => item.name),
     datasets: [
       {
-        backgroundColor: 'rgba(16,185,129, 0.5)',
+        backgroundColor: colors[0],
         data: result.value.city.co2EmissionByCategory.map((item) => item.sum)
       }
     ]
@@ -146,7 +146,7 @@ const emissionByJournalYearly = computed(() => {
 const emissionByJournalYearlyChartOptions = {
   element: {
     bar: {
-      backgroundColor: 'rgba(45,196,237, 0.5)'
+      backgroundColor: colors[0]
     }
   },
   responsive: true,
@@ -183,6 +183,9 @@ const emissionByJournalChartOptions = {
       onClick: null,
       position: 'bottom'
     },
+    tooltip: {
+      enabled: false
+    },
     datalabels: {
       font: {
         weight: 'bold'
@@ -213,6 +216,9 @@ const emissionByCategChartOptions = {
     legend: {
       display: false
     },
+    tooltip: {
+      enabled: false
+    },
     datalabels: {
       anchor: 'end',
       align: 'end',
@@ -237,10 +243,8 @@ const emissionByCategChartOptions = {
         <div v-if="!cityStore.currentCity">
           <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
-              <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Aucune commune sélectionnée !
-              </h2>
-              <p class="mt-6 text-lg leading-8 text-gray-600">
+              <h3>Aucune commune sélectionnée !</h3>
+              <p class="mt-6 leading-text">
                 Veuillez sélectionner votre commune pour continuer. Vous pouvez la trouvez par son
                 nom ou son code postal.
               </p>
@@ -264,7 +268,7 @@ const emissionByCategChartOptions = {
               class="flex space-x-4 sm:space-x-6 xl:space-x-8 items-center border rounded-xl border-gray-100 bg-white px-4 py-10 sm:px-6 xl:px-8"
             >
               <div>
-                <component :is="stat.icon" class="h-6 w-6 text-primary" aria-hidden="true" />
+                <component :is="stat.icon" class="h-10 w-10 text-primary" aria-hidden="true" />
               </div>
               <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
                 <dt class="text-sm font-medium leading-6 text-gray-500">{{ stat.name }}</dt>
@@ -276,7 +280,7 @@ const emissionByCategChartOptions = {
                 >
                   {{ stat.change }}
                 </dd>
-                <dd class="w-full flex-none text-3xl font-semibold leading-10 text-gray-900">
+                <dd class="w-full flex-none text-3xl font-bold leading-10 text-gray-900">
                   {{ stat.stat }} <span class="text-xl">{{ stat.statUom }}</span>
                 </dd>
               </div>
@@ -284,7 +288,10 @@ const emissionByCategChartOptions = {
           </dl>
           <div class="mt-10 grid grid-cols-1 gap-4 gap-y-2 sm:gap-y-0 lg:grid-cols-3">
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
-              <h5 class="pb-4">Evolution des émissions entre 2016 et 2021 en kgCO2eq/hab</h5>
+              <h5 class="pb-4">
+                Evolution des émissions entre 2016 et 2021
+                <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
+              </h5>
               <div class="flex-1">
                 <Bar
                   :options="emissionByJournalYearlyChartOptions"
@@ -299,7 +306,10 @@ const emissionByCategChartOptions = {
               </div>
             </div>
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
-              <h5 class="pb-4">Emissions par poste en 2021 en kgCO2eq/hab</h5>
+              <h5 class="pb-4">
+                Emissions par poste en 2021
+                <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
+              </h5>
               <div class="flex-1">
                 <Bar :options="emissionByCategChartOptions" :data="emissionByCateg" />
               </div>
