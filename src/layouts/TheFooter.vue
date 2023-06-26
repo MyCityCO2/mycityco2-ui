@@ -25,7 +25,7 @@ const navigation = {
                 </li>
               </ul>
 
-              <ul role="list" class="space-y-8">
+              <!-- <ul role="list" class="space-y-8">
                 <li v-for="item in navigation.social" :key="item.name">
                   <a
                     :href="item.href"
@@ -36,7 +36,7 @@ const navigation = {
                     <span>{{ item.name }}</span>
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
             <div
               class="m-auto mt-16 w-10/12 space-y-6 text-center sm:mt-auto sm:w-5/12 sm:text-left"
