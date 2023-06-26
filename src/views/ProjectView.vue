@@ -208,5 +208,75 @@ const thanks = [
         </div>
       </div>
     </section>
+    <section>
+      <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
+        <div
+          class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 gap-x-8 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pr-8"
+        >
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="@/assets/images/logos/vuejs.svg"
+            alt="VueJS logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="@/assets/images/logos/tailwindcss.svg"
+            alt="Tailwindcss logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="@/assets/images/logos/chartjs.svg"
+            alt="ChartJS logo"
+          />
+
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="@/assets/images/logos/heroicons.svg"
+            alt="Heroicons logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="https://tailwindui.com/img/logos/transistor-logo-gray-900.svg"
+            alt="Transistor"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="https://tailwindui.com/img/logos/statamic-logo-gray-900.svg"
+            alt="Statamic"
+            width="147"
+            height="48"
+          />
+        </div>
+        <div class="mx-auto w-full max-w-xl lg:mx-0">
+          <h3>Crédits</h3>
+          <ul
+            role="list"
+            class="marker:text-primary list-disc pl-5 space-y-3 mt-6 text-neutral-600"
+          >
+            <li>
+              Le code de nombreux modules utilisés par MyCityCO2 provient de l’Odoo Community
+              Association (OCA) organisation à but non lucratif qui aide ses membres à créer plus
+              rapidement des solution Odoo moins coûteuses et plus performantes, avec un accès
+              facile à des applications de haute qualité et à des mises à jour ouvertes.
+            </li>
+            <li>
+              Le framework javascript VueJS ainsi que ces composants core tel que Vue-Router et
+              Pinia ont été utilsé pour réalisé l'application web
+            </li>
+            <li>Le framework TailwindCSS a été utilisé pour réalisé la partie graphique</li>
+            <li>
+              La bibliothèque graphique Chart.js utilisée dans le tableau de bord de chaque commune
+            </li>
+            <li>Les icones utilisées proviennent de heroicons</li>
+            <li>
+              Une partie de l’arborescence et du contenu général du site de « Les Greniers
+              d'Abondance, Calculateur pour la Résilience Alimentaire des Territoires (CRATer)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </template>

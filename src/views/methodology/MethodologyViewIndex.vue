@@ -1,5 +1,6 @@
 <script setup>
 import { CheckCircleIcon } from '@heroicons/vue/20/solid'
+import { Bars2Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const configItems = [
   'Les données financières de la collectivité telles que publiées dans les comptes administratifs annuellement compte par compte selon la nomenclature M14 en euros;',
@@ -32,6 +33,35 @@ const configItems = [
             <span>{{ item }}</span>
           </li>
         </ul>
+      </div>
+      <div class="flex justify-around space-x-4 items-start">
+        <div class="p-4">
+          <h5>Emissions de GES</h5>
+          <p class="mt-1">(CO2e)</p>
+        </div>
+        <div class="mt-8">
+          <Bars2Icon class="h-5 w-5 text-black" />
+        </div>
+        <div class="flex flex-col space-y-2">
+          <div class="rounded-xl bg-primary p-4">
+            <h5 class="text-white">Données financières</h5>
+            <p class="mt-1 !text-white">(En euros)</p>
+          </div>
+          <p>Propre a chaque compte</p>
+          <p class="!text-sm italic">Collecté dans les comptes annuels de chaque collectivité</p>
+        </div>
+
+        <div class="mt-8">
+          <XMarkIcon class="h-5 w-5 text-black" />
+        </div>
+        <div class="flex flex-col space-y-2">
+          <div class="rounded-xl bg-primary p-4">
+            <h5 class="text-white">Facteur d'émissions</h5>
+            <p class="mt-1 !text-white">(CO2e par euro)</p>
+          </div>
+          <p>Base de facteurs d’émissions</p>
+          <p class="!text-sm italic">Issu de la base carbone de Exiobas</p>
+        </div>
       </div>
       <p>
         Le résultat est exprimé en « tonnes équivalent de CO2 », c’est-à-dire en émission de gaz à
