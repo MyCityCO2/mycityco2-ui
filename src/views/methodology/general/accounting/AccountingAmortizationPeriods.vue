@@ -35,7 +35,7 @@ const tableRules = [
         duration: '10 à 15 ans'
       },
       {
-        name: 'Matériel de bureau éléectrique ou électronique',
+        name: 'Matériel de bureau électrique ou électronique',
         duration: '5 à 10 ans'
       },
       {
@@ -49,6 +49,58 @@ const tableRules = [
       {
         name: 'Coffre-fort',
         duration: '20 à 30 ans'
+      },
+      {
+        name: 'Installations et appareils de chauffage',
+        duration: '10 à 20 ans'
+      },
+      {
+        name: 'Appareils de levage-ascenseurs',
+        duration: '20 à 30 ans'
+      },
+      {
+        name: 'Appareils de laboratoire',
+        duration: '5 à 10 ans'
+      },
+      {
+        name: 'Equipements de garages et ateliers',
+        duration: '10 à 15 ans'
+      },
+      {
+        name: 'Equipement des cuisines',
+        duration: '10 à 15 ans'
+      },
+      {
+        name: 'Equipements sportifs',
+        duration: '10 à 15 ans'
+      },
+      {
+        name: 'Installations de voirie',
+        duration: '20 à 30 ans'
+      },
+      {
+        name: 'Plantations',
+        duration: '15 à 20 ans'
+      },
+      {
+        name: 'Autres agencements et aménagements de terrains',
+        duration: '15 à 30 ans'
+      },
+      {
+        name: 'Terrains de gisement (mines et carrières)',
+        duration: 'sur la durée du contrat d’exploitation'
+      },
+      {
+        name: 'Constructions sur sol d’autrui',
+        duration: 'sur la durée du bail à construction'
+      },
+      {
+        name: 'Bâtiments légers, abris',
+        duration: '10 à 15 ans'
+      },
+      {
+        name: 'Agencements et aménagements de bâtiment, installations électriques et téléphoniques',
+        duration: '15 à 20 ans'
       }
     ]
   }
