@@ -27,7 +27,7 @@
         <h4>Code source</h4>
         <p class="mt-4">
           Le code de l'application est publié sous la licence AGPL (GNU Affero General Public
-          License), il est accessible ici(TODO lien vers repo github).
+          License), il est accessible <a href="https://github.com/MyCityCO2">ici</a>.
         </p>
       </div>
       <div id="credit">
