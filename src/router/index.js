@@ -112,17 +112,35 @@ const router = createRouter({
               component: () => import('@/views/methodology/general/GeneralEmissionPost.vue'),
               meta: {
                 previous: 'generalEmissionFactor',
-                next: 'methodologyDataSources'
+                next: 'generalLimitations'
+              }
+            },
+            {
+              path: 'limitations',
+              name: 'generalLimitations',
+              component: () => import('@/views/methodology/general/GeneralLimitView.vue'),
+              meta: {
+                previous: 'generalEmissionPost',
+                next: 'methodologyPartners'
               }
             }
           ]
+        },
+        {
+          path: 'partners',
+          name: 'methodologyPartners',
+          component: () => import('@/views/methodology/MethodologyViewPartners.vue'),
+          meta: {
+            previous: 'generalLimitations',
+            next: 'methodologyDataSources'
+          }
         },
         {
           path: 'datasources',
           name: 'methodologyDataSources',
           component: () => import('@/views/methodology/MethodologyViewDatasources.vue'),
           meta: {
-            previous: 'generalEmissionPost',
+            previous: 'methodologyPartners',
             next: 'methodologyLicense'
           }
         },

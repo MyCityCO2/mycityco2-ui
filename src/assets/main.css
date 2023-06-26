@@ -52,6 +52,9 @@
   .header-link {
     @apply text-sm font-semibold leading-6 border-b-2 border-transparent text-gray-900 hover:border-primary hover:text-gray-900 transition-all;
   }
+  .text-link {
+    @apply text-primary transition-all hover:text-opacity-80;
+  }
 }
 
 @layer utilities {

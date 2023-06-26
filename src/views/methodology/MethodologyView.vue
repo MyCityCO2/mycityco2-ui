@@ -29,8 +29,13 @@ const navigation = [
         ]
       },
       { name: "Facteurs d'émissions monétaires", to: { name: 'generalEmissionFactor' } },
-      { name: "Postes d'émissions", to: { name: 'generalEmissionPost' } }
+      { name: "Postes d'émissions", to: { name: 'generalEmissionPost' } },
+      { name: 'Limitations', to: { name: 'generalLimitations' } }
     ]
+  },
+  {
+    name: 'Partenaires',
+    to: { name: 'methodologyPartners' }
   },
   {
     name: 'Sources de données',
