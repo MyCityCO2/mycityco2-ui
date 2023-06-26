@@ -60,7 +60,7 @@ const configItems = [
             <p class="mt-1 !text-white">(CO2e par euro)</p>
           </div>
           <p>Base de facteurs d’émissions</p>
-          <p class="!text-sm italic">Issu de la base carbone de Exiobas</p>
+          <p class="!text-sm italic">Issu de la base carbone de Exiobase</p>
         </div>
       </div>
       <p>
