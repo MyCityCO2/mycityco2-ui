@@ -6,7 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { onBeforeMount, ref } from 'vue'
 
 const mobileMenuOpen = ref(false)
-const stickyHeader = ref(false)
+const stickyHeader = ref(window.scrollY > 10 ? true : false)
 const closeMenu = () => (mobileMenuOpen.value = false)
 
 onBeforeMount(() => {
@@ -14,7 +14,7 @@ onBeforeMount(() => {
 })
 
 function handleScroll() {
-  if (window.scrollY) {
+  if (window.scrollY > 10) {
     stickyHeader.value = true
   } else {
     stickyHeader.value = false
@@ -23,7 +23,12 @@ function handleScroll() {
 </script>
 
 <template>
-  <header :class="['z-50 absolute inset-x-0 top-0']">
+  <header
+    :class="[
+      'z-50 fixed inset-x-0 top-0 transition-all duration-500',
+      stickyHeader ? 'bg-white shadow' : 'bg-transparent shadow-none'
+    ]"
+  >
     <div
       class="mx-auto flex flex-col sm:flex-row max-w-7xl items-center justify-between pt-2 px-6 lg:px-8"
     >
@@ -44,12 +49,12 @@ function handleScroll() {
       </div>
     </div>
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between pb-4 lg:px-8"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/image.png" class="h-24 w-auto text-primary" alt="" />
+          <img src="@/assets/image.png" class="h-20 w-auto text-primary" alt="" />
         </router-link>
       </div>
       <div class="flex lg:hidden">
@@ -76,6 +81,7 @@ function handleScroll() {
         <router-link to="/dashboard" class="button-primary-small">Diagnostic</router-link>
       </div>
     </nav>
+
     <TransitionRoot as="template" :show="mobileMenuOpen">
       <Dialog as="div" class="relative z-50 lg:hidden" @close="closeMenu()">
         <TransitionChild
