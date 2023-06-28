@@ -3,10 +3,10 @@ import VHeading from '@/components/VHeading.vue'
 import VTimeline from '@/components/VTimeline.vue'
 import { CheckCircleIcon } from '@heroicons/vue/20/solid'
 import {
-  ChatBubbleOvalLeftEllipsisIcon,
+  ChatBubbleLeftRightIcon,
   CodeBracketIcon,
-  HeartIcon,
-  PencilSquareIcon
+  LanguageIcon,
+  LightBulbIcon
 } from '@heroicons/vue/24/outline'
 
 const features = [
@@ -20,18 +20,18 @@ const features = [
     name: 'Devenir précurseur',
     description:
       'Communes (maires, adjoints, agents) qui seraient intéressées par le projet pour devenir pilote des phases suivantes, faire des retours… ',
-    icon: PencilSquareIcon
+    icon: LightBulbIcon
   },
   {
     name: 'Traduire',
     description: 'Traducteurs pour préparer le développement dans d’autres pays.',
-    icon: ChatBubbleOvalLeftEllipsisIcon
+    icon: LanguageIcon
   },
   {
     name: 'Communiquer',
     description:
       'Communicants pour préparer et exécuter une stratégie de communication et mieux faire connaître le produit. Partager MyCityCO2 sur les réseaux sociaux ?...',
-    icon: HeartIcon
+    icon: ChatBubbleLeftRightIcon
   }
 ]
 
