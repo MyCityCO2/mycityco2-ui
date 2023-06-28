@@ -167,43 +167,50 @@ const thanks = [
           <img
             class="max-h-14 w-full object-contain object-left"
             src="@/assets/images/logos/opennet.png"
-            alt="Tuple"
+            alt="Open Net Sarl logo"
             width="105"
             height="48"
           />
           <img
             class="max-h-14 w-full object-contain object-left"
             src="@/assets/images/logos/odoo.svg"
-            alt="Reform"
+            alt="Odoo logo"
             width="104"
             height="48"
           />
           <img
             class="max-h-14 w-full object-contain object-left"
             src="@/assets/images/logos/ExioBase.png"
-            alt="SavvyCal"
+            alt="ExioBase logo"
             width="140"
             height="48"
           />
           <img
             class="max-h-14 w-full object-contain object-left"
-            src="https://tailwindui.com/img/logos/laravel-logo-gray-900.svg"
-            alt="Laravel"
+            src="@/assets/images/logos/La_Poste.svg"
+            alt="La Poste"
             width="136"
             height="48"
           />
           <img
-            class="max-h-14 w-full object-contain object-left"
-            src="https://tailwindui.com/img/logos/transistor-logo-gray-900.svg"
-            alt="Transistor"
+            class="max-h-20 w-full object-contain object-left"
+            src="@/assets/images/logos/vocables.svg"
+            alt="Vocables logo"
             width="158"
             height="48"
           />
           <img
-            class="max-h-14 w-full object-contain object-left"
-            src="https://tailwindui.com/img/logos/statamic-logo-gray-900.svg"
-            alt="Statamic"
+            class="max-h-20 w-full object-contain object-left"
+            src="@/assets/images/logos/AB.jpg"
+            alt="AB logo"
             width="147"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="@/assets/images/logos/mef.svg"
+            alt="Minitsère de l'économie et de la finance logo"
+            width="158"
             height="48"
           />
         </div>
@@ -237,15 +244,15 @@ const thanks = [
           />
           <img
             class="max-h-14 w-full object-contain object-left"
-            src="https://tailwindui.com/img/logos/transistor-logo-gray-900.svg"
-            alt="Transistor"
+            src="@/assets/images/logos/OCA.png"
+            alt="OCA logo"
             width="158"
             height="48"
           />
           <img
             class="max-h-14 w-full object-contain object-left"
-            src="https://tailwindui.com/img/logos/statamic-logo-gray-900.svg"
-            alt="Statamic"
+            src="@/assets/images/logos/crater.svg"
+            alt="Crater logo"
             width="147"
             height="48"
           />
