@@ -15,19 +15,19 @@ export const QUERY_CITY_DASHBOARD = gql`
     city(cityId: $cityId) {
       co2EmissionByCategory(year: $year) {
         name
-        sum
+        sum @roundFloat
       }
       co2EmissionsEvolution
       co2EmissionsEvolutionByJournal(year: $year) {
         name
-        sum
+        sum @roundFloat
       }
       co2EmissionsEvolutionByJournalYearly {
         name
-        sum
+        sum @roundFloat
         year
       }
-      co2EmissionsPerHab(year: $year)
+      co2EmissionsPerHab(year: $year) @roundFloat
       id
       name
       population
