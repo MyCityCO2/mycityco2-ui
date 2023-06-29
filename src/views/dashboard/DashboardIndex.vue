@@ -12,7 +12,10 @@ import {
   CategoryScale,
   Chart as ChartJS,
   Legend,
+  LineController,
+  LineElement,
   LinearScale,
+  PointElement,
   Title,
   Tooltip
 } from 'chart.js'
@@ -24,12 +27,14 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-
+  LineController,
   BarElement,
   CategoryScale,
   LinearScale,
   ArcElement,
-  ChartDataLabels
+  PointElement,
+  ChartDataLabels,
+  LineElement
 )
 
 const cityStore = useCityStore()
@@ -113,6 +118,11 @@ const emissionByJournalYearly = computed(() => {
   if (!result.value || !result.value?.city) return []
   let data = result.value.city.co2EmissionsEvolutionByJournalYearly
   const years = [...new Set(data.map((item) => item.year))]
+  const minYear = Math.min(...years)
+
+  const minYearTotalSum = data
+    .filter((item) => item.year === minYear)
+    .reduce((total, item) => total + item.sum, 0)
 
   const datasets = data.reduce((result, item, idx) => {
     const { name, sum, year } = item
@@ -128,6 +138,7 @@ const emissionByJournalYearly = computed(() => {
     } else {
       result.push({
         label: name,
+        type: 'bar',
         backgroundColor: colors[idx % colors.length],
         data: [{ x: year, y: sum }],
         borderWidth: 1
@@ -136,6 +147,21 @@ const emissionByJournalYearly = computed(() => {
 
     return result
   }, [])
+
+  const idealProgressionDataset = {
+    label: 'Accord de Paris',
+    type: 'line',
+    data: data.map((item) => {
+      const { year } = item
+      const adjustedSum = minYearTotalSum - minYearTotalSum * 0.035 * (year - minYear)
+      return { x: year, y: adjustedSum }
+    }),
+    fill: false,
+    borderColor: colors[0],
+    borderWidth: 2
+  }
+
+  datasets.push(idealProgressionDataset)
 
   return {
     labels: years,
@@ -159,7 +185,10 @@ const emissionByJournalYearlyChartOptions = {
       }
     },
     y: {
-      stacked: true
+      stacked: true,
+      grid: {
+        display: false
+      }
     }
   },
   plugins: {
@@ -168,7 +197,26 @@ const emissionByJournalYearlyChartOptions = {
       position: 'bottom'
     },
     datalabels: {
-      display: false
+      anchor: 'end',
+      align: 'end',
+      font: {
+        weight: 'bold'
+      },
+      formatter: (value, context) => {
+        if (context.datasetIndex == 2) return ''
+        const datasetArray = []
+        context.chart.data.datasets.forEach((dataset) => {
+          if (dataset.type != 'line' && dataset.data[context.dataIndex] != undefined) {
+            datasetArray.push(dataset.data[context.dataIndex].y)
+          }
+        })
+        const totalSum = (total, datapoint) => total + datapoint
+
+        let sum = datasetArray.reduce(totalSum, 0)
+        if (datasetArray.length == 1 || context.datasetIndex == datasetArray.length - 1)
+          return Math.floor(sum)
+        else return ''
+      }
     }
   }
 }
@@ -252,7 +300,9 @@ const emissionByCategChartOptions = {
                 <button @click="cityStore.openSelector()" class="button-primary">
                   Sélectionner
                 </button>
-                <a href="#" class="link">Demander une commune <span aria-hidden="true">→</span></a>
+                <router-link :to="{ name: 'contact' }" class="link"
+                  >Demander une commune <span aria-hidden="true">→</span></router-link
+                >
               </div>
             </div>
           </div>
@@ -272,14 +322,14 @@ const emissionByCategChartOptions = {
               </div>
               <div class="flex-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
                 <dt class="text-sm font-medium leading-6 text-gray-500">{{ stat.name }}</dt>
-                <dd
+                <!-- <dd
                   :class="[
                     stat.changeType === 'decrease' ? 'text-rose-600' : 'text-gray-700',
                     'text-xs font-medium'
                   ]"
                 >
                   {{ stat.change }}
-                </dd>
+                </dd> -->
                 <dd class="w-full flex-none text-3xl font-bold leading-10 text-gray-900">
                   {{ stat.stat }} <span class="text-xl">{{ stat.statUom }}</span>
                 </dd>
