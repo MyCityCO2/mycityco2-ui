@@ -71,7 +71,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: 'Evol. emissions 2016-2021',
+      name: 'Evol. annuelle moyenne des émissions 2016-2021',
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: '%',
       statIsChange: true,
@@ -300,7 +300,10 @@ const emissionByCategChartOptions = {
               </div>
             </div>
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
-              <h5 class="pb-4">Répartition des émissions en 2021</h5>
+              <h5 class="pb-4">
+                Répartition des émissions en 2021
+                <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
+              </h5>
               <div class="flex-1">
                 <Doughnut :data="emissionByJournal" :options="emissionByJournalChartOptions" />
               </div>
