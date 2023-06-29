@@ -8,13 +8,11 @@ import VCitySelectorModal from './components/VCitySelectorModal.vue'
 
 <template>
   <TheHeader />
-  <div class="bg-white shadow-sm flex-grow z-10">
-    <RouterView v-slot="{ Component }">
-      <VTransitionFade>
-        <component :is="Component" />
-      </VTransitionFade>
-    </RouterView>
-  </div>
+  <RouterView v-slot="{ Component }">
+    <VTransitionFade>
+      <component :is="Component" class="bg-white shadow-sm flex-grow z-10" />
+    </VTransitionFade>
+  </RouterView>
   <TheFooter />
   <teleport to="body">
     <VCitySelectorModal />

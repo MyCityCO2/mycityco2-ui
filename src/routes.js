@@ -5,6 +5,11 @@ const routes = [
     component: () => import('@/views/HomeView.vue')
   },
   {
+    path: '/legal',
+    name: 'legal',
+    component: () => import('@/views/LegalView.vue')
+  },
+  {
     path: '/methodology',
     name: 'methodology',
     component: () => import('@/views/methodology/MethodologyView.vue'),
@@ -165,9 +170,14 @@ const routes = [
     component: () => import('@/views/ContactView.vue')
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
+    path: '/diagnostic',
+    name: 'diagnostic',
     component: () => import('@/views/dashboard/DashboardIndex.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFoundView.vue')
   }
 ]
 

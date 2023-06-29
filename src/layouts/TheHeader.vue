@@ -78,7 +78,9 @@ function handleScroll() {
         >
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link to="/dashboard" class="button-primary-small">Diagnostic</router-link>
+        <router-link :to="{ name: 'diagnostic' }" class="button-primary-small"
+          >Diagnostic</router-link
+        >
       </div>
     </nav>
 
@@ -142,7 +144,7 @@ function handleScroll() {
                         </div>
                         <div class="py-6">
                           <router-link
-                            :to="{ name: 'dashboard' }"
+                            :to="{ name: 'diagnostic' }"
                             custom
                             v-slot="{ href, navigate }"
                             class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

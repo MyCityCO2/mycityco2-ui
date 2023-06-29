@@ -81,7 +81,7 @@ const features2 = [
 const enabled = ref(false)
 
 const onSelect = () => {
-  router.push({ name: 'dashboard' })
+  router.push({ name: 'diagnostic' })
 }
 </script>
 
