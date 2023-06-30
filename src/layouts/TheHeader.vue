@@ -49,12 +49,12 @@ function handleScroll() {
       </div>
     </div>
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between pb-4 lg:px-8"
+      class="mx-auto flex max-w-7xl items-center justify-between pb-4 px-6 lg:px-8"
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/image.png" class="h-20 w-auto text-primary" alt="" />
+          <img src="@/assets/image.png" class="h-16 w-auto text-primary" alt="" />
         </router-link>
       </div>
       <div class="flex lg:hidden">
