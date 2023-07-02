@@ -35,52 +35,6 @@ const features = [
   }
 ]
 
-const versionHistory = [
-  {
-    date: 'Juin 2023',
-    title: 'First release',
-    text: "la première version de l’application est en ligne. Elle couvre les 35'000 communes de la France. Le moteur de calcul est disponible en open-source, les configurations sont accessibles en toute transparence et les résultats sont publiés en open-data."
-  }
-]
-
-const roadmapHistory = [
-  {
-    date: 'Juillet 2023',
-    title: 'Certification',
-    text: 'reporting certifié GHG Protocol, Bilan GES.'
-  },
-  {
-    date: 'Août 2023',
-    title: 'Portail',
-    text: 'le portail de production des données est accessible.'
-  },
-  {
-    date: 'Septembre 2023',
-    title: 'Européen',
-    text: 'MyCityCO2 devient européen en intégrant les communes des cantons Suisse de Genève et de Vaud.'
-  },
-  {
-    date: 'Octobre 2023',
-    title: "Facteurs d'émissions annuel",
-    text: 'les facteurs d’émission monétaires sont dorénavant pris en compte de manière annuelle. Les données sont regénérées même si les impacts sont mineurs.'
-  },
-  {
-    date: 'Novembre 2023',
-    title: 'Toute la Suisse',
-    text: 'extension à toute la Suisse romande et à d’autres cantons.'
-  },
-  {
-    date: 'Décembre 2023',
-    title: 'V2.0',
-    text: 'MyCityCO2 v2.0 des comptes flash monétaires aux comptes physiques pour une précision accrue des comptes carbones.'
-  },
-  {
-    date: '2024',
-    title: 'Nouveaux pays',
-    text: 'de nouveaux pays s’emparent de la solution et publient les comptes carbones de leurs villes.'
-  }
-]
-
 const thanks = [
   'les membres d’Open Net qui se sont intensément investis pour sortir une première version',
   'les membres bénévoles de Carbones sur factures qui définissent les comptes carbones de demain',
@@ -95,7 +49,7 @@ const thanks = [
 <template>
   <div>
     <VHeading
-      title="Pourquoi Mycityco2"
+      title="Pourquoi Mycityco2 ?"
       text="MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
     />
     <section>
@@ -126,24 +80,6 @@ const thanks = [
           </div>
         </dl>
       </div>
-    </section>
-    <section>
-      <VTimeline
-        title="Historique des versions"
-        text="Here’s your guide to the tech fest 2021 process. Go through all the steps to know the
-            exact process of the fest."
-        :history="versionHistory"
-        inverse
-      />
-    </section>
-    <section>
-      <VTimeline
-        title="Feuille de route"
-        text="Here’s your guide to the tech fest 2021 process. Go through all the steps to know the
-            exact process of the fest."
-        :history="roadmapHistory"
-        dashed
-      />
     </section>
     <section>
       <div class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
