@@ -103,10 +103,9 @@ const onSelect = () => {
           </h1>
           <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p class="leading-text">
-              C'est peut-être un bon point de départ pour changer les choses à une autre échelle.
-              Cela permettrait de proposer une méthode à toutes les collectivités mettant en place
-              une application open source en ligne pour calculer automatiquement les carbones de
-              chaque collectivité.
+              Comment améliorer ce qu’on ne sait pas mesurer?
+              MyCityCO2, un outil libre et gratuit de suivi des empreintes carbones des 35'000 villes françaises 
+              au service de la lutte contre le changement climatique.
             </p>
             <div
               class="mt-10 transform divide-y divide-gray-500 divide-opacity-10 overflow-hidden rounded-xl ring-1 ring-black ring-opacity-5 transition-all"
