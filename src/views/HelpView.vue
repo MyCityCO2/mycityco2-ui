@@ -4,44 +4,15 @@ import { ref } from 'vue'
 
 const faqs = [
   {
-    question: 'Quelles sont les principales lacunes ou limites des bilans carbone actuels ?',
+    question: 'Quelle est la différence entre une empreinte carbone « Collectivité » et une empreinte carbone « Territoire » ? ',
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
+      'L’empreinte carbone « Territoire » a pour objectif d’estimer l’ensemble (collectivités, individus et entrprises) des émissions de gaz à effet de serre sur le territoire de la collectivité concernée. MyCityCO2 fournit l’empreinte de la collectivité, sans estimation, en partant des comptes administratifs de la commune et en mesurant les émissions liées aux bâtiments, aux infrastructures, aux services … de la collectivité.'
   },
   {
     question:
-      "Comment MyCityCO2 améliore-t-il la précision et la fiabilité de l'estimation des émissions de gaz à effet de serre ?",
+      "Comment est calculée la trajectoire de l’Accord de Paris ?",
     answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
-  },
-  {
-    question:
-      "Comment MyCityCO2 prend-il en compte les différentes sources d'émissions, y compris les émissions directes, indirectes et liées à la chaîne d'approvisionnement ?",
-    answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
-  },
-  {
-    question:
-      "Quelles sont les fonctionnalités de cet outil qui facilitent la collecte et l'analyse des données relatives aux émissions ?",
-    answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
-  },
-  {
-    question:
-      'Comment MyCityCO2 permet-il aux utilisateurs de suivre les progrès réalisés dans la réduction des émissions et de fixer des objectifs de réduction ambitieux ?',
-    answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
-  },
-  {
-    question:
-      'Comment MyCityCO2 contribue-t-il à la standardisation et à la comparabilité des comptes carbone entre différentes collectivités ?',
-    answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
-  },
-  {
-    question: 'Quelle est la prochaine étape importante pour le développement de MyCityCO2 ?',
-    answer:
-      'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.'
+      'Selon le rapport Secten qui présente les émissions de gaz à effet de serre en France depuis 1990 (Citepa, 2023. Gaz à effet de serre et polluants atmosphériques. Bilan des émissions en France de 1990 à 2022. Rapport Secten éd. 2023.) les émissions étaient de 456,4 Mt CO2e en 2016 et l’objectif défini par l’Accord de Paris de -50% en 2030 par rapport à 1990 nous mène à 270 Mt CO2e pour 2030. Par extrapolation, depuis 2016, les collectivités doivent s’inscrire dans une trajectoire de réduction de 3,65% chaque année.'
   }
 ]
 
