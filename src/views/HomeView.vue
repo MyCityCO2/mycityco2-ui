@@ -1,24 +1,10 @@
 <script setup>
 import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
-import { InboxIcon, TrashIcon, UsersIcon } from '@heroicons/vue/24/outline'
 
 import VCitySelector from '@/components/VCitySelector.vue'
-import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const mailingLists = [
-  { id: 1, title: 'Faible', description: 'Moins de 150', users: '-150 kgCO2e' },
-  {
-    id: 2,
-    title: 'Moyenne',
-    description: 'Entre 150 et 250',
-    users: '150 - 250 kgCO2e'
-  },
-  { id: 3, title: 'Elevée', description: 'Plus de 250', users: '+250 kgCO2e' }
-]
-
-const selectedMailingLists = ref(mailingLists[0])
 
 const features = [
   {
@@ -43,30 +29,6 @@ const features = [
   }
 ]
 
-const features2 = [
-  {
-    name: 'La base de données',
-    description:
-      'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
-    href: '#',
-    icon: InboxIcon
-  },
-  {
-    name: 'Le réseau',
-    description:
-      'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
-    href: '#',
-    icon: UsersIcon
-  },
-  {
-    name: 'Devenir un acteur',
-    description:
-      'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
-    href: '#',
-    icon: TrashIcon
-  }
-]
-
 const stats = [
   { id: 1, name: 'communes françaises analysées soit 100% des communes', value: "35'000" },
   {
@@ -80,8 +42,6 @@ const stats = [
     value: '23 %'
   }
 ]
-
-const enabled = ref(false)
 
 const onSelect = () => {
   router.push({ name: 'diagnostic' })
