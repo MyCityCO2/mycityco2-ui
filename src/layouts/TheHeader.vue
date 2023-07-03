@@ -54,7 +54,7 @@ function handleScroll() {
     >
       <div class="flex lg:flex-1">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/image.png" class="h-16 w-auto text-primary" alt="" />
+          <img src="@/assets/logo_MyCityCo2.png" class="h-16 w-auto text-primary" alt="" />
         </router-link>
       </div>
       <div class="flex lg:hidden">
@@ -114,7 +114,11 @@ function handleScroll() {
                   <div class="flex h-full flex-col overflow-y-auto bg-white px-6 py-6 shadow-xl">
                     <div class="flex items-center justify-between">
                       <router-link to="/" class="-m-1.5 p-1.5 ring-0 outline-none">
-                        <img src="@/assets/image.png" class="h-8 w-auto text-primary" alt="" />
+                        <img
+                          src="@/assets/logo_MyCityCo2.png"
+                          class="h-8 w-auto text-primary"
+                          alt=""
+                        />
                       </router-link>
                       <button
                         type="button"
