@@ -95,7 +95,9 @@ const onSelect = (item) => {
                   ]"
                   aria-hidden="true"
                 />
-                <span class="ml-3 flex-auto truncate">{{ city.name }} - {{ city.zipCode }}</span>
+                <span class="ml-3 flex-auto truncate"
+                  >{{ city.name }} - {{ city.zipCodes.join(' - ') }}</span
+                >
                 <span v-if="active" class="ml-3 flex-none text-gray-500">Sélectionner...</span>
               </li>
             </ComboboxOption>

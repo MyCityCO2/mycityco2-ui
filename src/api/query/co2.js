@@ -5,7 +5,7 @@ export const QUERY_CITIES = gql`
     cities(search: $search) {
       id
       name
-      zipCode
+      zipCodes
     }
   }
 `
@@ -31,7 +31,7 @@ export const QUERY_CITY_DASHBOARD = gql`
       id
       name
       population
-      zipCode
+      zipCodes
     }
   }
 `
