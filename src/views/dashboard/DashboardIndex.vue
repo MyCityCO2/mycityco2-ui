@@ -4,6 +4,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 
 import { QUERY_CITY_DASHBOARD } from '@/api/query/co2'
 import VLoading from '@/components/VLoading.vue'
+import VError from '@/components/alerts/VError.vue'
 import { ChartBarIcon, CloudIcon, UsersIcon } from '@heroicons/vue/24/outline'
 import { useLazyQuery } from '@vue/apollo-composable'
 import {
@@ -331,6 +332,12 @@ const features = [
         </div>
         <div v-else-if="loading">
           <VLoading />
+        </div>
+        <div v-else-if="error" class="max-w-2xl mx-auto">
+          <VError
+            title="Une erreur est survenue !"
+            text="Nous n'avons malheureusement pas pu charger les données."
+          />
         </div>
         <div v-else-if="result && result.city">
           <dl class="mx-auto grid grid-cols-1 gap-4 sm:gap-y-0 sm:grid-cols-3">

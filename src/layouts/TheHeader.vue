@@ -111,7 +111,7 @@ function handleScroll() {
                 leave-to="opacity-0 sm:translate-x-full"
               >
                 <DialogPanel class="pointer-events-auto w-screen sm:max-w-md">
-                  <div class="flex h-full flex-col overflow-y-auto bg-white px-6 py-6 shadow-xl">
+                  <div class="flex h-full flex-col overflow-y-auto px-6 py-6 shadow-xl">
                     <div class="flex items-center justify-between">
                       <router-link to="/" class="-m-1.5 p-1.5 ring-0 outline-none">
                         <img
