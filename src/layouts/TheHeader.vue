@@ -78,9 +78,7 @@ function handleScroll() {
         >
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link :to="{ name: 'diagnostic' }" class="button-primary-small"
-          >Diagnostic</router-link
-        >
+        <router-link :to="{ name: 'diagnostic' }" class="button-primary">Diagnostic</router-link>
       </div>
     </nav>
 
