@@ -1,6 +1,5 @@
 <script setup>
 import VHeading from '@/components/VHeading.vue'
-import VTimeline from '@/components/VTimeline.vue'
 import { CheckCircleIcon } from '@heroicons/vue/20/solid'
 import {
   ChatBubbleLeftRightIcon,
@@ -146,6 +145,20 @@ const thanks = [
             class="max-h-28 w-full object-contain object-left"
             src="@/assets/images/logos/mef.svg"
             alt="Minitsère de l'économie et de la finance logo"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="@/assets/images/logos/opendatasoft.svg"
+            alt="Opendatasoft"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="@/assets/images/logos/CITEPA.avif"
+            alt="CITEPA"
             width="158"
             height="48"
           />
