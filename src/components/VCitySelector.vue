@@ -5,19 +5,24 @@ import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headl
 import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import { DocumentPlusIcon, FolderPlusIcon, HomeIcon } from '@heroicons/vue/24/outline'
 import { useLazyQuery } from '@vue/apollo-composable'
-import { reactive, ref } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 import VSpin from './VSpin.vue'
 
 const props = defineProps({
   hasQuickActions: {
     type: Boolean,
     default: true
+  },
+  autoFocus: {
+    type: Boolean,
+    default: false
   }
 })
 
 const emit = defineEmits(['onSelect'])
 
 let timeoutRef = null
+const input = ref(null)
 const cityStore = useCityStore()
 const params = reactive({
   search: ''
@@ -41,6 +46,14 @@ const onSelect = (item) => {
   emit('onSelect', item)
   params.search = ''
 }
+
+// here watchEffect is used instead of onMounted because the ComboBoxInput render
+// later than the VCityselector component causing null value in inputRef
+watchEffect(() => {
+  if (input.value) {
+    input.value.focus()
+  }
+})
 </script>
 
 <template>
@@ -51,11 +64,13 @@ const onSelect = (item) => {
           class="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-900 text-opacity-40"
           aria-hidden="true"
         />
-        <ComboboxInput
-          class="h-12 w-full border-0 bg-gray-50 px-11 text-gray-900 focus:ring-0 sm:text-sm"
-          placeholder="Rechercher une ville..."
-          @change="doLazySearch($event.target.value)"
-        />
+        <ComboboxInput as="template" @change="doLazySearch($event.target.value)">
+          <input
+            ref="input"
+            placeholder="Rechercher une ville..."
+            class="h-12 w-full border-0 bg-gray-50 px-11 text-gray-900 focus:ring-0 sm:text-sm"
+          />
+        </ComboboxInput>
         <VSpin v-if="loading" class="absolute right-4 top-3.5 text-primary" />
       </div>
 
