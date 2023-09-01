@@ -147,10 +147,7 @@ const onSelect = () => {
         </div>
 
         <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-          <a href="#" class="button-primary">Get started</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Learn more <span aria-hidden="true">→</span></a
-          >
+          <router-link to="/contact" class="button-primary">Nous contacter</router-link>
         </div>
       </div>
     </section>
