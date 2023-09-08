@@ -51,10 +51,10 @@ onMounted(() => {
 
 watch(cityStore.dashboardVariables, (newVars) => {
   if (newVars.cityId && forceDisabled.value) {
-    console.log('trigger')
     load()
   }
 })
+
 const stats = computed(() => {
   if (!result.value || !result.value?.city) return []
   return [
@@ -88,7 +88,7 @@ const stats = computed(() => {
   ]
 })
 
-const colors = ['rgba(50, 202, 175, 0.5)', 'rgba(108, 199, 222, 0.5)']
+const colors = ['rgba(108, 199, 222, 0.8)', 'rgba(50, 202, 175, 0.8)']
 
 const emissionByCateg = computed(() => {
   if (!result.value || !result.value?.city) return []
@@ -158,8 +158,12 @@ const emissionByJournalYearly = computed(() => {
       return { x: year, y: adjustedSum }
     }),
     fill: false,
-    borderColor: colors[0],
-    borderWidth: 2
+    borderColor: '#d4d4d4',
+    borderWidth: 2,
+    borderDash: [10, 10],
+    pointStyle: false,
+    pointRadius: 0,
+    pointHitRadius: 0
   }
 
   datasets.push(idealProgressionDataset)
@@ -360,7 +364,7 @@ const features = [
                   {{ stat.change }}
                 </dd> -->
                 <dd class="w-full flex-none text-3xl font-bold leading-10 text-gray-900">
-                  {{ stat.stat }} <span class="text-xl">{{ stat.statUom }}</span>
+                  <span v-number="stat.stat" /> <span class="text-xl">{{ stat.statUom }}</span>
                 </dd>
               </div>
             </div>
