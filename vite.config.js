@@ -17,7 +17,7 @@ export default defineConfig({
     robotsPlugin(),
     sitemapPlugin(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       devOptions: {
         enabled: true
       },
