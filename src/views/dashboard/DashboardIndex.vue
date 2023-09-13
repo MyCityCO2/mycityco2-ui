@@ -60,7 +60,7 @@ const stats = computed(() => {
   return [
     {
       id: 1,
-      name: 'Population en 2021',
+      name: 'Population en 2022',
       stat: result.value.city.population,
       change: '1%',
       icon: UsersIcon,
@@ -68,7 +68,7 @@ const stats = computed(() => {
     },
     {
       id: 2,
-      name: 'Emissions en 2021',
+      name: 'Emissions en 2022',
       stat: `${result.value.city.co2EmissionsPerHab.toFixed(0)}`,
       statUom: 'kgCO2eq/hab',
       change: '5.4%',
@@ -77,7 +77,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: 'Evol. annuelle moyenne des émissions 2016-2021',
+      name: 'Evol. annuelle moyenne des émissions 2016-2022',
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: '%',
       statIsChange: true,
@@ -372,7 +372,7 @@ const features = [
           <div class="mt-10 grid grid-cols-1 gap-4 gap-y-2 sm:gap-y-0 lg:grid-cols-3">
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
               <h5 class="pb-4">
-                Evolution des émissions entre 2016 et 2021
+                Evolution des émissions entre 2016 et 2022
                 <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
               </h5>
               <div class="flex-1">
@@ -384,7 +384,7 @@ const features = [
             </div>
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
               <h5 class="pb-4">
-                Répartition des émissions en 2021
+                Répartition des émissions en 2022
                 <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
               </h5>
               <div class="flex-1">
@@ -393,7 +393,7 @@ const features = [
             </div>
             <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
               <h5 class="pb-4">
-                Emissions par poste en 2021
+                Emissions par poste en 2022
                 <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
               </h5>
               <div class="flex-1">
