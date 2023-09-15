@@ -5,6 +5,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { QUERY_CITY_DASHBOARD } from '@/api/query/co2'
 import VLoading from '@/components/VLoading.vue'
 import VError from '@/components/alerts/VError.vue'
+import VWarning from '@/components/alerts/VWarning.vue'
 import { ChartBarIcon, CloudIcon, UsersIcon } from '@heroicons/vue/24/outline'
 import { useLazyQuery } from '@vue/apollo-composable'
 import {
@@ -22,6 +23,7 @@ import {
 } from 'chart.js'
 import ChartDataLabels from 'chartjs-plugin-datalabels'
 import { Bar, Doughnut } from 'vue-chartjs'
+import { useRoute } from 'vue-router'
 import VHeader from './components/VHeader.vue'
 
 ChartJS.register(
@@ -38,8 +40,13 @@ ChartJS.register(
   LineElement
 )
 
+const route = useRoute()
 const cityStore = useCityStore()
 const sidebarOpen = ref(false)
+
+if (cityStore.hasCurrentCity == false && route.params?.cityId)
+  cityStore.setCurrentCityId(parseInt(route.params.cityId))
+
 const { result, load, loading, error, forceDisabled } = useLazyQuery(
   QUERY_CITY_DASHBOARD,
   cityStore.dashboardVariables
@@ -158,7 +165,7 @@ const emissionByJournalYearly = computed(() => {
       return { x: year, y: adjustedSum }
     }),
     fill: false,
-    borderColor: '#d4d4d4',
+    borderColor: '#737373',
     borderWidth: 2,
     borderDash: [10, 10],
     pointStyle: false,
@@ -312,10 +319,15 @@ const features = [
 <template>
   <div class="top-padding">
     <section class="section-small">
-      <VHeader @opensidebar="sidebarOpen = true" v-if="cityStore.currentCity" />
+      <VHeader
+        @opensidebar="sidebarOpen = true"
+        :loading="loading"
+        :error="error"
+        :result="result"
+      />
 
       <main class="mt-10">
-        <div v-if="!cityStore.currentCity">
+        <div v-if="!cityStore.hasCurrentCity">
           <div class="bg-white px-6 py-24 sm:py-32 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
               <h3>Aucune commune sélectionnée !</h3>
@@ -401,6 +413,12 @@ const features = [
               </div>
             </div>
           </div>
+        </div>
+        <div v-else class="max-w-2xl mx-auto">
+          <VWarning
+            title="Aucun résultat !"
+            text="Nous n'avons pas pu trouver de résultat pour votre recherche"
+          />
         </div>
       </main>
     </section>

@@ -1,11 +1,12 @@
+import { slug } from '@/utils'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { reactive, ref, watch } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 
 export const useCityStore = defineStore('city', () => {
   const currentCity = ref(null)
   const selectorOpen = ref(false)
   const dashboardVariables = reactive({
-    cityId: null,
+    cityId: 0,
     year: 2022
   })
 
@@ -13,16 +14,21 @@ export const useCityStore = defineStore('city', () => {
     if (newValue?.id) dashboardVariables.cityId = newValue.id
   })
 
-  const setCurrent = (city) => (currentCity.value = city)
+  const hasCurrentCity = computed(() => !!dashboardVariables.cityId != 0)
+
+  const setCurrentCity = (city) => (currentCity.value = { ...city, slug: slug(city.name) })
+  const setCurrentCityId = (cityId) => (currentCity.value = { id: cityId, name: null })
   const openSelector = () => (selectorOpen.value = true)
   const closeSelector = () => (selectorOpen.value = false)
 
   return {
-    currentCity,
+    hasCurrentCity,
     selectorOpen,
+    currentCity,
     openSelector,
     closeSelector,
-    setCurrent,
+    setCurrentCity,
+    setCurrentCityId,
     dashboardVariables
   }
 })
