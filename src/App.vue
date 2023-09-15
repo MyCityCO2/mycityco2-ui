@@ -4,6 +4,7 @@ import TheFooter from '@/layouts/TheFooter.vue'
 import TheHeader from '@/layouts/TheHeader.vue'
 import { RouterView } from 'vue-router'
 import VCitySelectorModal from './components/VCitySelectorModal.vue'
+import VNotifications from './components/VNotifications.vue'
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import VCitySelectorModal from './components/VCitySelectorModal.vue'
   </RouterView>
   <TheFooter />
   <teleport to="body">
+    <VNotifications />
     <VCitySelectorModal />
   </teleport>
 </template>
