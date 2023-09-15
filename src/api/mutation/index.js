@@ -13,3 +13,9 @@ export const MUTATION_LOGIN = gql`
     }
   }
 `
+
+export const MUTATION_CONTACT = gql`
+  mutation contact($contactData: ContactInput!) {
+    contact(contactData: $contactData)
+  }
+`
