@@ -1,7 +1,37 @@
 <script setup>
+import { MUTATION_CONTACT } from '@/api/mutation'
+import VSpin from '@/components/VSpin.vue'
 import VInput from '@/components/form/VInput.vue'
 import VTextarea from '@/components/form/VTextarea.vue'
+import { useNotificationStore } from '@/stores/notifications'
 import { EnvelopeIcon } from '@heroicons/vue/24/outline'
+import { useMutation } from '@vue/apollo-composable'
+import { useForm } from 'vee-validate'
+
+const notifStore = useNotificationStore()
+const { mutate: mutateContact, onDone, onError, loading } = useMutation(MUTATION_CONTACT)
+const { handleSubmit, meta, handleReset } = useForm()
+
+onDone(() => {
+  handleReset()
+  notifStore.add({
+    title: 'Succès !',
+    text: 'Le mail a bien été envoyé',
+    type: 'success'
+  })
+})
+
+onError(() => {
+  notifStore.add({
+    title: 'Erreur !',
+    text: "Une erreur s'est produite lors de l'envoi de mail !",
+    type: 'error'
+  })
+})
+
+const onSubmit = handleSubmit((values) => {
+  mutateContact({ contactData: values })
+})
 </script>
 
 <template>
@@ -28,7 +58,7 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
             </dl>
           </div>
         </div>
-        <form>
+        <form @submit="onSubmit">
           <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
@@ -50,7 +80,7 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
                 />
               </div>
               <div class="sm:col-span-2">
-                <VInput identifier="company" label="Société" type="text" />
+                <VInput identifier="company" label="Société" type="text" :required="false" />
               </div>
               <div class="sm:col-span-2">
                 <VInput identifier="subject" label="Sujet" type="text" />
@@ -60,7 +90,9 @@ import { EnvelopeIcon } from '@heroicons/vue/24/outline'
               </div>
             </div>
             <div class="mt-8 flex justify-end">
-              <button type="submit" class="button-primary">Envoyer</button>
+              <button type="submit" class="button-primary" :disabled="!meta.dirty">
+                <template v-if="loading"><VSpin /></template><template v-else>Envoyer</template>
+              </button>
             </div>
           </div>
         </form>

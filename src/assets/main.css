@@ -35,10 +35,10 @@
     @apply text-base font-semibold leading-7 text-primary;
   }
   .button-primary {
-    @apply rounded-xl bg-primary px-3.5 py-2.5 text-center text-sm tracking-wide font-semibold text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+    @apply rounded-xl bg-primary px-3.5 py-2.5 text-center text-sm tracking-wide font-semibold text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:bg-neutral-300;
   }
   .button-primary-small {
-    @apply rounded-xl bg-primary px-2.5 py-1.5 text-center text-sm tracking-wide font-medium text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+    @apply rounded-xl bg-primary px-2.5 py-1.5 text-center text-sm tracking-wide font-medium text-white shadow-sm hover:bg-opacity-80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:bg-neutral-300;
   }
   .link {
     @apply text-sm font-semibold leading-6 text-gray-900;

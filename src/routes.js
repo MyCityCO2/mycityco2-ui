@@ -175,6 +175,11 @@ const routes = [
     component: () => import('@/views/dashboard/DashboardIndex.vue')
   },
   {
+    path: '/diagnostic/:countryCode([A-Z]{2})-:cityId(\\d+)-:cityName',
+    name: 'diagnosticParams',
+    component: () => import('@/views/dashboard/DashboardIndex.vue')
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue')

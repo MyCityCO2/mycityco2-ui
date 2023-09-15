@@ -1,10 +1,6 @@
 <script setup>
-import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
-
 import VCitySelector from '@/components/VCitySelector.vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
+import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
 
 const features = [
   {
@@ -43,8 +39,8 @@ const stats = [
   }
 ]
 
-const onSelect = () => {
-  router.push({ name: 'diagnostic' })
+const onSelect = (item) => {
+  console.log(item)
 }
 </script>
 

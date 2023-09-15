@@ -13,6 +13,10 @@ export const QUERY_CITIES = gql`
 export const QUERY_CITY_DASHBOARD = gql`
   query getCityDashboard($cityId: Int!, $year: Int!) {
     city(cityId: $cityId) {
+      id
+      name
+      population
+      zipCodes
       co2EmissionByCategory(year: $year) {
         name
         sum @roundFloat
@@ -28,10 +32,6 @@ export const QUERY_CITY_DASHBOARD = gql`
         year
       }
       co2EmissionsPerHab(year: $year) @roundFloat
-      id
-      name
-      population
-      zipCodes
     }
   }
 `

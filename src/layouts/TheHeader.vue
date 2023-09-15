@@ -1,13 +1,39 @@
 <script setup>
 import { navigation } from '@/constant'
+import { useCityStore } from '@/stores/city'
 import { socials } from '@/svg'
+import { slug } from '@/utils'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { onBeforeMount, ref } from 'vue'
+import { computed, onBeforeMount, ref } from 'vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const cityStore = useCityStore()
 const mobileMenuOpen = ref(false)
 const stickyHeader = ref(window.scrollY > 10 ? true : false)
 const closeMenu = () => (mobileMenuOpen.value = false)
+const diagnosticLink = computed(() => {
+  if (route.params?.cityId)
+    return {
+      name: 'diagnosticParams',
+      params: {
+        countryCode: route.params.countryCode,
+        cityId: route.params.cityId,
+        cityName: route.params.cityName
+      }
+    }
+  if (cityStore.hasCurrentCity)
+    return {
+      name: 'diagnosticParams',
+      params: {
+        countryCode: 'FR',
+        cityId: cityStore.currentCity.id,
+        cityName: cityStore.currentCity.slug || slug(cityStore.currentCity.name)
+      }
+    }
+  return { name: 'diagnostic' }
+})
 
 onBeforeMount(() => {
   window.addEventListener('scroll', handleScroll)
@@ -78,7 +104,7 @@ function handleScroll() {
         >
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link :to="{ name: 'diagnostic' }" class="button-primary">Diagnostic</router-link>
+        <router-link :to="diagnosticLink" class="button-primary">Diagnostic</router-link>
       </div>
     </nav>
 
@@ -146,7 +172,7 @@ function handleScroll() {
                         </div>
                         <div class="py-6">
                           <router-link
-                            :to="{ name: 'diagnostic' }"
+                            :to="diagnosticLink"
                             custom
                             v-slot="{ href, navigate }"
                             class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

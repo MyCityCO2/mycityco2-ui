@@ -1,11 +1,13 @@
 <script setup>
 import { QUERY_CITIES } from '@/api/query'
 import { useCityStore } from '@/stores/city'
+import { slug } from '@/utils'
 import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions } from '@headlessui/vue'
 import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 import { DocumentPlusIcon, FolderPlusIcon, HomeIcon } from '@heroicons/vue/24/outline'
 import { useLazyQuery } from '@vue/apollo-composable'
 import { reactive, ref, watchEffect } from 'vue'
+import { useRouter } from 'vue-router'
 import VSpin from './VSpin.vue'
 
 const props = defineProps({
@@ -20,7 +22,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['onSelect'])
-
+const router = useRouter()
 let timeoutRef = null
 const input = ref(null)
 const cityStore = useCityStore()
@@ -42,9 +44,13 @@ const doLazySearch = (value) => {
 }
 
 const onSelect = (item) => {
-  cityStore.setCurrent(item)
+  cityStore.setCurrentCity(item)
   emit('onSelect', item)
   params.search = ''
+  router.push({
+    name: 'diagnosticParams',
+    params: { countryCode: 'FR', cityId: item.id, cityName: slug(item.name) }
+  })
 }
 
 // here watchEffect is used instead of onMounted because the ComboBoxInput render
