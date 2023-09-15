@@ -84,7 +84,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: 'Evol. annuelle moyenne des émissions 2016-2022',
+      name: 'Evolution annuelle moyenne des émissions 2016-2022',
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: '%',
       statIsChange: true,
