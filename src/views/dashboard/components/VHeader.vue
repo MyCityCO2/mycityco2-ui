@@ -5,9 +5,7 @@ import { useCityStore } from '@/stores/city'
 import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
 const props = defineProps({
-  loading: Boolean,
-  error: Boolean,
-  result: Object
+  title: String
 })
 const cityStore = useCityStore()
 </script>
@@ -15,11 +13,11 @@ const cityStore = useCityStore()
 <template>
   <div class="flex h-16 justify-between items-center lg:items-start gap-x-4 bg-white">
     <VTransitionFade>
-      <h3 v-if="props.loading">Chargement ...</h3>
-      <h3 v-else-if="props.error">Erreur !</h3>
+      <h3>{{ props.title }}</h3>
+      <!-- <h3 v-else-if="props.error">Erreur !</h3>
       <h3 class="truncate" v-else-if="props.result && props.result.city">
         Les émissions de CO2 à {{ props.result.city.name }}
-      </h3>
+      </h3> -->
       <!-- <h3 v-else>Aucun résultat</h3> -->
     </VTransitionFade>
     <div class="relative z-50 hidden lg:block">

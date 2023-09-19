@@ -5,6 +5,7 @@ export const QUERY_CITIES = gql`
     cities(search: $search) {
       id
       name
+      cityIdentifier
       zipCodes
     }
   }
@@ -12,8 +13,9 @@ export const QUERY_CITIES = gql`
 
 export const QUERY_CITY_DASHBOARD = gql`
   query getCityDashboard($cityId: Int!, $year: Int!) {
-    city(cityId: $cityId) {
+    city(cityIdentifier: $cityId) {
       id
+      cityIdentifier
       name
       population
       zipCodes

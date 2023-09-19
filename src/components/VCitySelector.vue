@@ -48,8 +48,8 @@ const onSelect = (item) => {
   emit('onSelect', item)
   params.search = ''
   router.push({
-    name: 'diagnosticParams',
-    params: { countryCode: 'FR', cityId: item.id, cityName: slug(item.name) }
+    name: 'diagnosticCity',
+    params: { countryCode: 'FR', cityIdentifier: item.cityIdentifier, cityName: slug(item.name) }
   })
 }
 

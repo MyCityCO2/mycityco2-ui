@@ -108,7 +108,7 @@ const onSelect = (item) => {
         <p class="mt-6 leading">
           De la plus petite commune française à la capitale, MyCityCO2 est le premier outil qui
           permet de consulter l’empreinte carbone de n’importe quelle ville française et ce de
-          manière historique sur les 6 dernières années.
+          manière historique sur les 7 dernières années.
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

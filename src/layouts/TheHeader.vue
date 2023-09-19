@@ -14,25 +14,25 @@ const mobileMenuOpen = ref(false)
 const stickyHeader = ref(window.scrollY > 10 ? true : false)
 const closeMenu = () => (mobileMenuOpen.value = false)
 const diagnosticLink = computed(() => {
-  if (route.params?.cityId)
+  if (route.params?.cityIdentifier)
     return {
-      name: 'diagnosticParams',
+      name: 'diagnosticCity',
       params: {
         countryCode: route.params.countryCode,
-        cityId: route.params.cityId,
+        cityIdentifier: route.params.cityIdentifier,
         cityName: route.params.cityName
       }
     }
   if (cityStore.hasCurrentCity)
     return {
-      name: 'diagnosticParams',
+      name: 'diagnosticCity',
       params: {
         countryCode: 'FR',
-        cityId: cityStore.currentCity.id,
+        cityIdentifier: cityStore.currentCity.cityIdentifier,
         cityName: cityStore.currentCity.slug || slug(cityStore.currentCity.name)
       }
     }
-  return { name: 'diagnostic' }
+  return { name: 'diagnosticIndex' }
 })
 
 onBeforeMount(() => {
