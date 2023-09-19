@@ -55,6 +55,9 @@
   .text-link {
     @apply text-primary transition-all hover:text-opacity-80;
   }
+  .share-button {
+    @apply border duration-200 inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-primary border-primary bg-white hover:bg-primary hover:text-white;
+  }
 }
 
 @layer utilities {
