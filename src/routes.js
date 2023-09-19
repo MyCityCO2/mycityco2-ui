@@ -172,12 +172,19 @@ const routes = [
   {
     path: '/diagnostic',
     name: 'diagnostic',
-    component: () => import('@/views/dashboard/DashboardIndex.vue')
-  },
-  {
-    path: '/diagnostic/:countryCode([A-Z]{2})-:cityId(\\d+)-:cityName',
-    name: 'diagnosticParams',
-    component: () => import('@/views/dashboard/DashboardIndex.vue')
+    component: () => import('@/views/dashboard/DashboardView.vue'),
+    children: [
+      {
+        path: '',
+        name: 'diagnosticIndex',
+        component: () => import('@/views/dashboard/DashboardIndexView.vue')
+      },
+      {
+        path: '/diagnostic/:countryCode([A-Z]{2})-:cityIdentifier(\\d+)-:cityName',
+        name: 'diagnosticCity',
+        component: () => import('@/views/dashboard/DashboardCityView.vue')
+      }
+    ]
   },
   {
     path: '/:pathMatch(.*)*',
