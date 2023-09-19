@@ -11,13 +11,13 @@ export const useCityStore = defineStore('city', () => {
   })
 
   watch(currentCity, (newValue) => {
-    if (newValue?.id) dashboardVariables.cityId = newValue.id
+    if (newValue?.cityIdentifier) dashboardVariables.cityId = newValue.cityIdentifier
   })
 
   const hasCurrentCity = computed(() => !!dashboardVariables.cityId != 0)
 
   const setCurrentCity = (city) => (currentCity.value = { ...city, slug: slug(city.name) })
-  const setCurrentCityId = (cityId) => (currentCity.value = { id: cityId, name: null })
+  const setCurrentCityId = (cityId) => (currentCity.value = { cityIdentifier: cityId })
   const openSelector = () => (selectorOpen.value = true)
   const closeSelector = () => (selectorOpen.value = false)
 
