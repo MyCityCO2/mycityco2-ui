@@ -296,7 +296,7 @@ const emissionByCategChartOptions = {
 
 const title = computed(() => {
   if (loading.value == true || error.value == true) return ''
-  if (result.value && result.value?.city) return `Les émissions de Co2 à ${result.value.city.name}`
+  if (result.value && result.value?.city) return `Les émissions de CO2 à ${result.value.city.name}`
   return ''
 })
 
