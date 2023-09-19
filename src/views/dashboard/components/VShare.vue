@@ -33,7 +33,7 @@ const links = computed(() => {
     },
     {
       name: 'Whatsapp',
-      url: `https://wa.me/?text=${encodedTitle.value}%20${encodedTitle.value}`,
+      url: `https://wa.me/?text=${encodedUrl.value}%20${encodedTitle.value}`,
       component: WhatsappIcon
     },
     {
