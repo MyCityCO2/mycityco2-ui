@@ -30,7 +30,7 @@ const features = [
     <section class="section-small">
       <RouterView v-slot="{ Component }">
         <VTransitionFade>
-          <component :is="Component" class="bg-white shadow-sm flex-grow z-10" />
+          <component :is="Component" />
         </VTransitionFade>
       </RouterView>
     </section>
