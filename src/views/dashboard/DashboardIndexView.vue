@@ -1,5 +1,8 @@
 <script setup>
+import { useCityStore } from '@/stores/city'
 import VHeader from './components/VHeader.vue'
+
+const cityStore = useCityStore()
 </script>
 
 <template>
