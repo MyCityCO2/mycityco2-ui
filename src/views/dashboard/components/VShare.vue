@@ -13,9 +13,6 @@ const props = defineProps({
 
 const encodedTitle = computed(() => encodeURIComponent(props.title))
 const encodedUrl = computed(() => encodeURIComponent(props.url))
-const bothEncoded = computed(
-  () => `${encodeURIComponent(props.url)} ${encodeURIComponent(props.title)}`
-)
 
 const links = computed(() => {
   return [
@@ -26,22 +23,22 @@ const links = computed(() => {
     },
     {
       name: 'Twitter',
-      url: `https://twitter.com/intent/tweet?url=${encodedUrl.value}&amp;text=${encodedTitle.value}`,
+      url: `https://twitter.com/intent/tweet?url=${encodedUrl.value}&text=${encodedTitle.value}`,
       component: TwitterIcon
     },
     {
       name: 'Linkedin',
-      url: `https://www.linkedin.com/shareArticle?mini=true&amp;url=${encodedUrl.value}&amp;title=${encodedTitle.value}&amp;summary=${encodedTitle.value}&amp;source=https%3A%2F%2Fwww.mycityco2.org`,
+      url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl.value}&title=${encodedTitle.value}&summary=${encodedTitle.value}&source=${encodedUrl.value}`,
       component: LinkedinIcon
     },
     {
       name: 'Whatsapp',
-      url: `https://wa.me/?text=${bothEncoded.value}`,
+      url: `https://wa.me/?text=${encodedTitle.value}%20${encodedTitle.value}`,
       component: WhatsappIcon
     },
     {
       name: 'Mail',
-      url: `mailto:?subject=${encodedTitle.value}&amp;body=${encodedUrl.value}`,
+      url: `mailto:?subject=${encodedTitle.value}&body=${encodedUrl.value}`,
       component: MailIcon
     }
   ]
