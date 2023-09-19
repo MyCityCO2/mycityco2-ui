@@ -36,7 +36,7 @@ const links = computed(() => {
     },
     {
       name: 'Whatsapp',
-      url: `https://wa.me/?text=${bothEncoded}`,
+      url: `https://wa.me/?text=${bothEncoded.value}`,
       component: WhatsappIcon
     },
     {
