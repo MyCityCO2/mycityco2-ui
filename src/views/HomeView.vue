@@ -1,5 +1,6 @@
 <script setup>
 import VCitySelector from '@/components/VCitySelector.vue'
+import VProgressBar from '@/components/VProgressBar.vue'
 import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
 
 const features = [
@@ -38,10 +39,6 @@ const stats = [
     value: '23 %'
   }
 ]
-
-const onSelect = (item) => {
-  console.log(item)
-}
 </script>
 
 <template>
@@ -60,6 +57,7 @@ const onSelect = (item) => {
           >
             Suivez l’empreinte carbone de votre ville
           </h1>
+
           <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p class="leading-text">
               Comment améliorer ce qu’on ne sait pas mesurer? MyCityCO2, un outil libre et gratuit
@@ -69,7 +67,7 @@ const onSelect = (item) => {
             <div
               class="mt-10 transform divide-y divide-gray-500 divide-opacity-10 overflow-hidden rounded-xl ring-1 ring-black ring-opacity-5 transition-all"
             >
-              <VCitySelector @on-select="onSelect" :hasQuickActions="false" auto-focus />
+              <VCitySelector :hasQuickActions="false" auto-focus />
             </div>
             <div class="mt-10 flex items-center gap-x-6">
               <router-link to="#contribute" class="button-primary">Contribuer</router-link>
@@ -87,6 +85,12 @@ const onSelect = (item) => {
       </div>
       <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
     </div>
+
+    <section class="section-small">
+      <div class="max-w-2xl mx-auto">
+        <VProgressBar :start="60.0" :interval-ms="2000" />
+      </div>
+    </section>
 
     <section class="section-small">
       <div class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
