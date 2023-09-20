@@ -4,12 +4,16 @@ import LinkedinIcon from '@/components/share/LinkedinIcon.vue'
 import MailIcon from '@/components/share/MailIcon.vue'
 import TwitterIcon from '@/components/share/TwitterIcon.vue'
 import WhatsappIcon from '@/components/share/WhatsappIcon.vue'
+import { useNotificationStore } from '@/stores/notifications'
+import { PaperClipIcon } from '@heroicons/vue/24/outline'
 import { computed } from 'vue'
 
 const props = defineProps({
   title: String,
   url: String
 })
+
+const notifStore = useNotificationStore()
 
 const encodedTitle = computed(() => encodeURIComponent(props.title))
 const encodedUrl = computed(() => encodeURIComponent(props.url))
@@ -40,6 +44,17 @@ const links = computed(() => {
       name: 'Mail',
       url: `mailto:?subject=${encodedTitle.value}&body=${encodedUrl.value}`,
       component: MailIcon
+    },
+    {
+      name: 'Clipboard',
+      clickHandler: () => {
+        navigator.clipboard.writeText(`${props.title} ${props.url}`)
+        notifStore.info({
+          title: 'Lien copié dans le presse papier !',
+          text: 'Vous pouvez le partager via CTRL+C.'
+        })
+      },
+      component: PaperClipIcon
     }
   ]
 })
@@ -47,16 +62,25 @@ const links = computed(() => {
 
 <template>
   <div class="sharing-buttons flex flex-wrap space-x-2">
-    <a
-      class="share-button"
-      target="_blank"
-      rel="noopener"
-      :href="link.url"
-      :aria-label="`Share on ${link.name}`"
-      v-for="link in links"
-      :key="link.name"
-    >
-      <component :is="link.component" class="h-4 w-4" />
-    </a>
+    <template v-for="link in links" :key="link.name">
+      <button
+        v-if="link?.clickHandler"
+        @click="link.clickHandler"
+        class="share-button"
+        :aria-label="`Share on ${link.name}`"
+      >
+        <component :is="link.component" class="h-4 w-4" />
+      </button>
+      <a
+        class="share-button"
+        target="_blank"
+        rel="noopener"
+        :href="link.url"
+        :aria-label="`Share on ${link.name}`"
+        v-else
+      >
+        <component :is="link.component" class="h-4 w-4" />
+      </a>
+    </template>
   </div>
 </template>
