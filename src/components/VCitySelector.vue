@@ -169,7 +169,7 @@ watchEffect(() => {
       >
         <HomeIcon class="mx-auto h-6 w-6 text-gray-900 text-opacity-40" aria-hidden="true" />
         <p class="mt-4 text-sm text-gray-900">
-          Nous n'avons pas pu trouver une commune correspondant a votre recherche.
+          Aucune commune correspondant à votre recherche, 16% restent à charger, vous pouvez par exemple essayer avec votre commune de naissance ou la commune voisine.
         </p>
       </div>
     </Combobox>
