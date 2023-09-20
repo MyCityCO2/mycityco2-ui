@@ -162,7 +162,7 @@ const emissionByJournalYearly = computed(() => {
     type: 'line',
     data: data.map((item) => {
       const { year } = item
-      const adjustedSum = minYearTotalSum - minYearTotalSum * 0.035 * (year - minYear)
+      const adjustedSum = minYearTotalSum - minYearTotalSum * 0.0365 * (year - minYear)
       return { x: year, y: adjustedSum }
     }),
     fill: false,
