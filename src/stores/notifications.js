@@ -21,11 +21,27 @@ export const useNotificationStore = defineStore('notifications', () => {
       timeout: timeout
     })
   }
+  const info = (notification) => {
+    add({ ...notification, type: 'info' })
+  }
+  const success = (notification) => {
+    add({ ...notification, type: 'success' })
+  }
+  const warn = (notification) => {
+    add({ ...notification, type: 'warn' })
+  }
+  const error = (notification) => {
+    add({ ...notification, type: 'error' })
+  }
 
   return {
     notifications,
     add,
-    remove
+    remove,
+    info,
+    error,
+    warn,
+    success
   }
 })
 

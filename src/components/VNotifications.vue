@@ -1,9 +1,14 @@
 <script setup>
 import { useNotificationStore } from '@/stores/notifications'
 import { CheckCircleIcon, ExclamationTriangleIcon, XCircleIcon } from '@heroicons/vue/20/solid'
+import { InformationCircleIcon } from '@heroicons/vue/24/outline'
 import { XMarkIcon as XIcon } from '@heroicons/vue/24/solid'
 
 const icons = {
+  info: {
+    icon: InformationCircleIcon,
+    color: 'text-blue-400'
+  },
   success: {
     icon: CheckCircleIcon,
     color: 'text-green-400'
