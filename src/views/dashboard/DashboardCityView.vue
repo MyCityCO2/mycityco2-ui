@@ -311,7 +311,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
   <div>
     <VHeader @opensidebar="sidebarOpen = true" :title="title" />
 
-    <div>
+    <div class="mt-4">
       <div v-if="loading">
         <VLoading />
       </div>

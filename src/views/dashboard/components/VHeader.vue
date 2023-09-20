@@ -11,9 +11,12 @@ const cityStore = useCityStore()
 </script>
 
 <template>
-  <div class="flex h-16 justify-between items-center lg:items-start gap-x-4 bg-white">
+  <div class="flex lg:min-h-[4rem] justify-between items-center lg:items-start gap-x-4 bg-white">
     <VTransitionFade>
-      <h3>{{ props.title }}</h3>
+      <div class="lg:basis-1/2 xl:basis-3/5">
+        <h3>{{ props.title }}</h3>
+      </div>
+
       <!-- <h3 v-else-if="props.error">Erreur !</h3>
       <h3 class="truncate" v-else-if="props.result && props.result.city">
         Les émissions de CO2 à {{ props.result.city.name }}
