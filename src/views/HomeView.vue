@@ -31,12 +31,12 @@ const stats = [
   {
     id: 2,
     name: 'empreinte carbone moyenne générée par les villes françaises',
-    value: '271 kgCO2eq/hab'
+    value: '132 kgCO2eq/hab'
   },
   {
     id: 3,
     name: 'des villes seulement respectent l’Accord de Paris visant à réduire de 50% les émissions en 2030',
-    value: '23 %'
+    value: '17 %'
   }
 ]
 </script>
