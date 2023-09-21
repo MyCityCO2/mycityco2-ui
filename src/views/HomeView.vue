@@ -31,7 +31,7 @@ const stats = [
   {
     id: 2,
     name: 'empreinte carbone moyenne générée par les villes françaises',
-    value: '132 kgCO2eq/hab'
+    value: '232 kgCO2eq/hab'
   },
   {
     id: 3,
