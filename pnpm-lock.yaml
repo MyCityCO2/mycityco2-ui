@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -8,6 +8,9 @@ dependencies:
   '@apollo/client':
     specifier: ^3.8.4
     version: 3.8.4(graphql@16.8.1)
+  '@gtm-support/vue-gtm':
+    specifier: ^2.1.0
+    version: 2.1.0(vue@3.3.4)
   '@headlessui/vue':
     specifier: ^1.7.16
     version: 1.7.16(vue@3.3.4)
@@ -1566,6 +1569,24 @@ packages:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       graphql: 16.8.1
+    dev: false
+
+  /@gtm-support/core@2.0.0:
+    resolution: {integrity: sha512-32hyxR/LIB6EWnUcbbrUzjkAE6PSRtqv/AztEnQ8MuCOQ7+u+yXOssfZqNDSWlQkEBn0Co6f7aHG+vcNZCGiLw==}
+    dev: false
+
+  /@gtm-support/vue-gtm@2.1.0(vue@3.3.4):
+    resolution: {integrity: sha512-QLhIk9VAEFcJ+CPoaWpC8crEHBpR+J46jSMIlYcfWWgYwxY1SLlg4wc7DcBHeEl5DxIAAyZYGyOkzdk2BvraFA==}
+    peerDependencies:
+      vue: '>= 3.2.0 < 4.0.0'
+    peerDependenciesMeta:
+      vue-router:
+        optional: true
+    dependencies:
+      '@gtm-support/core': 2.0.0
+      vue: 3.3.4
+    optionalDependencies:
+      vue-router: 4.2.4(vue@3.3.4)
     dev: false
 
   /@headlessui/vue@1.7.16(vue@3.3.4):
