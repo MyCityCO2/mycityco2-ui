@@ -1,4 +1,3 @@
-import { createGtm } from '@gtm-support/vue-gtm'
 import { DefaultApolloClient } from '@vue/apollo-composable'
 import { createPinia } from 'pinia'
 import { createApp, h, provide } from 'vue'
@@ -17,15 +16,15 @@ createApp({
 })
   .use(createPinia())
   .use(router)
-  .use(
-    createGtm({
-      id: import.meta.env.VITE_GTM,
-      defer: true,
-      compatibility: false,
-      debug: true,
-      enabled: import.meta.env.PROD ? true : false,
-      vueRouter: router
-    })
-  )
+  // .use(
+  //   createGtm({
+  //     id: import.meta.env.VITE_GTM,
+  //     defer: true,
+  //     compatibility: false,
+  //     debug: true,
+  //     enabled: import.meta.env.PROD ? true : false,
+  //     vueRouter: router
+  //   })
+  // )
   .directive('number', number)
   .mount('#app')
