@@ -70,7 +70,7 @@ const stats = [
               <VCitySelector :hasQuickActions="false" auto-focus />
             </div>
             <div class="mt-10 flex items-center gap-x-6">
-              <router-link to="#contribute" class="button-primary">Contribuer</router-link>
+              <router-link to="/contact" class="button-primary">Contribuer</router-link>
               <router-link to="#project" class="text-sm font-semibold leading-6 text-gray-900"
                 >En savoir plus <span aria-hidden="true">→</span></router-link
               >
