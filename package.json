@@ -44,9 +44,7 @@
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.9",
-    "vite-plugin-pwa": "^0.16.5",
     "vitest": "^0.31.4",
-    "workbox-window": "^7.0.0",
     "xmlbuilder": "^15.1.1"
   }
 }
