@@ -51,7 +51,7 @@ const links = computed(() => {
         navigator.clipboard.writeText(`${props.title} ${props.url}`)
         notifStore.info({
           title: 'Lien copié dans le presse papier !',
-          text: 'Vous pouvez le partager via CTRL+C.'
+          text: 'Vous pouvez le partager via CTRL+V.'
         })
       },
       component: PaperClipIcon
