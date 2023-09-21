@@ -85,7 +85,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: 'Evolution annuelle moyenne des émissions 2016-2022',
+      name: `Evolution annuelle moyenne des émissions ${result.value.city.minYear}-2022`,
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: '%',
       statIsChange: true,
@@ -353,7 +353,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
             class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col min-h-[20rem]"
           >
             <h5 class="pb-4">
-              Evolution des émissions entre 2016 et 2022
+              Evolution des émissions entre {{ result.city.minYear }} et 2022
               <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
             </h5>
             <div class="flex-1">

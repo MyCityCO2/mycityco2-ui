@@ -9,6 +9,7 @@ import { useLazyQuery } from '@vue/apollo-composable'
 import { reactive, ref, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import VSpin from './VSpin.vue'
+import VError from './alerts/VError.vue'
 
 const props = defineProps({
   hasQuickActions: {
@@ -29,7 +30,7 @@ const cityStore = useCityStore()
 const params = reactive({
   search: ''
 })
-const { load, result, loading } = useLazyQuery(QUERY_CITIES, params)
+const { load, result, loading, error } = useLazyQuery(QUERY_CITIES, params)
 const recent = ref([])
 const quickActions = [
   { name: 'Request new city...', icon: DocumentPlusIcon, shortcut: 'N', url: '#' },
@@ -159,8 +160,12 @@ watchEffect(() => {
         </li>
       </ComboboxOptions>
 
+      <div v-if="error" class="p-6 bg-gray-50">
+        <VError title="Une erreur s'est produite !" text="Veuillez réessayer plus tard." />
+      </div>
+
       <div
-        v-if="
+        v-else-if="
           !loading &&
           params.search !== '' &&
           (!result || !result.cities || result.cities.length === 0)
@@ -169,7 +174,8 @@ watchEffect(() => {
       >
         <HomeIcon class="mx-auto h-6 w-6 text-gray-900 text-opacity-40" aria-hidden="true" />
         <p class="mt-4 text-sm text-gray-900">
-          Aucune commune correspondant à votre recherche, 16% restent à charger, vous pouvez par exemple essayer avec votre commune de naissance ou la commune voisine.
+          Aucune commune correspondant à votre recherche, 16% restent à charger, vous pouvez par
+          exemple essayer avec votre commune de naissance ou la commune voisine.
         </p>
       </div>
     </Combobox>

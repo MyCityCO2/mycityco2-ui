@@ -17,6 +17,7 @@ export const QUERY_CITY_DASHBOARD = gql`
       id
       cityIdentifier
       name
+      minYear
       population
       zipCodes
       co2EmissionByCategory(year: $year) {
