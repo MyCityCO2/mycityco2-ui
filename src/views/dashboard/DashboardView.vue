@@ -15,7 +15,7 @@ const features = [
   {
     name: 'Développement à l’international (Suisse,…)',
     description:
-      'MyCityCO2 part de France et de Suisse avec d’emblée une ambition internationale. Sa méthode s’appuie sur une Comptabilité des carbones compatible avec les différentes comptabilités nationales, privées et publiques, et avec les grands standards carbones internationaux. Les empreintes produites suivent le standard « scopes 1, 2 et 3 amont ».'
+      'MyCityCO2 part de France et de Suisse avec d’emblée une ambition internationale. Sa méthode s’appuie sur la comptabilité financière des collectivités et s’inspire des grands référentiels carbones internationaux.'
   },
   {
     name: 'Module projet pour évaluer l’impact de décarbonation d’un projet (nouveau bâtiment, nouvelle infrastructure…)',
