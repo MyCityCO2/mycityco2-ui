@@ -34,8 +34,13 @@
       </p>
       <p>
         L’association entre les comptes du plan comptable et les facteurs d’émissions monétaires est
-        réalisée via une table de correspondance qui est librement accessible en suivant ce lien
-        (TODO)
+        réalisée via une table de correspondance qui est librement accessible en suivant
+        <a
+          href="https://github.com/MyCityCO2/mycityco2-data-processing/blob/main/mycityco2_data_process/data/fr/coa_condition.csv"
+          target="_blank"
+          class="text-link"
+          >ce lien</a
+        >
       </p>
     </div>
   </div>
