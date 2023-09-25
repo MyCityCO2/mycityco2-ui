@@ -4,13 +4,13 @@ import { RouterView } from 'vue-router'
 
 const features = [
   {
-    name: 'Quels services engendrent le plus de CO2 (éducation, santé, sécurité…) ?',
-    description: 'Quels services engendrent le plus de CO2 (éducation, santé, sécurité…) ?'
-  },
-  {
     name: 'Accompagnement des collectivités',
     description:
-      'MyCityCO2 va lancer des modules « matières » (énergie, réfection voies, …) et une assistance aux collectivités qui veulent aller plus loin, et affiner leurs comptes en carbones en vue de l’obtention de cerfication. Intéressé ? Inscrivez-vous'
+      'MyCityCO2 va lancer des modules « matières » (énergie, réfection voies, …) et une assistance aux collectivités qui veulent aller plus loin, et affiner leurs comptes en carbones en vue de l’obtention de cerfication. Intéressé ? Contactez-nous.'
+  },
+  {
+    name: 'Extension aux autres collectivités territoriales',
+    description: 'Les syndicats, les communautés de communes, les départements et les régions publiant elles aussi leur comptabilité en open data, nous prévoyons aussi de les prendre en compte dans un futur proche.'
   },
   {
     name: 'Développement à l’international (Suisse,…)',
