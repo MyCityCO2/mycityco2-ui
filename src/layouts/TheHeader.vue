@@ -69,7 +69,7 @@ function handleScroll() {
         </a>
       </div>
       <div class="order-first sm:order-last">
-        <p class="text-gray-900 text-sm">Initiative OpenData - OpenSource</p>
+        <p class="text-gray-900 text-sm">Initiative open source - open data</p>
       </div>
     </div>
     <nav
