@@ -301,7 +301,7 @@ const title = computed(() => {
 })
 
 const shareTitle = computed(() =>
-  result.value?.city.name ? `Consultez le bilan carbone de ${result.value.city.name}` : ''
+  result.value?.city.name ? `Consultez l'empreinte carbone de ${result.value.city.name}` : ''
 )
 
 const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
