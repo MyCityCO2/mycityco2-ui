@@ -87,12 +87,6 @@ const stats = [
     </div>
 
     <section class="section-small">
-      <div class="max-w-2xl mx-auto">
-        <VProgressBar :start="60.0" :interval-ms="2000" />
-      </div>
-    </section>
-
-    <section class="section-small">
       <div class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
         <div v-for="stat in stats" :key="stat.id" class="mx-auto flex max-w-xs flex-col gap-y-4">
           <h3>
