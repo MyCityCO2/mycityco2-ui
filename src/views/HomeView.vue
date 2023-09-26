@@ -16,7 +16,7 @@ const features = [
   },
   {
     name: 'Contribuer',
-    description: 'à atteindre les objectifs de l’Accord de Paris en 2030 (-50%)',
+    description: 'à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris',
     icon: UserPlusIcon
   },
   {
@@ -35,8 +35,8 @@ const stats = [
   },
   {
     id: 3,
-    name: 'des villes seulement respectent l’Accord de Paris visant à réduire de 50% les émissions en 2030',
-    value: '17 %'
+    name: 'des villes respectent la Stratégie nationale bas-carbone (SNBC) visant à réduire de 40% les émissions en 2030',
+    value: '24 %'
   }
 ]
 </script>
@@ -136,7 +136,7 @@ const stats = [
           </h2>
           <p class="leading-text mt-2">
             Accédez aux données détaillées de votre ville et identifiez les opportunités de
-            réduction des émissions pour atteindre les objectifs de l’Accord de Paris
+            réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés en France par la Stratégie nationale bas-carbone (SNBC)
           </p>
         </div>
 
