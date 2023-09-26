@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question:
-      "Comment est calculée la trajectoire de l’Accord de Paris ?",
+      "Comment est calculée la trajectoire de la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris ?",
     answer:
       'Selon le rapport Secten qui présente les émissions de gaz à effet de serre en France depuis 1990 (Citepa, 2023. Gaz à effet de serre et polluants atmosphériques. Bilan des émissions en France de 1990 à 2022. Rapport Secten éd. 2023.) les émissions étaient de 456,4 Mt CO2e en 2016 et l’objectif défini par l’Accord de Paris de -50% en 2030 par rapport à 1990 nous mène à 270 Mt CO2e pour 2030. Par extrapolation, depuis 2016, les collectivités doivent s’inscrire dans une trajectoire de réduction de 3,65% chaque année.'
   }
