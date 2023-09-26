@@ -49,7 +49,7 @@ const thanks = [
   <div>
     <VHeading
       title="Pourquoi Mycityco2 ?"
-      text="MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
+      text="MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
     />
     <section>
       <div
