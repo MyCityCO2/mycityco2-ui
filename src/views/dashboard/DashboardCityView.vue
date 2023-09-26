@@ -158,7 +158,7 @@ const emissionByJournalYearly = computed(() => {
   }, [])
 
   const idealProgressionDataset = {
-    label: 'Accord de Paris',
+    label: 'Stratégie nationale bas-carbone',
     type: 'line',
     data: data.map((item) => {
       const { year } = item
