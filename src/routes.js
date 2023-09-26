@@ -120,12 +120,12 @@ const routes = [
             component: () => import('@/views/methodology/general/GeneralLimitView.vue'),
             meta: {
               previous: 'generalEmissionPost',
-              next: 'methodologyPartners'
+              next: 'methodologyDataSources'
             }
           }
         ]
       },
-      {
+      /*{
         path: 'partners',
         name: 'methodologyPartners',
         component: () => import('@/views/methodology/MethodologyViewPartners.vue'),
@@ -133,13 +133,13 @@ const routes = [
           previous: 'generalLimitations',
           next: 'methodologyDataSources'
         }
-      },
+      },*/
       {
         path: 'datasources',
         name: 'methodologyDataSources',
         component: () => import('@/views/methodology/MethodologyViewDatasources.vue'),
         meta: {
-          previous: 'methodologyPartners',
+          previous: 'generalLimitations',
           next: 'methodologyLicense'
         }
       },
