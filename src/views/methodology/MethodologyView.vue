@@ -33,10 +33,10 @@ const navigation = [
       { name: 'Limitations', to: { name: 'generalLimitations' } }
     ]
   },
-  {
+  /*{
     name: 'Partenaires',
     to: { name: 'methodologyPartners' }
-  },
+  },*/
   {
     name: 'Sources de données',
     to: { name: 'methodologyDataSources' }
