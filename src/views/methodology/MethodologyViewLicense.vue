@@ -34,7 +34,7 @@
       <div id="credit">
         <h4>Comment créditer MyCityCO2</h4>
         <p class="mt-4">
-          Citer l’application comme suit : « MyCityCO2, calculateur de comptes carbones pour les
+          Citer l’application comme suit : « MyCityCO2, calculateur d'empreinte carbone pour les
           collectivités. [Application disponible en ligne : https://mycityco2.org (consultée le
           XX/YY/20ZZ)] »
         </p>
