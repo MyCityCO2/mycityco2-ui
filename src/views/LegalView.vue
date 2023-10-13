@@ -14,7 +14,7 @@ import VHeading from '@/components/VHeading.vue'
       <h4>Edition du site</h4>
       <p>
         Le présent site, accessible à l’URL www.mycityco2.org (le « Site »), est édité par : Open
-        Net S. à r.l. , société au capital de 100000 euros, inscrite au R.C.S. de PARIS sous le
+        Net S. à r.l. , société au capital de 100000 CHF, inscrite au Registre du commerce du Canton de Vaud sous le
         numéro CH-550.1.020.926-6, dont le siège social est situé au Chemin de la Lande 1 1008
         Prilly, représenté(e) par Jacques-André Eberhard dûment habilité(e)
       </p>
@@ -34,21 +34,7 @@ import VHeading from '@/components/VHeading.vue'
       </ul>
       <h4>Données personnelles</h4>
       <p>
-        Le traitement de vos données à caractère personnel est régi par notre Charte du respect de
-        la vie privée, disponible depuis la section "Charte de Protection des Données Personnelles",
-        conformément au Règlement Général sur la Protection des Données 2016/679 du 27 avril 2016
-        («RGPD»).
-      </p>
-      <p>
-        Jacques-André Eberhard a désigné un Délégué à la Protection des Données (DPO) auprès de la
-        CNIL (Désignation N° ). Les coordonnées de notre Délégué à la Protection des Données sont
-        les suivantes :
-      </p>
-      <p>
-        Nom : Jean-Marc Vandel<br />
-        Adresse : Rue de Genève 77 1004 Lausanne<br />
-        Téléphone : +41217014245<br />
-        Email : contact@mycityco2.org<br />
+        Aucune donnée personnelle n'est stockée.
       </p>
     </div>
   </div>
