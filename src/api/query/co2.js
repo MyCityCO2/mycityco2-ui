@@ -7,6 +7,9 @@ export const QUERY_CITIES = gql`
       name
       cityIdentifier
       zipCodes
+      country {
+        code
+      }
     }
   }
 `
@@ -20,6 +23,10 @@ export const QUERY_CITY_DASHBOARD = gql`
       minYear
       population
       zipCodes
+      country {
+        code,
+        name
+      }
       co2EmissionByCategory(year: $year) {
         name
         sum @roundFloat

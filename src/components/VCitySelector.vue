@@ -50,7 +50,7 @@ const onSelect = (item) => {
   params.search = ''
   router.push({
     name: 'diagnosticCity',
-    params: { countryCode: 'FR', cityIdentifier: item.cityIdentifier, cityName: slug(item.name) }
+    params: { countryCode: item.country.code, cityIdentifier: item.cityIdentifier, cityName: slug(item.name) }
   })
 }
 
@@ -117,9 +117,10 @@ watchEffect(() => {
                   ]"
                   aria-hidden="true"
                 />
-                <span class="ml-3 flex-auto truncate"
-                  >{{ city.name }} - {{ city.zipCodes.join(' - ') }}</span
-                >
+                <div class="ml-3 flex-auto truncate">
+                  <span class="text-gray-400">{{ city.country.code }} - </span>
+                  <span>{{ city.name }} - {{ city.zipCodes.join(' - ') }}</span>
+                </div>
                 <span v-if="active" class="ml-3 flex-none text-gray-500">Sélectionner...</span>
               </li>
             </ComboboxOption>
