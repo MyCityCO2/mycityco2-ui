@@ -7,6 +7,7 @@ import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessu
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { isDev } from '@/utils'
 
 const route = useRoute()
 const cityStore = useCityStore()
@@ -55,6 +56,9 @@ function handleScroll() {
       stickyHeader ? 'bg-white shadow' : 'bg-transparent shadow-none'
     ]"
   >
+    <div class="bg-red-300 w-full text-center py-1 text-gray-900 text-sm" v-if="isDev">
+      Dev Environment
+    </div>
     <div class="mx-auto flex flex-row max-w-7xl items-center justify-between pt-2 px-2 lg:px-8">
       <div class="flex mt-2 sm:mt-0 justify-center space-x-4">
         <a

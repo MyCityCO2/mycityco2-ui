@@ -8,3 +8,5 @@ export const slug = (name) => {
     .replace(/-+$/, '')
   return name
 }
+
+export const isDev = import.meta.env.VITE_APP_ENV === 'development'
