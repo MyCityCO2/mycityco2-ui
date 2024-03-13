@@ -11,7 +11,8 @@ const getHeaders = () => {
 const createLink = () => {
   const httpLink = createUploadLink({
     uri: import.meta.env.VITE_API_URL,
-    credentials: 'include'
+    // TODO: Remove this for prod
+    credentials: 'omit',
   })
 
   const authLink = new ApolloLink((operation, forward) => {
