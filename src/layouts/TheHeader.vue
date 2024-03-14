@@ -8,9 +8,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { isDev } from '@/utils'
+import { useI18n } from 'vue-i18n'
+import { useCountryStore } from '@/stores/countryStore'
 
+const { locale, setLocaleMessage } = useI18n()
 const route = useRoute()
 const cityStore = useCityStore()
+const countryStore = useCountryStore()
 const mobileMenuOpen = ref(false)
 const stickyHeader = ref(window.scrollY > 10 ? true : false)
 const closeMenu = () => (mobileMenuOpen.value = false)
@@ -46,6 +50,15 @@ function handleScroll() {
   } else {
     stickyHeader.value = false
   }
+}
+
+const changeCountry = () =>
+  countryStore.country === 'FR' ? countryStore.setCountry('CH') : countryStore.setCountry('FR')
+
+const changeLanguage = async (newLocale) => {
+  const messages = await import(`../locales/${countryStore.country}/${newLocale}.json`)
+  setLocaleMessage(newLocale, messages.default)
+  locale.value = newLocale
 }
 </script>
 
@@ -108,6 +121,23 @@ function handleScroll() {
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <router-link :to="diagnosticLink" class="button-primary">Diagnostic</router-link>
       </div>
+      <div class="flex items-center gap-2 ml-2">
+        <button
+          @click="changeLanguage('fr')"
+          class="text-slate-500"
+          :class="{ 'text-slate-900': locale === 'fr' }"
+        >
+          FR
+        </button>
+        <button
+          @click="changeLanguage('en')"
+          class="text-slate-500"
+          :class="{ 'text-slate-900': locale === 'en' }"
+        >
+          EN
+        </button>
+      </div>
+      <button class="bg-red-500" @click="changeCountry">{{ countryStore.country }}</button>
     </nav>
 
     <TransitionRoot as="template" :show="mobileMenuOpen">

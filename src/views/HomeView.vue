@@ -1,7 +1,9 @@
 <script setup>
 import VCitySelector from '@/components/VCitySelector.vue'
-import VProgressBar from '@/components/VProgressBar.vue'
 import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const features = [
   {
@@ -16,7 +18,8 @@ const features = [
   },
   {
     name: 'Contribuer',
-    description: 'à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris',
+    description:
+      'à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris',
     icon: UserPlusIcon
   },
   {
@@ -55,7 +58,7 @@ const stats = [
           <h1
             class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto"
           >
-            Suivez l’empreinte carbone de votre ville
+            {{ t('home.title') }}
           </h1>
 
           <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
@@ -136,7 +139,8 @@ const stats = [
           </h2>
           <p class="leading-text mt-2">
             Accédez aux données détaillées de votre ville et identifiez les opportunités de
-            réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés en France par la Stratégie nationale bas-carbone (SNBC)
+            réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et
+            implémentés en France par la Stratégie nationale bas-carbone (SNBC)
           </p>
         </div>
 
