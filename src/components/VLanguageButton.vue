@@ -27,8 +27,8 @@ const changeLanguage = async (newLocale, newCountry) => {
 <template>
   <button
     :class="{
-      'text-slate-900': locale === language,
-      'text-slate-500': locale !== language
+      'text-primary': locale === language,
+      'text-gray-900': locale !== language
     }"
     @click="changeLanguage(language, countryStore.country)"
   >
