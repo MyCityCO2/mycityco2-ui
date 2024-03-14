@@ -1,18 +1,15 @@
 <script setup>
 import { navigation } from '@/constant'
 import { useCityStore } from '@/stores/city'
+import { useCountryStore } from '@/stores/countryStore'
 import { socials } from '@/svg'
-import { slug } from '@/utils'
+import { isDev, slug } from '@/utils'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { isDev } from '@/utils'
-import { useI18n } from 'vue-i18n'
-import { useCountryStore } from '@/stores/countryStore'
-import { watch } from 'vue'
+import VLanguageButton from '../components/VLanguageButton.vue'
 
-const { locale, setLocaleMessage } = useI18n()
 const route = useRoute()
 const cityStore = useCityStore()
 const countryStore = useCountryStore()
@@ -55,19 +52,6 @@ const handleScroll = () => {
 
 const changeCountry = () =>
   countryStore.country === 'FR' ? countryStore.setCountry('CH') : countryStore.setCountry('FR')
-
-watch(
-  () => countryStore.country,
-  async (newCountry) => {
-    await changeLanguage(locale.value, newCountry)
-  }
-)
-
-const changeLanguage = async (newLocale, newCountry) => {
-  const messages = await import(`../locales/${newCountry}/${newLocale}.json`)
-  setLocaleMessage(newLocale, messages.default)
-  locale.value = newLocale
-}
 </script>
 
 <template>
@@ -130,20 +114,8 @@ const changeLanguage = async (newLocale, newCountry) => {
         <router-link :to="diagnosticLink" class="button-primary">Diagnostic</router-link>
       </div>
       <div class="flex items-center gap-2 ml-2">
-        <button
-          @click="changeLanguage('fr', countryStore.country)"
-          class="text-slate-500"
-          :class="{ 'text-slate-900': locale === 'fr' }"
-        >
-          FR
-        </button>
-        <button
-          @click="changeLanguage('en', countryStore.country)"
-          class="text-slate-500"
-          :class="{ 'text-slate-900': locale === 'en' }"
-        >
-          EN
-        </button>
+        <VLanguageButton language="fr" />
+        <VLanguageButton language="en" />
       </div>
       <button class="bg-red-500" @click="changeCountry">{{ countryStore.country }}</button>
     </nav>
