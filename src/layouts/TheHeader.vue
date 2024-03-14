@@ -10,6 +10,7 @@ import { useRoute } from 'vue-router'
 import { isDev } from '@/utils'
 import { useI18n } from 'vue-i18n'
 import { useCountryStore } from '@/stores/countryStore'
+import { watch } from 'vue'
 
 const { locale, setLocaleMessage } = useI18n()
 const route = useRoute()
@@ -44,7 +45,7 @@ onBeforeMount(() => {
   window.addEventListener('scroll', handleScroll)
 })
 
-function handleScroll() {
+const handleScroll = () => {
   if (window.scrollY > 10) {
     stickyHeader.value = true
   } else {
@@ -55,8 +56,15 @@ function handleScroll() {
 const changeCountry = () =>
   countryStore.country === 'FR' ? countryStore.setCountry('CH') : countryStore.setCountry('FR')
 
-const changeLanguage = async (newLocale) => {
-  const messages = await import(`../locales/${countryStore.country}/${newLocale}.json`)
+watch(
+  () => countryStore.country,
+  async (newCountry) => {
+    await changeLanguage(locale.value, newCountry)
+  }
+)
+
+const changeLanguage = async (newLocale, newCountry) => {
+  const messages = await import(`../locales/${newCountry}/${newLocale}.json`)
   setLocaleMessage(newLocale, messages.default)
   locale.value = newLocale
 }
@@ -123,14 +131,14 @@ const changeLanguage = async (newLocale) => {
       </div>
       <div class="flex items-center gap-2 ml-2">
         <button
-          @click="changeLanguage('fr')"
+          @click="changeLanguage('fr', countryStore.country)"
           class="text-slate-500"
           :class="{ 'text-slate-900': locale === 'fr' }"
         >
           FR
         </button>
         <button
-          @click="changeLanguage('en')"
+          @click="changeLanguage('en', countryStore.country)"
           class="text-slate-500"
           :class="{ 'text-slate-900': locale === 'en' }"
         >
