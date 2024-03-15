@@ -1,14 +1,15 @@
 <script setup>
 import { navigation } from '@/constant'
 import { useCityStore } from '@/stores/city'
-import { useCountryStore } from '@/stores/countryStore'
 import { socials } from '@/svg'
 import { isDev, slug } from '@/utils'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import VCountrySelector from '../components/VCountrySelector.vue'
 import VLanguageButton from '../components/VLanguageButton.vue'
+import { useCountryStore } from '@/stores/countryStore'
 
 const route = useRoute()
 const cityStore = useCityStore()
@@ -49,9 +50,6 @@ const handleScroll = () => {
     stickyHeader.value = false
   }
 }
-
-const changeCountry = () =>
-  countryStore.country === 'FR' ? countryStore.setCountry('CH') : countryStore.setCountry('FR')
 </script>
 
 <template>
@@ -82,14 +80,20 @@ const changeCountry = () =>
       </div>
     </div>
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between pb-4 px-6 lg:px-8"
+      class="mx-auto max-w-7xl grid grid-cols-8 items-center pb-4 px-6 lg:px-8"
       aria-label="Global"
     >
-      <div class="flex lg:flex-1">
+      <div class="col-span-3 flex items-center gap-4">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/logo_MyCityCo2.png" class="h-16 w-auto text-primary" alt="" />
+          <img
+            src="@/assets/logo_MyCityCo2.png"
+            class="h-16 w-auto text-primary"
+            alt="logo MyCityCo2"
+          />
         </router-link>
+        <VCountrySelector />
       </div>
+
       <div class="flex lg:hidden">
         <button
           type="button"
@@ -100,7 +104,8 @@ const changeCountry = () =>
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
+
+      <div class="hidden col-span-4 lg:flex lg:items-center lg:gap-x-12">
         <router-link
           v-for="item in navigation"
           :key="item.name"
@@ -109,15 +114,22 @@ const changeCountry = () =>
           class="header-link"
           >{{ item.name }}</router-link
         >
+        <router-link :to="diagnosticLink" class="hidden lg:block button-primary"
+          >Diagnostic</router-link
+        >
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link :to="diagnosticLink" class="button-primary">Diagnostic</router-link>
-      </div>
-      <div class="flex items-center gap-2 ml-2">
+
+      <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
         <VLanguageButton language="fr" />
+        <span>|</span>
         <VLanguageButton language="en" />
+        <template v-if="countryStore.country === 'CH'">
+          <span>|</span>
+          <VLanguageButton language="de" />
+          <span>|</span>
+          <VLanguageButton language="it" />
+        </template>
       </div>
-      <button class="bg-red-500" @click="changeCountry">{{ countryStore.country }}</button>
     </nav>
 
     <TransitionRoot as="template" :show="mobileMenuOpen">

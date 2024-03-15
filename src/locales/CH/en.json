@@ -1,5 +1,6 @@
 {
   "home": {
     "title": "CH English"
-  }
+  },
+  "country": { "FR": "France", "CH": "Switzerland" }
 }

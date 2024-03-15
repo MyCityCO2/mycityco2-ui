@@ -1,5 +1,6 @@
 {
   "home": {
     "title": "Deutch"
-  }
+  },
+  "country": { "FR": "French deutch", "CH": "Switzerland deutch" }
 }
