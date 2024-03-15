@@ -17,6 +17,7 @@ const countries = computed(() => [
 const selectedCountry = ref(countries.value[0])
 
 const changeCountry = () => {
+  locale.value = 'fr'
   const newCountry = countryStore.country === 'FR' ? 'CH' : 'FR'
   countryStore.setCountry(newCountry)
 }
