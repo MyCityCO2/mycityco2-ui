@@ -15,11 +15,10 @@
         "value": "232 kgCO2eq/abitante"
       },
       "2": {
-        "name": "delle città rispettano la Strategia climatica a lungo termine della Svizzera mirata a ridurre del 50% le emissioni entro il 2030.",
+        "name": "delle città rispettano la Strategia climatica a lungo termine della Svizzera mirata a ridurre del 50% le emissioni entro il 2030",
         "value": "24 %"
       }
     },
-
     "features": {
       "subtitle": "Adotta uno strumento libero, gratuito e trasparente validato da esperti",
       "title": "Il primo strumento per l'impronta di carbonio per le collettività pubbliche",
@@ -57,6 +56,6 @@
   },
   "footer": {
     "open_source": "Iniziativa open source - open data",
-    "copyright": "2023 MyCityCo2 uno strumento gratuito e open source."
+    "copyright": "2023 MyCityCo2 uno strumento gratuito e open source"
   }
 }

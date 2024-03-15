@@ -15,11 +15,10 @@
         "value": "232 kgCO2eq/capita"
       },
       "2": {
-        "name": "of cities adhere to Switzerland's long-term climate strategy aiming to reduce emissions by 50% by 2030.",
+        "name": "of cities adhere to Switzerland's long-term climate strategy aiming to reduce emissions by 50% by 2030",
         "value": "24 %"
       }
     },
-
     "features": {
       "subtitle": "Embrace a free, transparent, and expert-validated tool",
       "title": "1st Carbon Footprint Tool for Public Entities",
@@ -57,6 +56,6 @@
   },
   "footer": {
     "open_source": "Open Source Initiative - Open Data",
-    "copyright": "2023 MyCityCo2 a free and open-source tool."
+    "copyright": "2023 MyCityCo2 a free and open-source tool"
   }
 }

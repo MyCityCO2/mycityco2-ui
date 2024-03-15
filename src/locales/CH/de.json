@@ -15,11 +15,10 @@
         "value": "232 kgCO2eq/Einwohner"
       },
       "2": {
-        "name": "der Städte entsprechen der langfristigen Klimastrategie der Schweiz, die darauf abzielt, die Emissionen bis 2030 um 50% zu reduzieren.",
+        "name": "der Städte entsprechen der langfristigen Klimastrategie der Schweiz, die darauf abzielt, die Emissionen bis 2030 um 50% zu reduzieren",
         "value": "24 %"
       }
     },
-
     "features": {
       "subtitle": "Nehmen Sie ein kostenloses, transparentes und von Experten validiertes Tool an",
       "title": "Erstes CO2-Fußabdruck-Tool für öffentliche Einrichtungen",
@@ -57,6 +56,6 @@
   },
   "footer": {
     "open_source": "Open Source Initiative - Open Data",
-    "copyright": "2023 MyCityCo2 ein kostenloses und Open-Source-Tool."
+    "copyright": "2023 MyCityCo2 ein kostenloses und Open-Source-Tool"
   }
 }
