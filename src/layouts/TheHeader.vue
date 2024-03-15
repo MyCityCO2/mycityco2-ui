@@ -62,7 +62,7 @@ const handleScroll = () => {
       Dev Environment
     </div>
     <nav
-      class="mx-auto max-w-7xl grid grid-cols-8 items-center py-4 px-6 lg:px-8"
+      class="mx-auto max-w-7xl flex justify-between lg:grid grid-cols-8 items-center py-4 px-6 lg:px-8"
       aria-label="Global"
     >
       <div class="col-span-3 flex items-center gap-4">
@@ -73,9 +73,8 @@ const handleScroll = () => {
             alt="logo MyCityCo2"
           />
         </router-link>
-        <VCountrySelector />
+        <VCountrySelector class="hidden lg:block" />
       </div>
-
       <div class="flex lg:hidden">
         <button
           type="button"
@@ -86,7 +85,6 @@ const handleScroll = () => {
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-
       <div class="hidden col-span-4 lg:flex lg:items-center lg:gap-x-12">
         <router-link
           v-for="item in navigation"
@@ -100,7 +98,6 @@ const handleScroll = () => {
           >Diagnostic</router-link
         >
       </div>
-
       <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
         <VLanguageButton language="fr" />
         <span>|</span>
@@ -190,6 +187,7 @@ const handleScroll = () => {
                             ></router-link
                           >
                         </div>
+                        <VCountrySelector class="pt-8" />
                       </div>
                     </div>
                   </div>
