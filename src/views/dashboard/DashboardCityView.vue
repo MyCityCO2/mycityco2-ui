@@ -68,7 +68,7 @@ const stats = computed(() => {
   return [
     {
       id: 1,
-      name: 'Population en 2022',
+      name: 'Population en 2020',
       stat: result.value.city.population,
       change: '1%',
       icon: UsersIcon,
@@ -76,7 +76,7 @@ const stats = computed(() => {
     },
     {
       id: 2,
-      name: 'Emissions en 2022',
+      name: 'Emissions en 2020',
       stat: `${result.value.city.co2EmissionsPerHab.toFixed(0)}`,
       statUom: 'kgCO2eq/hab',
       change: '5.4%',
@@ -85,7 +85,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: `Evolution annuelle moyenne des émissions ${result.value.city.minYear}-2022`,
+      name: `Evolution annuelle moyenne des émissions ${result.value.city.minYear}-2020`,
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: '%',
       statIsChange: true,
@@ -353,7 +353,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
             class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col min-h-[20rem]"
           >
             <h5 class="pb-4">
-              Evolution des émissions entre {{ result.city.minYear }} et 2022
+              Evolution des émissions entre {{ result.city.minYear }} et 2020
               <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
             </h5>
             <div class="flex-1">
@@ -362,7 +362,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
           </div>
           <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
             <h5 class="pb-4">
-              Répartition des émissions en 2022
+              Répartition des émissions en 2020
               <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
             </h5>
             <div class="flex-1">
@@ -371,7 +371,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
           </div>
           <div class="rounded-xl border border-gray-100 bg-white px-4 py-5 sm:py-6 flex flex-col">
             <h5 class="pb-4">
-              Emissions par poste en 2022
+              Emissions par poste en 2020
               <span class="text-sm font-normal leading-none">en kgCO2eq/hab</span>
             </h5>
             <div class="flex-1">
