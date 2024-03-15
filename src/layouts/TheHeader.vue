@@ -1,16 +1,18 @@
 <script setup>
 import { navigation } from '@/constant'
 import { useCityStore } from '@/stores/city'
-import { socials } from '@/svg'
-import { slug } from '@/utils'
+import { isDev, slug } from '@/utils'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { computed, onBeforeMount, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { isDev } from '@/utils'
+import VCountrySelector from '../components/VCountrySelector.vue'
+import VLanguageButton from '../components/VLanguageButton.vue'
+import { useCountryStore } from '@/stores/countryStore'
 
 const route = useRoute()
 const cityStore = useCityStore()
+const countryStore = useCountryStore()
 const mobileMenuOpen = ref(false)
 const stickyHeader = ref(window.scrollY > 10 ? true : false)
 const closeMenu = () => (mobileMenuOpen.value = false)
@@ -40,7 +42,7 @@ onBeforeMount(() => {
   window.addEventListener('scroll', handleScroll)
 })
 
-function handleScroll() {
+const handleScroll = () => {
   if (window.scrollY > 10) {
     stickyHeader.value = true
   } else {
@@ -59,32 +61,21 @@ function handleScroll() {
     <div class="bg-red-300 w-full text-center py-1 text-gray-900 text-sm" v-if="isDev">
       Dev Environment
     </div>
-    <div class="mx-auto flex flex-row max-w-7xl items-center justify-between pt-2 px-2 lg:px-8">
-      <div class="flex mt-2 sm:mt-0 justify-center space-x-4">
-        <a
-          v-for="item in socials"
-          :key="item.name"
-          :href="item.href"
-          target="_blank"
-          class="text-gray-400 hover:text-gray-500"
-        >
-          <span class="sr-only">{{ item.name }}</span>
-          <component :is="item.icon" class="h-5 w-5" aria-hidden="true" />
-        </a>
-      </div>
-      <div class="order-first sm:order-last">
-        <p class="text-gray-900 text-sm">Initiative open source - open data</p>
-      </div>
-    </div>
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between pb-4 px-6 lg:px-8"
+      class="mx-auto max-w-7xl grid grid-cols-8 items-center py-4 px-6 lg:px-8"
       aria-label="Global"
     >
-      <div class="flex lg:flex-1">
+      <div class="col-span-3 flex items-center gap-4">
         <router-link :to="{ name: 'home' }" class="-m-1.5 p-1.5">
-          <img src="@/assets/logo_MyCityCo2.png" class="h-16 w-auto text-primary" alt="" />
+          <img
+            src="@/assets/logo_MyCityCo2.png"
+            class="h-16 w-auto text-primary"
+            alt="logo MyCityCo2"
+          />
         </router-link>
+        <VCountrySelector />
       </div>
+
       <div class="flex lg:hidden">
         <button
           type="button"
@@ -95,7 +86,8 @@ function handleScroll() {
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
+
+      <div class="hidden col-span-4 lg:flex lg:items-center lg:gap-x-12">
         <router-link
           v-for="item in navigation"
           :key="item.name"
@@ -104,9 +96,21 @@ function handleScroll() {
           class="header-link"
           >{{ item.name }}</router-link
         >
+        <router-link :to="diagnosticLink" class="hidden lg:block button-primary"
+          >Diagnostic</router-link
+        >
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link :to="diagnosticLink" class="button-primary">Diagnostic</router-link>
+
+      <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
+        <VLanguageButton language="fr" />
+        <span>|</span>
+        <VLanguageButton language="en" />
+        <template v-if="countryStore.country === 'CH'">
+          <span>|</span>
+          <VLanguageButton language="de" />
+          <span>|</span>
+          <VLanguageButton language="it" />
+        </template>
       </div>
     </nav>
 

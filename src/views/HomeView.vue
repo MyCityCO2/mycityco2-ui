@@ -1,44 +1,26 @@
 <script setup>
+import { computed } from 'vue'
 import VCitySelector from '@/components/VCitySelector.vue'
-import VProgressBar from '@/components/VProgressBar.vue'
 import { BookOpenIcon, RadioIcon, ScaleIcon, UserPlusIcon } from '@heroicons/vue/20/solid'
+import { useI18n } from 'vue-i18n'
 
-const features = [
-  {
-    name: 'Consulter',
-    description: 'les émissions de gaz à effet de serre de sa commune',
-    icon: BookOpenIcon
-  },
-  {
-    name: 'Evaluer',
-    description: ' la réduction de l’empreinte carbone année après année',
-    icon: ScaleIcon
-  },
-  {
-    name: 'Contribuer',
-    description: 'à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris',
-    icon: UserPlusIcon
-  },
-  {
-    name: 'Partager',
-    description: 'les résultats de sa commune avec ses proches',
-    icon: RadioIcon
-  }
-]
+const { t } = useI18n()
 
-const stats = [
-  { id: 1, name: 'communes françaises analysées soit 100% des communes', value: "35'000" },
-  {
-    id: 2,
-    name: 'empreinte carbone moyenne générée par les villes françaises',
-    value: '232 kgCO2eq/hab'
-  },
-  {
-    id: 3,
-    name: 'des villes respectent la Stratégie nationale bas-carbone (SNBC) visant à réduire de 40% les émissions en 2030',
-    value: '24 %'
-  }
-]
+const features = computed(() =>
+  [BookOpenIcon, ScaleIcon, UserPlusIcon, RadioIcon].map((icon, idx) => ({
+    icon,
+    name: t(`home.features.${idx}.name`),
+    description: t(`home.features.${idx}.description`)
+  }))
+)
+
+const stats = computed(() =>
+  [0, 1, 2].map((_, idx) => ({
+    id: idx,
+    name: t(`home.stats.${idx}.name`),
+    value: t(`home.stats.${idx}.value`)
+  }))
+)
 </script>
 
 <template>
@@ -55,14 +37,12 @@ const stats = [
           <h1
             class="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto"
           >
-            Suivez l’empreinte carbone de votre ville
+            {{ t('home.hero.title') }}
           </h1>
 
           <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p class="leading-text">
-              Comment améliorer ce qu’on ne sait pas mesurer? MyCityCO2, un outil libre et gratuit
-              de suivi des empreintes carbones des 35'000 villes françaises au service de la lutte
-              contre le changement climatique.
+              {{ t('home.hero.text') }}
             </p>
             <div
               class="mt-10 transform divide-y divide-gray-500 divide-opacity-10 overflow-hidden rounded-xl ring-1 ring-black ring-opacity-5 transition-all"
@@ -70,9 +50,11 @@ const stats = [
               <VCitySelector :hasQuickActions="false" auto-focus />
             </div>
             <div class="mt-10 flex items-center gap-x-6">
-              <router-link to="/contact" class="button-primary">Contribuer</router-link>
+              <router-link to="/contact" class="button-primary">{{
+                t('actions.contribute')
+              }}</router-link>
               <router-link to="#project" class="text-sm font-semibold leading-6 text-gray-900"
-                >En savoir plus <span aria-hidden="true">→</span></router-link
+                >{{ t('actions.learn_more') }} <span aria-hidden="true">→</span></router-link
               >
             </div>
           </div>
@@ -99,14 +81,10 @@ const stats = [
 
     <section id="project">
       <div class="mx-auto max-w-3xl lg:text-center">
-        <span class="tooltip"
-          >Adoptez un outil libre, gratuit et transparent validé par des experts</span
-        >
-        <h3 class="mt-2">1er outil d’empreinte carbone pour les collectivités</h3>
+        <span class="tooltip">{{ t('home.features.subtitle') }}</span>
+        <h3 class="mt-2">{{ t('home.features.title') }}</h3>
         <p class="mt-6 leading">
-          De la plus petite commune française à la capitale, MyCityCO2 est le premier outil qui
-          permet de consulter l’empreinte carbone de n’importe quelle ville française et ce de
-          manière historique sur les 7 dernières années.
+          {{ t('home.features.description') }}
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -132,16 +110,16 @@ const stats = [
       <div class="lg:flex lg:items-center lg:justify-between">
         <div class="max-w-3xl">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Prêts à aller plus loin ?
+            {{ t('home.pre_footer.title') }}
           </h2>
           <p class="leading-text mt-2">
-            Accédez aux données détaillées de votre ville et identifiez les opportunités de
-            réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés en France par la Stratégie nationale bas-carbone (SNBC)
+            {{ t('home.pre_footer.description') }}
           </p>
         </div>
-
         <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-          <router-link to="/contact" class="button-primary">Nous contacter</router-link>
+          <router-link to="/contact" class="button-primary">
+            {{ t('actions.contact_us') }}
+          </router-link>
         </div>
       </div>
     </section>

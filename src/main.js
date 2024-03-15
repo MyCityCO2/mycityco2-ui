@@ -8,6 +8,8 @@ import { number } from './directives'
 
 import App from './App.vue'
 import router from './router'
+import { createI18n } from 'vue-i18n'
+import fr from './locales/FR/fr.json'
 
 createApp({
   setup() {
@@ -16,6 +18,15 @@ createApp({
   render: () => h(App)
 })
   .use(createPinia())
+  .use(
+    createI18n({
+      legacy: false,
+      locale: 'fr',
+      messages: {
+        fr
+      }
+    })
+  )
   .use(router)
   .use(
     createGtm({
