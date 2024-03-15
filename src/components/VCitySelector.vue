@@ -68,14 +68,14 @@ watchEffect(() => {
     <Combobox :model-value="params.search" @update:modelValue="onSelect">
       <div class="relative">
         <MagnifyingGlassIcon
-          class="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-900 text-opacity-40"
+          class="pointer-events-none absolute left-4 top-5 h-6 w-6 text-gray-900 text-opacity-40"
           aria-hidden="true"
         />
         <ComboboxInput as="template" @change="doLazySearch($event.target.value)">
           <input
             ref="input"
             placeholder="Rechercher une ville..."
-            class="h-12 w-full border-0 bg-gray-50 px-11 text-gray-900 focus:ring-0 sm:text-sm"
+            class="w-full border-0 bg-gray-50 px-11 py-4 text-gray-900 focus:ring-0 sm:text-sm lg:text-2xl"
           />
         </ComboboxInput>
         <VSpin v-if="loading" class="absolute right-4 top-3.5 text-primary" />
