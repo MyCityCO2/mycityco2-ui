@@ -1,9 +1,9 @@
 const navigation = [
-  { name: 'Accueil', href: { name: 'home' } },
-  { name: 'Projet', href: { name: 'project' } },
-  { name: 'Aide', href: { name: 'help' } },
-  { name: 'Méthodologie', href: { name: 'methodologyIndex' } },
-  { name: 'Contact', href: { name: 'contact' } }
+  { name: 'home.title', href: { name: 'home' } },
+  { name: 'project.title', href: { name: 'project' } },
+  { name: 'help.title', href: { name: 'help' } },
+  { name: 'methodology.title', href: { name: 'methodologyIndex' } },
+  { name: 'actions.contact', href: { name: 'contact' } }
 ]
 
 export { navigation }

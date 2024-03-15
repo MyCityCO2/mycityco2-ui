@@ -9,6 +9,9 @@ import { useRoute } from 'vue-router'
 import VCountrySelector from '../components/VCountrySelector.vue'
 import VLanguageButton from '../components/VLanguageButton.vue'
 import { useCountryStore } from '@/stores/countryStore'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const route = useRoute()
 const cityStore = useCityStore()
@@ -92,11 +95,11 @@ const handleScroll = () => {
           :to="item.href"
           active-class="!text-primary !border-primary"
           class="header-link"
-          >{{ item.name }}</router-link
+          >{{ t(item.name) }}</router-link
         >
-        <router-link :to="diagnosticLink" class="hidden lg:block button-primary"
-          >Diagnostic</router-link
-        >
+        <router-link :to="diagnosticLink" class="hidden lg:block lg:flex-1 button-primary">{{
+          t('diagnostic.title')
+        }}</router-link>
       </div>
       <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
         <VLanguageButton language="fr" />

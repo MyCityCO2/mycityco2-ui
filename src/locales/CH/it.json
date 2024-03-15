@@ -57,5 +57,17 @@
   "footer": {
     "open_source": "Iniziativa open source - open data",
     "copyright": "2023 MyCityCo2 uno strumento gratuito e open source"
+  },
+  "project": {
+    "title": "Progetto"
+  },
+  "help": {
+    "title": "Aiuto"
+  },
+  "methodology": {
+    "title": "Metodologia"
+  },
+  "diagnostic": {
+    "title": "Diagnosi"
   }
 }
