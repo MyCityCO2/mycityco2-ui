@@ -10,7 +10,6 @@ import App from './App.vue'
 import router from './router'
 import { createI18n } from 'vue-i18n'
 import fr from './locales/FR/fr.json'
-console.log('fr', fr)
 
 createApp({
   setup() {

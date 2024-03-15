@@ -1,5 +1,8 @@
 <script setup>
 import { socials } from '@/svg'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -11,12 +14,12 @@ import { socials } from '@/svg'
         <RouterLink
           :to="{ name: 'legal' }"
           class="text-sm leading-6 text-gray-600 hover:text-primary transition-all"
-          >Mentions légales</RouterLink
+          >{{ t('actions.legal_notice', 2) }}</RouterLink
         >
         <RouterLink
           :to="{ name: 'contact' }"
           class="text-sm leading-6 text-gray-600 hover:text-primary transition-all"
-          >Contact</RouterLink
+          >{{ t('actions.contact') }}</RouterLink
         >
         <a
           v-for="item in socials"
@@ -29,10 +32,10 @@ import { socials } from '@/svg'
           <component :is="item.icon" class="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
-      <p class="text-gray-900 text-sm">Initiative open source - open data</p>
+      <p class="text-gray-900 text-sm">{{ t('footer.open_source') }}</p>
       <div class="mt-8 md:mt-0">
         <p class="text-center text-sm leading-5 text-gray-500">
-          &copy; 2023 MyCityCo2 a free and open source tool.
+          &copy; {{ t('footer.copyright') }}
         </p>
       </div>
     </div>

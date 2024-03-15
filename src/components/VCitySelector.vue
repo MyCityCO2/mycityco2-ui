@@ -10,6 +10,9 @@ import { reactive, ref, watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import VSpin from './VSpin.vue'
 import VError from './alerts/VError.vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   hasQuickActions: {
@@ -74,8 +77,8 @@ watchEffect(() => {
         <ComboboxInput as="template" @change="doLazySearch($event.target.value)">
           <input
             ref="input"
-            placeholder="Rechercher une ville..."
-            class="w-full border-0 bg-gray-50 px-11 py-4 text-gray-900 focus:ring-0 sm:text-sm lg:text-2xl"
+            :placeholder="t('actions.search_city') + '...'"
+            class="w-full border-0 bg-gray-50 px-12 py-4 text-gray-900 focus:ring-0 sm:text-sm lg:text-2xl"
           />
         </ComboboxInput>
         <VSpin v-if="loading" class="absolute right-4 top-3.5 text-primary" />
