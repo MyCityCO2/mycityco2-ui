@@ -45,12 +45,12 @@ const onSubmit = handleSubmit((values) => {
               votre avis, nous signaler un problème technique ou autre ?
               Contactez-nous en complétant ce formulaire
             </p>
-            <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+            <dl class="mt-10 space-y-4 text-base leading-7 text-neutral-600">
               <div class="flex gap-x-4">
                 <dt class="flex-none">
                   <span class="sr-only">Email</span>
                   <EnvelopeIcon
-                    class="h-7 w-6 text-gray-400"
+                    class="h-7 w-6 text-neutral-400"
                     aria-hidden="true"
                   />
                 </dt>

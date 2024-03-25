@@ -131,10 +131,10 @@ const currentGlossary = ref(0)
         <div class="mt-10 lg:col-span-7 lg:mt-0">
           <dl class="space-y-10">
             <div v-for="faq in faqs" :key="faq.question">
-              <dt class="text-base font-semibold leading-7 text-gray-900">
+              <dt class="text-base font-semibold leading-7">
                 {{ faq.question }}
               </dt>
-              <dd class="mt-2 text-base leading-7 text-gray-600">
+              <dd class="mt-2 text-base leading-7">
                 {{ faq.answer }}
               </dd>
             </div>
@@ -157,7 +157,7 @@ const currentGlossary = ref(0)
                 :class="[
                   idx == currentGlossary
                     ? 'text-primary text-lg'
-                    : 'text-gray-400 text-xs',
+                    : 'text-neutral-400 text-xs',
                   'cursor-pointer hover:text-primary py-1 transition-all transform',
                 ]"
               >

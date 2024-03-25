@@ -3,7 +3,6 @@ import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/vue/20/solid"
 
 const route = useRoute()
 const pageMeta = computed(() => route.meta)
-console.log(pageMeta.value)
 const localePath = useLocalePath()
 const navigation = [
   {
@@ -130,10 +129,10 @@ const navigation = [
               <NuxtLink
                 v-if="pageMeta?.meta?.previous"
                 :to="localePath(pageMeta.meta.previous)"
-                class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-gray-500"
+                class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 <ArrowLongLeftIcon
-                  class="mr-3 h-5 w-5 text-gray-400 group-hover:text-primary transition-colors"
+                  class="mr-3 h-5 w-5 text-neutral-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
                 Précédent
@@ -144,11 +143,11 @@ const navigation = [
               <NuxtLink
                 v-if="pageMeta?.meta?.next"
                 :to="localePath(pageMeta.meta.next)"
-                class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-gray-500"
+                class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 Suivant
                 <ArrowLongRightIcon
-                  class="ml-3 h-5 w-5 text-gray-400 group-hover:text-primary transition-colors"
+                  class="ml-3 h-5 w-5 text-neutral-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
               </NuxtLink>

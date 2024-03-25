@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/20/solid"
 
 const rules = [
@@ -144,19 +144,19 @@ const tableRules = [
                   <tr>
                     <th
                       scope="col"
-                      class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                      class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-neutral-900 sm:pl-3"
                     >
                       Type
                     </th>
                     <th
                       scope="col"
-                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      class="px-3 py-3.5 text-left text-sm font-semibold text-neutral-900"
                     >
                       Immobilisations
                     </th>
                     <th
                       scope="col"
-                      class="py-3.5 pl-3 pr-4 sm:pr-3 text-left text-sm font-semibold text-gray-900"
+                      class="py-3.5 pl-3 pr-4 sm:pr-3 text-left text-sm font-semibold text-neutral-900"
                     >
                       Durée
                     </th>
@@ -164,11 +164,11 @@ const tableRules = [
                 </thead>
                 <tbody class="bg-white">
                   <template v-for="rule in tableRules" :key="rule.name">
-                    <tr class="border-t border-gray-200">
+                    <tr class="border-t border-neutral-200">
                       <th
                         colspan="5"
                         scope="colgroup"
-                        class="bg-gray-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                        class="bg-neutral-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-neutral-900 sm:pl-3"
                       >
                         {{ rule.name }}
                       </th>
@@ -177,20 +177,22 @@ const tableRules = [
                       v-for="(rule, ruleIdx) in rule.rules"
                       :key="rule"
                       :class="[
-                        ruleIdx === 0 ? 'border-gray-300' : 'border-gray-200',
+                        ruleIdx === 0
+                          ? 'border-neutral-300'
+                          : 'border-neutral-200',
                         'border-t',
                       ]"
                     >
                       <td
-                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3"
+                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-neutral-900 sm:pl-3"
                       />
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                        class="whitespace-nowrap px-3 py-4 text-sm text-neutral-500"
                       >
                         {{ rule.name }}
                       </td>
                       <td
-                        class="whitespace-nowrap py-4 pl-3 pr-4 sm:pr-3 text-sm text-gray-500"
+                        class="whitespace-nowrap py-4 pl-3 pr-4 sm:pr-3 text-sm text-neutral-500"
                       >
                         {{ rule.duration }}
                       </td>

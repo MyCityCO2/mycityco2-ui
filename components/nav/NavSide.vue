@@ -24,10 +24,10 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
           :to="item.to"
           :class="[
             isActiveLink(item.to.path)
-              ? 'bg-gray-50 text-primary'
-              : 'hover:bg-gray-50',
+              ? 'bg-neutral-50 dark:bg-white/10 !text-primary dark:!text-primary'
+              : 'hover:bg-neutral-50 dark:hover:bg-white/10',
             props.parent ? 'font-semibold' : 'font-normal',
-            'block rounded-md py-2 pr-2 pl-10 text-sm leading-6  text-gray-700',
+            'block rounded-md py-2 pr-2 pl-10 text-sm leading-6 text-neutral-700 dark:text-neutral-300',
           ]"
           >{{ item.name }}</NuxtLink
         >
@@ -36,11 +36,13 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
       <div v-else>
         <NuxtLink
           :to="item.to"
-          exact-active-class="bg-gray-50 !text-primary"
-          class="hover:bg-gray-50 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-gray-700"
+          exact-active-class="bg-neutral-50 dark:bg-white/10 !text-primary"
+          class="hover:bg-neutral-50 dark:hover:bg-white/10 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-neutral-700 dark:text-neutral-300"
         >
           <ChevronRightIcon
-            :class="['rotate-90 text-gray-500 h-5 w-5 shrink-0']"
+            :class="[
+              'rotate-90 text-neutral-500 dark:text-neutral-400 h-5 w-5 shrink-0',
+            ]"
             aria-hidden="true"
           />
           {{ item.name }}

@@ -20,11 +20,11 @@ const emit = defineEmits(["update:modelValue"])
     <span class="flex flex-grow flex-col">
       <SwitchLabel
         as="span"
-        class="text-sm font-medium leading-6 text-gray-900"
+        class="text-sm font-medium leading-6 text-neutral-900"
         passive
         >{{ props.ask }}</SwitchLabel
       >
-      <SwitchDescription as="span" class="text-sm text-gray-500">{{
+      <SwitchDescription as="span" class="text-sm text-neutral-500">{{
         props.text
       }}</SwitchDescription>
     </span>
@@ -40,7 +40,7 @@ const emit = defineEmits(["update:modelValue"])
       <span
         aria-hidden="true"
         :class="[
-          props.modelValue == true ? 'bg-primary' : 'bg-gray-200',
+          props.modelValue == true ? 'bg-primary' : 'bg-neutral-200',
           'pointer-events-none absolute mx-auto h-4 w-9 rounded-full transition-colors duration-200 ease-in-out',
         ]"
       />
@@ -48,7 +48,7 @@ const emit = defineEmits(["update:modelValue"])
         aria-hidden="true"
         :class="[
           props.modelValue == true ? 'translate-x-5' : 'translate-x-0',
-          'pointer-events-none absolute left-0 inline-block h-5 w-5 transform rounded-full border border-gray-200 bg-white shadow ring-0 transition-transform duration-200 ease-in-out',
+          'pointer-events-none absolute left-0 inline-block h-5 w-5 transform rounded-full border border-neutral-200 bg-white shadow ring-0 transition-transform duration-200 ease-in-out',
         ]"
       />
     </Switch>

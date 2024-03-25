@@ -73,9 +73,11 @@ const thanks = [
             class="relative group"
           >
             <div
-              class="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+              class="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 dark:bg-white/10 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
             ></div>
-            <dt class="text-base font-semibold leading-7 text-gray-900">
+            <dt
+              class="text-base font-semibold leading-7 text-neutral-900 dark:text-white"
+            >
               <div
                 class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg"
               >
@@ -88,7 +90,7 @@ const thanks = [
               {{ feature.name }}
             </dt>
             <dd
-              class="mt-1 text-base leading-7 text-gray-600"
+              class="mt-1 text-base leading-7 text-neutral-600 dark:text-neutral-400"
               v-html="feature.description"
             />
           </div>
@@ -112,7 +114,9 @@ const thanks = [
                   class="mt-1 h-5 w-5 flex-none text-primary"
                   aria-hidden="true"
                 />
-                <span class="text-gray-600">{{ item }}</span>
+                <span class="text-neutral-600 dark:text-neutral-400">{{
+                  item
+                }}</span>
               </li>
             </ul>
           </div>
@@ -233,7 +237,7 @@ const thanks = [
           <h3>Crédits</h3>
           <ul
             role="list"
-            class="marker:text-primary list-disc pl-5 space-y-3 mt-6 text-neutral-600"
+            class="marker:text-primary list-disc pl-5 space-y-3 mt-6 text-neutral-600 dark:text-neutral-400"
           >
             <li>
               Le code de nombreux modules utilisés par MyCityCO2 provient de

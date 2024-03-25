@@ -3,7 +3,7 @@
 <template>
   <div class="relative z-0 min-h-screen flex flex-col">
     <AppHeader />
-    <div class="bg-white shadow-sm flex-grow z-10">
+    <div class="shadow-sm flex-grow z-10">
       <slot></slot>
     </div>
     <AppFooter />

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/20/solid"
 
 const accountClasses = [
@@ -102,7 +102,7 @@ const accountClasses2 = [
               aria-hidden="true"
             />
             <span
-              ><strong class="font-semibold text-gray-900"
+              ><strong class="font-semibold text-neutral-900"
                 >Classe {{ idx + 1 }} - {{ item.key }} : {{ "" }}</strong
               >{{ item.text }}</span
             >
@@ -128,7 +128,7 @@ const accountClasses2 = [
               aria-hidden="true"
             />
             <span
-              ><strong class="font-semibold text-gray-900"
+              ><strong class="font-semibold text-neutral-900"
                 >Classe {{ idx + 1 }} - {{ item.key }} : {{ "" }}</strong
               >{{ item.text }}</span
             >

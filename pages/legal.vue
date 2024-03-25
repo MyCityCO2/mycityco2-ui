@@ -28,7 +28,7 @@ const { t } = useI18n()
       <h4>Directeur de publication</h4>
       <p>Le Directeur de la publication du Site est Jacques-André Eberhard.</p>
       <h4>Nous contacter</h4>
-      <ul class="list-disc pl-6 text-gray-600">
+      <ul class="list-disc pl-6 text-neutral-600">
         <li>Par téléphone: +41217014245</li>
         <li>Par email: contact@mycityco2.org</li>
         <li>Par courrier: Rue de Genève 77 1004 Lausanne, Suisse</li>

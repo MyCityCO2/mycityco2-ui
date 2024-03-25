@@ -28,7 +28,7 @@ const { value, errorMessage } = useField(
 <template>
   <label
     :for="identifier"
-    class="block text-sm font-semibold leading-6 text-gray-900"
+    class="block text-sm font-semibold leading-6 text-neutral-900 dark:text-white"
     >{{ label }}</label
   >
   <div class="mt-2.5">
@@ -36,7 +36,7 @@ const { value, errorMessage } = useField(
       :id="identifier"
       v-model="value"
       :rows="rows"
-      class="block w-full rounded-lg border-0 px-3.5 py-2 text-gray-900 bg-gray-50 ring-1 ring-inset ring-black ring-opacity-5 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+      class="input-primary"
     />
   </div>
   <p class="mt-2 text-sm text-red-600" v-if="errorMessage">

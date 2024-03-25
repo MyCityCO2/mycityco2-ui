@@ -56,7 +56,9 @@ function handleScroll() {
   <header
     :class="[
       'z-50 fixed inset-x-0 top-0 transition-all duration-500',
-      stickyHeader ? 'bg-white shadow' : 'bg-transparent shadow-none',
+      stickyHeader
+        ? 'bg-white dark:bg-neutral-950 shadow dark:shadow-xl'
+        : 'bg-transparent shadow-none',
     ]"
   >
     <div
@@ -68,14 +70,16 @@ function handleScroll() {
           :key="item.name"
           :href="item.href"
           target="_blank"
-          class="text-gray-400 hover:text-gray-500"
+          class="text-neutral-400 hover:text-neutral-500"
         >
           <span class="sr-only">{{ item.name }}</span>
           <component :is="item.icon" class="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
       <div class="order-first sm:order-last">
-        <p class="text-gray-900 text-sm">Initiative open source - open data</p>
+        <p class="text-neutral-900 text-sm">
+          Initiative open source - open data
+        </p>
       </div>
     </div>
     <nav
@@ -94,7 +98,7 @@ function handleScroll() {
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-neutral-700"
           @click="mobileMenuOpen = true"
         >
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
@@ -128,7 +132,7 @@ function handleScroll() {
           leave-from="opacity-100"
           leave-to="opacity-0"
         >
-          <div class="fixed inset-0 bg-gray-300/80 transition-opacity" />
+          <div class="fixed inset-0 bg-neutral-300/80 transition-opacity" />
         </TransitionChild>
 
         <div class="fixed inset-0 overflow-hidden">
@@ -159,14 +163,14 @@ function handleScroll() {
                       </NuxtLink>
                       <button
                         type="button"
-                        class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                        class="-m-2.5 rounded-md p-2.5 text-neutral-700"
                         @click="closeMenu()"
                       >
                         <XMarkIcon class="h-6 w-6" aria-hidden="true" />
                       </button>
                     </div>
                     <div class="mt-6 flow-root">
-                      <div class="-my-6 divide-y divide-gray-500/10">
+                      <div class="-my-6 divide-y divide-neutral-500/10">
                         <div class="space-y-2 py-6">
                           <NuxtLink
                             v-for="item in navigation"
@@ -177,7 +181,7 @@ function handleScroll() {
                           >
                             <a
                               :href="href"
-                              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                               @click.prevent="navigate(), closeMenu()"
                               >{{ item.name }}</a
                             >
@@ -188,10 +192,10 @@ function handleScroll() {
                             :to="diagnosticLink"
                             custom
                             v-slot="{ href, navigate }"
-                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                             ><a
                               :href="href"
-                              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                               @click.prevent="navigate(), closeMenu()"
                               >Diagnostic</a
                             ></NuxtLink
