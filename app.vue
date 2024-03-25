@@ -3,6 +3,12 @@
   <NuxtLayout name="default">
     <NuxtPage />
   </NuxtLayout>
+  <ClientOnly>
+    <teleport to="body">
+      <AppNotifications />
+      <CitySelectorModal />
+    </teleport>
+  </ClientOnly>
 </template>
 
 <style>

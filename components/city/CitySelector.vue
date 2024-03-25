@@ -14,7 +14,7 @@ import {
 import { QUERY_CITIES } from "~/api/query"
 
 const { t } = useI18n()
-
+const localeRoute = useLocaleRoute()
 const props = defineProps({
   hasQuickActions: {
     type: Boolean,
@@ -62,14 +62,15 @@ const onSelect = (item) => {
   cityStore.setCurrentCity(item)
   emit("onSelect", item)
   params.search = ""
-  router.push({
-    name: "diagnosticCity",
+  const route = localeRoute({
+    name: "diagnostic-countryCode-cityIdentifier-cityName",
     params: {
       countryCode: item.country.code,
       cityIdentifier: item.cityIdentifier,
       cityName: slug(item.name),
     },
   })
+  navigateTo(route.fullPath)
 }
 
 // here watchEffect is used instead of onMounted because the ComboBoxInput render
@@ -96,7 +97,7 @@ watchEffect(() => {
           <input
             ref="input"
             :placeholder="t('actions.search_city') + '...'"
-            class="w-full border-0 bg-neutral-50 dark:bg-neutral-900 px-11 text-neutral-900 dark:text-white ring-1 ring-inset ring-black/10 dark:ring-white/10 focus:ring-0 sm:text-sm h-12"
+            class="w-full rounded-xl border-0 bg-neutral-50 dark:bg-neutral-900 px-11 text-neutral-900 dark:text-white ring-0 focus:ring-0 sm:text-sm h-12"
           />
         </ComboboxInput>
         <LoadingSpin

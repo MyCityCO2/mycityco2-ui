@@ -9,7 +9,7 @@ const cityStore = useCityStore()
 
 <template>
   <div
-    class="flex lg:min-h-[4rem] justify-between items-center lg:items-start gap-x-4 bg-white"
+    class="flex lg:min-h-[4rem] justify-between items-center lg:items-start gap-x-4"
   >
     <TransitionFade>
       <div class="lg:basis-1/2 xl:basis-3/5">

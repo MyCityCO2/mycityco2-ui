@@ -64,7 +64,7 @@
     @apply text-primary transition-all hover:text-opacity-80;
   }
   .share-button {
-    @apply border duration-200 inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-primary border-primary bg-white hover:bg-primary hover:text-white;
+    @apply border duration-200 inline-flex items-center mb-1 mr-1 transition p-3 rounded-full text-primary dark:text-primary border-primary bg-white dark:bg-neutral-950 hover:bg-primary hover:text-white;
   }
   .input-primary {
     @apply block w-full rounded-lg border-0 px-3.5 py-2 text-neutral-900 dark:text-white bg-neutral-50 dark:bg-neutral-900 ring-1 ring-inset ring-black dark:ring-white/10 ring-opacity-5 placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:ring-2 focus:ring-inset focus:ring-primary dark:focus:ring-primary sm:text-sm sm:leading-6;
@@ -90,7 +90,7 @@
   @apply bg-neutral-950;
 }
 .light body {
-  @apply bg-neutral-50;
+  @apply bg-white;
 }
 
 #methodology p {

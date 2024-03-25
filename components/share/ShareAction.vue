@@ -57,7 +57,7 @@ const links = computed(() => {
 </script>
 
 <template>
-  <div class="sharing-buttons flex flex-wrap space-x-2">
+  <div class="flex flex-wrap space-x-2">
     <template v-for="link in links" :key="link.name">
       <button
         v-if="link?.clickHandler"
