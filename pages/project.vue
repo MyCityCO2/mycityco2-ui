@@ -1,0 +1,242 @@
+<script setup lang="ts">
+import { CheckCircleIcon } from "@heroicons/vue/20/solid";
+
+const { data: features } = await useAsyncData("project_features", () =>
+  queryContent("project", "_features").findOne()
+);
+
+const { data: thanks } = await useAsyncData("project_thanks", () =>
+  queryContent("project", "_thanks").findOne()
+);
+</script>
+
+<template>
+  <div>
+    <AppHeading
+      title="Pourquoi Mycityco2 ?"
+      text="MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
+    />
+    <section>
+      <div
+        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+      >
+        <div>
+          <h3>Comment contribuer ?</h3>
+          <p class="my-6 leading-text">
+            MyCityCO2 est développée par une équipe de volontaires. Nous sommes
+            à la recherche de tous types de contributeurs.
+          </p>
+          <router-link to="/contact" class="button-primary"
+            >Contactez-nous</router-link
+          >
+        </div>
+
+        <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+          <div
+            v-for="feature in features.body"
+            :key="feature.name"
+            class="relative group"
+          >
+            <div
+              class="absolute -inset-x-4 -inset-y-6 -z-10 scale-95 bg-zinc-50 dark:bg-white/10 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+            ></div>
+            <dt
+              class="text-base font-semibold leading-7 text-neutral-900 dark:text-white"
+            >
+              <div
+                class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg"
+              >
+                <component
+                  :is="getOutlineIcon(feature.icon)"
+                  class="h-6 w-6 text-primary"
+                  aria-hidden="true"
+                />
+              </div>
+              {{ feature.name }}
+            </dt>
+            <dd
+              class="mt-1 text-base leading-7 text-neutral-600 dark:text-neutral-400"
+              v-html="feature.description"
+            />
+          </div>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2"
+      >
+        <div class="mx-auto w-full max-w-xl lg:mx-0">
+          <h3>Remerciements</h3>
+          <p class="mt-6 leading-text">
+            Merci à toutes celles et ceux qui ont rendu le lancement de
+            MyCityCO2 possible :
+          </p>
+          <div class="mx-4">
+            <ul role="list" class="mt-2 space-y-2">
+              <li
+                class="flex gap-x-3"
+                v-for="(item, idx) in thanks.body"
+                :key="idx"
+              >
+                <CheckCircleIcon
+                  class="mt-1 h-5 w-5 flex-none text-primary"
+                  aria-hidden="true"
+                />
+                <span class="text-neutral-600 dark:text-neutral-400">{{
+                  item
+                }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 gap-x-8 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8"
+        >
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/opennet.png"
+            alt="Open Net Sarl logo"
+            width="105"
+            height="48"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/odoo.svg"
+            alt="Odoo logo"
+            width="104"
+            height="48"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/ExioBase.png"
+            alt="ExioBase logo"
+            width="140"
+            height="48"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/La_Poste.svg"
+            alt="La Poste"
+            width="136"
+            height="48"
+          />
+          <img
+            class="max-h-20 w-full object-contain object-left"
+            src="/img/logos/vocables.svg"
+            alt="Vocables logo"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-20 w-full object-contain object-left"
+            src="/img/logos/AB.jpg"
+            alt="AB logo"
+            width="147"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="/img/logos/mef.svg"
+            alt="Minitsère de l'économie et de la finance logo"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="/img/logos/opendatasoft.svg"
+            alt="Opendatasoft"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-28 w-full object-contain object-left"
+            src="/img/logos/CITEPA.avif"
+            alt="CITEPA"
+            width="158"
+            height="48"
+          />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2"
+      >
+        <div
+          class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 gap-x-8 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pr-8"
+        >
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/vuejs.svg"
+            alt="VueJS logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/tailwindcss.svg"
+            alt="Tailwindcss logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/chartjs.svg"
+            alt="ChartJS logo"
+          />
+
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/heroicons.svg"
+            alt="Heroicons logo"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/OCA.png"
+            alt="OCA logo"
+            width="158"
+            height="48"
+          />
+          <img
+            class="max-h-14 w-full object-contain object-left"
+            src="/img/logos/crater.svg"
+            alt="Crater logo"
+            width="147"
+            height="48"
+          />
+        </div>
+        <div class="mx-auto w-full max-w-xl lg:mx-0">
+          <h3>Crédits</h3>
+          <ul
+            role="list"
+            class="marker:text-primary list-disc pl-5 space-y-3 mt-6 text-neutral-600 dark:text-neutral-400"
+          >
+            <li>
+              Le code de nombreux modules utilisés par MyCityCO2 provient de
+              l’Odoo Community Association (OCA) organisation à but non lucratif
+              qui aide ses membres à créer plus rapidement des solutions Odoo
+              moins coûteuses et plus performantes, avec un accès facile à des
+              applications de haute qualité et à des mises à jour ouvertes.
+            </li>
+            <li>
+              Le framework javascript VueJS ainsi que ses composants core tel
+              que Vue-Router et Pinia ont été utilsés pour réaliser
+              l'application web
+            </li>
+            <li>
+              Le framework TailwindCSS a été utilisé pour réaliser la partie
+              graphique
+            </li>
+            <li>
+              La bibliothèque graphique Chart.js utilisée dans le tableau de
+              bord de chaque commune
+            </li>
+            <li>Les icones utilisées proviennent de heroicons</li>
+            <li>
+              Une partie de l’arborescence et du contenu général du site de «
+              Les Greniers d'Abondance, Calculateur pour la Résilience
+              Alimentaire des Territoires (CRATer)»
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Consulter",
+    "description": "les émissions de gaz à effet de serre de sa commune",
+    "icon": "BookOpenIcon"
+  },
+  {
+    "name": "Evaluer",
+    "description": " la réduction de l’empreinte carbone année après année",
+    "icon": "ScaleIcon"
+  },
+  {
+    "name": "Contribuer",
+    "description": "à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris",
+    "icon": "UserPlusIcon"
+  },
+  {
+    "name": "Partager",
+    "description": "les résultats de sa commune avec ses proches",
+    "icon": "RadioIcon"
+  }
+]

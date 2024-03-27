@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "communes françaises analysées soit 100% des communes",
+    "value": "35'000"
+  },
+  {
+    "id": 2,
+    "name": "empreinte carbone moyenne générée par les villes françaises",
+    "value": "232 kgCO2eq/hab"
+  },
+  {
+    "id": 3,
+    "name": "des villes respectent la Stratégie nationale bas-carbone (SNBC) visant à réduire de 40% les émissions en 2030",
+    "value": "24 %"
+  }
+]

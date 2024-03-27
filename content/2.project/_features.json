@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Développer",
+    "description": "Développeurs en travaillant directement sur le code (<a href=\"https://github.com/MyCityCO2\" target=\"_blank\" class=\"text-link\">projet github</a>).",
+    "icon": "CodeBracketIcon"
+  },
+  {
+    "name": "Devenir précurseur",
+    "description": "Communes (maires, adjoints, agents) qui seraient intéressées par le projet pour devenir pilote des phases suivantes, faire des retours… ",
+    "icon": "LightBulbIcon"
+  },
+  {
+    "name": "Traduire",
+    "description": "Traducteurs pour préparer le développement dans d’autres pays.",
+    "icon": "LanguageIcon"
+  },
+  {
+    "name": "Communiquer",
+    "description": "Communicants pour préparer et exécuter une stratégie de communication et mieux faire connaître le produit. Partager MyCityCO2 sur les réseaux sociaux ?...",
+    "icon": "ChatBubbleLeftRightIcon"
+  }
+]
