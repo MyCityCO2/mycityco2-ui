@@ -18,14 +18,14 @@ const countries = computed(() => [
 const selectedCountry = ref(countries.value[0])
 
 const changeCountry = async () => {
-  const newCountry = countryStore.country === "FR" ? "CH" : "FR"
-  countryStore.setCountry(newCountry)
   if (countryStore.country === "FR") {
-    await navigateTo(switchLocalePath("fr-FR"))
-    locale.value = "fr-FR"
-  } else {
+    countryStore.setCountry("CH")
     await navigateTo(switchLocalePath("fr-CH"))
     locale.value = "fr-CH"
+  } else {
+    countryStore.setCountry("FR")
+    await navigateTo(switchLocalePath("fr-FR"))
+    locale.value = "fr-FR"
   }
 }
 
