@@ -4,7 +4,6 @@ import { socials } from "~/svg"
 
 const { t } = useI18n()
 const route = useRoute()
-const localepath = useLocalePath()
 const localeRoute = useLocaleRoute()
 const cityStore = useCityStore()
 
@@ -64,13 +63,13 @@ const handleScroll = () => {
       aria-label="Global"
     >
       <div class="col-span-3 flex items-center gap-4">
-        <NuxtLink :to="localepath('/')" class="-m-1.5 p-1.5">
+        <NuxtLinkLocale to="/" class="-m-1.5 p-1.5">
           <img
             src="/assets/logo_MyCityCo2.png"
             class="h-16 w-auto text-primary"
             alt="logo MyCityCo2"
           />
-        </NuxtLink>
+        </NuxtLinkLocale>
         <CountrySelector class="hidden lg:block" />
       </div>
       <div class="flex lg:hidden">
@@ -84,13 +83,13 @@ const handleScroll = () => {
         </button>
       </div>
       <div class="hidden col-span-4 lg:flex lg:items-center lg:gap-x-12">
-        <NuxtLink
+        <NuxtLinkLocale
           v-for="item in navigation"
           :key="item.name"
-          :to="localepath(item.to)"
+          :to="item.to"
           class="header-link"
           active-class="!text-primary !border-primary"
-          >{{ t(item.name) }}</NuxtLink
+          >{{ t(item.name) }}</NuxtLinkLocale
         >
         <button @click="navigateTo(diagnosticLink)" class="button-primary">
           Diagnostic

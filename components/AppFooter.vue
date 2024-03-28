@@ -2,7 +2,6 @@
 import { socials } from "~/svg"
 
 const { t } = useI18n()
-const localepath = useLocalePath()
 
 const links = computed(() => [
   { to: "/legal", label: t("actions.legal_notice", 2) },
@@ -16,12 +15,12 @@ const links = computed(() => [
       class="mx-auto max-w-7xl px-6 py-10 gap-4 md:gap-0 flex items-center flex-col md:flex-row md:items-center md:justify-between lg:px-8"
     >
       <div class="flex items-center space-x-4">
-        <NuxtLink
+        <NuxtLinkLocale
           v-for="link in links"
           :key="link.to"
-          :to="localepath(link.to)"
+          :to="link.to"
           class="text-sm leading-6 text-neutral-600 dark:text-neutral-300 hover:text-primary transition-all"
-          >{{ link.label }}</NuxtLink
+          >{{ link.label }}</NuxtLinkLocale
         >
         <a
           v-for="item in socials"

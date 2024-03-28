@@ -20,7 +20,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
   <ul role="list" class="space-y-1 overflow-hidden">
     <li v-for="item in props.navigation" :key="item.name">
       <template v-if="!item.children">
-        <NuxtLink
+        <NuxtLinkLocale
           :to="item.to"
           :class="[
             isActiveLink(item.to.path)
@@ -29,7 +29,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
             props.parent ? 'font-semibold' : 'font-normal',
             'block rounded-md py-2 pr-2 pl-10 text-sm leading-6 text-neutral-700 dark:text-neutral-300',
           ]"
-          >{{ item.name }}</NuxtLink
+          >{{ item.name }}</NuxtLinkLocale
         >
       </template>
 
