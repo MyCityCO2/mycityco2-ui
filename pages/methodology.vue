@@ -3,97 +3,92 @@ import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/vue/20/solid"
 
 const route = useRoute()
 const pageMeta = computed(() => route.meta)
-const localePath = useLocalePath()
 const navigation = [
   {
     name: "Présentation générale",
-    to: { path: localePath("/methodology/") },
+    to: { path: "/methodology/" },
     children: [
       {
         name: "Comptabilité",
-        to: { path: localePath("/methodology/general/accounting/") },
+        to: { path: "/methodology/general/accounting/" },
         children: [
           {
             name: "Plan comptable normalisé",
-            to: { path: localePath("/methodology/general/accounting/plan") },
+            to: { path: "/methodology/general/accounting/plan" },
           },
           {
             name: "Investissement",
             to: {
-              path: localePath("/methodology/general/accounting/investment"),
+              path: "/methodology/general/accounting/investment",
             },
           },
           {
             name: "Fonctionnement",
             to: {
-              path: localePath("/methodology/general/accounting/functionning"),
+              path: "/methodology/general/accounting/functionning",
             },
           },
           {
             name: "Amortissements",
             to: {
-              path: localePath("/methodology/general/accounting/depreciations"),
+              path: "/methodology/general/accounting/depreciations",
             },
           },
           {
             name: "Durées d’amortissement",
             to: {
-              path: localePath(
-                "/methodology/general/accounting/amortization-period"
-              ),
+              path: "/methodology/general/accounting/amortization-period",
             },
           },
           {
             name: "Configuration des comptes",
             to: {
-              path: localePath(
-                "/methodology/general/accounting/accounts-configuration"
-              ),
+              path: "/methodology/general/accounting/accounts-configuration",
             },
           },
         ],
       },
       {
         name: "Facteurs d'émissions monétaires",
-        to: { path: localePath("/methodology/general/emission-factor") },
+        to: { path: "/methodology/general/emission-factor" },
       },
       {
         name: "Postes d'émissions",
-        to: { path: localePath("/methodology/general/emission-post") },
+        to: { path: "/methodology/general/emission-post" },
       },
       {
         name: "Limitations",
-        to: { path: localePath("/methodology/general/limitations") },
+        to: { path: "/methodology/general/limitations" },
       },
     ],
   },
   {
     name: "Sources de données",
-    to: { path: localePath("/methodology/datasources") },
+    to: { path: "/methodology/datasources" },
   },
   {
     name: "License d'utilisation",
-    to: { path: localePath("/methodology/license") },
+    to: { path: "/methodology/license" },
     children: [
       {
         name: "Contenus",
-        to: { path: localePath("/methodology/license"), hash: "#content" },
+        to: { path: "/methodology/license", hash: "#content" },
       },
       {
         name: "Données",
-        to: { path: localePath("/methodology/license#data"), hash: "#data" },
+        to: { path: "/methodology/license#data", hash: "#data" },
       },
       {
         name: "Code source",
         to: {
-          path: localePath("/methodology/license#source-code"),
+          path: "/methodology/license#source-code",
           hash: "#source-code",
         },
       },
       {
         name: "Comment créditer MyCityCO2",
         to: {
-          path: localePath("/methodology/license#credit"),
+          path: "/methodology/license#credit",
           hash: "#credit",
         },
       },
@@ -126,9 +121,9 @@ const navigation = [
             class="flex items-center justify-between mt-4 px-4 sm:px-0"
           >
             <div class="-mt-px flex w-0 flex-1 group">
-              <NuxtLink
+              <NuxtLinkLocale
                 v-if="pageMeta?.meta?.previous"
-                :to="localePath(pageMeta.meta.previous)"
+                :to="pageMeta.meta.previous"
                 class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 <ArrowLongLeftIcon
@@ -136,13 +131,13 @@ const navigation = [
                   aria-hidden="true"
                 />
                 Précédent
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
 
             <div class="-mt-px flex w-0 flex-1 justify-end group">
-              <NuxtLink
+              <NuxtLinkLocale
                 v-if="pageMeta?.meta?.next"
-                :to="localePath(pageMeta.meta.next)"
+                :to="pageMeta.meta.next"
                 class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 Suivant
@@ -150,7 +145,7 @@ const navigation = [
                   class="ml-3 h-5 w-5 text-neutral-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
-              </NuxtLink>
+              </NuxtLinkLocale>
             </div>
           </nav>
         </div>

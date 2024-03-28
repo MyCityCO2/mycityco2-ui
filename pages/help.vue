@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const localepath = useLocalePath()
 const faqs = [
   {
     question:
@@ -124,8 +123,8 @@ const currentGlossary = ref(0)
           <p class="my-6 leading-text">
             Vous ne trouvez pas la réponse à votre question ?
           </p>
-          <NuxtLink :to="localepath('/contact')" class="button-primary"
-            >Contactez-nous</NuxtLink
+          <NuxtLinkLocale to="/contact" class="button-primary"
+            >Contactez-nous</NuxtLinkLocale
           >
         </div>
         <div class="mt-10 lg:col-span-7 lg:mt-0">

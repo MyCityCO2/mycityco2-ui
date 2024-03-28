@@ -20,7 +20,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
   <ul role="list" class="space-y-1 overflow-hidden">
     <li v-for="item in props.navigation" :key="item.name">
       <template v-if="!item.children">
-        <NuxtLink
+        <NuxtLinkLocale
           :to="item.to"
           :class="[
             isActiveLink(item.to.path)
@@ -29,12 +29,12 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
             props.parent ? 'font-semibold' : 'font-normal',
             'block rounded-md py-2 pr-2 pl-10 text-sm leading-6 text-neutral-700 dark:text-neutral-300',
           ]"
-          >{{ item.name }}</NuxtLink
+          >{{ item.name }}</NuxtLinkLocale
         >
       </template>
 
       <div v-else>
-        <NuxtLink
+        <NuxtLinkLocale
           :to="item.to"
           exact-active-class="bg-neutral-50 dark:bg-white/10 !text-primary"
           class="hover:bg-neutral-50 dark:hover:bg-white/10 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-neutral-700 dark:text-neutral-300"
@@ -46,7 +46,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
             aria-hidden="true"
           />
           {{ item.name }}
-        </NuxtLink>
+        </NuxtLinkLocale>
         <ul class="mt-1 px-4">
           <NavSide :navigation="item.children" />
         </ul>
