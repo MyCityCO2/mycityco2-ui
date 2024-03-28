@@ -10,15 +10,12 @@ const { t, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const countryStore = useCountryStore()
 
-const countries = computed(() => [
-  { code: "FR", label: t("country.FR") },
-  { code: "CH", label: t("country.CH") },
-])
+const countries = ["FR", "CH"]
 
-const selectedCountry = ref(countries.value[0])
+const selectedCountry = ref(countries[0])
 
 const changeCountry = async () => {
-  const { code } = selectedCountry.value
+  const code = selectedCountry.value
   const localeCode = `fr-${code}`
   countryStore.setCountry(code)
   await navigateTo(switchLocalePath(localeCode))
@@ -26,19 +23,19 @@ const changeCountry = async () => {
 }
 
 watch(locale, () => {
-  selectedCountry.value = countries.value[countryStore.country === "FR" ? 0 : 1]
+  selectedCountry.value = countries[countryStore.country === "FR" ? 0 : 1]
 })
 </script>
 
 <template>
-  <HeadlessListbox as="div" v-model="selectedCountry" by="code">
+  <HeadlessListbox as="div" v-model="selectedCountry">
     <div class="relative mt-1">
       <HeadlessListboxButton
         class="relative w-full cursor-pointer rounded-md border text-gray-900 border-gray-900 py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
       >
         <span class="flex items-center truncate gap-2"
           ><MapPinIcon class="h-5 w-5" aria-hidden="true" />{{
-            selectedCountry.label
+            t(`country.${selectedCountry}`)
           }}</span
         >
         <span
@@ -58,7 +55,7 @@ watch(locale, () => {
           <HeadlessListboxOption
             v-slot="{ active, selected }"
             v-for="country in countries"
-            :key="country.code"
+            :key="country"
             :value="country"
             as="template"
             @click="changeCountry"
@@ -73,7 +70,7 @@ watch(locale, () => {
                   'block truncate',
                 ]"
               >
-                {{ country.label }}</span
+                {{ t(`country.${country}`) }}</span
               >
               <span
                 v-if="selected"
