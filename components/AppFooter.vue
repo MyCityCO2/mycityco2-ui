@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { socials } from "~/svg";
+import { socials } from "~/svg"
 
-const { t } = useI18n();
-const localepath = useLocalePath();
+const { t } = useI18n()
+const localepath = useLocalePath()
 
-const links = [
+const links = computed(() => [
   { to: "/legal", label: t("actions.legal_notice", 2) },
   { to: "/contact", label: t("actions.contact") },
-];
+])
 </script>
 
 <template>
