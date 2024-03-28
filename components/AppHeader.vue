@@ -137,7 +137,7 @@ const handleScroll = () => {
                       class="flex h-full flex-col overflow-y-auto px-6 py-6 shadow-xl bg-white"
                     >
                       <div class="flex items-center justify-between">
-                        <NuxtLink
+                        <NuxtLinkLocale
                           to="/"
                           class="-m-1.5 p-1.5 ring-0 outline-none"
                         >
@@ -146,7 +146,7 @@ const handleScroll = () => {
                             class="h-8 w-auto text-primary"
                             alt=""
                           />
-                        </NuxtLink>
+                        </NuxtLinkLocale>
                         <button
                           type="button"
                           class="-m-2.5 rounded-md p-2.5 text-neutral-700"
@@ -158,7 +158,7 @@ const handleScroll = () => {
                       <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-neutral-500/10">
                           <div class="space-y-2 py-6">
-                            <NuxtLink
+                            <NuxtLinkLocale
                               v-for="item in navigation"
                               :key="item.name"
                               :to="item.to"
@@ -171,10 +171,10 @@ const handleScroll = () => {
                                 @click.prevent="navigate(), closeMenu()"
                                 >{{ item.name }}</a
                               >
-                            </NuxtLink>
+                            </NuxtLinkLocale>
                           </div>
                           <div class="py-6">
-                            <NuxtLink
+                            <NuxtLinkLocale
                               :to="diagnosticLink"
                               custom
                               v-slot="{ href, navigate }"
@@ -184,7 +184,7 @@ const handleScroll = () => {
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                                 @click.prevent="navigate(), closeMenu()"
                                 >Diagnostic</a
-                              ></NuxtLink
+                              ></NuxtLinkLocale
                             >
                           </div>
                           <CountrySelector class="pt-8" />

@@ -54,14 +54,14 @@ const { t } = useI18n()
               <CitySelector :hasQuickActions="false" auto-focus />
             </div>
             <div class="mt-10 flex items-center gap-x-6">
-              <NuxtLink to="/contact" class="button-primary">{{
+              <NuxtLinkLocale to="/contact" class="button-primary">{{
                 t("actions.contribute")
-              }}</NuxtLink>
-              <NuxtLink
+              }}</NuxtLinkLocale>
+              <NuxtLinkLocale
                 to="#project"
                 class="text-sm font-semibold leading-6 text-neutral-900"
                 >{{ t("actions.learn_more") }}
-                <span aria-hidden="true">→</span></NuxtLink
+                <span aria-hidden="true">→</span></NuxtLinkLocale
               >
             </div>
           </div>

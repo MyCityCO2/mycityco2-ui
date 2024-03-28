@@ -34,7 +34,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
       </template>
 
       <div v-else>
-        <NuxtLink
+        <NuxtLinkLocale
           :to="item.to"
           exact-active-class="bg-neutral-50 dark:bg-white/10 !text-primary"
           class="hover:bg-neutral-50 dark:hover:bg-white/10 flex items-center w-full text-left rounded-md p-2 gap-x-3 text-sm leading-6 font-semibold text-neutral-700 dark:text-neutral-300"
@@ -46,7 +46,7 @@ const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
             aria-hidden="true"
           />
           {{ item.name }}
-        </NuxtLink>
+        </NuxtLinkLocale>
         <ul class="mt-1 px-4">
           <NavSide :navigation="item.children" />
         </ul>
