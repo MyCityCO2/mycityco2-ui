@@ -10,17 +10,20 @@ const availableLocales = computed(() => {
 
 <template>
   <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
-    <NuxtLink
-      :class="{
-        'text-primary': locale.code === selectedLocale,
-      }"
+    <div
       v-for="locale in availableLocales"
       :key="locale.code"
-      :to="switchLocalePath(locale.code)"
-      class="group text-gray-900"
+      class="text-gray-900 group"
     >
-      {{ locale.name }}
-      <span class="group-last:hidden">|</span>
-    </NuxtLink>
+      <NuxtLink
+        :class="{
+          'text-primary': locale.code === selectedLocale,
+        }"
+        :to="switchLocalePath(locale.code)"
+      >
+        {{ locale.name }}
+      </NuxtLink>
+      <span class="group-last:hidden ml-1">|</span>
+    </div>
   </div>
 </template>
