@@ -66,7 +66,61 @@
     "copyright": "2023 MyCityCo2 a free and open source tool"
   },
   "project": {
-    "title": "Project"
+    "title": "Project",
+    "hero": {
+      "title": "Why Mycityco2?",
+      "text": "MyCityCO2 aims to automate carbon accounting for all local authorities (municipalities, inter-municipal cooperation structures, and unions). Thus, MyCityCO2 allows local authorities to focus on implementing actions to decarbonize public services. MyCityCO2 facilitates raising awareness among a wide audience (citizens, elected officials, etc.) about the challenges of climate change related to greenhouse gas emissions. Is my municipality aligned with the trajectory defined by the National Low Carbon Strategy (SNBC), France's roadmap to meet the Paris Agreement? MyCityCO2 will allow you to visualize your carbon trajectory compared to the target trajectory."
+    },
+    "contribute": {
+      "title": "How to contribute?",
+      "text": "MyCityCO2 is developed by a team of volunteers. We are looking for all types of contributors.",
+      "features": [
+        {
+          "name": "Develop",
+          "description": "Developers by working directly on the code {link}.",
+          "icon": "CodeBracketIcon"
+        },
+        {
+          "name": "Become a pioneer",
+          "description": "Communities (mayors, deputies, agents) who would be interested in the project to become pilots of the following phases, provide feedback...",
+          "icon": "LightBulbIcon"
+        },
+        {
+          "name": "Translate",
+          "description": "Translators to prepare development in other countries.",
+          "icon": "LanguageIcon"
+        },
+        {
+          "name": "Communicate",
+          "description": "Communicators to prepare and execute a communication strategy and better promote the product. Share MyCityCO2 on social networks?...",
+          "icon": "ChatBubbleLeftRightIcon"
+        }
+      ]
+    },
+    "thanks": {
+      "title": "Acknowledgments",
+      "text": "Thanks to all those who made the launch of MyCityCO2 possible:",
+      "list": [
+        "the members of Open Net who have intensely invested to release a first version",
+        "the volunteer members of Carbones sur factures who define the carbon accounts of tomorrow",
+        "Pierre Chassany (Vocables) for creating the MyCityCO2 logo",
+        "the experts who contributed to the development of the solution",
+        "the representatives of local authorities who participate in testing the solution and guide us on the needs to be covered",
+        "data providers who make the effort to make their data public and thus promote open data",
+        "Odoo SA, publisher of the open-source Odoo ERP on which the CO2 tracking module was developed"
+      ]
+    },
+    "credits": {
+      "title": "Credits",
+      "list": [
+        "The code for many modules used by MyCityCO2 comes from the Odoo Community Association (OCA), a non-profit organization that helps its members create Odoo solutions more quickly, at lower cost, and more efficiently, with easy access to high-quality applications and open updates.",
+        "The VueJS javascript framework as well as its core components such as Vue-Router and Pinia were used to create the web application",
+        "The TailwindCSS framework was used to create the graphical part",
+        "The Chart.js graphics library used in the dashboard of each municipality",
+        "The icons used come from heroicons",
+        "Part of the structure and general content of the website comes from 'Les Greniers d'Abondance, Calculateur pour la Résilience Alimentaire des Territoires (CRATer)'"
+      ]
+    }
   },
   "help": {
     "title": "Help"
