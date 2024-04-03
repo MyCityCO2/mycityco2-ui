@@ -1,28 +1,5 @@
 <script setup lang="ts">
-import {
-  BookOpenIcon,
-  RadioIcon,
-  ScaleIcon,
-  UserPlusIcon,
-} from "@heroicons/vue/20/solid"
-
-const features = computed(() =>
-  [BookOpenIcon, ScaleIcon, UserPlusIcon, RadioIcon].map((icon, idx) => ({
-    icon,
-    name: t(`home.features.${idx}.name`),
-    description: t(`home.features.${idx}.description`),
-  }))
-)
-
-const stats = computed(() =>
-  [0, 1, 2].map((_, idx) => ({
-    id: idx,
-    name: t(`home.stats.${idx}.name`),
-    value: t(`home.stats.${idx}.value`),
-  }))
-)
-
-const { t } = useI18n()
+const { t, tm, rt } = useI18n()
 </script>
 
 <template>
@@ -80,14 +57,12 @@ const { t } = useI18n()
     <section class="section-small">
       <div class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
         <div
-          v-for="stat in stats"
-          :key="stat.id"
+          v-for="stat in tm('home.stats')"
+          :key="rt(stat.value)"
           class="mx-auto flex max-w-xs flex-col gap-y-4"
         >
-          <h3>
-            {{ stat.value }}
-          </h3>
-          <p class="leading-text">{{ stat.name }}</p>
+          <h3>{{ rt(stat.value) }}</h3>
+          <p class="leading-text">{{ rt(stat.name) }}</p>
         </div>
       </div>
     </section>
@@ -107,8 +82,8 @@ const { t } = useI18n()
           class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
         >
           <div
-            v-for="feature in features"
-            :key="feature.name"
+            v-for="feature in tm('home.features.list')"
+            :key="rt(feature.name)"
             class="relative pl-16"
           >
             <dt
@@ -118,17 +93,17 @@ const { t } = useI18n()
                 class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary"
               >
                 <component
-                  :is="feature.icon"
+                  :is="iconsMap(rt(feature.icon))"
                   class="h-6 w-6 text-white"
                   aria-hidden="true"
                 />
               </div>
-              {{ feature.name }}
+              {{ rt(feature.name) }}
             </dt>
             <dd
               class="mt-2 text-base leading-7 text-neutral-600 dark:text-neutral-400"
             >
-              {{ feature.description }}
+              {{ rt(feature.description) }}
             </dd>
           </div>
         </dl>
