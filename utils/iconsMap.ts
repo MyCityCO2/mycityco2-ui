@@ -12,10 +12,10 @@ interface IIcon {
 
 export default (iconName: string) => {
   const icons: IIcon = {
-    BookOpenIcon: BookOpenIcon,
-    RadioIcon: RadioIcon,
-    ScaleIcon: ScaleIcon,
-    UserPlusIcon: UserPlusIcon,
+    BookOpenIcon,
+    RadioIcon,
+    ScaleIcon,
+    UserPlusIcon,
   }
   return icons[iconName]
 }
