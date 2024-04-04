@@ -51,22 +51,6 @@
       "description": "Accédez aux données détaillées de votre ville et identifiez les opportunités de réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés en France par la Stratégie nationale bas-carbone (SNBC)"
     }
   },
-  "class": "Classe",
-  "country": { "FR": "France", "CH": "Suisse" },
-  "actions": {
-    "contribute": "Contribuer",
-    "learn_more": "En savoir plus",
-    "contact_us": "Nous contacter",
-    "contact": "Contact",
-    "search_city": "Rechercher une ville",
-    "legal_notice": "Mentions légale | Mentions légales",
-    "previous": "Précédent",
-    "next": "Suivant"
-  },
-  "footer": {
-    "open_source": "Initiative open source - open data",
-    "copyright": "2023 MyCityCo2 a free and open source tool"
-  },
   "project": {
     "title": "Projet",
     "hero": {
@@ -483,7 +467,16 @@
         "68* - Dotations aux amortissements et provisions : comme expliqué dans le chapitre amortissements, cette catégorie est exclue et gérée correctement par MyCityCO2 en s’appuyant sur les dépenses d’investissement."
       ]
     },
-    "emission_factors": { "title": "Facteurs d'émissions monétaires" },
+    "monetary_emission_factors": {
+      "title": "Facteurs d'émissions monétaires",
+      "paragraphs": [
+        "Les facteurs d'émissions monétaires désignent les coefficients utilisés pour convertir des quantités monétaires en émissions de gaz à effet de serre (GES). Ces facteurs représentent la relation entre une unité monétaire dépensée ou générée et les émissions de GES associées à cette activité ou à ce secteur économique spécifique.",
+        "Les facteurs d'émissions monétaires permettent d'évaluer l'empreinte carbone d'une organisation, d'un produit ou d'un service en prenant en compte non seulement les émissions directes, mais également les émissions indirectes résultant des dépenses monétaires. Ils sont basés sur des données statistiques et des analyses sectorielles qui évaluent les émissions de GES associées à différentes catégories de dépenses, telles que l'énergie, les transports, les matériaux, etc.",
+        "L'utilisation des facteurs d'émissions monétaires offre une approche complète pour évaluer et quantifier l'impact environnemental d'une activité économique ou d'une organisation en prenant en considération l'ensemble des flux monétaires et de leurs conséquences en termes d'émissions de GES. Cela permet de mieux comprendre les sources d'émissions et d'identifier les domaines où des mesures de réduction peuvent être prises pour atténuer l'impact climatique.",
+        "Les facteurs d'émissions monétaires varient en fonction des pays et des années. Exiobase fournit une batterie de plus de 100 facteurs d’émissions monétaires pour l’ensemble des pays de l’Union Européenne ainsi que pour les grandes économies mondiales soit un total de 44 pays avec un historique annuel depuis les années 1990.",
+        "L’association entre les comptes du plan comptable et les facteurs d’émissions monétaires est réalisée via une table de correspondance qui est librement accessible en suivant {link}."
+      ]
+    },
     "emission_posts": { "title": "Postes d'émissions" },
     "limitations": { "title": "Limitations" },
     "data_sources": { "title": "Sources de données" },
@@ -493,8 +486,24 @@
     "source_code": { "title": "Code source" },
     "credit": { "title": "Comment créditer MyCityCO2" }
   },
-
   "diagnostic": {
     "title": "Diagnostic"
+  },
+  "this_link": "ce lien",
+  "class": "Classe",
+  "country": { "FR": "France", "CH": "Suisse" },
+  "actions": {
+    "contribute": "Contribuer",
+    "learn_more": "En savoir plus",
+    "contact_us": "Nous contacter",
+    "contact": "Contact",
+    "search_city": "Rechercher une ville",
+    "legal_notice": "Mentions légale | Mentions légales",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "footer": {
+    "open_source": "Initiative open source - open data",
+    "copyright": "2023 MyCityCo2 a free and open source tool"
   }
 }

@@ -51,20 +51,6 @@
       "description": "Access detailed data of your city and identify emission reduction opportunities to achieve the goals set by the Paris Agreement and implemented in France by the National Low Carbon Strategy (SNBC)"
     }
   },
-  "class": "Class",
-  "country": { "FR": "France", "CH": "Switzerland" },
-  "actions": {
-    "contribute": "Contribute",
-    "learn_more": "Learn More",
-    "contact_us": "Contact Us",
-    "contact": "Contact",
-    "search_city": "Search for a city",
-    "legal_notice": "Legal Notice | Legal Notices"
-  },
-  "footer": {
-    "open_source": "Open-source initiative - open data",
-    "copyright": "2023 MyCityCo2 a free and open source tool"
-  },
   "project": {
     "title": "Project",
     "hero": {
@@ -481,7 +467,16 @@
         "68* - Depreciation and provision allowances: as explained in the depreciation chapter, this category is excluded and managed properly by MyCityCO2 based on investment expenses."
       ]
     },
-    "emission_factors": { "title": "Monetary Emission Factors" },
+    "monetary_emission_factors": {
+      "title": "Monetary Emission Factors",
+      "paragraphs": [
+        "Monetary emission factors refer to the coefficients used to convert monetary amounts into greenhouse gas (GHG) emissions. These factors represent the relationship between a spent or generated monetary unit and the associated GHG emissions from that activity or specific economic sector.",
+        "Monetary emission factors allow the assessment of the carbon footprint of an organization, product, or service by considering not only direct emissions but also indirect emissions resulting from monetary expenditures. They are based on statistical data and sectoral analyses that assess GHG emissions associated with different spending categories, such as energy, transportation, materials, etc.",
+        "The use of monetary emission factors provides a comprehensive approach to evaluate and quantify the environmental impact of an economic activity or organization by taking into account all monetary flows and their consequences in terms of GHG emissions. This helps to better understand emission sources and identify areas where reduction measures can be taken to mitigate climate impact.",
+        "Monetary emission factors vary depending on countries and years. Exiobase provides a range of over 100 monetary emission factors for all EU countries as well as for major global economies, totaling 44 countries with annual historical data since the 1990s.",
+        "The association between the chart of accounts and the monetary emission factors is made through a correspondence table that is freely accessible by following {link}."
+      ]
+    },
     "emission_posts": { "title": "Emission Posts" },
     "limitations": { "title": "Limitations" },
     "data_sources": { "title": "Data Sources" },
@@ -493,5 +488,20 @@
   },
   "diagnostic": {
     "title": "Diagnostic"
+  },
+  "this_link": "this link",
+  "class": "Class",
+  "country": { "FR": "France", "CH": "Switzerland" },
+  "actions": {
+    "contribute": "Contribute",
+    "learn_more": "Learn More",
+    "contact_us": "Contact Us",
+    "contact": "Contact",
+    "search_city": "Search for a city",
+    "legal_notice": "Legal Notice | Legal Notices"
+  },
+  "footer": {
+    "open_source": "Open-source initiative - open data",
+    "copyright": "2023 MyCityCo2 a free and open source tool"
   }
 }

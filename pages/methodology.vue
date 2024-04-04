@@ -50,7 +50,7 @@ const navigation = [
         ],
       },
       {
-        name: t("methodology.emission_factors.title"),
+        name: t("methodology.monetary_emission_factors.title"),
         to: { path: "/methodology/general/emission-factor" },
       },
       {

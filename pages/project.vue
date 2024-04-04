@@ -50,7 +50,7 @@ const { t, tm, rt } = useI18n()
               class="mt-1 text-base leading-7 text-neutral-600 dark:text-neutral-400"
               v-html="
                 rt(feature.description, {
-                  link: `<a href='https://github.com/MyCityCO2' target='_blank' class='text-link'>projet github</a>`,
+                  link: `<a href='https://github.com/MyCityCO2' target='_blank' class='text-link'>GitHub</a>`,
                 })
               "
             />
