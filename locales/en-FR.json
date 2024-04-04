@@ -463,7 +463,24 @@
         }
       ]
     },
-    "account_configuration": { "title": "Account Configuration" },
+    "accounts_config": {
+      "title": "Accounts Configuration",
+      "paragraph_1": "Regarding investment expenses, only accounts from class 2 'fixed asset accounts' are taken into consideration. The following accounts are excluded from the calculation:",
+      "paragraph_2": "For operating expenses, only accounts from class 6 'expense accounts' are taken into account. The following accounts are excluded from the calculation:",
+      "config_items": [
+        "22 - Assets received by allocation: refers to assets or goods transferred to a public entity by another entity, usually the State or a local authority, within a specific allocation framework. These investments are considered to have impacted the carbon account of the municipality that built it and are therefore ignored at the time of transfer.",
+        "23 - Work in progress: refers to what is under construction. It will only be taken into account when construction is completed.",
+        "24 - Allocated, granted, leased or made available assets: allocations are ignored in the same way as assets received by allocation.",
+        "26 - Investments and receivables attached to investments: taking stakes does not generate emissions. The power conferred by the stake in another establishment may generate emissions related to decisions, but they will simply be recorded in the respective municipality.",
+        "27 - Other financial assets: whether loans, deposits, guarantees... it is the beneficiary who, in using this financial facility, will in one way or another generate emissions.",
+        "28 - Amortization of assets: asset amortizations are ignored, see the chapter on amortizations.",
+        "29 - Provisions for asset impairments: provisions are accounting operations that do not generate emissions."
+      ],
+      "expense_rules": [
+        "641* - Employee salaries: an employee's salary itself does not generate emissions. It is what the employee does with it that generates emissions.",
+        "68* - Depreciation and provision allowances: as explained in the depreciation chapter, this category is excluded and managed properly by MyCityCO2 based on investment expenses."
+      ]
+    },
     "emission_factors": { "title": "Monetary Emission Factors" },
     "emission_posts": { "title": "Emission Posts" },
     "limitations": { "title": "Limitations" },

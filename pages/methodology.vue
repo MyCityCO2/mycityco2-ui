@@ -42,7 +42,7 @@ const navigation = [
             },
           },
           {
-            name: t("methodology.account_configuration.title"),
+            name: t("methodology.accounts_config.title"),
             to: {
               path: "/methodology/general/accounting/accounts-configuration",
             },
