@@ -243,7 +243,11 @@
       "exiobase_carbon_database": "Issu de la base carbone de Exiobase",
       "result_tonnes_co2_equivalent": "Le résultat est exprimé en « tonnes équivalent de CO2 », c’est-à-dire en émission de gaz à effet de serre disposant d’un potentiel de réchauffement global équivalent à un kilogramme de CO2."
     },
-    "accounting": { "title": "Comptabilité" },
+    "accounting": {
+      "title": "Comptabilité",
+      "intro": "Introduction",
+      "description": "La comptabilité publique suit les principes posés par le plan comptable général applicable au secteur privé : comptabilité en droits constatés, en partie double (correspondance entre les ressources et leurs emplois). Pour les dépenses comme pour les recettes, les collectivités distinguent les opérations de fonctionnement (produits et charges) de ses opérations d'investissement (opérations sur le patrimoine)."
+    },
     "standardized_chart_of_accounts": { "title": "Plan comptable normalisé" },
     "investment": { "title": "Investissement" },
     "operation": { "title": "Fonctionnement" },
