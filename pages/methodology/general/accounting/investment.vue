@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/20/solid"
 
+const { t } = useI18n()
+
 const accountClasses = [
   "Comptes 20 – Immobilisations incorporelles : par exemple les comptes 203* concernant les frais d’études.",
   "Comptes 21 – Immobilisations corporelles : par exemple les comptes 213* concernant les constructions mais aussi par exemple le compte 2151 qui concerne l’installation de réseaux de voirie.",
@@ -9,7 +11,7 @@ const accountClasses = [
 <template>
   <div>
     <div class="methodology__section_header">
-      <h3>Investissement</h3>
+      <h3>{{ t("methodology.investment.title") }}</h3>
     </div>
     <div class="methodology__section">
       <p>

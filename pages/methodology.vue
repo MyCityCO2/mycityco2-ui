@@ -14,7 +14,7 @@ const navigation = [
         to: { path: "/methodology/general/accounting/" },
         children: [
           {
-            name: t("methodology.standardized_chart_of_accounts.title"),
+            name: t("methodology.accounting_plan.title"),
             to: { path: "/methodology/general/accounting/plan" },
           },
           {
@@ -50,7 +50,7 @@ const navigation = [
         ],
       },
       {
-        name: t("methodology.monetary_emission_factors.title"),
+        name: t("methodology.emission_factors.title"),
         to: { path: "/methodology/general/emission-factor" },
       },
       {

@@ -19,7 +19,6 @@
         "value": "24 %"
       }
     ],
-
     "features": {
       "subtitle": "Adopt a free, transparent tool validated by experts",
       "title": "1st carbon footprint tool for local authorities",
@@ -52,6 +51,7 @@
       "description": "Access detailed data of your city and identify emission reduction opportunities to achieve the goals set by the Paris Agreement and implemented in France by the National Low Carbon Strategy (SNBC)"
     }
   },
+  "class": "Class",
   "country": { "FR": "France", "CH": "Switzerland" },
   "actions": {
     "contribute": "Contribute",
@@ -242,16 +242,83 @@
       "exiobase_carbon_database": "From the Exiobase carbon database",
       "result_tonnes_co2_equivalent": "The result is expressed in 'tonnes of CO2 equivalent', that is, in greenhouse gas emissions with a global warming potential equivalent to one kilogram of CO2."
     },
-    "accounting": { "title": "Accounting" },
-    "standardized_chart_of_accounts": {
-      "title": "Standardized Chart of Accounts"
+    "accounting": {
+      "title": "Accounting",
+      "intro": "Introduction",
+      "description": "Public accounting follows the principles set forth by the general accounting plan applicable to the private sector: accrual accounting, double-entry (correspondence between resources and their uses). For both expenses and revenues, local authorities distinguish between operating operations (income and expenses) and investment operations (transactions involving assets)."
+    },
+    "accounting_plan": {
+      "title": "Standardized Chart of Accounts",
+      "description_1": "Various accounting standards are applicable to the local public sector depending on the type of local authorities (municipalities, departments, regions) and the nature of the activity carried out (administrative public service or industrial and commercial public service). These different types of accounting were previously set out in different accounting instructions depending on the categories of local authorities: M14 for municipalities, M52 for departments, M71 for regions, M4 for industrial and commercial public services, M22 for ESMS (medico-social establishments), M31 for OPH (public housing offices), etc. As of January 1, 2024, municipalities, inter-municipalities, departments, and regions will use a single accounting instruction, instruction M57, already used by metropolises. However, instruction M4 (used for industrial and commercial public services) and instruction M22 (social and medico-social establishments) will be retained.",
+      "description_2": "MyCityCO2 currently relies on instruction M14 and will switch to instruction M57 starting in 2024. In both cases, the account classes are as follows:",
+      "description_3": "MyCityCO2 only considers classes 2 and 6 representing actual operating and investment expenses, which generate CO2 emissions. The following classes are excluded for the reasons below:",
+      "checklist_1": [
+        {
+          "key": "Capital accounts",
+          "text": "includes most of the items grouped in this class by the PCG (shareholders' equity, loans and similar debts), but also specific accounts for local authorities (FCTVA, development tax, fines revenue, etc.). Additionally, account 13 'investment subsidies' reflects received subsidies, and account 15 reflects provisions for risks and charges."
+        },
+        {
+          "key": "Fixed asset accounts",
+          "text": "presents the elements of assets intended to be used durably for the activities of local authorities and integrated into their assets in tangible, intangible, or financial form (accounts 20 to 27). Depreciation of assets is summarized in the subdivisions of account 28. These are justified by an amortization plan which the local authority will determine the duration of. As an element of truthfulness of the balance sheet and the income statement, depreciation is the accounting recognition of a decrease in the value of an asset resulting from use, time, technical change, or any other cause. Depreciation is mandatory only for communities with 3,500 inhabitants or more and certain assets. It is a form of self-financing (materialized by an expense in the operating section and a corresponding income in the investment section), which allows for the renewal of assets whose value depreciates. Provisions for depreciation of assets are recorded in account 29. Provisions for depreciation of assets result from the recognition of a decrease in the value of an immobilized asset resulting from causes whose effects are not necessarily irreversible."
+        },
+        {
+          "key": "Inventory and work in progress accounts",
+          "text": "are used to track: - inventories of supplies and commodities intended for consumption, - inventories entering a production cycle. These concern operations related to subdivisions and development zones (315 'Land to be developed', 3 555 'Developed land') which are managed in a separate budget. Only inventories that enter the production cycle are budgeted."
+        },
+        {
+          "key": "Third-party accounts",
+          "text": "includes non-exclusively financial receivables and payables with a term of less than one year, or at least short term. It also records regularization accounts. Class 4 accounts are managed by the public accountant except for account 481 'Expenses to be spread over several financial years', which will appear in the budget, as well as accounts 454, 456, 457, 458 'Transactions on behalf of third parties' and, if the municipality has opted for budgetary provisions, account 49 'Provisions for depreciation of third-party accounts'. The use of accounts 408 and 418, which are non-budgetary, for the allocation of expenses and revenues should also be noted."
+        },
+        {
+          "key": "Financial accounts",
+          "text": "record movements of values and operations with the treasury, banks, and financial institutions. They may also include accounts related to authorized cash investments. Non-budgetary, these accounts are managed by the local authority's accountant."
+        },
+        {
+          "key": "Expense accounts",
+          "text": "group accounts intended to record, in the financial year, charges by nature related to normal or current financing (accounts 60 to 65), financial management (account 66), and provisions for depreciation and provisions (account 68). Additionally, the operating section includes three globalized chapters grouping class 6 accounts: chapters 011 'general character charges', 012 'personnel expenses and related costs' and 013 'charge mitigations'."
+        },
+        {
+          "key": "Revenue accounts",
+          "text": "are presented similarly to class 6. Account 73 reflects taxes, distinguishing impositions reclassified according to economic criteria. There is then correspondence between accounts tracing other current expenses and revenues (accounts 60 to 65 and 70 to 75), financial expenses and revenues (accounts 66 and 76), and provisions for depreciation and provisions (accounts 68 and 78). Account 79 is used to transfer charges temporarily charged to the operating section to investment for spreading. Additionally, the operating section includes a globalized chapter grouping class 7 accounts: chapter 014 'revenue mitigations'."
+        },
+        {
+          "key": "Special accounts",
+          "text": "account for off-balance sheet commitments as well as movements affecting the inactive values of the local authority."
+        }
+      ],
+      "checklist_2": [
+        {
+          "key": "Capital accounts",
+          "text": "balance sheet accounts grouping accounts that record the long-term financial resources of the local authority. It is at the time of using these resources that carbon will be accounted for."
+        },
+        {
+          "key": "Inventory and work in progress accounts",
+          "text": "balance sheet accounts representing the state of the local authority's inventory at a given time; they are not included in the calculation of the carbon footprint of the local authority. Expenses incurred to stock these products will have been captured either through expense accounts or fixed asset accounts."
+        },
+        {
+          "key": "Third-party accounts",
+          "text": "balance sheet accounts reflecting financial relationships with third parties at a given date; these accounts will have been fed by purchases and sales from classes 6 and 7."
+        },
+        {
+          "key": "Financial accounts",
+          "text": "these accounts are related to non-budgetary orders, recording movements of value with the treasury, banks, etc."
+        },
+        {
+          "key": "Revenue accounts",
+          "text": "revenues are excluded as we focus at this stage on calculating the carbon footprint of the local authority."
+        },
+        {
+          "key": "Special accounts",
+          "text": "corresponding to commitments that the local authority has made but which are not directly reflected in its balance sheet, these commitments are potential obligations that can generate future financial charges for the local authority. It is at this point that they will be accounted for in terms of emissions."
+        }
+      ]
     },
     "investment": { "title": "Investment" },
     "operation": { "title": "Operation" },
     "depreciations": { "title": "Depreciations" },
     "amortization_periods": { "title": "Amortization Periods" },
     "account_configuration": { "title": "Account Configuration" },
-    "monetary_emission_factors": { "title": "Monetary Emission Factors" },
+    "emission_factors": { "title": "Monetary Emission Factors" },
     "emission_posts": { "title": "Emission Posts" },
     "limitations": { "title": "Limitations" },
     "data_sources": { "title": "Data Sources" },
