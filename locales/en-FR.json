@@ -123,7 +123,102 @@
     }
   },
   "help": {
-    "title": "Help"
+    "title": "Help",
+    "hero": {
+      "title": "Understanding the Risks Associated with Greenhouse Gas Emissions",
+      "text": "Greenhouse gas (GHG) emissions represent a set of major risks for our planet and all living beings residing on it. By increasing the concentration of GHGs in the atmosphere, we disrupt the Earth's climate balance, leading to serious consequences. The primary risk is climate change, which causes dramatic environmental changes such as rising sea levels, extreme weather events, and disruption of ecosystems. These changes have repercussions on agriculture, water availability, and human health. Reducing GHG emissions and transitioning to a sustainable economy is essential to prevent these risks and protect our planet."
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "text": "Can't find the answer to your question?",
+      "list": [
+        {
+          "question": "What is the difference between 'Collective' carbon footprint and 'Territory' carbon footprint?",
+          "answer": "The 'Territory' carbon footprint aims to estimate the total (communities, individuals, and businesses) greenhouse gas emissions in the territory of the concerned community. MyCityCO2 provides the community's footprint, without estimation, based on the municipality's administrative accounts and by measuring emissions related to buildings, infrastructures, services, etc., of the community."
+        },
+        {
+          "question": "How is the trajectory of the Low Carbon National Strategy (SNBC), France's roadmap to meet the Paris Agreement, calculated?",
+          "answer": "According to the Secten report which presents greenhouse gas emissions in France since 1990 (Citepa, 2023. Greenhouse gases and atmospheric pollutants. Emission balance in France from 1990 to 2020. Secten report ed. 2023.), emissions were 456.4 Mt CO2e in 2016 and the objective defined by the Paris Agreement of -50% by 2030 compared to 1990 leads us to 270 Mt CO2e for 2030. By extrapolation, since 2016, communities must follow a trajectory of reduction of 3.65% each year."
+        }
+      ]
+    },
+    "glossary": {
+      "title": "Glossary",
+      "list": [
+        {
+          "name": "Paris Agreement",
+          "description": "The Paris Agreement is an international agreement on climate change adopted in 2015 during COP21. It aims to limit global warming to less than 2 degrees Celsius compared to pre-industrial levels and to pursue efforts to limit the temperature rise to 1.5 degrees Celsius."
+        },
+        {
+          "name": "Depreciation",
+          "description": "Depreciation in accounting corresponds to the systematic allocation of the cost of a fixed asset over its useful life, to reflect its gradual depreciation over time and reduce its book value. This allows for the consideration of wear and tear, obsolescence, and the use of the asset over time."
+        },
+        {
+          "name": "GHG Inventory",
+          "description": "GHG inventories (Greenhouse Gas) are assessment tools of greenhouse gas emissions from an organization, a company, or a territory. They quantify and report greenhouse gas emissions, identifying main sources and guiding actions to reduce the impact on climate."
+        },
+        {
+          "name": "Carbon on Invoice",
+          "description": "The Carbones Sur Factures (CSF) community launched by Reconcilions-nous has one goal: to quickly enable every producer in Europe, merchant or non-merchant, to indicate the reliable carbon weight of their offerings, and thus help every actor in their decarbonization choices. The means? Frame the current carbon counts in a reliable and simple carbon accounting."
+        },
+        {
+          "name": "Climate Change",
+          "description": "Refers to the long-term alteration of Earth's climate patterns, resulting in significant variations in global temperatures, precipitation, winds, and other climatic parameters. Climate change is primarily caused by human activities, such as greenhouse gas emissions, and leads to consequences such as rising sea levels, extreme weather events, and disruption of ecosystems."
+        },
+        {
+          "name": "CO2 Equivalent",
+          "description": "CO2 equivalent is a measure that converts emissions from different greenhouse gases into a single unit of measurement, taking into account their potential for global warming relative to carbon dioxide (CO2). This facilitates the comparison and aggregation of emissions from different gases, providing a common estimate of their contribution to climate change."
+        },
+        {
+          "name": "Carbon Footprint",
+          "description": "The carbon footprint refers to the total amount of greenhouse gases emitted directly or indirectly by a person, company, community, or territory. It measures the impact on climate change and can include emissions related to energy, transportation, food, industrial production, etc."
+        },
+        {
+          "name": "Exiobase",
+          "description": "Economic and environmental database providing detailed information on material flows, energy, and emissions in the global economy. It allows for the analysis of interactions between economic activities and environmental impact, contributing to sustainability assessment and informed decision-making. It provides monetary emission factors for MyCityCO2."
+        },
+        {
+          "name": "Emission Factor (Monetary and Physical)",
+          "description": "A monetary emission factor is a measure that expresses greenhouse gas emissions associated with a unit of currency spent, typically in the context of purchasing goods or services. A physical emission factor quantifies greenhouse gas emissions per physical unit of a product, activity, or process. These factors help assess the environmental impact of economic activities and guide choices towards more sustainable options in terms of greenhouse gas emissions."
+        },
+        {
+          "name": "GHG (Greenhouse Gas)",
+          "description": "Greenhouse gases (GHGs) are compounds present in the atmosphere that contribute to the greenhouse effect. They trap heat emitted by the Earth, leading to planetary warming. Major human-caused GHGs include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and fluorinated gases. They are mainly emitted by industrial, agricultural, and energy activities and are responsible for climate change by increasing Earth's average temperature."
+        },
+        {
+          "name": "GHG Protocol",
+          "description": "The GHG Protocol (Greenhouse Gas Protocol) is a framework for accounting and managing greenhouse gas (GHG) emissions."
+        },
+        {
+          "name": "Planetary Boundaries",
+          "description": "Planetary boundaries refer to the thresholds and conditions necessary to maintain a safe and stable state of planet Earth. They define the tolerance limits of key ecological processes, such as climate change, biodiversity loss, the water cycle, and resource use, beyond which the overall functioning of the Earth's ecosystem could be compromised. Planetary boundaries serve as a guide to guide actions aimed at maintaining environmental sustainability and preserving conditions conducive to life on Earth."
+        },
+        {
+          "name": "GWP (Global Warming Potential)",
+          "description": "Indicators used to assess the impact of different greenhouse gases (GHGs) on global warming. GWPs compare the ability of each gas to trap heat in the atmosphere relative to carbon dioxide (CO2), which is used as a reference with a GWP of 1. GWPs allow for the conversion of emissions from different GHGs into CO2 equivalents, thereby facilitating the comparison and aggregation of GHG emissions from different sources."
+        },
+        {
+          "name": "Scope",
+          "description": "The scopes of a carbon footprint are categories that define the sources and boundaries of greenhouse gas (GHG) emissions to be considered in the assessment. They allow for a comprehensive evaluation of GHG emissions related to an organization's activities, considering both direct and indirect emissions throughout the value chain."
+        },
+        {
+          "name": "Carbon Neutrality",
+          "description": "Carbon neutrality refers to a state in which net greenhouse gas (GHG) emissions are zero. This means that total GHG emissions are fully offset by actions to reduce, avoid, or sequester emissions, often through GHG reduction projects or the purchase of carbon credits. Achieving carbon neutrality is considered a key objective in combating climate change, as it helps stabilize the concentration of GHGs in the atmosphere, thereby limiting global warming."
+        },
+        {
+          "name": "NZI (Net Zero Initiative)",
+          "description": "A global movement aimed at achieving carbon neutrality worldwide. It is a commitment by governments, businesses, and organizations to reduce their greenhouse gas (GHG) emissions to zero and offset any residual emissions through emission reduction or sequestration actions. The initiative aims to accelerate efforts to combat climate change by encouraging a transition to low-carbon economies and promoting sustainable practices."
+        },
+        {
+          "name": "SBTi (Science Based Targets initiative)",
+          "description": "A collaborative initiative between several organizations, including CDP, the United Nations Global Compact, the World Resources Institute, and WWF. Its goal is to promote the setting of science-based targets for reducing greenhouse gas (GHG) emissions. Companies engaging in SBTi strive to set emission reduction targets aligned with scientific recommendations to limit global warming to 1.5 degrees Celsius. SBTi provides criteria and guidelines to ensure these targets are rigorous and consistent with the climate emergency."
+        },
+        {
+          "name": "SNBC (Stratégie Nationale Bas Carbone)",
+          "description": "France's roadmap for combating climate change. It provides guidance for implementing, in all sectors, the transition to a low-carbon, circular, and sustainable economy."
+        }
+      ]
+    }
   },
   "methodology": {
     "title": "Methodology"
