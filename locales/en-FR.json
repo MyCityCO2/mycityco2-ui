@@ -331,7 +331,24 @@
         "Accounts 61 and 62 - External services: for example accounts 615* concerning maintenance and repairs that are not of an investment nature, 617 for studies and research, and 623* for advertising, publications, and public relations."
       ]
     },
-    "depreciations": { "title": "Depreciations" },
+    "depreciations": {
+      "title": "Depreciations",
+      "paragraph_1": "From a general accounting perspective, depreciation is generally defined as the irreversible reduction, spread over a determined period, of the amount carried on certain items of the balance sheet. Depreciation for impairment is the accounting recognition of a decrease in the value of an asset resulting from usage, time, change of technology, or any other cause. Because of the difficulties in measuring this decrease, depreciation generally consists of spreading the value of depreciable assets over a probable life span.",
+      "paragraph_2": "From the perspective of communities, in accordance with the provisions of article L.2321-2-27° of the CGCT, the implementation of the depreciation setup is adapted as follows:",
+      "paragraph_3": "Furthermore, in accordance with article R.2321-1 of the CGCT, the provisions for depreciation of the following assets constitute mandatory expenses for the municipalities, groups, and establishments mentioned above:",
+      "paragraph_4": "Regarding intangible assets, the defined accounts seem to be exhaustive; however, the problem arises with tangible assets for which all significant accounts are omitted, such as 2131 \"Public Building Constructions\", 2153 \"Installations, technical equipment, and machinery\" ... which represent the majority of public investment expenses.",
+      "paragraph_5": "MyCityCO2 cannot rely on the depreciation management mechanism as defined in the accounting of communities. Thus, depreciation passed in the operating budget to accounts 68 must be ignored, and all depreciations must be virtually recreated starting from investment expenses.",
+      "paragraph_6": "MyCityCO2 generates the associated depreciation for each investment expense.",
+      "checklist_1": [
+        "municipalities with a population equal to or greater than 3,500 inhabitants",
+        "groups of municipalities with a total population equal to or greater than this threshold",
+        "and their public establishments; therefore, a municipal social action center and a school fund whose municipality of attachment meets the above criteria also depreciate their assets."
+      ],
+      "checklist_2": [
+        "as for intangible assets (20), those listed in accounts 202 \"Costs of studies, development, modifications, and revisions of urban planning documents\", 2031 \"Study expenses\" (not followed by realization), 2032 \"Research and development expenses\", 2033 \"Insertion expenses\" (not followed by realization), 204 \"Equipment grants paid\", 205 \"Concessions and similar rights, patents, licenses, trademarks, processes, software, rights, and similar values\" and 208 \"Other intangible assets\" except for assets subject to provision",
+        "as for tangible assets (21), assets listed in accounts 2156 \"Firefighting and civil defense equipment and tools\", 2157 \"Roadway equipment and tools\", 2158 \"Other installations, technical equipment, and tools\" and 218 \"Other tangible assets\"."
+      ]
+    },
     "amortization_periods": { "title": "Amortization Periods" },
     "account_configuration": { "title": "Account Configuration" },
     "emission_factors": { "title": "Monetary Emission Factors" },
