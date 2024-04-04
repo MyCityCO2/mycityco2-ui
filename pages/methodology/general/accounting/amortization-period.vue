@@ -87,7 +87,7 @@ const { t, rt, tm } = useI18n()
                     </tr>
                     <tr
                       v-for="(r, ruleIdx) in rule.rules"
-                      :key="rt(r)"
+                      :key="ruleIdx"
                       :class="[
                         ruleIdx === 0
                           ? 'border-neutral-300'
