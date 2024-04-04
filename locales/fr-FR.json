@@ -58,7 +58,9 @@
     "contact_us": "Nous contacter",
     "contact": "Contact",
     "search_city": "Rechercher une ville",
-    "legal_notice": "Mentions légale | Mentions légales"
+    "legal_notice": "Mentions légale | Mentions légales",
+    "previous": "Précédent",
+    "next": "Suivant"
   },
   "footer": {
     "open_source": "Initiative open source - open data",
@@ -220,7 +222,24 @@
     }
   },
   "methodology": {
-    "title": "Méthodologie"
+    "title": "Méthodologie",
+    "general_overview": { "title": "Présentation générale" },
+    "accounting": { "title": "Comptabilité" },
+    "standardized_chart_of_accounts": { "title": "Plan comptable normalisé" },
+    "investment": { "title": "Investissement" },
+    "operation": { "title": "Fonctionnement" },
+    "depreciations": { "title": "Amortissements" },
+    "amortization_periods": { "title": "Durées d’amortissement" },
+    "account_configuration": { "title": "Configuration des comptes" },
+    "monetary_emission_factors": { "title": "Facteurs d'émissions monétaires" },
+    "emission_posts": { "title": "Postes d'émissions" },
+    "limitations": { "title": "Limitations" },
+    "data_sources": { "title": "Sources de données" },
+    "usage_license": { "title": "License d'utilisation" },
+    "contents": { "title": "Contenus" },
+    "data": { "title": "Données" },
+    "source_code": { "title": "Code source" },
+    "credit": { "title": "Comment créditer MyCityCO2" }
   },
   "diagnostic": {
     "title": "Diagnostic"
