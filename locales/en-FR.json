@@ -349,7 +349,120 @@
         "as for tangible assets (21), assets listed in accounts 2156 \"Firefighting and civil defense equipment and tools\", 2157 \"Roadway equipment and tools\", 2158 \"Other installations, technical equipment, and tools\" and 218 \"Other tangible assets\"."
       ]
     },
-    "amortization_periods": { "title": "Amortization Periods" },
+    "amortization_periods": {
+      "title": "Amortization Periods",
+      "paragraph_1": "The amortization periods for tangible and intangible assets are determined for each asset or category of assets by the deliberative assembly, with the following exceptions:",
+      "paragraph_2": "For other assets, the assembly may refer to the indicative scale below:",
+      "paragraph_3": "MyCityCO2 respects the same amortization periods, however, defining a maximum duration of 7 years for the longest amortizations. Since MyCityCO2 cannot rely on the amortization management mechanism (see above), it is necessary to reconstruct the amortization history to provide a faithful picture of the state of amortizations. Data has been provided since 2010, generating amortizations from the investment date, allowing us, after 7 fiscal years, by 2016, to have a complete view of community emissions. It is in 2016 that the Paris Agreement entered into force, so it is since 2016 that the communities' trajectory can be measured.",
+      "table_headers": {
+        "type": "Type",
+        "assets": "Assets",
+        "duration": "Duration"
+      },
+      "rules": [
+        "Fees related to urban planning documents referred to in Article L.121-7 of the Urban Planning Code, which are amortized over a maximum period of 10 years",
+        "Study fees and insertion fees not followed by realization, which are amortized over a maximum period of 5 years",
+        "Research and development costs, which are amortized over a maximum period of 5 years",
+        "Patents, which are amortized over the term of the privilege they enjoy or over the effective duration of their use if shorter",
+        "Equipment subsidies paid, which are amortized over a maximum period of 5 years when the beneficiary is a private entity, or fifteen years when the beneficiary is a public entity"
+      ],
+      "table_rules": [
+        {
+          "name": "Intangible Assets",
+          "rules": [
+            {
+              "name": "Software",
+              "duration": "2 years"
+            }
+          ]
+        },
+        {
+          "name": "Tangible Assets",
+          "rules": [
+            {
+              "name": "Cars",
+              "duration": "5 to 10 years"
+            },
+            {
+              "name": "Trucks and Industrial Vehicles",
+              "duration": "4 to 8 years"
+            },
+            {
+              "name": "Furniture",
+              "duration": "10 to 15 years"
+            },
+            {
+              "name": "Electric or Electronic Office Equipment",
+              "duration": "5 to 10 years"
+            },
+            {
+              "name": "Computer Equipment",
+              "duration": "2 to 5 years"
+            },
+            {
+              "name": "Standard Equipment",
+              "duration": "6 to 10 years"
+            },
+            {
+              "name": "Safe",
+              "duration": "20 to 30 years"
+            },
+            {
+              "name": "Heating Installations and Appliances",
+              "duration": "10 to 20 years"
+            },
+            {
+              "name": "Lifts-Elevators",
+              "duration": "20 to 30 years"
+            },
+            {
+              "name": "Laboratory Equipment",
+              "duration": "5 to 10 years"
+            },
+            {
+              "name": "Garage and Workshop Equipment",
+              "duration": "10 to 15 years"
+            },
+            {
+              "name": "Kitchen Equipment",
+              "duration": "10 to 15 years"
+            },
+            {
+              "name": "Sports Equipment",
+              "duration": "10 to 15 years"
+            },
+            {
+              "name": "Road Installations",
+              "duration": "20 to 30 years"
+            },
+            {
+              "name": "Plantations",
+              "duration": "15 to 20 years"
+            },
+            {
+              "name": "Other Layouts and Land Improvements",
+              "duration": "15 to 30 years"
+            },
+            {
+              "name": "Deposit Areas (mines and quarries)",
+              "duration": "over the duration of the exploitation contract"
+            },
+            {
+              "name": "Constructions on others' land",
+              "duration": "over the duration of the land lease"
+            },
+            {
+              "name": "Light Buildings, Shelters",
+              "duration": "10 to 15 years"
+            },
+            {
+              "name": "Building Layouts and Improvements, Electrical and Telephone Installations",
+              "duration": "15 to 20 years"
+            }
+          ]
+        }
+      ]
+    },
     "account_configuration": { "title": "Account Configuration" },
     "emission_factors": { "title": "Monetary Emission Factors" },
     "emission_posts": { "title": "Emission Posts" },
