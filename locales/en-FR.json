@@ -322,7 +322,15 @@
         "Accounts 21 – Tangible assets: for example, accounts 213* concerning constructions, but also for example account 2151 concerning the installation of road networks."
       ]
     },
-    "operation": { "title": "Operation" },
+    "operation": {
+      "title": "Operation",
+      "definition": "Operating operations correspond to the regular and routine activities of a public entity, such as expenses related to the provision of public services, employee salaries, operating expenses, purchases of goods and services necessary for the proper functioning of the entity, etc. These operating operations are generally recurrent and occur frequently as part of the daily activities of the public entity.",
+      "method": "In order to calculate the carbon footprint of the community, MyCityCO2 selects only operating expenses and not revenues. Among the expense accounts:",
+      "checklist": [
+        "Accounts 60 - Purchases of goods and services: for example accounts 60221 - Fuels and fuels, 60612 Energy and electricity, 6061 purchases of administrative supplies...",
+        "Accounts 61 and 62 - External services: for example accounts 615* concerning maintenance and repairs that are not of an investment nature, 617 for studies and research, and 623* for advertising, publications, and public relations."
+      ]
+    },
     "depreciations": { "title": "Depreciations" },
     "amortization_periods": { "title": "Amortization Periods" },
     "account_configuration": { "title": "Account Configuration" },

@@ -324,7 +324,15 @@
         "Comptes 21 – Immobilisations corporelles : par exemple les comptes 213* concernant les constructions mais aussi par exemple le compte 2151 qui concerne l’installation de réseaux de voirie."
       ]
     },
-    "operation": { "title": "Fonctionnement" },
+    "operation": {
+      "title": "Fonctionnement",
+      "definition": "Les opérations de fonctionnement correspondent aux activités régulières et courantes d'une entité publique, telles que les dépenses liées à la fourniture de services publics, les salaires des employés, les frais de fonctionnement, les achats de biens et de services nécessaires au bon fonctionnement de l'entité, etc. Ces opérations de fonctionnement sont généralement récurrentes et se produisent fréquemment dans le cadre des activités quotidiennes de la collectivité publique.",
+      "method": "Afin de calculer l’empreinte carbone de la collectivité, MyCityCO2 sélectionne les dépenses de fonctionnement uniquement et pas les recettes. Parmi les comptes de charges :",
+      "checklist": [
+        "Comptes 60 - Achats de biens et services : par exemple les comptes 60221 – Combustibles et carburants, 60612 Energie et électricité, 6061 achats de fournitures administratives…",
+        "Comptes 61 et 62 – Services extérieurs : par exemple les comptes 615* concernant l’entretien et les réparations qui ne sont pas de l’ordre d’un investissement, 617 pour les études et recherches et 623* pour la publicité, les publications et les relations publiques"
+      ]
+    },
     "depreciations": { "title": "Amortissements" },
     "amortization_periods": { "title": "Durées d’amortissement" },
     "account_configuration": { "title": "Configuration des comptes" },
