@@ -223,7 +223,26 @@
   },
   "methodology": {
     "title": "Méthodologie",
-    "general_overview": { "title": "Présentation générale" },
+    "general_overview": {
+      "title": "Présentation générale",
+      "carbon_flash_accounts_calculation": "MyCityCO2 calcule les comptes carbones flash des collectivités.",
+      "carbon_flash_accounts_definition": "Un compte carbone flash représente une estimation des émissions directes et indirectes de gaz à effet de serre liées à l'activité de la collectivité sur une période déterminée calculée sur la base des comptes financiers des collectivités.",
+      "emissions_by_category": "Les émissions sont présentées par 'poste' (alimentation, construction, maintenance, transports...). Ces catégories permettent d’identifier les principales sources d’émissions et de hiérarchiser les actions qui peuvent être mises en place pour réduire ces émissions. Cette estimation se fait en combinant deux types de données différentes :",
+      "checklist": [
+        "Les données financières de la collectivité telles que publiées dans les comptes administratifs annuellement compte par compte selon la nomenclature M14 en euros;",
+        "Les facteurs d’émissions représentent la quantité de gaz à effet de serre engendrée par l’utilisation d’un euro, par exemple la quantité de CO2 émise pour 1€ de nourriture achetée."
+      ],
+      "ghg_emissions": "Emissions de GES",
+      "financial_data": "Données financières",
+      "in_euros": "(En euros)",
+      "per_account": "Propre a chaque compte",
+      "annual_accounts_collection": "Collecté dans les comptes annuels de chaque collectivité",
+      "emission_factor": "Facteur d'émissions",
+      "co2e_per_euro": "(CO2e par euro)",
+      "emission_factor_database": "Base de facteurs d’émissions",
+      "exiobase_carbon_database": "Issu de la base carbone de Exiobase",
+      "result_tonnes_co2_equivalent": "Le résultat est exprimé en « tonnes équivalent de CO2 », c’est-à-dire en émission de gaz à effet de serre disposant d’un potentiel de réchauffement global équivalent à un kilogramme de CO2."
+    },
     "accounting": { "title": "Comptabilité" },
     "standardized_chart_of_accounts": { "title": "Plan comptable normalisé" },
     "investment": { "title": "Investissement" },
@@ -241,6 +260,7 @@
     "source_code": { "title": "Code source" },
     "credit": { "title": "Comment créditer MyCityCO2" }
   },
+
   "diagnostic": {
     "title": "Diagnostic"
   }
