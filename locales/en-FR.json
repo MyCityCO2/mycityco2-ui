@@ -487,7 +487,15 @@
         "The association between the accounts of the chart of accounts and emission category is made through a correspondence table that is freely accessible by following {link_1} and for investment expenditures {link_2}."
       ]
     },
-    "limitations": { "title": "Limitations" },
+    "limitations": {
+      "title": "Limitations",
+      "rules": [
+        "Monetary factors vs. physical factors: Data published in open data by the General Directorate of Finance only allows for retrieving the accounting data of local authorities but not the physical consumptions associated with expenses such as electricity consumption, gas consumption, the number of kilometers of renovated roads... Thus, the use of physical emission factors is impossible. It is in a second stage that local authorities will be able to transition from their flash carbon account to a more precise carbon account based on consumptions and therefore on physical emission factors.",
+        "Emissions vs. Absorptions: At this stage, MyCityCO2 cannot quantify the emissions absorbed by the local authority, whether through its natural heritage or technical processes. Only emissions are accounted for.",
+        "Annex budgets to integrate: For this first version, only the main budgets are taken into account.",
+        "Include entities other than municipalities: Currently, only municipalities are taken into account. The objective is to extend coverage and thus include also inter-municipal cooperation structures, unions, departments, and regions."
+      ]
+    },
     "data_sources": { "title": "Data Sources" },
     "usage_license": { "title": "Usage License" },
     "contents": { "title": "Contents" },

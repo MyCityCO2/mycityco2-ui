@@ -487,7 +487,15 @@
         "L’association entre les comptes du plan comptable et les catégories de postes d’émissions est réalisée via une table de correspondance qui est librement accessible en suivant {link_1} et pour les dépenses d'investissement {link_2}."
       ]
     },
-    "limitations": { "title": "Limitations" },
+    "limitations": {
+      "title": "Limitations",
+      "rules": [
+        "Facteurs monétaires vs facteurs physiques : les données publiées en open data par la direction générale des finances permet seulement de récupérer les données comptables des collectivités mais pas les consommations physiques associées aux dépenses telle la consommation d’électricité, de gaz, le nombre de kilomètres de voirie rénovées… Ainsi l’utilisation des facteurs d’émissions physiques est impossible. C’est dans une seconde étape que les collectivités pourront passer de leur compte carbone flash à un compte carbone plus précis basé sur les consommations et donc sur des facteurs d’émissions physiques.",
+        "Emissions vs Absorptions : MyCityCO2 à ce stade ne peut pas quantifier les émissions absorbées par la collectivité que ce soit via son patrimoine naturel ou des procédés techniques. Seules les émissions sont comptabilisées.",
+        "Budgets annexes à intégrer : pour cette première version seuls les budgets principaux sont pris en compte.",
+        "Collectivités autres que communes à inclure : à ce jour seules les communes sont prises en compte, l’objectif est d’étendre la couverture et ainsi d’intégrer aussi les EPCI, les syndicats, les départements et les régions."
+      ]
+    },
     "data_sources": { "title": "Sources de données" },
     "usage_license": { "title": "License d'utilisation" },
     "contents": { "title": "Contenus" },
