@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/20/solid"
 
-const { t } = useI18n()
-
-const accountClasses = [
-  "Comptes 20 – Immobilisations incorporelles : par exemple les comptes 203* concernant les frais d’études.",
-  "Comptes 21 – Immobilisations corporelles : par exemple les comptes 213* concernant les constructions mais aussi par exemple le compte 2151 qui concerne l’installation de réseaux de voirie.",
-]
+const { t, rt, tm } = useI18n()
 </script>
 <template>
   <div>
@@ -15,24 +10,16 @@ const accountClasses = [
     </div>
     <div class="methodology__section">
       <p>
-        Les opérations d'investissement font référence aux dépenses engagées
-        pour acquérir des actifs durables ou pour améliorer ceux déjà détenus
-        par l'entité publique. Cela peut inclure l'achat de terrains, de
-        bâtiments, d'équipements, la construction d'infrastructures publiques,
-        etc. Les opérations d'investissement sont à plus long terme et visent
-        généralement à renforcer ou à développer le patrimoine de la
-        collectivité publique.
+        {{ t("methodology.investment.operations_definition") }}
       </p>
       <div>
         <p>
-          Afin de calculer l’empreinte carbone de la collectivité MyCityCO2
-          sélectionne les dépenses d’investissement uniquement et pas les
-          recettes. Parmi les comptes de charges:
+          {{ t("methodology.investment.calculation_method") }}
         </p>
         <ul role="list" class="mt-2 space-y-2">
           <li
             class="flex gap-x-3"
-            v-for="(item, idx) in accountClasses"
+            v-for="(item, idx) in tm('methodology.investment.checklist')"
             :key="idx"
           >
             <CheckCircleIcon
@@ -41,8 +28,8 @@ const accountClasses = [
             />
             <span
               ><strong class="font-semibold text-neutral-900"
-                >Classe {{ idx + 1 }} : </strong
-              >{{ item }}</span
+                >{{ t("class") }} {{ idx + 1 }} : </strong
+              >{{ rt(item) }}</span
             >
           </li>
         </ul>

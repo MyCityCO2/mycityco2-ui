@@ -313,7 +313,15 @@
         }
       ]
     },
-    "investment": { "title": "Investment" },
+    "investment": {
+      "title": "Investment",
+      "operations_definition": "Investment operations refer to expenses incurred to acquire durable assets or to improve those already held by the public entity. This can include the purchase of land, buildings, equipment, the construction of public infrastructure, etc. Investment operations are more long-term and generally aim to strengthen or develop the assets of the public entity.",
+      "calculation_method": "In order to calculate the carbon footprint of the community, MyCityCO2 selects only investment expenses and not revenues. Among the expense accounts:",
+      "checklist": [
+        "Accounts 20 – Intangible assets: for example, accounts 203* concerning study costs.",
+        "Accounts 21 – Tangible assets: for example, accounts 213* concerning constructions, but also for example account 2151 concerning the installation of road networks."
+      ]
+    },
     "operation": { "title": "Operation" },
     "depreciations": { "title": "Depreciations" },
     "amortization_periods": { "title": "Amortization Periods" },
