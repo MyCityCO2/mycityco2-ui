@@ -477,7 +477,16 @@
         "The association between the chart of accounts and the monetary emission factors is made through a correspondence table that is freely accessible by following {link}."
       ]
     },
-    "emission_posts": { "title": "Emission Posts" },
+    "emission_posts": {
+      "title": "Emission Categories",
+      "paragraphs": [
+        "Emission categories refer to the different sources or categories of activities that contribute to greenhouse gas (GHG) emissions. These emission categories allow for the categorization and analysis of different emission sources for a comprehensive assessment of the carbon footprint of an organization, product, project, or specific activity.",
+        "Emission categories can include a variety of emission sources, such as direct emissions from energy combustion (e.g., emissions from the use of fossil fuels), indirect emissions related to consumed electricity, emissions resulting from the use of materials and chemicals, emissions related to transportation, emissions from waste management, etc.",
+        "By identifying and detailing the different emission categories, it becomes possible to quantify and analyze the impact of each specific emission category on the total GHG emissions. This allows for directing emission reduction efforts towards the most significant areas and developing specific strategies to mitigate environmental impacts.",
+        "It is essential to tailor emission categories to the specificities of each situation, taking into account the sectors of activity, available data, and carbon emission assessment objectives. Rigorous identification of emission categories facilitates consistency and comparability of carbon emission calculations, thereby enabling accurate assessment and informed decision-making regarding emission reduction.",
+        "The association between the accounts of the chart of accounts and emission category is made through a correspondence table that is freely accessible by following {link_1} and for investment expenditures {link_2}."
+      ]
+    },
     "limitations": { "title": "Limitations" },
     "data_sources": { "title": "Data Sources" },
     "usage_license": { "title": "Usage License" },
