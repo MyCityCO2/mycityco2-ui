@@ -496,7 +496,28 @@
         "Collectivités autres que communes à inclure : à ce jour seules les communes sont prises en compte, l’objectif est d’étendre la couverture et ainsi d’intégrer aussi les EPCI, les syndicats, les départements et les régions."
       ]
     },
-    "data_sources": { "title": "Sources de données" },
+    "data_sources": {
+      "title": "Sources de données",
+      "details": "Détails complet de la source de données",
+      "list": [
+        {
+          "name": "Balances comptables des communes",
+          "definition": "Balances des budgets principaux et budgets annexes des communes",
+          "year": "Depuis 2010 jusqu’à 2021 tous les ans",
+          "geo": "Par commune pour toute la France",
+          "vendor": "DGFiP (Direction Générale des Finances Publiques)",
+          "link": "https://data.economie.gouv.fr/explore/?q=balances+comptables+des+communes&sort=title"
+        },
+        {
+          "name": "Facteurs d’émissions monétaires",
+          "definition": "140 facteurs d’émissions par pays couvrant de nombreux secteurs d’activités",
+          "year": "Depuis 1995 jusqu’à 2020 tous les ans",
+          "geo": "44 pays dont les pays de l’UE",
+          "vendor": "Exiobase",
+          "link": "https://zenodo.org/record/5589597"
+        }
+      ]
+    },
     "usage_license": { "title": "License d'utilisation" },
     "contents": { "title": "Contenus" },
     "data": { "title": "Données" },
@@ -508,6 +529,11 @@
   },
   "this_link": "ce lien",
   "class": "Classe",
+  "definition": "Définition",
+  "geography": "Géographie",
+  "supplier": "Fournisseur",
+  "year": "Année | Années",
+  "link": "Lien",
   "country": { "FR": "France", "CH": "Suisse" },
   "actions": {
     "contribute": "Contribuer",

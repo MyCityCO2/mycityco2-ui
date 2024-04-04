@@ -496,7 +496,28 @@
         "Include entities other than municipalities: Currently, only municipalities are taken into account. The objective is to extend coverage and thus include also inter-municipal cooperation structures, unions, departments, and regions."
       ]
     },
-    "data_sources": { "title": "Data Sources" },
+    "data_sources": {
+      "title": "Data Sources",
+      "details": "Complete details of the data source",
+      "list": [
+        {
+          "name": "Municipal Accounting Balances",
+          "definition": "Balances of main budgets and annex budgets of municipalities",
+          "year": "From 2010 to 2021 every year",
+          "geo": "By municipality for the whole France",
+          "vendor": "DGFiP (Direction Générale des Finances Publiques)",
+          "link": "https://data.economie.gouv.fr/explore/?q=balances+comptables+des+communes&sort=title"
+        },
+        {
+          "name": "Monetary Emission Factors",
+          "definition": "140 emission factors per country covering numerous sectors of activities",
+          "year": "From 1995 to 2020 every year",
+          "geo": "44 countries including EU countries",
+          "vendor": "Exiobase",
+          "link": "https://zenodo.org/record/5589597"
+        }
+      ]
+    },
     "usage_license": { "title": "Usage License" },
     "contents": { "title": "Contents" },
     "data": { "title": "Data" },
@@ -508,6 +529,11 @@
   },
   "this_link": "this link",
   "class": "Class",
+  "definition": "Definition",
+  "geography": "Geography",
+  "supplier": "Supplier",
+  "year": "Year | Years",
+  "link": "Link",
   "country": { "FR": "France", "CH": "Switzerland" },
   "actions": {
     "contribute": "Contribute",
