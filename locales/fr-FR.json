@@ -518,7 +518,17 @@
         }
       ]
     },
-    "usage_license": { "title": "License d'utilisation" },
+    "usage_license": {
+      "title": "License d'utilisation",
+      "content_title": "Contenus",
+      "content_text": "Sauf mention contraire, le contenu de ce site est publié par MyCityCO2 sous la licence CC BY-NC-SA 4.0 (Creative Commons, Attribution, Pas d’utilisation commerciale, Partage dans les mêmes conditions).",
+      "data_title": "Données",
+      "data_text": "Les données accessibles dans l’application ou via l'API sont mises à disposition sous la licence 'Open Database Licence' (ODbL). Tous les droits sur le contenu individuel de la base de données sont concédés sous la licence de contenu de la base de données. Vous êtes libre de copier, distribuer, transmettre et adapter ces données, à condition que vous créditiez le projet MyCityCO2. Si vous modifiez ou utilisez nos données dans d’autres œuvres dérivées, vous ne pouvez distribuer celles-ci que sous la même licence.",
+      "source_code_title": "Code source",
+      "source_code_text": "Le code de l'application est publié sous la licence AGPL (GNU Affero General Public License), il est accessible",
+      "credit_title": "Comment créditer MyCityCO2",
+      "credit_text": "Citer l’application comme suit : « MyCityCO2, calculateur d'empreinte carbone pour les collectivités. [Application disponible en ligne : https://mycityco2.org (consultée le XX/YY/20ZZ)] »"
+    },
     "contents": { "title": "Contenus" },
     "data": { "title": "Données" },
     "source_code": { "title": "Code source" },
@@ -534,6 +544,7 @@
   "supplier": "Fournisseur",
   "year": "Année | Années",
   "link": "Lien",
+  "here": "ici",
   "country": { "FR": "France", "CH": "Suisse" },
   "actions": {
     "contribute": "Contribuer",

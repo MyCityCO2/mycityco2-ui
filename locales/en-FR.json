@@ -518,7 +518,17 @@
         }
       ]
     },
-    "usage_license": { "title": "Usage License" },
+    "usage_license": {
+      "title": "Usage License",
+      "content_title": "Contents",
+      "content_text": "Unless otherwise noted, the content of this site is published by MyCityCO2 under the CC BY-NC-SA 4.0 license (Creative Commons, Attribution, Non-Commercial, ShareAlike).",
+      "data_title": "Data",
+      "data_text": "The data accessible in the application or via the API is made available under the Open Database License (ODbL). All rights to the individual content of the database are granted under the database content license. You are free to copy, distribute, transmit, and adapt this data, provided you credit the MyCityCO2 project. If you modify or use our data in other derivative works, you may only distribute them under the same license.",
+      "source_code_title": "Source Code",
+      "source_code_text": "The application code is published under the AGPL license (GNU Affero General Public License), it is accessible",
+      "credit_title": "How to Credit MyCityCO2",
+      "credit_text": "Cite the application as follows: 'MyCityCO2, carbon footprint calculator for municipalities. [Application available online: https://mycityco2.org (accessed on XX/YY/20ZZ)]'"
+    },
     "contents": { "title": "Contents" },
     "data": { "title": "Data" },
     "source_code": { "title": "Source Code" },
@@ -534,6 +544,7 @@
   "supplier": "Supplier",
   "year": "Year | Years",
   "link": "Link",
+  "here": "here",
   "country": { "FR": "France", "CH": "Switzerland" },
   "actions": {
     "contribute": "Contribute",

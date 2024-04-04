@@ -72,22 +72,22 @@ const navigation = [
     to: { path: "/methodology/license" },
     children: [
       {
-        name: t("methodology.contents.title"),
+        name: t("methodology.usage_license.content_title"),
         to: { path: "/methodology/license", hash: "#content" },
       },
       {
-        name: t("methodology.data.title"),
+        name: t("methodology.usage_license.data_title"),
         to: { path: "/methodology/license#data", hash: "#data" },
       },
       {
-        name: t("methodology.source_code.title"),
+        name: t("methodology.usage_license.source_code_title"),
         to: {
           path: "/methodology/license#source-code",
           hash: "#source-code",
         },
       },
       {
-        name: t("methodology.credit.title"),
+        name: t("methodology.usage_license.credit_title"),
         to: {
           path: "/methodology/license#credit",
           hash: "#credit",
