@@ -550,7 +550,46 @@
     "send_button": "Send"
   },
   "diagnostic": {
-    "title": "Diagnostic"
+    "title": "Diagnostic",
+    "development_axes": "Development Axes",
+    "community_development": "A common good waiting to be developed",
+    "no_city_selected": "No city selected!",
+    "select_city_to_continue": "Please select your city to continue. You can find it by name or postal code.",
+    "select": "Select",
+    "request_city": "Request a city",
+    "community_development_description": "MyCityCO2 has the aim to continue developing both in terms of geographical coverage (particularly within the European Union) and in terms of functional coverage. You are welcome to contribute to the development of this digital common good.",
+    "population": "Population in 2020",
+    "emissions": "Emissions in 2020",
+    "average_annual_emissions_evolution": "Average annual emissions evolution",
+    "national_low_carbon_strategy": "National Low Carbon Strategy",
+    "co2_emissions_at": "CO2 emissions in {city}",
+    "check_carbon_footprint_of": "Check the carbon footprint of {city}",
+    "error_occurred": "An error occurred!",
+    "unable_to_load_data": "We unfortunately couldn't load the data.",
+    "no_results": "No results!",
+    "no_result_found": "We couldn't find any results for your search.",
+    "emission_evolution_between": "Emission evolution between {minYear} and 2020",
+    "emission_distribution": "Emission distribution in 2020",
+    "emission_by_category": "Emissions by category in 2020",
+    "co2_eq_per_hab": "in kgCO2eq/cap",
+    "features": [
+      {
+        "name": "Support for local authorities",
+        "description": "MyCityCO2 will launch 'material' modules (energy, road repair, etc.) and provide assistance to local authorities that want to go further and refine their carbon accounts in order to obtain certification. Interested? Contact us."
+      },
+      {
+        "name": "Extension to other territorial authorities",
+        "description": "Syndicates, intermunicipal communities, departments, and regions also publishing their accounts in open data, we also plan to take them into account in the near future."
+      },
+      {
+        "name": "International development (Switzerland, ...)",
+        "description": "MyCityCO2 starts from France and Switzerland with an immediate international ambition. Its method is based on the financial accounting of local authorities and draws inspiration from major international carbon frameworks."
+      },
+      {
+        "name": "Project module to assess the decarbonization impact of a project (new building, new infrastructure, ...)",
+        "description": "Local authorities will make crucial decisions in the next 30 years: shared measurement tools are the best way to find the right compromises."
+      }
+    ]
   },
   "this_link": "this link",
   "class": "Class",

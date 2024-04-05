@@ -550,7 +550,46 @@
     "send_button": "Envoyer"
   },
   "diagnostic": {
-    "title": "Diagnostic"
+    "title": "Diagnostic",
+    "development_axes": "Les grands axes de développement",
+    "community_development": "Un bien commun qui ne demande qu’à se développer",
+    "no_city_selected": "Aucune commune sélectionnée !",
+    "select_city_to_continue": "Veuillez sélectionner votre commune pour continuer. Vous pouvez la trouver par son nom ou son code postal.",
+    "select": "Sélectionner",
+    "request_city": "Demander une commune",
+    "community_development_description": "MyCityCO2 a vocation à continuer à se développer que ce soit en termes de couverture géographique (union européenne notamment) ou en termes de couverture fonctionnelle, vous êtes les bienvenus pour contribuer au développement de ce bien commun numérique.",
+    "population": "Population en 2020",
+    "emissions": "Émissions en 2020",
+    "average_annual_emissions_evolution": "Évolution annuelle moyenne des émissions",
+    "national_low_carbon_strategy": "Stratégie nationale bas-carbone",
+    "co2_emissions_at": "Les émissions de CO2 à {city}",
+    "check_carbon_footprint_of": "Consultez l'empreinte carbone de {city}",
+    "error_occurred": "Une erreur est survenue !",
+    "unable_to_load_data": "Nous n'avons malheureusement pas pu charger les données.",
+    "no_results": "Aucun résultat !",
+    "no_result_found": "Nous n'avons pas pu trouver de résultat pour votre recherche.",
+    "emission_evolution_between": "Évolution des émissions entre {minYear} et 2020",
+    "emission_distribution": "Répartition des émissions en 2020",
+    "emission_by_category": "Émissions par poste en 2020",
+    "co2_eq_per_hab": "en kgCO2eq/hab",
+    "features": [
+      {
+        "name": "Accompagnement des collectivités",
+        "description": "MyCityCO2 va lancer des modules « matières » (énergie, réfection voies, …) et une assistance aux collectivités qui veulent aller plus loin, et affiner leurs comptes en carbones en vue de l’obtention de cerfication. Intéressé ? Contactez-nous."
+      },
+      {
+        "name": "Extension aux autres collectivités territoriales",
+        "description": "Les syndicats, les communautés de communes, les départements et les régions publiant elles aussi leur comptabilité en open data, nous prévoyons aussi de les prendre en compte dans un futur proche."
+      },
+      {
+        "name": "Développement à l’international (Suisse,…)",
+        "description": "MyCityCO2 part de France et de Suisse avec d’emblée une ambition internationale. Sa méthode s’appuie sur la comptabilité financière des collectivités et s’inspire des grands référentiels carbones internationaux."
+      },
+      {
+        "name": "Module projet pour évaluer l’impact de décarbonation d’un projet (nouveau bâtiment, nouvelle infrastructure…)",
+        "description": "Les collectivités locales vont prendre des décisions essentielles dans les 30 ans qui viennent : des outils de mesure partagés sont la meilleure façon de trouver les bons compromis."
+      }
+    ]
   },
   "this_link": "ce lien",
   "class": "Classe",

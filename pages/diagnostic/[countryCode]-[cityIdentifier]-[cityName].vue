@@ -34,6 +34,7 @@ ChartJS.register(
   LineElement
 )
 
+const { t } = useI18n()
 const route = useRoute()
 const cityStore = useCityStore()
 const sidebarOpen = ref(false)
@@ -61,7 +62,7 @@ const stats = computed(() => {
   return [
     {
       id: 1,
-      name: "Population en 2020",
+      name: t("diagnostic.population"),
       stat: result.value.city.population,
       change: "1%",
       icon: UsersIcon,
@@ -69,7 +70,7 @@ const stats = computed(() => {
     },
     {
       id: 2,
-      name: "Emissions en 2020",
+      name: t("diagnostic.emissions"),
       stat: `${result.value.city.co2EmissionsPerHab.toFixed(0)}`,
       statUom: "kgCO2eq/hab",
       change: "5.4%",
@@ -78,7 +79,7 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: `Evolution annuelle moyenne des émissions ${result.value.city.minYear}-2020`,
+      name: t("diagnostic.average_annual_emissions_evolution"),
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: "%",
       statIsChange: true,
@@ -157,7 +158,7 @@ const emissionByJournalYearly = computed(() => {
   }, [])
 
   const idealProgressionDataset = {
-    label: "Stratégie nationale bas-carbone",
+    label: t("diagnostic.national_low_carbon_strategy"),
     type: "line",
     data: data.map((item) => {
       const { year } = item
@@ -303,13 +304,15 @@ const emissionByCategChartOptions = {
 const title = computed(() => {
   if (loading.value == true || error.value == true) return ""
   if (result.value && result.value?.city)
-    return `Les émissions de CO2 à ${result.value.city.name}`
+    return t("diagnostic.co2_emissions_at", { city: result.value.city.name })
   return ""
 })
 
 const shareTitle = computed(() =>
   result.value?.city.name
-    ? `Consultez l'empreinte carbone de ${result.value.city.name}`
+    ? t("diagnostic.check_carbon_footprint_of", {
+        city: result.value.city.name,
+      })
     : ""
 )
 
@@ -326,8 +329,8 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
       </div>
       <div v-else-if="error" class="max-w-2xl mx-auto">
         <AlertError
-          title="Une erreur est survenue !"
-          text="Nous n'avons malheureusement pas pu charger les données."
+          :title="t('diagnostic.error_occurred')"
+          :text="t('diagnostic.unable_to_load_data')"
         />
       </div>
       <div v-else-if="result && result.city">
@@ -375,10 +378,14 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
             class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-5 sm:py-6 flex flex-col min-h-[20rem]"
           >
             <h5 class="pb-4">
-              Evolution des émissions entre {{ result.city.minYear }} et 2020
-              <span class="text-sm font-normal leading-none"
-                >en kgCO2eq/hab</span
-              >
+              {{
+                t("diagnostic.emission_evolution_between", {
+                  minYear: result.city.minYear,
+                })
+              }}
+              <span class="text-sm font-normal leading-none">{{
+                t("diagnostic.co2_eq_per_hab")
+              }}</span>
             </h5>
             <div class="flex-1">
               <Bar
@@ -391,10 +398,10 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
             class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-5 sm:py-6 flex flex-col"
           >
             <h5 class="pb-4">
-              Répartition des émissions en 2020
-              <span class="text-sm font-normal leading-none"
-                >en kgCO2eq/hab</span
-              >
+              {{ t("diagnostic.emission_distribution") }}
+              <span class="text-sm font-normal leading-none">{{
+                t("diagnostic.co2_eq_per_hab")
+              }}</span>
             </h5>
             <div class="flex-1">
               <Doughnut
@@ -407,10 +414,8 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
             class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-5 sm:py-6 flex flex-col"
           >
             <h5 class="pb-4">
-              Emissions par poste en 2020
-              <span class="text-sm font-normal leading-none"
-                >en kgCO2eq/hab</span
-              >
+              {{ t("diagnostic.emission_by_category") }}
+              <span class="text-sm font-normal leading-none">{{}}</span>
             </h5>
             <div class="flex-1">
               <Bar
@@ -423,8 +428,8 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
       </div>
       <div v-else class="max-w-2xl mx-auto">
         <AlertWarning
-          title="Aucun résultat !"
-          text="Nous n'avons pas pu trouver de résultat pour votre recherche"
+          :title="t('diagnostic.no_results')"
+          :text="t('diagnostic.no_result_found')"
         />
       </div>
     </div>
