@@ -366,7 +366,7 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
                 </dd> -->
               <dd class="w-full flex-none text-3xl font-bold leading-10">
                 <span v-number="stat.stat" />
-                <span class="text-xl">{{ stat.statUom }}</span>
+                <span class="text-xl ml-1">{{ stat.statUom }}</span>
               </dd>
             </div>
           </div>
