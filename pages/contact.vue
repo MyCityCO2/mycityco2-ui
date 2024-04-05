@@ -2,6 +2,8 @@
 import { EnvelopeIcon } from "@heroicons/vue/24/outline"
 import { MUTATION_CONTACT } from "~/api/mutation"
 
+const { t } = useI18n()
+
 const notifStore = useNotificationStore()
 const {
   mutate: mutateContact,
@@ -14,16 +16,16 @@ const { handleSubmit, meta, handleReset } = useForm()
 onDone(() => {
   handleReset()
   notifStore.add({
-    title: "Succès !",
-    text: "Le mail a bien été envoyé",
+    title: t("contact.success_title"),
+    text: t("contact.success_message"),
     type: "success",
   })
 })
 
 onError(() => {
   notifStore.add({
-    title: "Erreur !",
-    text: "Une erreur s'est produite lors de l'envoi de mail !",
+    title: t("contact.error_title"),
+    text: t("contact.error_message"),
     type: "error",
   })
 })
@@ -39,16 +41,14 @@ const onSubmit = handleSubmit((values) => {
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="relative lg:static">
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h3>Contactez nous</h3>
+            <h3>{{ t("actions.contact_us") }}</h3>
             <p class="mt-6 text-lg leading-8">
-              Vous souhaitez poser une question, faire un commentaire, donner
-              votre avis, nous signaler un problème technique ou autre ?
-              Contactez-nous en complétant ce formulaire
+              {{ t("contact.contact_us_description") }}
             </p>
             <dl class="mt-10 space-y-4 text-base leading-7 text-neutral-600">
               <div class="flex gap-x-4">
                 <dt class="flex-none">
-                  <span class="sr-only">Email</span>
+                  <span class="sr-only">{{ t("contact.email_label") }}</span>
                   <EnvelopeIcon
                     class="h-7 w-6 text-neutral-400"
                     aria-hidden="true"
@@ -67,18 +67,30 @@ const onSubmit = handleSubmit((values) => {
           <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <FormInput identifier="firstname" label="Prénom" type="text" />
+                <FormInput
+                  identifier="firstname"
+                  :label="t('contact.first_name_label')"
+                  type="text"
+                />
               </div>
               <div>
-                <FormInput identifier="lastname" label="Nom" type="text" />
+                <FormInput
+                  identifier="lastname"
+                  :label="t('contact.last_name_label')"
+                  type="text"
+                />
               </div>
               <div class="sm:col-span-2">
-                <FormInput identifier="email" label="Email" type="email" />
+                <FormInput
+                  identifier="email"
+                  :label="t('contact.email_label')"
+                  type="email"
+                />
               </div>
               <div class="sm:col-span-2">
                 <FormInput
                   identifier="phone"
-                  label="Numéro de téléphone"
+                  :label="t('contact.phone_label')"
                   type="text"
                   placeholder="+41 00 000 00 00"
                   :required="false"
@@ -87,16 +99,24 @@ const onSubmit = handleSubmit((values) => {
               <div class="sm:col-span-2">
                 <FormInput
                   identifier="company"
-                  label="Société"
+                  :label="t('contact.company_label')"
                   type="text"
                   :required="false"
                 />
               </div>
               <div class="sm:col-span-2">
-                <FormInput identifier="subject" label="Sujet" type="text" />
+                <FormInput
+                  identifier="subject"
+                  :label="t('contact.subject_label')"
+                  type="text"
+                />
               </div>
               <div class="sm:col-span-2">
-                <FormTextarea identifier="message" label="Message" :rows="4" />
+                <FormTextarea
+                  identifier="message"
+                  :label="t('contact.message_label')"
+                  :rows="4"
+                />
               </div>
             </div>
             <div class="mt-8 flex justify-end">
@@ -106,7 +126,7 @@ const onSubmit = handleSubmit((values) => {
                 :disabled="!meta.dirty"
               >
                 <template v-if="loading"><LoadingSpin /></template
-                ><template v-else>Envoyer</template>
+                ><template v-else>{{ t("contact.send_button") }}</template>
               </button>
             </div>
           </div>

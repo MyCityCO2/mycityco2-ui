@@ -534,6 +534,21 @@
     "source_code": { "title": "Source Code" },
     "credit": { "title": "How to credit MyCityCO2" }
   },
+  "contact": {
+    "success_title": "Success!",
+    "success_message": "The email has been sent successfully.",
+    "error_title": "Error!",
+    "error_message": "An error occurred while sending the email!",
+    "contact_us_description": "Do you want to ask a question, make a comment, give your opinion, report a technical issue, or anything else? Contact us by completing this form.",
+    "email_label": "Email",
+    "first_name_label": "First Name",
+    "last_name_label": "Last Name",
+    "phone_label": "Phone Number",
+    "company_label": "Company",
+    "subject_label": "Subject",
+    "message_label": "Message",
+    "send_button": "Send"
+  },
   "diagnostic": {
     "title": "Diagnostic"
   },

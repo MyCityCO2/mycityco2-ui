@@ -534,6 +534,21 @@
     "source_code": { "title": "Code source" },
     "credit": { "title": "Comment créditer MyCityCO2" }
   },
+  "contact": {
+    "success_title": "Succès !",
+    "success_message": "Le mail a bien été envoyé",
+    "error_title": "Erreur !",
+    "error_message": "Une erreur s'est produite lors de l'envoi de mail !",
+    "contact_us_description": "Vous souhaitez poser une question, faire un commentaire, donner votre avis, nous signaler un problème technique ou autre ? Contactez-nous en complétant ce formulaire.",
+    "email_label": "Email",
+    "first_name_label": "Prénom",
+    "last_name_label": "Nom",
+    "phone_label": "Numéro de téléphone",
+    "company_label": "Société",
+    "subject_label": "Sujet",
+    "message_label": "Message",
+    "send_button": "Envoyer"
+  },
   "diagnostic": {
     "title": "Diagnostic"
   },
@@ -549,7 +564,7 @@
   "actions": {
     "contribute": "Contribuer",
     "learn_more": "En savoir plus",
-    "contact_us": "Nous contacter",
+    "contact_us": "Contactez-nous",
     "contact": "Contact",
     "search_city": "Rechercher une ville",
     "legal_notice": "Mentions légale | Mentions légales",
