@@ -1,17 +1,29 @@
 <script setup lang="ts">
+import { ref, watchEffect } from "vue"
+
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/vue/20/solid"
+
+interface RouteItem {
+  name: string
+  to: { path: string; hash?: string }
+  children?: RouteItem[]
+}
 
 const { t } = useI18n()
 const route = useRoute()
-const pageMeta = computed(() => route.meta)
-const navigation = [
+const localePath = useLocalePath()
+
+const prevPath = ref<string>("")
+const nextPath = ref<string>("")
+
+const navigation: RouteItem[] = [
   {
     name: t("methodology.general_overview.title"),
-    to: { path: "/methodology/" },
+    to: { path: "/methodology" },
     children: [
       {
         name: t("methodology.accounting.title"),
-        to: { path: "/methodology/general/accounting/" },
+        to: { path: "/methodology/general/accounting" },
         children: [
           {
             name: t("methodology.accounting_plan.title"),
@@ -73,7 +85,7 @@ const navigation = [
     children: [
       {
         name: t("methodology.usage_license.content_title"),
-        to: { path: "/methodology/license", hash: "#content" },
+        to: { path: "/methodology/license#content", hash: "#content" },
       },
       {
         name: t("methodology.usage_license.data_title"),
@@ -96,6 +108,40 @@ const navigation = [
     ],
   },
 ]
+
+const findAdjacentPaths = (
+  items: RouteItem[],
+  currentPath: string
+): { prev: string; next: string } => {
+  let prev = ""
+  let next = ""
+  let foundCurrent = false
+
+  const traverse = (items: RouteItem[]) => {
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i]
+      if (localePath(item.to.path) === currentPath) {
+        foundCurrent = true
+      } else if (foundCurrent && next === "") {
+        next = localePath(item.to.path)
+        return
+      } else {
+        prev = localePath(item.to.path)
+      }
+      if (item.children) traverse(item.children)
+    }
+  }
+
+  traverse(items)
+
+  return { prev, next }
+}
+
+watchEffect(() => {
+  const { prev, next } = findAdjacentPaths(navigation, route.path + route.hash)
+  prevPath.value = prev
+  nextPath.value = next
+})
 </script>
 
 <template>
@@ -117,14 +163,11 @@ const navigation = [
 
         <div class="sm:col-span-2 md:col-span-3 relative" id="methodology">
           <NuxtPage :page-key="(route) => route.path" />
-          <nav
-            v-if="pageMeta"
-            class="flex items-center justify-between mt-4 px-4 sm:px-0"
-          >
+          <nav class="flex items-center justify-between mt-4 px-4 sm:px-0">
             <div class="-mt-px flex w-0 flex-1 group">
               <NuxtLinkLocale
-                v-if="pageMeta?.meta?.previous"
-                :to="pageMeta.meta.previous"
+                v-if="prevPath"
+                :to="prevPath"
                 class="inline-flex items-center border-t-2 border-transparent pr-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 <ArrowLongLeftIcon
@@ -137,8 +180,8 @@ const navigation = [
 
             <div class="-mt-px flex w-0 flex-1 justify-end group">
               <NuxtLinkLocale
-                v-if="pageMeta?.meta?.next"
-                :to="pageMeta.meta.next"
+                v-if="nextPath"
+                :to="nextPath"
                 class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-neutral-500"
               >
                 {{ t("actions.next") }}
