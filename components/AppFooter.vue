@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LinkIcon } from "@heroicons/vue/24/outline"
-
 import { socials } from "~/svg"
 
 const { t } = useI18n()
@@ -41,12 +39,10 @@ const links = computed(() => [
         </p>
         <a
           href="https://www.ecoindex.fr/resultat/?id=bc781b9b-1c33-49d5-980b-95e84119eed9"
-          class="text-sm flex items-center"
+          class="text-sm underline"
           target="_blank"
           rel="noopener noreferrer"
-          ><LinkIcon class="mr-1 h-3 w-3" aria-hidden="true" />{{
-            t("footer.ecoindex", { n: 1.24 })
-          }}</a
+          >{{ t("footer.ecoindex", { n: 1.24 }) }}</a
         >
       </div>
       <div>
