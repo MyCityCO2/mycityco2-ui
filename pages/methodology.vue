@@ -3,18 +3,18 @@ import { ref, watchEffect } from "vue"
 
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/vue/20/solid"
 
+const { t } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
+
+const prevPath = ref("")
+const nextPath = ref("")
+
 interface RouteItem {
   name: string
   to: { path: string; hash?: string }
   children?: RouteItem[]
 }
-
-const { t } = useI18n()
-const route = useRoute()
-const localePath = useLocalePath()
-
-const prevPath = ref<string>("")
-const nextPath = ref<string>("")
 
 const navigation: RouteItem[] = [
   {
