@@ -44,12 +44,14 @@ definePageMeta({
           </li>
         </ul>
       </div>
-      <div class="flex justify-around space-x-4 items-start">
+      <div
+        class="flex flex-col lg:flex-row justify-around space-x-4 items-center lg:items-start"
+      >
         <div class="p-4">
           <h5>{{ t("methodology.general_overview.ghg_emissions") }}</h5>
           <p class="mt-1">(CO2e)</p>
         </div>
-        <div class="mt-8">
+        <div class="my-8">
           <Bars2Icon class="h-5 w-5 text-black" />
         </div>
         <div class="flex flex-col space-y-2">
@@ -67,7 +69,7 @@ definePageMeta({
           </p>
         </div>
 
-        <div class="mt-8">
+        <div class="my-8">
           <XMarkIcon class="h-5 w-5 text-black" />
         </div>
         <div class="flex flex-col space-y-2">

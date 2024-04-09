@@ -5,13 +5,13 @@ const { t, tm, rt } = useI18n()
 <template>
   <div>
     <div
-      class="relative isolate overflow-hidden bg-gradient-to-b from-emerald-100/20 dark:from-emerald-700/20 pt-14"
+      class="relative isolate overflow-hidden bg-gradient-to-b from-emerald-100/20 dark:from-emerald-700/20"
     >
       <div
         class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-neutral-950 shadow-xl shadow-primary/10 ring-1 ring-emerald-50 dark:ring-emerald-600 sm:-mr-80 lg:-mr-96"
         aria-hidden="true"
       />
-      <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
           class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
         >
@@ -54,7 +54,7 @@ const { t, tm, rt } = useI18n()
       />
     </div>
 
-    <section class="section-small">
+    <section>
       <div class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
         <div
           v-for="stat in tm('home.stats')"
