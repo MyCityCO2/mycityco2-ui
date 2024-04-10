@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline"
-import { socials } from "~/svg"
 
 const { t } = useI18n()
 const route = useRoute()
@@ -92,10 +91,12 @@ const handleScroll = () => {
           >{{ t(item.name) }}</NuxtLinkLocale
         >
         <button @click="navigateTo(diagnosticLink)" class="button-primary">
-          Diagnostic
+          {{ t("diagnostic.title") }}
         </button>
       </div>
-      <LanguageSelector />
+      <LanguageSelector
+        class="hidden justify-self-end lg:flex items-center gap-1 ml-2"
+      />
     </nav>
     <ClientOnly
       ><HeadlessTransitionRoot as="template" :show="mobileMenuOpen">
@@ -169,7 +170,7 @@ const handleScroll = () => {
                                 :href="href"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                                 @click.prevent="navigate(), closeMenu()"
-                                >{{ item.name }}</a
+                                >{{ t(item.name) }}</a
                               >
                             </NuxtLinkLocale>
                           </div>
@@ -178,16 +179,19 @@ const handleScroll = () => {
                               :to="diagnosticLink"
                               custom
                               v-slot="{ href, navigate }"
-                              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                               ><a
                                 :href="href"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
                                 @click.prevent="navigate(), closeMenu()"
-                                >Diagnostic</a
-                              ></NuxtLinkLocale
+                              >
+                                {{ t("diagnostic.title") }}
+                              </a></NuxtLinkLocale
                             >
                           </div>
                           <CountrySelector class="pt-8" />
+                          <LanguageSelector
+                            class="pt-8 flex justify-center items-center lg:hidden gap-1 ml-2"
+                          />
                         </div>
                       </div>
                     </div>
