@@ -94,14 +94,36 @@ const colors = ["rgba(108, 199, 222, 0.8)", "rgba(50, 202, 175, 0.8)"]
 
 const emissionByCateg = computed(() => {
   if (!result.value || !result.value?.city) return []
+
+  const sortedCategories = [...result.value.city.co2EmissionByCategory].sort(
+    (a, b) => b.sum - a.sum
+  )
+
+  const groupedData = sortedCategories.reduce((acc, item) => {
+    if (!acc[item.journalIdName]) {
+      acc[item.journalIdName] = {}
+    }
+    acc[item.journalIdName][item.name] = item.sum
+    return acc
+  }, {})
+
+  const labels = [...new Set(sortedCategories.map((item) => item.name))]
+  const datasets = []
+
+  for (const key in groupedData) {
+    const data = labels.map((name) => groupedData[key][name] || 0)
+    const backgroundColor = key === "Investissement" ? colors[0] : colors[1]
+
+    datasets.push({
+      label: key,
+      backgroundColor,
+      data,
+    })
+  }
+
   return {
-    labels: result.value.city.co2EmissionByCategory.map((item) => item.name),
-    datasets: [
-      {
-        backgroundColor: colors[0],
-        data: result.value.city.co2EmissionByCategory.map((item) => item.sum),
-      },
-    ],
+    labels,
+    datasets,
   }
 })
 
@@ -271,7 +293,11 @@ const emissionByCategChartOptions = {
   maintainAspectRatio: false,
   indexAxis: "y",
   scales: {
+    x: {
+      stacked: true,
+    },
     y: {
+      stacked: true,
       grid: {
         display: false,
       },
@@ -284,19 +310,11 @@ const emissionByCategChartOptions = {
     legend: {
       display: false,
     },
-    tooltip: {
-      enabled: false,
-    },
     datalabels: {
-      anchor: "end",
-      align: "end",
       font: {
         weight: "bold",
       },
-      formatter: (value) => {
-        let newValue = Math.floor(value)
-        return newValue.toString()
-      },
+      formatter: (value) => (value ? Math.floor(value).toString() : ""),
     },
   },
 }

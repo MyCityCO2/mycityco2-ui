@@ -33,7 +33,18 @@ const links = computed(() => [
           <component :is="item.icon" class="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
-      <p class="text-gray-900 text-sm">{{ t("footer.open_source") }}</p>
+      <div class="text-center flex flex-col gap-2">
+        <p class="text-gray-900 text-sm">
+          {{ t("footer.open_source") }}
+        </p>
+        <a
+          href="https://www.ecoindex.fr/resultat/?id=bc781b9b-1c33-49d5-980b-95e84119eed9"
+          class="text-sm underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ t("footer.ecoindex", { n: 1.24 }) }}</a
+        >
+      </div>
       <div>
         <p
           class="text-center text-sm leading-5 text-neutral-500 dark:text-neutral-400"
