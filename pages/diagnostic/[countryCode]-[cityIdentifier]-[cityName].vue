@@ -94,12 +94,19 @@ const colors = ["rgba(108, 199, 222, 0.8)", "rgba(50, 202, 175, 0.8)"]
 
 const emissionByCateg = computed(() => {
   if (!result.value || !result.value?.city) return []
+
+  const sortedCategories = [...result.value.city.co2EmissionByCategory].sort(
+    (a, b) => b.sum - a.sum
+  )
+  const labels = sortedCategories.map((item) => item.name)
+  const data = sortedCategories.map((item) => item.sum)
+
   return {
-    labels: result.value.city.co2EmissionByCategory.map((item) => item.name),
+    labels,
     datasets: [
       {
         backgroundColor: colors[0],
-        data: result.value.city.co2EmissionByCategory.map((item) => item.sum),
+        data,
       },
     ],
   }
