@@ -98,17 +98,32 @@ const emissionByCateg = computed(() => {
   const sortedCategories = [...result.value.city.co2EmissionByCategory].sort(
     (a, b) => b.sum - a.sum
   )
-  const labels = sortedCategories.map((item) => item.name)
-  const data = sortedCategories.map((item) => item.sum)
+
+  const groupedData = sortedCategories.reduce((acc, item) => {
+    if (!acc[item.journalIdName]) {
+      acc[item.journalIdName] = {}
+    }
+    acc[item.journalIdName][item.name] = item.sum
+    return acc
+  }, {})
+
+  const labels = [...new Set(sortedCategories.map((item) => item.name))]
+  const datasets = []
+
+  for (const key in groupedData) {
+    const data = labels.map((name) => groupedData[key][name] || 0)
+    const backgroundColor = key === "Investissement" ? colors[0] : colors[1]
+
+    datasets.push({
+      label: key,
+      backgroundColor,
+      data,
+    })
+  }
 
   return {
     labels,
-    datasets: [
-      {
-        backgroundColor: colors[0],
-        data,
-      },
-    ],
+    datasets,
   }
 })
 
@@ -278,7 +293,11 @@ const emissionByCategChartOptions = {
   maintainAspectRatio: false,
   indexAxis: "y",
   scales: {
+    x: {
+      stacked: true,
+    },
     y: {
+      stacked: true,
       grid: {
         display: false,
       },
@@ -291,19 +310,11 @@ const emissionByCategChartOptions = {
     legend: {
       display: false,
     },
-    tooltip: {
-      enabled: false,
-    },
     datalabels: {
-      anchor: "end",
-      align: "end",
       font: {
         weight: "bold",
       },
-      formatter: (value) => {
-        let newValue = Math.floor(value)
-        return newValue.toString()
-      },
+      formatter: (value) => (value ? Math.floor(value).toString() : ""),
     },
   },
 }
