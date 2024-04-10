@@ -9,7 +9,7 @@ const availableLocales = computed(() => {
 </script>
 
 <template>
-  <div class="hidden justify-self-end lg:flex items-center gap-1 ml-2">
+  <div>
     <div
       v-for="locale in availableLocales"
       :key="locale.code"
