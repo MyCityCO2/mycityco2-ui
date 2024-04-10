@@ -3,8 +3,8 @@ const { t, rt, tm } = useI18n()
 </script>
 
 <template>
-  <div class="top-padding">
-    <section class="section-small">
+  <div>
+    <section class="pt-0">
       <NuxtPage :page-key="(route) => route.path" />
     </section>
     <section id="project">
@@ -22,7 +22,7 @@ const { t, rt, tm } = useI18n()
           <div
             v-for="feature in tm('diagnostic.features')"
             :key="rt(feature.name)"
-            class="relative pl-16"
+            class="relative pl-0 lg:pl-16"
           >
             <dt class="text-base font-semibold leading-7 text-neutral-900">
               {{ rt(feature.name) }}

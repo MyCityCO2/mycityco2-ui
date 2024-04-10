@@ -36,8 +36,8 @@ const onSubmit = handleSubmit((values) => {
 </script>
 
 <template>
-  <div class="top-padding">
-    <section class="relative isolate">
+  <div>
+    <section class="pt-0">
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="relative lg:static">
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -45,7 +45,7 @@ const onSubmit = handleSubmit((values) => {
             <p class="mt-6 text-lg leading-8">
               {{ t("contact.contact_us_description") }}
             </p>
-            <dl class="mt-10 space-y-4 text-base leading-7 text-neutral-600">
+            <dl class="my-10 space-y-4 text-base leading-7 text-neutral-600">
               <div class="flex gap-x-4">
                 <dt class="flex-none">
                   <span class="sr-only">{{ t("contact.email_label") }}</span>

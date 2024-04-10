@@ -147,7 +147,7 @@ watchEffect(() => {
 <template>
   <div>
     <AppHeading :title="t('methodology.title')" text="" :alt="true" />
-    <section class="section-small section-top-0">
+    <section>
       <div
         class="flex flex-col space-y-8 sm:flex-none sm:space-y-0 sm:grid sm:grid-cols-3 md:grid-cols-4 sm:gap-x-8"
       >

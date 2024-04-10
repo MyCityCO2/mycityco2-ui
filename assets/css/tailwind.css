@@ -25,7 +25,7 @@
     @apply text-neutral-600 dark:text-neutral-300 transition-all hover:text-primary;
   }
   section {
-    @apply mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32;
+    @apply mx-auto max-w-7xl px-6 lg:px-8 py-16 lg:py-32 last:pb-0;
   }
   dt {
     @apply text-neutral-900 dark:text-white;
@@ -72,17 +72,8 @@
 }
 
 @layer utilities {
-  .section-small {
-    @apply !py-12 sm:!py-16;
-  }
-  .section-top-0 {
-    @apply !pt-0 sm:!pt-0;
-  }
   .leading-text {
     @apply text-lg leading-8;
-  }
-  .top-padding {
-    @apply pt-32;
   }
 }
 
