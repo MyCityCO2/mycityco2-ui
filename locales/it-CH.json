@@ -1,0 +1,79 @@
+{
+  "home": {
+    "title": "Home",
+    "hero": {
+      "title": "Segui l'impronta di carbonio del tuo comune",
+      "text": "Come possiamo migliorare ciò che non siamo in grado di misurare? MyCityCO2, uno strumento libero e gratuito per il monitoraggio delle impronte di carbonio delle 2172 comunità svizzere al servizio della lotta contro il cambiamento climatico. La strategia climatica a lungo termine si basa sulla legge rivista sul CO2 e sugli obiettivi in essa contenuti."
+    },
+    "stats": [
+      {
+        "name": "comuni svizzeri analizzati, pari al 90% dei comuni",
+        "value": "2172"
+      },
+      {
+        "name": "impronta di carbonio media generata dalle città svizzere",
+        "value": "232 kgCO2eq/abitante"
+      },
+      {
+        "name": "delle città rispettano la Strategia climatica a lungo termine della Svizzera mirata a ridurre del 50% le emissioni entro il 2030",
+        "value": "24 %"
+      }
+    ],
+    "features": {
+      "subtitle": "Adotta uno strumento libero, gratuito e trasparente validato da esperti",
+      "title": "Il primo strumento per l'impronta di carbonio per le collettività pubbliche",
+      "description": "Indipendentemente dalle dimensioni del comune, MyCityCO2 è il primo strumento che consente di consultare l'impronta di carbonio di qualsiasi città svizzera nel corso degli ultimi 7 anni.",
+      "list": [
+        {
+          "name": "Consultare",
+          "description": "le emissioni di gas serra del proprio comune",
+          "icon": "BookOpenIcon"
+        },
+        {
+          "name": "Valutare",
+          "description": "la riduzione dell'impronta di carbonio anno dopo anno",
+          "icon": "ScaleIcon"
+        },
+        {
+          "name": "Contribuire",
+          "description": "a raggiungere gli obiettivi definiti dalla Strategia climatica a lungo termine della Svizzera, la roadmap della Svizzera per rispettare l'Accordo di Parigi",
+          "icon": "UserPlusIcon"
+        },
+        {
+          "name": "Condividere",
+          "description": "i risultati del proprio comune con i propri cari",
+          "icon": "RadioIcon"
+        }
+      ]
+    },
+    "pre_footer": {
+      "title": "Pronti a fare di più?",
+      "description": "Accedi ai dati dettagliati del tuo comune e identifica le opportunità di riduzione delle emissioni per raggiungere gli obiettivi stabiliti dall'Accordo di Parigi e implementati dalla Strategia climatica a lungo termine della Svizzera."
+    }
+  },
+  "country": { "FR": "Francia", "CH": "Svizzera" },
+  "actions": {
+    "contribute": "Contribuire",
+    "learn_more": "Maggiori informazioni",
+    "contact_us": "Contattaci",
+    "contact": "Contatto",
+    "search_city": "Cerca una città",
+    "legal_notice": "Avviso legale | Avvisi legali"
+  },
+  "footer": {
+    "open_source": "Iniziativa open source - open data",
+    "copyright": "2023 MyCityCo2 uno strumento gratuito e open source"
+  },
+  "project": {
+    "title": "Progetto"
+  },
+  "help": {
+    "title": "Aiuto"
+  },
+  "methodology": {
+    "title": "Metodologia"
+  },
+  "diagnostic": {
+    "title": "Diagnosi"
+  }
+}

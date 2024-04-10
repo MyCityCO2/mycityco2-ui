@@ -39,8 +39,44 @@ export default defineNuxtConfig({
     url: "https://mycityco2.org",
   },
   i18n: {
-    locales: ["fr", "en"],
-    defaultLocale: "fr",
+    baseUrl: "https://www.mycityco2.org",
+    lazy: true,
+    langDir: "locales",
+    defaultLocale: "fr-FR",
+    locales: [
+      {
+        name: "FR",
+        code: "fr-FR",
+        file: "fr-FR.json",
+        isCatchallLocale: true,
+      },
+      {
+        name: "EN",
+        code: "en-FR",
+        file: "en-FR.json",
+      },
+      {
+        name: "FR",
+        code: "fr-CH",
+        file: "fr-CH.json",
+      },
+      {
+        name: "EN",
+        code: "en-CH",
+        file: "en-CH.json",
+      },
+      {
+        name: "DE",
+        code: "de-CH",
+        file: "de-CH.json",
+      },
+      {
+        name: "IT",
+        code: "it-CH",
+        file: "it-CH.json",
+      },
+    ],
+    vueI18n: "./i18n.config.ts",
   },
   googleFonts: {
     families: {

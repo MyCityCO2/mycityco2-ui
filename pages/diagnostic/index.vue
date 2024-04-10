@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const cityStore = useCityStore()
-const localePath = useLocalePath()
 </script>
 
 <template>
@@ -20,9 +19,9 @@ const localePath = useLocalePath()
               <button @click="cityStore.openSelector()" class="button-primary">
                 Sélectionner
               </button>
-              <NuxtLink :to="localePath('/contact')" class="link"
+              <NuxtLinkLocale to="/contact" class="link"
                 >Demander une commune
-                <span aria-hidden="true">→</span></NuxtLink
+                <span aria-hidden="true">→</span></NuxtLinkLocale
               >
             </div>
           </div>

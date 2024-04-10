@@ -1,52 +1,5 @@
 <script setup lang="ts">
-import {
-  BookOpenIcon,
-  RadioIcon,
-  ScaleIcon,
-  UserPlusIcon,
-} from "@heroicons/vue/20/solid"
-
-const features = [
-  {
-    name: "Consulter",
-    description: "les émissions de gaz à effet de serre de sa commune",
-    icon: BookOpenIcon,
-  },
-  {
-    name: "Evaluer",
-    description: " la réduction de l’empreinte carbone année après année",
-    icon: ScaleIcon,
-  },
-  {
-    name: "Contribuer",
-    description:
-      "à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris",
-    icon: UserPlusIcon,
-  },
-  {
-    name: "Partager",
-    description: "les résultats de sa commune avec ses proches",
-    icon: RadioIcon,
-  },
-]
-
-const stats = [
-  {
-    id: 1,
-    name: "communes françaises analysées soit 100% des communes",
-    value: "35'000",
-  },
-  {
-    id: 2,
-    name: "empreinte carbone moyenne générée par les villes françaises",
-    value: "232 kgCO2eq/hab",
-  },
-  {
-    id: 3,
-    name: "des villes respectent la Stratégie nationale bas-carbone (SNBC) visant à réduire de 40% les émissions en 2030",
-    value: "24 %",
-  },
-]
+const { t, tm, rt } = useI18n()
 </script>
 
 <template>
@@ -65,15 +18,12 @@ const stats = [
           <h1
             class="max-w-2xl text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:col-span-2 xl:col-auto"
           >
-            Suivez l’empreinte carbone de votre ville
+            {{ t("home.hero.title") }}
           </h1>
 
           <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
             <p class="leading-text">
-              Comment améliorer ce qu’on ne sait pas mesurer? MyCityCO2, un
-              outil libre et gratuit de suivi des empreintes carbones des 35'000
-              villes françaises au service de la lutte contre le changement
-              climatique.
+              {{ t("home.hero.text") }}
             </p>
             <div
               class="mt-10 transform divide-y divide-neutral-500 dark:divide-neutral-300 divide-opacity-10 overflow-hidden rounded-xl ring-1 ring-black dark:ring-white ring-opacity-5 transition-all"
@@ -81,13 +31,14 @@ const stats = [
               <CitySelector :hasQuickActions="false" auto-focus />
             </div>
             <div class="mt-10 flex items-center gap-x-6">
-              <NuxtLink to="/contact" class="button-primary"
-                >Contribuer</NuxtLink
-              >
-              <NuxtLink
+              <NuxtLinkLocale to="/contact" class="button-primary">{{
+                t("actions.contribute")
+              }}</NuxtLinkLocale>
+              <NuxtLinkLocale
                 to="#project"
                 class="text-sm font-semibold leading-6 text-neutral-900"
-                >En savoir plus <span aria-hidden="true">→</span></NuxtLink
+                >{{ t("actions.learn_more") }}
+                <span aria-hidden="true">→</span></NuxtLinkLocale
               >
             </div>
           </div>
@@ -106,32 +57,24 @@ const stats = [
     <section class="section-small">
       <div class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
         <div
-          v-for="stat in stats"
-          :key="stat.id"
+          v-for="stat in tm('home.stats')"
+          :key="rt(stat.value)"
           class="mx-auto flex max-w-xs flex-col gap-y-4"
         >
-          <h3>
-            {{ stat.value }}
-          </h3>
-          <p class="leading-text">{{ stat.name }}</p>
+          <h3>{{ rt(stat.value) }}</h3>
+          <p class="leading-text">{{ rt(stat.name) }}</p>
         </div>
       </div>
     </section>
 
     <section id="project">
       <div class="mx-auto max-w-3xl lg:text-center">
-        <span class="tooltip"
-          >Adoptez un outil libre, gratuit et transparent validé par des
-          experts</span
-        >
+        <span class="tooltip">{{ t("home.features.subtitle") }}</span>
         <h3 class="mt-2">
-          1er outil d’empreinte carbone pour les collectivités
+          {{ t("home.features.title") }}
         </h3>
         <p class="mt-6 leading">
-          De la plus petite commune française à la capitale, MyCityCO2 est le
-          premier outil qui permet de consulter l’empreinte carbone de n’importe
-          quelle ville française et ce de manière historique sur les 7 dernières
-          années.
+          {{ t("home.features.description") }}
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -139,8 +82,8 @@ const stats = [
           class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
         >
           <div
-            v-for="feature in features"
-            :key="feature.name"
+            v-for="feature in tm('home.features.list')"
+            :key="rt(feature.name)"
             class="relative pl-16"
           >
             <dt
@@ -150,17 +93,17 @@ const stats = [
                 class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-primary"
               >
                 <component
-                  :is="feature.icon"
+                  :is="iconsMap(rt(feature.icon))"
                   class="h-6 w-6 text-white"
                   aria-hidden="true"
                 />
               </div>
-              {{ feature.name }}
+              {{ rt(feature.name) }}
             </dt>
             <dd
               class="mt-2 text-base leading-7 text-neutral-600 dark:text-neutral-400"
             >
-              {{ feature.description }}
+              {{ rt(feature.description) }}
             </dd>
           </div>
         </dl>
@@ -173,20 +116,17 @@ const stats = [
           <h2
             class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
           >
-            Prêts à aller plus loin ?
+            {{ t("home.pre_footer.title") }}
           </h2>
           <p class="leading-text mt-2">
-            Accédez aux données détaillées de votre ville et identifiez les
-            opportunités de réduction des émissions pour atteindre les objectifs
-            fixés par l’Accord de Paris et implémentés en France par la
-            Stratégie nationale bas-carbone (SNBC)
+            {{ t("home.pre_footer.description") }}
           </p>
         </div>
 
         <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-          <NuxtLink to="/contact" class="button-primary"
-            >Nous contacter</NuxtLink
-          >
+          <NuxtLink to="/contact" class="button-primary">{{
+            t("actions.contact_us")
+          }}</NuxtLink>
         </div>
       </div>
     </section>
