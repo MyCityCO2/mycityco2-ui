@@ -12,7 +12,7 @@ const countryStore = useCountryStore()
 
 const countries = ["FR", "CH"]
 
-const selectedCountry = ref(countries[0])
+const selectedCountry = ref(countryStore.country)
 
 const changeCountry = async () => {
   const code = selectedCountry.value

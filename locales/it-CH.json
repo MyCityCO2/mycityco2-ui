@@ -62,7 +62,8 @@
   },
   "footer": {
     "open_source": "Iniziativa open source - open data",
-    "copyright": "2023 MyCityCo2 uno strumento gratuito e open source"
+    "copyright": "2023 MyCityCo2 uno strumento gratuito e open source",
+    "ecoindex": "La visualizzazione di questa pagina genera {n} g CO2e"
   },
   "project": {
     "title": "Progetto"
