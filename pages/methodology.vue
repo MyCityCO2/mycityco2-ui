@@ -1,47 +1,48 @@
 <script setup lang="ts">
 import { ArrowLongLeftIcon, ArrowLongRightIcon } from "@heroicons/vue/20/solid"
 
+const { t } = useI18n()
 const route = useRoute()
 const pageMeta = computed(() => route.meta)
 const navigation = [
   {
-    name: "Présentation générale",
+    name: t("methodology.general_overview.title"),
     to: { path: "/methodology/" },
     children: [
       {
-        name: "Comptabilité",
+        name: t("methodology.accounting.title"),
         to: { path: "/methodology/general/accounting/" },
         children: [
           {
-            name: "Plan comptable normalisé",
+            name: t("methodology.accounting_plan.title"),
             to: { path: "/methodology/general/accounting/plan" },
           },
           {
-            name: "Investissement",
+            name: t("methodology.investment.title"),
             to: {
               path: "/methodology/general/accounting/investment",
             },
           },
           {
-            name: "Fonctionnement",
+            name: t("methodology.operation.title"),
             to: {
               path: "/methodology/general/accounting/functionning",
             },
           },
           {
-            name: "Amortissements",
+            name: t("methodology.depreciations.title"),
             to: {
               path: "/methodology/general/accounting/depreciations",
             },
           },
           {
-            name: "Durées d’amortissement",
+            name: t("methodology.amortization_periods.title"),
             to: {
               path: "/methodology/general/accounting/amortization-period",
             },
           },
           {
-            name: "Configuration des comptes",
+            name: t("methodology.accounts_config.title"),
             to: {
               path: "/methodology/general/accounting/accounts-configuration",
             },
@@ -49,44 +50,44 @@ const navigation = [
         ],
       },
       {
-        name: "Facteurs d'émissions monétaires",
+        name: t("methodology.monetary_emission_factors.title"),
         to: { path: "/methodology/general/emission-factor" },
       },
       {
-        name: "Postes d'émissions",
+        name: t("methodology.emission_posts.title"),
         to: { path: "/methodology/general/emission-post" },
       },
       {
-        name: "Limitations",
+        name: t("methodology.limitations.title"),
         to: { path: "/methodology/general/limitations" },
       },
     ],
   },
   {
-    name: "Sources de données",
+    name: t("methodology.data_sources.title"),
     to: { path: "/methodology/datasources" },
   },
   {
-    name: "License d'utilisation",
+    name: t("methodology.usage_license.title"),
     to: { path: "/methodology/license" },
     children: [
       {
-        name: "Contenus",
+        name: t("methodology.usage_license.content_title"),
         to: { path: "/methodology/license", hash: "#content" },
       },
       {
-        name: "Données",
+        name: t("methodology.usage_license.data_title"),
         to: { path: "/methodology/license#data", hash: "#data" },
       },
       {
-        name: "Code source",
+        name: t("methodology.usage_license.source_code_title"),
         to: {
           path: "/methodology/license#source-code",
           hash: "#source-code",
         },
       },
       {
-        name: "Comment créditer MyCityCO2",
+        name: t("methodology.usage_license.credit_title"),
         to: {
           path: "/methodology/license#credit",
           hash: "#credit",
@@ -99,7 +100,7 @@ const navigation = [
 
 <template>
   <div>
-    <AppHeading title="Méthodologie" text="" :alt="true" />
+    <AppHeading :title="t('methodology.title')" text="" :alt="true" />
     <section class="section-small section-top-0">
       <div
         class="flex flex-col space-y-8 sm:flex-none sm:space-y-0 sm:grid sm:grid-cols-3 md:grid-cols-4 sm:gap-x-8"
@@ -130,7 +131,7 @@ const navigation = [
                   class="mr-3 h-5 w-5 text-neutral-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"
                 />
-                Précédent
+                {{ t("actions.previous") }}
               </NuxtLinkLocale>
             </div>
 
@@ -140,7 +141,7 @@ const navigation = [
                 :to="pageMeta.meta.next"
                 class="inline-flex items-center border-t-2 border-transparent pl-1 pt-4 text-sm font-medium text-neutral-500"
               >
-                Suivant
+                {{ t("actions.next") }}
                 <ArrowLongRightIcon
                   class="ml-3 h-5 w-5 text-neutral-400 group-hover:text-primary transition-colors"
                   aria-hidden="true"

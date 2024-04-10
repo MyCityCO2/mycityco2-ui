@@ -1,49 +1,41 @@
+<script setup>
+const { t } = useI18n()
+</script>
+
 <template>
   <div>
     <div class="methodology__section_header">
-      <h3>License d'utilisation</h3>
+      <h3>{{ t("methodology.usage_license.title") }}</h3>
     </div>
     <div class="methodology__section">
       <div id="content">
-        <h4>Contenus</h4>
+        <h4>{{ t("methodology.usage_license.content_title") }}</h4>
         <p class="mt-4">
-          Sauf mention contraire, le contenu de ce site est publié par MyCityCO2
-          sous la licence CC BY-NC-SA 4.0 (Creative Commons, Attribution, Pas
-          d’utilisation commerciale, Partage dans les mêmes conditions)
+          {{ t("methodology.usage_license.content_text") }}
         </p>
       </div>
       <div id="data">
-        <h4>Données</h4>
+        <h4>{{ t("methodology.usage_license.data_title") }}</h4>
         <p class="mt-4">
-          Les données accessibles dans l’application ou via l'API sont mises à
-          disposition sous la licence "Open Database Licence" (ODbL). Tous les
-          droits sur le contenu individuel de la base de données sont concédés
-          sous la licence de contenu de la base de données. Vous êtes libre de
-          copier, distribuer, transmettre et adapter ces données, à condition
-          que vous créditiez le projet MyCityCO2. Si vous modifiez ou utilisez
-          nos données dans d’autres œuvres dérivées, vous ne pouvez distribuer
-          celles-ci que sous la même licence.
+          {{ t("methodology.usage_license.data_text") }}
         </p>
       </div>
       <div id="source-code">
-        <h4>Code source</h4>
+        <h4>{{ t("methodology.usage_license.source_code_title") }}</h4>
         <p class="mt-4">
-          Le code de l'application est publié sous la licence AGPL (GNU Affero
-          General Public License), il est accessible
+          {{ t("methodology.usage_license.source_code_text") }}
           <a
             href="https://github.com/MyCityCO2"
             target="_blank"
             class="text-link"
-            >ici</a
+            >{{ t("here") }}</a
           >.
         </p>
       </div>
       <div id="credit">
-        <h4>Comment créditer MyCityCO2</h4>
+        <h4>{{ t("methodology.usage_license.credit_title") }}</h4>
         <p class="mt-4">
-          Citer l’application comme suit : « MyCityCO2, calculateur d'empreinte
-          carbone pour les collectivités. [Application disponible en ligne :
-          https://mycityco2.org (consultée le XX/YY/20ZZ)] »
+          {{ t("methodology.usage_license.credit_text") }}
         </p>
       </div>
     </div>

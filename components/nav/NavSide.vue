@@ -2,6 +2,7 @@
 import { ChevronRightIcon } from "@heroicons/vue/20/solid"
 import { computed } from "vue"
 import { useRoute } from "vue-router"
+const localePath = useLocalePath()
 
 const props = defineProps({
   navigation: Object,
@@ -13,7 +14,8 @@ const props = defineProps({
 
 const route = useRoute()
 const currentUrl = computed(() => route.path + route.hash)
-const isActiveLink = (linkUrl) => currentUrl.value === linkUrl
+const isActiveLink = (linkUrl) =>
+  localePath(currentUrl.value) === localePath(linkUrl)
 </script>
 
 <template>

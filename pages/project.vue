@@ -1,75 +1,32 @@
 <script setup lang="ts">
 import { CheckCircleIcon } from "@heroicons/vue/20/solid"
-import {
-  ChatBubbleLeftRightIcon,
-  CodeBracketIcon,
-  LanguageIcon,
-  LightBulbIcon,
-} from "@heroicons/vue/24/outline"
 
-const features = [
-  {
-    name: "Développer",
-    description:
-      'Développeurs en travaillant directement sur le code (<a href="https://github.com/MyCityCO2" target="_blank" class="text-link">projet github</a>).',
-    icon: CodeBracketIcon,
-  },
-  {
-    name: "Devenir précurseur",
-    description:
-      "Communes (maires, adjoints, agents) qui seraient intéressées par le projet pour devenir pilote des phases suivantes, faire des retours… ",
-    icon: LightBulbIcon,
-  },
-  {
-    name: "Traduire",
-    description:
-      "Traducteurs pour préparer le développement dans d’autres pays.",
-    icon: LanguageIcon,
-  },
-  {
-    name: "Communiquer",
-    description:
-      "Communicants pour préparer et exécuter une stratégie de communication et mieux faire connaître le produit. Partager MyCityCO2 sur les réseaux sociaux ?...",
-    icon: ChatBubbleLeftRightIcon,
-  },
-]
-
-const thanks = [
-  "les membres d’Open Net qui se sont intensément investis pour sortir une première version",
-  "les membres bénévoles de Carbones sur factures qui définissent les comptes carbones de demain",
-  "Pierre Chassany (Vocables) pour la création du logo MyCityCO2",
-  "les experts qui ont contribué au développement de la solution",
-  "les représentants des collectivités qui participent au test de la solution et nous aiguillent sur les besoins à couvrir",
-  "les fournisseurs de données qui font l’effort de rendre publiques leurs données et ainsi faire la promotion de l’open-data",
-  "Odoo SA, éditeur de l’ERP open-source Odoo sur la base duquel le module de CO2 tracking a été développé",
-]
+const { t, tm, rt } = useI18n()
 </script>
 
 <template>
   <div>
     <AppHeading
-      title="Pourquoi Mycityco2 ?"
-      text="MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
+      :title="t('project.hero.title')"
+      :text="t('project.hero.text')"
     />
     <section>
       <div
         class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
       >
         <div>
-          <h3>Comment contribuer ?</h3>
+          <h3>{{ t("project.contribute.title") }}</h3>
           <p class="my-6 leading-text">
-            MyCityCO2 est développée par une équipe de volontaires. Nous sommes
-            à la recherche de tous types de contributeurs.
+            {{ t("project.contribute.text") }}
           </p>
-          <router-link to="/contact" class="button-primary"
-            >Contactez-nous</router-link
-          >
+          <router-link to="/contact" class="button-primary">{{
+            t("actions.contact_us")
+          }}</router-link>
         </div>
-
         <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
           <div
-            v-for="feature in features"
-            :key="feature.name"
+            v-for="feature in tm('project.contribute.features')"
+            :key="rt(feature.name)"
             class="relative group"
           >
             <div
@@ -82,16 +39,20 @@ const thanks = [
                 class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg"
               >
                 <component
-                  :is="feature.icon"
+                  :is="iconsMap(rt(feature.icon))"
                   class="h-6 w-6 text-primary"
                   aria-hidden="true"
                 />
               </div>
-              {{ feature.name }}
+              {{ rt(feature.name) }}
             </dt>
             <dd
               class="mt-1 text-base leading-7 text-neutral-600 dark:text-neutral-400"
-              v-html="feature.description"
+              v-html="
+                rt(feature.description, {
+                  link: `<a href='https://github.com/MyCityCO2' target='_blank' class='text-link'>GitHub</a>`,
+                })
+              "
             />
           </div>
         </dl>
@@ -102,20 +63,23 @@ const thanks = [
         class="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2"
       >
         <div class="mx-auto w-full max-w-xl lg:mx-0">
-          <h3>Remerciements</h3>
+          <h3>{{ t("project.thanks.title") }}</h3>
           <p class="mt-6 leading-text">
-            Merci à toutes celles et ceux qui ont rendu le lancement de
-            MyCityCO2 possible :
+            {{ t("project.thanks.text") }}
           </p>
           <div class="mx-4">
             <ul role="list" class="mt-2 space-y-2">
-              <li class="flex gap-x-3" v-for="(item, idx) in thanks" :key="idx">
+              <li
+                class="flex gap-x-3"
+                v-for="(item, idx) in tm('project.thanks.list')"
+                :key="idx"
+              >
                 <CheckCircleIcon
                   class="mt-1 h-5 w-5 flex-none text-primary"
                   aria-hidden="true"
                 />
                 <span class="text-neutral-600 dark:text-neutral-400">{{
-                  item
+                  rt(item)
                 }}</span>
               </li>
             </ul>
@@ -234,37 +198,14 @@ const thanks = [
           />
         </div>
         <div class="mx-auto w-full max-w-xl lg:mx-0">
-          <h3>Crédits</h3>
+          <h3>{{ t("project.credits.title") }}</h3>
           <ul
+            v-for="tool in tm('project.credits.list')"
+            :key="rt(tool)"
             role="list"
             class="marker:text-primary list-disc pl-5 space-y-3 mt-6 text-neutral-600 dark:text-neutral-400"
           >
-            <li>
-              Le code de nombreux modules utilisés par MyCityCO2 provient de
-              l’Odoo Community Association (OCA) organisation à but non lucratif
-              qui aide ses membres à créer plus rapidement des solutions Odoo
-              moins coûteuses et plus performantes, avec un accès facile à des
-              applications de haute qualité et à des mises à jour ouvertes.
-            </li>
-            <li>
-              Le framework javascript VueJS ainsi que ses composants core tel
-              que Vue-Router et Pinia ont été utilsés pour réaliser
-              l'application web
-            </li>
-            <li>
-              Le framework TailwindCSS a été utilisé pour réaliser la partie
-              graphique
-            </li>
-            <li>
-              La bibliothèque graphique Chart.js utilisée dans le tableau de
-              bord de chaque commune
-            </li>
-            <li>Les icones utilisées proviennent de heroicons</li>
-            <li>
-              Une partie de l’arborescence et du contenu général du site de «
-              Les Greniers d'Abondance, Calculateur pour la Résilience
-              Alimentaire des Territoires (CRATer)»
-            </li>
+            <li>{{ rt(tool) }}</li>
           </ul>
         </div>
       </div>
