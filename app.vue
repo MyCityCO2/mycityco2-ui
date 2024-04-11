@@ -1,3 +1,8 @@
+<script setup>
+// Use SSR-safe IDs for Headless UI
+provideHeadlessUseId(() => useId())
+</script>
+
 <template>
   <NuxtLoadingIndicator color="#47b9a3" />
   <NuxtLayout name="default">
