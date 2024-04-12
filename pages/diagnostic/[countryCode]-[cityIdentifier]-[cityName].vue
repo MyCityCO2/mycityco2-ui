@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ChartBarIcon, CloudIcon, UsersIcon } from "@heroicons/vue/24/outline"
-import { useLazyQuery } from "@vue/apollo-composable"
 import {
   ArcElement,
   BarElement,
@@ -39,22 +38,17 @@ const route = useRoute()
 const cityStore = useCityStore()
 const sidebarOpen = ref(false)
 
-if (cityStore.hasCurrentCity == false && route.params?.cityIdentifier)
+watch(route, () =>
   cityStore.setCurrentCityId(parseInt(route.params.cityIdentifier))
-
-const { result, load, loading, error, forceDisabled } = useLazyQuery(
-  QUERY_CITY_DASHBOARD,
-  cityStore.dashboardVariables
 )
 
-onMounted(() => {
-  if (cityStore.dashboardVariables.cityId && forceDisabled.value) load()
-})
-
-watch(cityStore.dashboardVariables, (newVars) => {
-  if (newVars.cityId && forceDisabled.value) {
-    load()
-  }
+const {
+  data: result,
+  pending,
+  error,
+} = await useAsyncQuery(QUERY_CITY_DASHBOARD, {
+  cityId: parseInt(route.params.cityIdentifier),
+  year: cityStore.dashboardVariables.year,
 })
 
 const stats = computed(() => {
@@ -266,8 +260,8 @@ const emissionByJournalYearlyChartOptions = {
 const emissionByJournalChartOptions = {
   backgroundColor: colors,
   responsive: true,
-  maintainAspectRatio: false,
-  cutout: 90,
+  maintainAspectRatio: true,
+  cutout: "70%",
   plugins: {
     legend: {
       onClick: null,
@@ -320,7 +314,7 @@ const emissionByCategChartOptions = {
 }
 
 const title = computed(() => {
-  if (loading.value == true || error.value == true) return ""
+  if (pending.value || error.value) return ""
   if (result.value && result.value?.city)
     return t("diagnostic.co2_emissions_at", { city: result.value.city.name })
   return ""
@@ -340,12 +334,8 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
 <template>
   <div>
     <HeadingDiagnostic @opensidebar="sidebarOpen = true" :title="title" />
-
     <div class="mt-4">
-      <div v-if="loading">
-        <LoadingLoader />
-      </div>
-      <div v-else-if="error" class="max-w-2xl mx-auto">
+      <div v-if="error" class="max-w-2xl mx-auto">
         <AlertError
           :title="t('diagnostic.error_occurred')"
           :text="t('diagnostic.unable_to_load_data')"
@@ -406,10 +396,12 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               }}</span>
             </h5>
             <div class="flex-1">
-              <Bar
-                :options="emissionByJournalYearlyChartOptions"
-                :data="emissionByJournalYearly"
-              />
+              <ClientOnly>
+                <Bar
+                  :options="emissionByJournalYearlyChartOptions"
+                  :data="emissionByJournalYearly"
+                />
+              </ClientOnly>
             </div>
           </div>
           <div
@@ -422,10 +414,12 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               }}</span>
             </h5>
             <div class="flex-1">
-              <Doughnut
-                :data="emissionByJournal"
-                :options="emissionByJournalChartOptions"
-              />
+              <ClientOnly>
+                <Doughnut
+                  :data="emissionByJournal"
+                  :options="emissionByJournalChartOptions"
+                />
+              </ClientOnly>
             </div>
           </div>
           <div
@@ -436,10 +430,12 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               <span class="text-sm font-normal leading-none">{{}}</span>
             </h5>
             <div class="flex-1">
-              <Bar
-                :options="emissionByCategChartOptions"
-                :data="emissionByCateg"
-              />
+              <ClientOnly>
+                <Bar
+                  :options="emissionByCategChartOptions"
+                  :data="emissionByCateg"
+                />
+              </ClientOnly>
             </div>
           </div>
         </div>

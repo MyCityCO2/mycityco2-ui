@@ -90,9 +90,13 @@ const handleScroll = () => {
           active-class="!text-primary !border-primary"
           >{{ t(item.name) }}</NuxtLinkLocale
         >
-        <button @click="navigateTo(diagnosticLink)" class="button-primary">
+        <NuxtLinkLocale
+          :to="diagnosticLink.href"
+          class="header-link"
+          active-class="!text-primary !border-primary"
+        >
           {{ t("diagnostic.title") }}
-        </button>
+        </NuxtLinkLocale>
       </div>
       <LanguageSelector
         class="hidden justify-self-end lg:flex items-center gap-1 ml-2"
