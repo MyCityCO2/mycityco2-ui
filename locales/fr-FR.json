@@ -537,7 +537,6 @@
   "contact": {
     "success_title": "Succès !",
     "success_message": "Le mail a bien été envoyé",
-    "error_title": "Erreur !",
     "error_message": "Une erreur s'est produite lors de l'envoi de mail !",
     "contact_us_description": "Vous souhaitez poser une question, faire un commentaire, donner votre avis, nous signaler un problème technique ou autre ? Contactez-nous en complétant ce formulaire.",
     "email_label": "Email",
@@ -572,6 +571,8 @@
     "emission_distribution": "Répartition des émissions en 2020",
     "emission_by_category": "Émissions par poste en 2020",
     "co2_eq_per_hab": "en kgCO2eq/hab",
+    "copy_link_title": "Lien copié dans le presse papier !",
+    "copy_link_text": "Vous pouvez le partager via CTRL+V.",
     "features": [
       {
         "name": "Accompagnement des collectivités",
@@ -599,6 +600,7 @@
   "year": "Année | Années",
   "link": "Lien",
   "here": "ici",
+  "error_title": "Erreur !",
   "country": { "FR": "France", "CH": "Suisse" },
   "actions": {
     "contribute": "Contribuer",

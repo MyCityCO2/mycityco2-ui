@@ -24,7 +24,7 @@ onDone(() => {
 
 onError(() => {
   notifStore.add({
-    title: t("contact.error_title"),
+    title: t("error_title"),
     text: t("contact.error_message"),
     type: "error",
   })
