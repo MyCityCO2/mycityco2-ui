@@ -41,20 +41,6 @@ declare global {
     }
   }
 
-  interface Dataset {
-    label: string
-    type: string
-    backgroundColor?: string
-    data: { x: number; y: number }[]
-    borderWidth?: number
-    fill?: boolean
-    borderColor?: string
-    borderDash?: number[]
-    pointStyle?: boolean
-    pointRadius?: number
-    pointHitRadius?: number
-  }
-
   interface ImportMetaEnv {
     VITE_BASE_URL: string
   }
