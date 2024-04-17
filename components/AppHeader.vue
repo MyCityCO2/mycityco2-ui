@@ -26,9 +26,10 @@ const diagnosticLink = computed(() => {
       name: "diagnostic-countryCode-cityIdentifier-cityName",
       params: {
         countryCode: "FR",
-        cityIdentifier: cityStore.currentCity.cityIdentifier,
+        cityIdentifier: cityStore.currentCity?.cityIdentifier,
         cityName:
-          cityStore.currentCity.slug || slug(cityStore.currentCity.name),
+          cityStore.currentCity?.slug ||
+          slug(cityStore.currentCity?.name || ""),
       },
     })
   return localeRoute("diagnostic")
@@ -91,7 +92,7 @@ const handleScroll = () => {
           >{{ t(item.name) }}</NuxtLinkLocale
         >
         <NuxtLinkLocale
-          :to="diagnosticLink.href"
+          :to="diagnosticLink?.href"
           class="header-link"
           active-class="!text-primary !border-primary"
         >
