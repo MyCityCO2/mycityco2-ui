@@ -12,8 +12,8 @@ const props = defineProps({
 })
 const { t } = useI18n()
 const notifStore = useNotificationStore()
-const encodedTitle = computed(() => encodeURIComponent(props.title))
-const encodedUrl = computed(() => encodeURIComponent(props.url))
+const encodedTitle = computed(() => encodeURIComponent(props.title || ""))
+const encodedUrl = computed(() => encodeURIComponent(props.url || ""))
 const links = computed(() => {
   return [
     {

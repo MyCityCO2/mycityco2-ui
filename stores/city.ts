@@ -1,7 +1,9 @@
+import { ref, reactive, computed, watch } from "vue"
+
 export const useCityStore = defineStore("city", () => {
-  const currentCity = ref(null)
-  const selectorOpen = ref(false)
-  const dashboardVariables = reactive({
+  const currentCity = ref<City | null>(null)
+  const selectorOpen = ref<boolean>(false)
+  const dashboardVariables = reactive<DashboardVariables>({
     cityId: 0,
     year: 2020,
   })
@@ -11,11 +13,11 @@ export const useCityStore = defineStore("city", () => {
       dashboardVariables.cityId = newValue.cityIdentifier
   })
 
-  const hasCurrentCity = computed(() => !!dashboardVariables.cityId != 0)
+  const hasCurrentCity = computed(() => dashboardVariables.cityId !== 0)
 
-  const setCurrentCity = (city) =>
-    (currentCity.value = { ...city, slug: slug(city.name) })
-  const setCurrentCityId = (cityId) =>
+  const setCurrentCity = (city: City) =>
+    (currentCity.value = { ...city, slug: city.name ? slug(city.name) : "" })
+  const setCurrentCityId = (cityId: number) =>
     (currentCity.value = { cityIdentifier: cityId })
   const openSelector = () => (selectorOpen.value = true)
   const closeSelector = () => (selectorOpen.value = false)

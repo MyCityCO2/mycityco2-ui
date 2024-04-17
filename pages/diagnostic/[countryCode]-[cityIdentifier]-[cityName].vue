@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ChartBarIcon, CloudIcon, UsersIcon } from "@heroicons/vue/24/outline"
-import { useLazyQuery } from "@vue/apollo-composable"
+import type { ChartData, ChartDataset, ChartOptions, Point } from "chart.js"
 import {
   ArcElement,
   BarElement,
@@ -15,7 +15,7 @@ import {
   Tooltip,
 } from "chart.js"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import { Bar, Doughnut } from "vue-chartjs"
+import { Bar, Chart, Doughnut } from "vue-chartjs"
 import { useRoute } from "vue-router"
 import { QUERY_CITY_DASHBOARD } from "~/api/query/co2"
 import ShareAction from "~/components/share/ShareAction.vue"
@@ -36,27 +36,27 @@ ChartJS.register(
 
 const { t } = useI18n()
 const route = useRoute()
+const url = useRequestURL()
 const cityStore = useCityStore()
 const sidebarOpen = ref(false)
 
-if (cityStore.hasCurrentCity == false && route.params?.cityIdentifier)
-  cityStore.setCurrentCityId(parseInt(route.params.cityIdentifier))
-
-const { result, load, loading, error, forceDisabled } = useLazyQuery(
-  QUERY_CITY_DASHBOARD,
-  cityStore.dashboardVariables
-)
-
-onMounted(() => {
-  if (cityStore.dashboardVariables.cityId && forceDisabled.value) load()
+watch(route, () => {
+  const cityIdentifier = !Array.isArray(route.params.cityIdentifier)
+    ? route.params.cityIdentifier.toString()
+    : ""
+  cityStore.setCurrentCityId(parseInt(cityIdentifier, 10))
 })
 
-watch(cityStore.dashboardVariables, (newVars) => {
-  if (newVars.cityId && forceDisabled.value) {
-    load()
-  }
+const {
+  data: result,
+  pending,
+  error,
+} = await useAsyncQuery<CityData>(QUERY_CITY_DASHBOARD, {
+  cityId: !Array.isArray(route.params.cityIdentifier)
+    ? parseInt(route.params.cityIdentifier)
+    : "",
+  year: cityStore.dashboardVariables.year,
 })
-
 const stats = computed(() => {
   if (!result.value || !result.value?.city) return []
   return [
@@ -92,14 +92,22 @@ const stats = computed(() => {
 
 const colors = ["rgba(108, 199, 222, 0.8)", "rgba(50, 202, 175, 0.8)"]
 
-const emissionByCateg = computed(() => {
-  if (!result.value || !result.value?.city) return []
+const emissionByCateg = computed<ChartData<"bar">>(() => {
+  if (!result.value || !result.value?.city)
+    return {
+      labels: [],
+      datasets: [],
+    }
 
   const sortedCategories = [...result.value.city.co2EmissionByCategory].sort(
     (a, b) => b.sum - a.sum
   )
 
-  const groupedData = sortedCategories.reduce((acc, item) => {
+  interface GroupedData {
+    [key: string]: { [key: string]: number }
+  }
+
+  const groupedData = sortedCategories.reduce<GroupedData>((acc, item) => {
     if (!acc[item.journalIdName]) {
       acc[item.journalIdName] = {}
     }
@@ -127,8 +135,12 @@ const emissionByCateg = computed(() => {
   }
 })
 
-const emissionByJournal = computed(() => {
-  if (!result.value || !result.value?.city) return []
+const emissionByJournal = computed<ChartData<"doughnut">>(() => {
+  if (!result.value || !result.value?.city)
+    return {
+      labels: [],
+      datasets: [],
+    }
   return {
     labels: result.value.city.co2EmissionsEvolutionByJournal.map(
       (item) => item.name
@@ -143,9 +155,15 @@ const emissionByJournal = computed(() => {
   }
 })
 
-const emissionByJournalYearly = computed(() => {
-  if (!result.value || !result.value?.city) return []
-  let data = result.value.city.co2EmissionsEvolutionByJournalYearly
+const emissionByJournalYearly = computed<ChartData>(() => {
+  if (!result.value || !result.value.city)
+    return {
+      labels: [],
+      datasets: [],
+    }
+
+  let data: { year: number; name: string; sum: number }[] =
+    result.value.city.co2EmissionsEvolutionByJournalYearly
   const years = [...new Set(data.map((item) => item.year))]
   const minYear = Math.min(...years)
 
@@ -153,33 +171,40 @@ const emissionByJournalYearly = computed(() => {
     .filter((item) => item.year === minYear)
     .reduce((total, item) => total + item.sum, 0)
 
-  const datasets = data.reduce((result, item, idx) => {
-    const { name, sum, year } = item
-    const existingDataset = result.find((dataset) => dataset.label === name)
+  const datasets: ChartDataset[] = data.reduce(
+    (result: ChartDataset[], item, idx) => {
+      const { name, sum, year } = item
+      const existingDataset = result.find((dataset) => dataset.label === name)
 
-    if (existingDataset) {
-      const existingData = existingDataset.data.find(
-        (dataItem) => dataItem.x === year
-      )
-      if (existingData) {
-        existingData.y += sum
+      if (existingDataset) {
+        const existingData = existingDataset.data.find(
+          (dataItem): dataItem is { x: number; y: number } =>
+            !!dataItem &&
+            typeof dataItem === "object" &&
+            "x" in dataItem &&
+            dataItem.x === year
+        )
+        if (existingData) {
+          existingData.y += sum
+        } else {
+          existingDataset.data.push({ x: year, y: sum })
+        }
       } else {
-        existingDataset.data.push({ x: year, y: sum })
+        result.push({
+          label: name,
+          type: "bar",
+          backgroundColor: colors[idx % colors.length],
+          data: [{ x: year, y: sum }],
+          borderWidth: 1,
+        })
       }
-    } else {
-      result.push({
-        label: name,
-        type: "bar",
-        backgroundColor: colors[idx % colors.length],
-        data: [{ x: year, y: sum }],
-        borderWidth: 1,
-      })
-    }
 
-    return result
-  }, [])
+      return result
+    },
+    []
+  )
 
-  const idealProgressionDataset = {
+  const idealProgressionDataset: ChartDataset = {
     label: t("diagnostic.national_low_carbon_strategy"),
     type: "line",
     data: data.map((item) => {
@@ -201,12 +226,12 @@ const emissionByJournalYearly = computed(() => {
 
   return {
     labels: years,
-    datasets: datasets,
+    datasets,
   }
 })
 
-const emissionByJournalYearlyChartOptions = {
-  element: {
+const emissionByJournalYearlyChartOptions: ChartOptions = {
+  elements: {
     bar: {
       backgroundColor: colors[0],
     },
@@ -229,7 +254,7 @@ const emissionByJournalYearlyChartOptions = {
   },
   plugins: {
     legend: {
-      onClick: null,
+      onClick: () => undefined,
       position: "bottom",
     },
     datalabels: {
@@ -238,18 +263,15 @@ const emissionByJournalYearlyChartOptions = {
       font: {
         weight: "bold",
       },
-      formatter: (value, context) => {
+      formatter: (_, context) => {
         if (context.datasetIndex == 2) return ""
-        const datasetArray = []
-        context.chart.data.datasets.forEach((dataset) => {
-          if (
-            dataset.type != "line" &&
-            dataset.data[context.dataIndex] != undefined
-          ) {
-            datasetArray.push(dataset.data[context.dataIndex].y)
+        const datasetArray: number[] = []
+        context.chart.data.datasets.forEach((dataset: ChartDataset) => {
+          if (dataset.type != "line") {
+            datasetArray.push((dataset.data[context.dataIndex] as Point)?.y)
           }
         })
-        const totalSum = (total, datapoint) => total + datapoint
+        const totalSum = (total: number, datapoint: number) => total + datapoint
 
         let sum = datasetArray.reduce(totalSum, 0)
         if (
@@ -263,14 +285,17 @@ const emissionByJournalYearlyChartOptions = {
   },
 }
 
-const emissionByJournalChartOptions = {
-  backgroundColor: colors,
+const emissionByJournalChartOptions: ChartOptions<"doughnut"> = {
+  backgroundColor: (ctx, options) => {
+    const index = ctx.dataIndex ?? 0
+    return colors[index % colors.length]
+  },
   responsive: true,
-  maintainAspectRatio: false,
-  cutout: 90,
+  maintainAspectRatio: true,
+  cutout: "70%",
   plugins: {
     legend: {
-      onClick: null,
+      onClick: () => undefined,
       position: "bottom",
     },
     tooltip: {
@@ -280,7 +305,7 @@ const emissionByJournalChartOptions = {
       font: {
         weight: "bold",
       },
-      formatter: (value) => {
+      formatter: (value: number) => {
         let newValue = Math.floor(value)
         return newValue.toString()
       },
@@ -288,7 +313,7 @@ const emissionByJournalChartOptions = {
   },
 }
 
-const emissionByCategChartOptions = {
+const emissionByCategChartOptions: ChartOptions<"bar"> = {
   responsive: true,
   maintainAspectRatio: false,
   indexAxis: "y",
@@ -314,13 +339,13 @@ const emissionByCategChartOptions = {
       font: {
         weight: "bold",
       },
-      formatter: (value) => (value ? Math.floor(value).toString() : ""),
+      formatter: (value: number) => (value ? Math.floor(value).toString() : ""),
     },
   },
 }
 
 const title = computed(() => {
-  if (loading.value == true || error.value == true) return ""
+  if (pending.value || error.value) return ""
   if (result.value && result.value?.city)
     return t("diagnostic.co2_emissions_at", { city: result.value.city.name })
   return ""
@@ -334,18 +359,17 @@ const shareTitle = computed(() =>
     : ""
 )
 
-const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
+const shareUrl = computed(() => {
+  const meta = import.meta as unknown as { env?: ImportMetaEnv }
+  return url.origin + route.fullPath
+})
 </script>
 
 <template>
   <div>
     <HeadingDiagnostic @opensidebar="sidebarOpen = true" :title="title" />
-
     <div class="mt-4">
-      <div v-if="loading">
-        <LoadingLoader />
-      </div>
-      <div v-else-if="error" class="max-w-2xl mx-auto">
+      <div v-if="error" class="max-w-2xl mx-auto">
         <AlertError
           :title="t('diagnostic.error_occurred')"
           :text="t('diagnostic.unable_to_load_data')"
@@ -406,10 +430,13 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               }}</span>
             </h5>
             <div class="flex-1">
-              <Bar
-                :options="emissionByJournalYearlyChartOptions"
-                :data="emissionByJournalYearly"
-              />
+              <ClientOnly>
+                <Chart
+                  type="bar"
+                  :options="emissionByJournalYearlyChartOptions"
+                  :data="emissionByJournalYearly"
+                />
+              </ClientOnly>
             </div>
           </div>
           <div
@@ -422,10 +449,12 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               }}</span>
             </h5>
             <div class="flex-1">
-              <Doughnut
-                :data="emissionByJournal"
-                :options="emissionByJournalChartOptions"
-              />
+              <ClientOnly>
+                <Doughnut
+                  :data="emissionByJournal"
+                  :options="emissionByJournalChartOptions"
+                />
+              </ClientOnly>
             </div>
           </div>
           <div
@@ -436,10 +465,12 @@ const shareUrl = computed(() => import.meta.env.VITE_BASE_URL + route.fullPath)
               <span class="text-sm font-normal leading-none">{{}}</span>
             </h5>
             <div class="flex-1">
-              <Bar
-                :options="emissionByCategChartOptions"
-                :data="emissionByCateg"
-              />
+              <ClientOnly>
+                <Bar
+                  :options="emissionByCategChartOptions"
+                  :data="emissionByCateg"
+                />
+              </ClientOnly>
             </div>
           </div>
         </div>

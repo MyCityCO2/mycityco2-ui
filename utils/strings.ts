@@ -1,5 +1,5 @@
-export function slug(text: string): string {
-  return text
+export const slug = (text: string): string =>
+  text
     .toString()
     .toLowerCase()
     .normalize("NFD")
@@ -7,4 +7,3 @@ export function slug(text: string): string {
     .replace(/\s+/g, "-")
     .replace(/[^\w\-]+/g, "")
     .replace(/\-\-+/g, "-")
-}
