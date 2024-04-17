@@ -10,7 +10,7 @@ const props = defineProps({
   title: String,
   url: String,
 })
-
+const { t } = useI18n()
 const notifStore = useNotificationStore()
 const encodedTitle = computed(() => encodeURIComponent(props.title))
 const encodedUrl = computed(() => encodeURIComponent(props.url))
@@ -44,10 +44,16 @@ const links = computed(() => {
     {
       name: "Clipboard",
       clickHandler: () => {
-        navigator.clipboard.writeText(`${props.title} ${props.url}`)
-        notifStore.info({
-          title: "Lien copié dans le presse papier !",
-          text: "Vous pouvez le partager via CTRL+V.",
+        if (props.url) {
+          navigator.clipboard.writeText(props.url)
+          return notifStore.info({
+            title: t("diagnostic.copy_link_title"),
+            text: t("diagnostic.copy_link_text"),
+          })
+        }
+        return notifStore.info({
+          title: t("error_title"),
+          text: "",
         })
       },
       component: PaperClipIcon,

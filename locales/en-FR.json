@@ -537,7 +537,6 @@
   "contact": {
     "success_title": "Success!",
     "success_message": "The email has been sent successfully.",
-    "error_title": "Error!",
     "error_message": "An error occurred while sending the email!",
     "contact_us_description": "Do you want to ask a question, make a comment, give your opinion, report a technical issue, or anything else? Contact us by completing this form.",
     "email_label": "Email",
@@ -572,6 +571,8 @@
     "emission_distribution": "Emission distribution in 2020",
     "emission_by_category": "Emissions by category in 2020",
     "co2_eq_per_hab": "in kgCO2eq/cap",
+    "copy_link_title": "Link copied to clipboard!",
+    "copy_link_text": "You can share it via CTRL+V.",
     "features": [
       {
         "name": "Support for local authorities",
@@ -599,6 +600,7 @@
   "year": "Year | Years",
   "link": "Link",
   "here": "here",
+  "error_title": "Error!",
   "country": { "FR": "France", "CH": "Switzerland" },
   "actions": {
     "contribute": "Contribute",
