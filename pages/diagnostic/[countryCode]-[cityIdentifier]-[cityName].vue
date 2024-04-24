@@ -333,7 +333,8 @@ const emissionByCategChartOptions: ChartOptions<"bar"> = {
       display: false,
     },
     legend: {
-      display: false,
+      onClick: () => undefined,
+      position: "bottom",
     },
     datalabels: {
       font: {
