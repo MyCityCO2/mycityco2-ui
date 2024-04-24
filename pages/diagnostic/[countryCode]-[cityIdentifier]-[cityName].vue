@@ -359,10 +359,7 @@ const shareTitle = computed(() =>
     : ""
 )
 
-const shareUrl = computed(() => {
-  const meta = import.meta as unknown as { env?: ImportMetaEnv }
-  return url.origin + route.fullPath
-})
+const shareUrl = computed(() => url.origin + route.fullPath)
 </script>
 
 <template>

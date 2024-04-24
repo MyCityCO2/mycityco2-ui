@@ -40,10 +40,6 @@ declare global {
       co2EmissionsPerHab: number
     }
   }
-
-  interface ImportMetaEnv {
-    VITE_BASE_URL: string
-  }
 }
 
-export { City, DashboardVariables, CityData, ImportMetaEnv }
+export { City, DashboardVariables, CityData }
