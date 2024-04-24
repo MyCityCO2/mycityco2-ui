@@ -35,7 +35,7 @@ const { t, tm, rt } = useI18n()
                 t("actions.contribute")
               }}</NuxtLinkLocale>
               <NuxtLinkLocale
-                to="#project"
+                :to="{ path: '/', hash: '#project' }"
                 class="text-sm font-semibold leading-6 text-neutral-900"
                 >{{ t("actions.learn_more") }}
                 <span aria-hidden="true">→</span></NuxtLinkLocale
