@@ -5,7 +5,7 @@ provideHeadlessUseId(() => useId())
 
 <template>
   <NuxtLoadingIndicator color="#47b9a3" />
-  <NuxtLayout name="default">
+  <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
   <ClientOnly>

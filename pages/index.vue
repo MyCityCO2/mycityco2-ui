@@ -1,11 +1,15 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
+
+definePageMeta({
+  layout: "home",
+})
 </script>
 
 <template>
   <div>
     <div
-      class="relative isolate overflow-hidden bg-gradient-to-b from-emerald-100/20 dark:from-emerald-700/20"
+      class="relative isolate overflow-hidden bg-gradient-to-b from-emerald-100/20 dark:from-emerald-700/20 pt-40 lg:pt-56"
     >
       <div
         class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white dark:bg-neutral-950 shadow-xl shadow-primary/10 ring-1 ring-emerald-50 dark:ring-emerald-600 sm:-mr-80 lg:-mr-96"

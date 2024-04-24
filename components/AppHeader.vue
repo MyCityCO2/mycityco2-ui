@@ -91,11 +91,7 @@ const handleScroll = () => {
           active-class="!text-primary !border-primary"
           >{{ t(item.name) }}</NuxtLinkLocale
         >
-        <NuxtLinkLocale
-          :to="diagnosticLink?.href"
-          class="header-link"
-          active-class="!text-primary !border-primary"
-        >
+        <NuxtLinkLocale :to="diagnosticLink?.href" class="button-primary">
           {{ t("diagnostic.title") }}
         </NuxtLinkLocale>
       </div>
