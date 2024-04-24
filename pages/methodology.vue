@@ -124,8 +124,7 @@ const findAdjacentPaths = (
         foundCurrent = true
       } else if (foundCurrent && next === "") {
         next = localePath(item.to.path)
-        return
-      } else {
+      } else if (!foundCurrent) {
         prev = localePath(item.to.path)
       }
       if (item.children) traverse(item.children)
