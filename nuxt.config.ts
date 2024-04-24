@@ -27,7 +27,8 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: "http://localhost:8000/api/graphql",
+        httpEndpoint:
+          process.env.NUXT_API_URL ?? "http://localhost:8000/api/graphql",
         browserHttpEndpoint: "/api/graphql",
         httpLinkOptions: {
           credentials: "include",
@@ -36,10 +37,10 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: "https://mycityco2.org",
+    url: process.env.NUXT_BASE_URL,
   },
   i18n: {
-    baseUrl: "https://www.mycityco2.org",
+    baseUrl: process.env.NUXT_BASE_URL,
     lazy: true,
     langDir: "locales",
     defaultLocale: "fr-FR",
