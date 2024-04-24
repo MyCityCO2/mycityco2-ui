@@ -608,7 +608,9 @@
     "contact_us": "Contact Us",
     "contact": "Contact",
     "search_city": "Search for a city",
-    "legal_notice": "Legal Notice | Legal Notices"
+    "legal_notice": "Legal Notice | Legal Notices",
+    "previous": "Previous",
+    "next": "Next"
   },
   "footer": {
     "open_source": "Open-source initiative - open data",
