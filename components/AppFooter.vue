@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { LinkIcon } from "@heroicons/vue/20/solid"
 import { socials } from "~/svg"
 
 const { t } = useI18n()
@@ -33,22 +34,23 @@ const links = computed(() => [
           <component :is="item.icon" class="h-5 w-5" aria-hidden="true" />
         </a>
       </div>
-      <div class="text-center flex flex-col gap-2">
-        <p class="text-gray-900 text-sm">
-          {{ t("footer.open_source") }}
+      <div class="items-center flex flex-col gap-2">
+        <p class="text-sm" rel="noopener noreferrer">
+          {{ t("footer.ecoindex", { n: 1.24 }) }}
         </p>
         <a
           href="https://www.ecoindex.fr/resultat/?id=bc781b9b-1c33-49d5-980b-95e84119eed9"
-          class="text-sm underline"
           target="_blank"
+          class="text-sm flex items-center"
           rel="noopener noreferrer"
-          >{{ t("footer.ecoindex", { n: 1.24 }) }}</a
-        >
+          >EcoIndex A<LinkIcon class="h-3 w-3 ml-1"
+        /></a>
       </div>
-      <div>
-        <p
-          class="text-center text-sm leading-5 text-neutral-500 dark:text-neutral-400"
-        >
+      <div class="items-center flex flex-col gap-2">
+        <p class="text-gray-900 text-sm">
+          {{ t("footer.open_source") }}
+        </p>
+        <p class="text-sm leading-5 text-neutral-500 dark:text-neutral-400">
           &copy; {{ t("footer.copyright") }}
         </p>
       </div>
