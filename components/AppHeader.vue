@@ -59,10 +59,10 @@ const handleScroll = () => {
     ]"
   >
     <nav
-      class="mx-auto max-w-7xl flex justify-between lg:grid grid-cols-8 items-center py-4 px-6 lg:px-8"
+      class="mx-auto max-w-7xl flex justify-between items-center py-4 px-6 lg:px-8"
       aria-label="Global"
     >
-      <div class="col-span-3 flex items-center gap-4">
+      <div class="flex items-center gap-4">
         <NuxtLinkLocale to="/" class="-m-1.5 p-1.5">
           <img
             src="/assets/logo_MyCityCo2.png"
@@ -70,7 +70,7 @@ const handleScroll = () => {
             alt="logo MyCityCo2"
           />
         </NuxtLinkLocale>
-        <CountrySelector class="hidden lg:block" />
+        <!-- <CountrySelector class="hidden lg:block" /> to be uncommented when swiss cities data will be implemented -->
       </div>
       <div class="flex lg:hidden">
         <button
@@ -82,7 +82,7 @@ const handleScroll = () => {
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden col-span-4 lg:flex lg:items-center lg:gap-x-12">
+      <div class="hidden lg:flex lg:items-center lg:gap-x-12">
         <NuxtLinkLocale
           v-for="item in navigation"
           :key="item.name"
@@ -189,7 +189,7 @@ const handleScroll = () => {
                               </a></NuxtLinkLocale
                             >
                           </div>
-                          <CountrySelector class="pt-8" />
+                          <!-- <CountrySelector class="pt-8" /> to be uncommented when swiss cities data will be implemented -->
                           <LanguageSelector
                             class="pt-8 flex justify-center items-center lg:hidden gap-1 ml-2"
                           />
