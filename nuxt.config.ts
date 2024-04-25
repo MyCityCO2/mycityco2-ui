@@ -16,6 +16,11 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/color-mode",
   ],
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.NUXT_BASE_URL,
+    },
+  },
   nitro: {
     devProxy: {
       "/api/": {

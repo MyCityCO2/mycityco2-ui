@@ -36,7 +36,7 @@ ChartJS.register(
 
 const { t } = useI18n()
 const route = useRoute()
-const url = useRequestURL()
+const runtimeConfig = useRuntimeConfig()
 const cityStore = useCityStore()
 const sidebarOpen = ref(false)
 
@@ -360,7 +360,7 @@ const shareTitle = computed(() =>
     : ""
 )
 
-const shareUrl = computed(() => url.origin + route.fullPath)
+const shareUrl = computed(() => runtimeConfig.public.baseUrl + route.fullPath)
 </script>
 
 <template>
