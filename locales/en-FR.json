@@ -124,7 +124,7 @@
         },
         {
           "question": "How is the trajectory of the Low Carbon National Strategy (SNBC), France's roadmap to meet the Paris Agreement, calculated?",
-          "answer": "According to the Secten report which presents greenhouse gas emissions in France since 1990 (Citepa, 2023. Greenhouse gases and atmospheric pollutants. Emission balance in France from 1990 to 2020. Secten report ed. 2023.), emissions were 456.4 Mt CO2e in 2016 and the objective defined by the Paris Agreement of -50% by 2030 compared to 1990 leads us to 270 Mt CO2e for 2030. By extrapolation, since 2016, communities must follow a trajectory of reduction of 3.65% each year."
+          "answer": "According to the Secten report which presents greenhouse gas emissions in France since 1990 (Citepa, 2023. Greenhouse gases and atmospheric pollutants. Emission balance in France from 1990 to 2022. Secten report ed. 2023.), emissions were 456.4 Mt CO2e in 2016 and the objective defined by the Paris Agreement of -50% by 2030 compared to 1990 leads us to 270 Mt CO2e for 2030. By extrapolation, since 2016, communities must follow a trajectory of reduction of 3.65% each year."
         }
       ]
     },
@@ -511,7 +511,7 @@
         {
           "name": "Monetary Emission Factors",
           "definition": "140 emission factors per country covering numerous sectors of activities",
-          "year": "From 1995 to 2020 every year",
+          "year": "From 1995 to 2022 every year",
           "geo": "44 countries including EU countries",
           "vendor": "Exiobase",
           "link": "https://zenodo.org/record/5589597"
@@ -557,9 +557,9 @@
     "select": "Select",
     "request_city": "Request a city",
     "community_development_description": "MyCityCO2 has the aim to continue developing both in terms of geographical coverage (particularly within the European Union) and in terms of functional coverage. You are welcome to contribute to the development of this digital common good.",
-    "population": "Population in 2020",
-    "emissions": "Emissions in 2020",
-    "average_annual_emissions_evolution": "Average annual emissions evolution",
+    "population": "Population in 2022",
+    "emissions": "Emissions in 2022",
+    "average_annual_emissions_evolution": "Average annual emissions evolution {minYear}-2022",
     "national_low_carbon_strategy": "National Low Carbon Strategy",
     "co2_emissions_at": "CO2 emissions in {city}",
     "check_carbon_footprint_of": "Check the carbon footprint of {city}",
@@ -567,9 +567,9 @@
     "unable_to_load_data": "We unfortunately couldn't load the data.",
     "no_results": "No results!",
     "no_result_found": "We couldn't find any results for your search.",
-    "emission_evolution_between": "Emission evolution between {minYear} and 2020",
-    "emission_distribution": "Emission distribution in 2020",
-    "emission_by_category": "Emissions by category in 2020",
+    "emission_evolution_between": "Emission evolution between {minYear} and 2022",
+    "emission_distribution": "Emission distribution in 2022",
+    "emission_by_category": "Emissions by category in 2022",
     "co2_eq_per_hab": "in kgCO2eq/cap",
     "copy_link_title": "Link copied to clipboard!",
     "copy_link_text": "You can share it via CTRL+V.",

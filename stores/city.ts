@@ -5,7 +5,7 @@ export const useCityStore = defineStore("city", () => {
   const selectorOpen = ref<boolean>(false)
   const dashboardVariables = reactive<DashboardVariables>({
     cityId: 0,
-    year: 2020,
+    year: 2022,
   })
 
   watch(currentCity, (newValue) => {

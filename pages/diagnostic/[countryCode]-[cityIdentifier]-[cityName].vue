@@ -79,7 +79,9 @@ const stats = computed(() => {
     },
     {
       id: 3,
-      name: t("diagnostic.average_annual_emissions_evolution"),
+      name: t("diagnostic.average_annual_emissions_evolution", {
+        minYear: result.value.city.minYear,
+      }),
       stat: `${result.value.city.co2EmissionsEvolution}`,
       statUom: "%",
       statIsChange: true,

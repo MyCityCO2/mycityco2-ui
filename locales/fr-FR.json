@@ -124,7 +124,7 @@
         },
         {
           "question": "Comment est calculée la trajectoire de la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris ?",
-          "answer": "Selon le rapport Secten qui présente les émissions de gaz à effet de serre en France depuis 1990 (Citepa, 2023. Gaz à effet de serre et polluants atmosphériques. Bilan des émissions en France de 1990 à 2020. Rapport Secten éd. 2023.) les émissions étaient de 456,4 Mt CO2e en 2016 et l’objectif défini par l’Accord de Paris de -50% en 2030 par rapport à 1990 nous mène à 270 Mt CO2e pour 2030. Par extrapolation, depuis 2016, les collectivités doivent s’inscrire dans une trajectoire de réduction de 3,65% chaque année."
+          "answer": "Selon le rapport Secten qui présente les émissions de gaz à effet de serre en France depuis 1990 (Citepa, 2023. Gaz à effet de serre et polluants atmosphériques. Bilan des émissions en France de 1990 à 2022. Rapport Secten éd. 2023.) les émissions étaient de 456,4 Mt CO2e en 2016 et l’objectif défini par l’Accord de Paris de -50% en 2030 par rapport à 1990 nous mène à 270 Mt CO2e pour 2030. Par extrapolation, depuis 2016, les collectivités doivent s’inscrire dans une trajectoire de réduction de 3,65% chaque année."
         }
       ]
     },
@@ -511,7 +511,7 @@
         {
           "name": "Facteurs d’émissions monétaires",
           "definition": "140 facteurs d’émissions par pays couvrant de nombreux secteurs d’activités",
-          "year": "Depuis 1995 jusqu’à 2020 tous les ans",
+          "year": "Depuis 1995 jusqu’à 2022 tous les ans",
           "geo": "44 pays dont les pays de l’UE",
           "vendor": "Exiobase",
           "link": "https://zenodo.org/record/5589597"
@@ -557,9 +557,9 @@
     "select": "Sélectionner",
     "request_city": "Demander une commune",
     "community_development_description": "MyCityCO2 a vocation à continuer à se développer que ce soit en termes de couverture géographique (union européenne notamment) ou en termes de couverture fonctionnelle, vous êtes les bienvenus pour contribuer au développement de ce bien commun numérique.",
-    "population": "Population en 2020",
-    "emissions": "Émissions en 2020",
-    "average_annual_emissions_evolution": "Évolution annuelle moyenne des émissions",
+    "population": "Population en 2022",
+    "emissions": "Émissions en 2022",
+    "average_annual_emissions_evolution": "Évolution annuelle moyenne des émissions {minYear}-2022",
     "national_low_carbon_strategy": "Stratégie nationale bas-carbone",
     "co2_emissions_at": "Les émissions de CO2 à {city}",
     "check_carbon_footprint_of": "Consultez l'empreinte carbone de {city}",
@@ -567,9 +567,9 @@
     "unable_to_load_data": "Nous n'avons malheureusement pas pu charger les données.",
     "no_results": "Aucun résultat !",
     "no_result_found": "Nous n'avons pas pu trouver de résultat pour votre recherche.",
-    "emission_evolution_between": "Évolution des émissions entre {minYear} et 2020",
-    "emission_distribution": "Répartition des émissions en 2020",
-    "emission_by_category": "Émissions par poste en 2020",
+    "emission_evolution_between": "Évolution des émissions entre {minYear} et 2022",
+    "emission_distribution": "Répartition des émissions en 2022",
+    "emission_by_category": "Émissions par poste en 2022",
     "co2_eq_per_hab": "en kgCO2eq/hab",
     "copy_link_title": "Lien copié dans le presse papier !",
     "copy_link_text": "Vous pouvez le partager via CTRL+V.",
