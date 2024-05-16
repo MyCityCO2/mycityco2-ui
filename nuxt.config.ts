@@ -86,7 +86,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Lato: [100, 300, 400, 700, 900],
+      Inter: "100..900",
     },
   },
   colorMode: {
