@@ -1,0 +1,620 @@
+{
+  "home": {
+    "title": "Accueil",
+    "hero": {
+      "title": "Suivez l’empreinte carbone de votre ville",
+      "text": "Comment améliorer ce qu’on ne sait pas mesurer? MyCityCO2, un outil libre et gratuit de suivi des empreintes carbones des 35'000 villes françaises au service de la lutte contre le changement climatique."
+    },
+    "stats": [
+      {
+        "name": "communes françaises analysées soit 100% des communes",
+        "value": "35'000"
+      },
+      {
+        "name": "empreinte carbone moyenne générée par les villes françaises",
+        "value": "232 kgCO2eq/hab"
+      },
+      {
+        "name": "des villes respectent la Stratégie nationale bas-carbone (SNBC) visant à réduire de 40% les émissions en 2030",
+        "value": "24 %"
+      }
+    ],
+    "features": {
+      "subtitle": "Adoptez un outil libre, gratuit et transparent validé par des experts",
+      "title": "1er outil d’empreinte carbone pour les collectivités",
+      "description": "De la plus petite commune française à la capitale, MyCityCO2 est le premier outil qui permet de consulter l’empreinte carbone de n’importe quelle ville française et ce de manière historique sur les 7 dernières années",
+      "list": [
+        {
+          "name": "Consulter",
+          "description": "les émissions de gaz à effet de serre de sa commune",
+          "icon": "BookOpenIcon"
+        },
+        {
+          "name": "Évaluer",
+          "description": "la réduction de l’empreinte carbone année après année",
+          "icon": "ScaleIcon"
+        },
+        {
+          "name": "Contribuer",
+          "description": "à atteindre les objectifs définis par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris",
+          "icon": "UserPlusIcon"
+        },
+        {
+          "name": "Partager",
+          "description": "les résultats de sa commune avec ses proches",
+          "icon": "RadioIcon"
+        }
+      ]
+    },
+    "pre_footer": {
+      "title": "Prêts à aller plus loin ?",
+      "description": "Accédez aux données détaillées de votre ville et identifiez les opportunités de réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés en France par la Stratégie nationale bas-carbone (SNBC)"
+    }
+  },
+  "project": {
+    "title": "Projet",
+    "hero": {
+      "title": "Pourquoi Mycityco2 ?",
+      "text": "MyCityCO2 a pour objectif d'automatiser les comptes carbones pour toutes les collectivités (communes, EPCI et syndicats). Ainsi, MyCityCO2 permet aux collectivités de se concentrer sur les actions à mettre en œuvre pour décarboner les services publics. MyCityCO2 facilite la prise de conscience d’un large public (citoyens, élus, etc...) sur les enjeux du dérèglement climatique lié aux émissions des gaz à effet de serre. Est-ce que ma commune est en phase avec la trajectoire définie par la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l'Accord de Paris ? MyCityCO2 vous permettra de visualiser votre trajectoire carbone vis-à-vis de la trajectoire cible."
+    },
+    "contribute": {
+      "title": "Comment contribuer ?",
+      "text": "MyCityCO2 est développée par une équipe de volontaires. Nous sommes à la recherche de tous types de contributeurs.",
+      "features": [
+        {
+          "name": "Développer",
+          "description": "Développeurs en travaillant directement sur le code {link}.",
+          "icon": "CodeBracketIcon"
+        },
+        {
+          "name": "Devenir précurseur",
+          "description": "Communes (maires, adjoints, agents) qui seraient intéressées par le projet pour devenir pilote des phases suivantes, faire des retours… ",
+          "icon": "LightBulbIcon"
+        },
+        {
+          "name": "Traduire",
+          "description": "Traducteurs pour préparer le développement dans d’autres pays.",
+          "icon": "LanguageIcon"
+        },
+        {
+          "name": "Communiquer",
+          "description": "Communicants pour préparer et exécuter une stratégie de communication et mieux faire connaître le produit. Partager MyCityCO2 sur les réseaux sociaux ?...",
+          "icon": "ChatBubbleLeftRightIcon"
+        }
+      ]
+    },
+    "thanks": {
+      "title": "Remerciements",
+      "text": "Merci à toutes celles et ceux qui ont rendu le lancement de MyCityCO2 possible :",
+      "list": [
+        "les membres d’Open Net qui se sont intensément investis pour sortir une première version",
+        "les membres bénévoles de Carbones sur factures qui définissent les comptes carbones de demain",
+        "Pierre Chassany (Vocables) pour la création du logo MyCityCO2",
+        "les experts qui ont contribué au développement de la solution",
+        "les représentants des collectivités qui participent au test de la solution et nous aiguillent sur les besoins à couvrir",
+        "les fournisseurs de données qui font l’effort de rendre publiques leurs données et ainsi faire la promotion de l’open-data",
+        "Odoo SA, éditeur de l’ERP open-source Odoo sur la base duquel le module de CO2 tracking a été développé"
+      ]
+    },
+    "credits": {
+      "title": "Crédits",
+      "list": [
+        "Le code de nombreux modules utilisés par MyCityCO2 provient de l’Odoo Community Association (OCA) organisation à but non lucratif qui aide ses membres à créer plus rapidement des solutions Odoo moins coûteuses et plus performantes, avec un accès facile à des applications de haute qualité et à des mises à jour ouvertes.",
+        "Le framework javascript VueJS ainsi que ses composants core tel que Vue-Router et Pinia ont été utilsés pour réaliser l'application web",
+        "Le framework TailwindCSS a été utilisé pour réaliser la partie graphique",
+        "La bibliothèque graphique Chart.js utilisée dans le tableau de bord de chaque commune",
+        "Les icones utilisées proviennent de heroicons",
+        "Une partie de l’arborescence et du contenu général du site de «Les Greniers d'Abondance, Calculateur pour la Résilience Alimentaire des Territoires (CRATer)»"
+      ]
+    }
+  },
+  "help": {
+    "title": "Aide",
+    "hero": {
+      "title": "Comprendre les risques liés aux émissions de Gaz à Effet de Serre",
+      "text": "Les émissions de gaz à effet de serre (GES) représentent un ensemble de risques majeurs pour notre planète et tous les êtres vivants qui y résident. En augmentant la concentration de GES dans l'atmosphère, nous perturbons l'équilibre climatique de la Terre, ce qui entraîne des conséquences graves. Le principal risque est le réchauffement climatique, qui provoque des changements environnementaux dramatiques tels que l'élévation du niveau de la mer, les phénomènes météorologiques extrêmes et la perturbation des écosystèmes. Ces changements ont des répercussions sur l'agriculture, la disponibilité de l'eau et la santé humaine. Réduire les émissions de GES et passer à une économie durable est essentiel pour prévenir ces risques et protéger notre planète."
+    },
+    "faqs": {
+      "title": "Foire aux questions",
+      "text": "Vous ne trouvez pas la réponse à votre question ?",
+      "list": [
+        {
+          "question": "Quelle est la différence entre une empreinte carbone « Collectivité » et une empreinte carbone « Territoire » ? ",
+          "answer": "L’empreinte carbone « Territoire » a pour objectif d’estimer l’ensemble (collectivités, individus et entrprises) des émissions de gaz à effet de serre sur le territoire de la collectivité concernée. MyCityCO2 fournit l’empreinte de la collectivité, sans estimation, en partant des comptes administratifs de la commune et en mesurant les émissions liées aux bâtiments, aux infrastructures, aux services … de la collectivité."
+        },
+        {
+          "question": "Comment est calculée la trajectoire de la Stratégie nationale bas-carbone (SNBC), feuille de route de la France pour respecter l’Accord de Paris ?",
+          "answer": "Selon le rapport Secten qui présente les émissions de gaz à effet de serre en France depuis 1990 (Citepa, 2023. Gaz à effet de serre et polluants atmosphériques. Bilan des émissions en France de 1990 à 2022. Rapport Secten éd. 2023.) les émissions étaient de 456,4 Mt CO2e en 2016 et l’objectif défini par l’Accord de Paris de -50% en 2030 par rapport à 1990 nous mène à 270 Mt CO2e pour 2030. Par extrapolation, depuis 2016, les collectivités doivent s’inscrire dans une trajectoire de réduction de 3,65% chaque année."
+        }
+      ]
+    },
+    "glossary": {
+      "title": "Glossaire",
+      "list": [
+        {
+          "name": "Accord de Paris",
+          "description": " l'Accord de Paris est un accord international sur le changement climatique adopté en 2015 lors de la COP21. Il vise à limiter le réchauffement climatique mondial à moins de 2 degrés Celsius par rapport aux niveaux préindustriels et à poursuivre les efforts pour limiter l'élévation de la température à 1,5 degré Celsius."
+        },
+        {
+          "name": "Amortissement",
+          "description": " les amortissements en comptabilité correspondent à la répartition systématique du coût d'un actif immobilisé sur sa durée de vie utile, afin de refléter sa dépréciation progressive dans le temps et de réduire sa valeur comptable. Cela permet de prendre en compte l'usure, l'obsolescence et l'utilisation de l'actif au fil du temps."
+        },
+        {
+          "name": "Bilan GES",
+          "description": " les bilans GES (Gaz à Effet de Serre) sont des outils d'évaluation des émissions de gaz à effet de serre d'une organisation, d'une entreprise ou d'un territoire. Ils quantifient et rapportent les émissions de gaz à effet de serre, permettant d'identifier les sources principales et d'orienter les actions pour réduire l'impact sur le climat."
+        },
+        {
+          "name": "Carbone sur facture",
+          "description": " la communauté Carbones Sur Factures (ou CSF) lancée par Réconcilions-nous a un objectif : permettre rapidement à chaque producteur en Europe, marchand on non marchand, d’indiquer le poids fiable en carbones de ses offres, et aider ainsi chaque acteur dans ses choix de décarbonation. Le moyen ? Encadrer les comptages actuels des carbones dans une comptabilité des carbones fiable et simple."
+        },
+        {
+          "name": "Changement climatique",
+          "description": " réfère à l'altération à long terme des schémas climatiques de la Terre, résultant en des variations significatives des températures, des précipitations, des vents et d'autres paramètres climatiques à l'échelle mondiale. Le changement climatique est principalement causé par les activités humaines, telles que l'émission de gaz à effet de serre, et entraîne des conséquences telles que l'élévation du niveau de la mer, les phénomènes météorologiques extrêmes et la perturbation des écosystèmes."
+        },
+        {
+          "name": "CO2 équivalent",
+          "description": " Le CO2 équivalent est une mesure qui permet de convertir les émissions de différents gaz à effet de serre en une seule unité de mesure, en prenant en compte leur potentiel de réchauffement climatique par rapport au dioxyde de carbone (CO2). Cela facilite la comparaison et l'agrégation des émissions de différents gaz, en fournissant une estimation commune de leur contribution au changement climatique."
+        },
+        {
+          "name": "Empreinte carbone",
+          "description": " L'empreinte carbone désigne la quantité totale de gaz à effet de serre émise directement ou indirectement par une personne, une entreprise, une collectivité ou territoire. Elle mesure l'impact sur le changement climatique et peut inclure les émissions liées à l'énergie, aux transports, à l'alimentation, à la production industrielle, etc."
+        },
+        {
+          "name": "Exiobase",
+          "description": " base de données économiques et environnementales qui fournit des informations détaillées sur les flux de matières, d'énergie et d'émissions dans l'économie mondiale. Elle permet d'analyser les interactions entre les activités économiques et l'impact environnemental, contribuant ainsi à l'évaluation de la durabilité et à la prise de décisions éclairées. Elle fournit les facteurs d’émission monétaires pour MyCityCO2."
+        },
+        {
+          "name": "Facteur d’émission (monétaire et physique)",
+          "description": " Un facteur d'émission monétaire est une mesure qui exprime les émissions de gaz à effet de serre associées à une unité monétaire dépensée, généralement dans le cadre de l'achat de biens ou de services. Un facteur d'émission physique quantifie les émissions de gaz à effet de serre par unité physique d'un produit, d'une activité ou d'un processus. Ces facteurs aident à évaluer l'impact environnemental des activités économiques et à orienter les choix vers des options plus durables en terme d'émissions de gaz à effet de serre."
+        },
+        {
+          "name": "GES (Gaz à effet de Serre)",
+          "description": " les gaz à effet de serre (GES) sont des composés présents dans l'atmosphère qui contribuent au phénomène de l'effet de serre. Ils retiennent la chaleur émise par la Terre, ce qui entraîne un réchauffement de la planète. Les principaux GES d'origine humaine comprennent le dioxyde de carbone (CO2), le méthane (CH4), le protoxyde d'azote (N2O) et les gaz fluorés. Ils sont principalement émis par des activités industrielles, agricoles et énergétiques et sont responsables du changement climatique en augmentant la température moyenne de la Terre."
+        },
+        {
+          "name": "GHG Protocol",
+          "description": " le GHG Protocol (Greenhouse Gas Protocol) est un cadre de comptabilisation et de gestion des émissions de gaz à effet de serre (GES)."
+        },
+        {
+          "name": "Limites planétaires",
+          "description": " les limites planétaires font référence aux seuils et aux conditions nécessaires pour préserver un état sûr et stable de la planète Terre. Elles définissent les limites de tolérance de certains processus écologiques clés, tels que le changement climatique, la perte de biodiversité, le cycle de l'eau et l'utilisation des ressources, au-delà desquels le fonctionnement global de l'écosystème terrestre pourrait être compromis. Les limites planétaires servent de guide pour orienter les actions visant à maintenir la durabilité environnementale et à préserver les conditions propices à la vie sur Terre."
+        },
+        {
+          "name": "PRG (Potentiel de Réchauffement Global)",
+          "description": " indicateurs utilisés pour évaluer l'impact des différents gaz à effet de serre (GES) sur le réchauffement climatique. Les PRG comparent la capacité de chaque gaz à emprisonner la chaleur dans l'atmosphère par rapport au dioxyde de carbone (CO2), qui est utilisé comme référence avec un PRG de 1. Les PRG permettent de convertir les émissions de différents GES en équivalents CO2, facilitant ainsi la comparaison et l'agrégation des émissions de GES provenant de différentes sources."
+        },
+        {
+          "name": "Scope",
+          "description": " les scopes d'un bilan carbone sont des catégories qui définissent les sources et les périmètres des émissions de gaz à effet de serre (GES) à prendre en compte lors de l'évaluation. Ils permettent une évaluation complète des émissions de GES liées aux activités d'une organisation, en prenant en compte les émissions directes et indirectes tout au long de la chaîne de valeur."
+        },
+        {
+          "name": "Neutralité carbone",
+          "description": " la neutralité carbone fait référence à un état dans lequel les émissions nettes de gaz à effet de serre (GES) sont équivalentes à zéro. Cela signifie que les émissions totales de GES sont entièrement compensées par des actions visant à réduire, éviter ou séquestrer les émissions, souvent par le biais de projets de réduction des GES ou de l'achat de crédits carbone. Atteindre la neutralité carbone est considéré comme un objectif clé dans la lutte contre le changement climatique, car cela permet de stabiliser le niveau de concentration des GES dans l'atmosphère, contribuant ainsi à limiter le réchauffement climatique."
+        },
+        {
+          "name": "NZI (Net Zero Initiative)",
+          "description": " mouvement mondial visant à atteindre la neutralité carbone à l'échelle mondiale. Il s'agit d'un engagement des gouvernements, des entreprises et des organisations à réduire leurs émissions de gaz à effet de serre (GES) à zéro, et à compenser toute émission résiduelle par des actions de réduction ou de séquestration des GES. L'initiative vise à accélérer les efforts pour lutter contre le changement climatique en encourageant une transition vers des économies à faible émission de carbone et en favorisant les pratiques durables."
+        },
+        {
+          "name": "SBTi (Science Based Targets initiative)",
+          "description": " initiative collaborative entre plusieurs organisations, dont le CDP, le Global Compact des Nations Unies, le World Resources Institute et le WWF. Son objectif est de promouvoir la fixation d'objectifs de réduction des émissions de gaz à effet de serre (GES) basés sur la science. Les entreprises qui s'engagent dans la SBTI s'efforcent de fixer des cibles de réduction des émissions alignées sur les recommandations scientifiques pour limiter le réchauffement climatique mondial à 1,5 degré Celsius. La SBTI fournit des critères et des directives pour garantir que ces objectifs sont rigoureux et cohérents avec l'urgence climatique."
+        },
+        {
+          "name": "SNBC (Stratégie Nationale Bas Carbone)",
+          "description": " feuille de route de la France pour lutter contre le changement climatique. Elle donne des orientations pour mettre en œuvre, dans tous les secteurs d’activité, la transition vers une économie bas-carbone, circulaire et durable."
+        }
+      ]
+    }
+  },
+  "methodology": {
+    "title": "Méthodologie",
+    "general_overview": {
+      "title": "Présentation générale",
+      "carbon_flash_accounts_calculation": "MyCityCO2 calcule les comptes carbones flash des collectivités.",
+      "carbon_flash_accounts_definition": "Un compte carbone flash représente une estimation des émissions directes et indirectes de gaz à effet de serre liées à l'activité de la collectivité sur une période déterminée calculée sur la base des comptes financiers des collectivités.",
+      "emissions_by_category": "Les émissions sont présentées par 'poste' (alimentation, construction, maintenance, transports...). Ces catégories permettent d’identifier les principales sources d’émissions et de hiérarchiser les actions qui peuvent être mises en place pour réduire ces émissions. Cette estimation se fait en combinant deux types de données différentes :",
+      "checklist": [
+        "Les données financières de la collectivité telles que publiées dans les comptes administratifs annuellement compte par compte selon la nomenclature M14 en euros;",
+        "Les facteurs d’émissions représentent la quantité de gaz à effet de serre engendrée par l’utilisation d’un euro, par exemple la quantité de CO2 émise pour 1€ de nourriture achetée."
+      ],
+      "ghg_emissions": "Emissions de GES",
+      "financial_data": "Données financières",
+      "in_euros": "(En euros)",
+      "per_account": "Propre a chaque compte",
+      "annual_accounts_collection": "Collecté dans les comptes annuels de chaque collectivité",
+      "emission_factor": "Facteur d'émissions",
+      "co2e_per_euro": "(CO2e par euro)",
+      "emission_factor_database": "Base de facteurs d’émissions",
+      "exiobase_carbon_database": "Issu de la base carbone de Exiobase",
+      "result_tonnes_co2_equivalent": "Le résultat est exprimé en « tonnes équivalent de CO2 », c’est-à-dire en émission de gaz à effet de serre disposant d’un potentiel de réchauffement global équivalent à un kilogramme de CO2."
+    },
+    "accounting": {
+      "title": "Comptabilité",
+      "intro": "Introduction",
+      "description": "La comptabilité publique suit les principes posés par le plan comptable général applicable au secteur privé : comptabilité en droits constatés, en partie double (correspondance entre les ressources et leurs emplois). Pour les dépenses comme pour les recettes, les collectivités distinguent les opérations de fonctionnement (produits et charges) de ses opérations d'investissement (opérations sur le patrimoine)."
+    },
+    "accounting_plan": {
+      "title": "Plan comptable normalisé",
+      "description_1": "Différentes comptabilités sont applicables au secteur public local selon le type de collectivités (communes, départements, régions) et selon la nature de l'activité exercée (service public administratif ou service public à caractère industriel et commercial). Ces différents types de comptabilités se déclinaient jusqu’à présent au sein d’instructions comptables différentes selon les catégories de collectivités : M14 pour les communes, M52 pour les départements, M71 pour les régions, M4 pour les services à caractère industriel et commercial, M22 pour les ESMS, M31 pour les OPH, etc. A compter du 1er janvier 2024, les communes, intercommunalités, départements et régions utiliseront une seule instruction comptable, l’instruction M57, déjà utilisée par les métropoles. Toutefois, l’instruction M4 (utilisée pour les services publics industriels et commerciaux) et l’instruction M22 (établissements sociaux et médico sociaux) seront conservées.",
+      "description_2": "MyCityCO2 s’appuie aujourd’hui sur l’instruction M14 et exploitera à compter de 2024 l’instruction M57. Dans les deux cas, les classes de comptes sont les suivantes :",
+      "description_3": "MyCityCO2 ne retient que les classes 2 et 6 représentant les dépenses réelles de fonctionnement et d’investissement, génératrices d’émissions de CO2. Les classes suivantes sont exclues pour les raisons ci-dessous :",
+      "checklist_1": [
+        {
+          "key": "Comptes de capitaux",
+          "text": "comporte la majeure partie des éléments regroupés dans cette classe par le PCG (fonds propres, emprunts et dettes assimilées), mais aussi des comptes spécifiques aux collectivités (FCTVA, Taxe d’aménagement, produit des amendes de police, …). Par ailleurs, le compte 13 « subventions d’investissement » retrace les subventions reçues et le compte 15 les provisions pour risques et charges."
+        },
+        {
+          "key": "Comptes d’immobilisations",
+          "text": "présente les éléments d’actif destinés à servir de façon durable à l’activité des collectivités locales et intégrés dans leur patrimoine sous forme corporelle, incorporelle ou financière (comptes 20 à 27). Les amortissements des immobilisations sont récapitulés aux subdivisions du compte 28. Ceux-ci sont justifiés par un plan d’amortissement dont la collectivité fixera la durée. Élément de sincérité du bilan et du compte de résultat, l’amortissement est la constatation comptable d’un amoindrissement de la valeur d’un élément d’actif résultant de l’usage, du temps, du changement technique ou de toute autre cause. L’amortissement n’est obligatoire que pour les collectivités de 3 500 habitants et plus et certains biens. Il s’agit d’une forme d’autofinancement (matérialisé par une dépense de la section de fonctionnement et en contrepartie une recette de la section d’investissement), qui permet de prévoir le renouvellement des biens dont la valeur se déprécie. Les provisions pour dépréciation des immobilisations sont retracées au compte 29. Les provisions pour dépréciation des immobilisations procèdent de la constatation d’un amoindrissement de la valeur d’un élément d’actif immobilisé résultant de causes dont les effets ne sont pas nécessairement irréversibles."
+        },
+        {
+          "key": "Comptes de stocks et en-cours",
+          "text": " servent à retracer : – les stocks de fournitures et de denrées destinés à être consommés, – les stocks entrant dans un cycle de production. Ceux-ci concernent les opérations relatives aux lotissements et aux zones d’aménagement (315 « Terrains à aménager », 3 555 « Terrains aménagés ») qui sont gérées en budget annexe. Seuls sont budgétaires les stocks qui rentrent dans le cycle de production."
+        },
+        {
+          "key": "Comptes de tiers",
+          "text": "comprend les créances et les dettes non exclusivement financières dont l’échéance est à moins d’un an, ou du moins à court terme. Elle enregistre également des comptes de régularisation. Les comptes de la classe 4 sont mouvementés par le comptable public sauf pour le compte 481 « Charges à répartir sur plusieurs exercices », qui figurera au budget, ainsi que les comptes 454, 456, 457, 458 « Opérations pour compte de tiers » et, si la commune a opté pour des provisions budgétaires, le compte 49 « Provisions pour dépréciation des comptes de tiers ». On peut signaler également l’utilisation des comptes 408 et 418, non budgétaires, servant au rattachement des charges et des produits."
+        },
+        {
+          "key": "Comptes financiers",
+          "text": "enregistrent les mouvements de valeurs et les opérations faites avec le trésor public, les banques et les établissements financiers. Ils peuvent également comprendre les comptes relatifs aux placements de trésorerie autorisés. Non budgétaires, ces comptes sont gérés par le comptable de la collectivité."
+        },
+        {
+          "key": "Comptes de charges",
+          "text": "regroupent les comptes destinés à enregistrer, dans l’exercice, les charges par nature qui se rapportent au financement normal ou courant (comptes 60 à 65), à la gestion financière (compte 66) et aux dotations aux amortissements et aux provisions (compte 68). Par ailleurs, la section de fonctionnement comprend trois chapitres globalisés regroupant des comptes de classe 6 : les chapitres 011 « charges à caractère général », 012 « charges de personnel et frais assimilés » et 013 « atténuation de charges »."
+        },
+        {
+          "key": "Comptes de produits",
+          "text": "répondent à la même présentation que la classe 6. Le compte 73 retrace les impôts et taxes en distinguant les impositions reclassées selon des critères économiques. Il y a ensuite correspondance entre les comptes retraçant les autres charges et produits courants (comptes 60 à 65 et 70 à 75), les charges et produits financiers (comptes 66 et 76) et les dotations et reprises sur amortissements et provisions (comptes 68 et 78). Le compte 79 est utilisé pour transférer en investissement des charges provisoirement imputées en section de fonctionnement en vue de leur étalement. Par ailleurs, la section de fonctionnement comprend un chapitre globalisé regroupant des comptes de classe 7 : le chapitre 014 « atténuations de produits »."
+        },
+        {
+          "key": "Comptes spéciaux",
+          "text": "comptabilisent les engagements hors bilan ainsi que les mouvements affectant les valeurs inactives de la collectivité."
+        }
+      ],
+      "checklist_2": [
+        {
+          "key": "Comptes de capitaux",
+          "text": "comptes de bilan regroupant les comptes qui enregistrent les ressources financières à long terme de la collectivité. C’est au moment de l’utilisation de ces ressources que le carbone sera comptabilisé."
+        },
+        {
+          "key": "Comptes de stocks et en-cours",
+          "text": "comptes de bilan représentant l’état du stock de la collectivité à un moment donné, ils n’entrent pas dans le calcul de l’empreinte carbone de la collectivité. Les dépenses effectuées pour mettre en stock ces produits auront été capturées soit via les comptes de charges soit les comptes d’immobilisations."
+        },
+        {
+          "key": "Comptes de tiers",
+          "text": "comptes de bilan reflétant les relations financières avec les tiers à une date donnée, ces comptes auront été alimentés par les achats et les ventes des classes 6 et 7."
+        },
+        {
+          "key": "Comptes financiers",
+          "text": "ces comptes sont liés à des opérations d’ordres, non budgétaires, enregistrant des mouvements de valeur avec le trésor public, les banques…"
+        },
+        {
+          "key": "Comptes de produits",
+          "text": "les produits sont exclus car nous nous concentrons à ce stade au calcul de l’empreinte carbone de la collectivité."
+        },
+        {
+          "key": "Comptes spéciaux",
+          "text": "correspondant aux engagements que la collectivité locale a pris, mais qui ne sont pas directement reflétés dans son bilan, ces engagements sont des obligations potentielles qui peuvent générer des charges financières futures pour la collectivité. C’est à ce moment qu’elles seront comptabilisées en termes d’émissions."
+        }
+      ]
+    },
+    "investment": {
+      "title": "Investissement",
+      "operations_definition": "Les opérations d'investissement font référence aux dépenses engagées pour acquérir des actifs durables ou pour améliorer ceux déjà détenus par l'entité publique. Cela peut inclure l'achat de terrains, de bâtiments, d'équipements, la construction d'infrastructures publiques, etc. Les opérations d'investissement sont à plus long terme et visent généralement à renforcer ou à développer le patrimoine de la collectivité publique.",
+      "calculation_method": "Afin de calculer l’empreinte carbone de la collectivité, MyCityCO2 sélectionne les dépenses d’investissement uniquement et pas les recettes. Parmi les comptes de charges :",
+      "checklist": [
+        "Comptes 20 – Immobilisations incorporelles : par exemple les comptes 203* concernant les frais d’études.",
+        "Comptes 21 – Immobilisations corporelles : par exemple les comptes 213* concernant les constructions mais aussi par exemple le compte 2151 qui concerne l’installation de réseaux de voirie."
+      ]
+    },
+    "operation": {
+      "title": "Fonctionnement",
+      "definition": "Les opérations de fonctionnement correspondent aux activités régulières et courantes d'une entité publique, telles que les dépenses liées à la fourniture de services publics, les salaires des employés, les frais de fonctionnement, les achats de biens et de services nécessaires au bon fonctionnement de l'entité, etc. Ces opérations de fonctionnement sont généralement récurrentes et se produisent fréquemment dans le cadre des activités quotidiennes de la collectivité publique.",
+      "method": "Afin de calculer l’empreinte carbone de la collectivité, MyCityCO2 sélectionne les dépenses de fonctionnement uniquement et pas les recettes. Parmi les comptes de charges :",
+      "checklist": [
+        "Comptes 60 - Achats de biens et services : par exemple les comptes 60221 – Combustibles et carburants, 60612 Energie et électricité, 6061 achats de fournitures administratives…",
+        "Comptes 61 et 62 – Services extérieurs : par exemple les comptes 615* concernant l’entretien et les réparations qui ne sont pas de l’ordre d’un investissement, 617 pour les études et recherches et 623* pour la publicité, les publications et les relations publiques"
+      ]
+    },
+    "depreciations": {
+      "title": "Amortissements",
+      "paragraph_1": "D’un point de vue de la comptabilité générale au sens large, l’amortissement est défini d’une manière générale comme étant la réduction irréversible, répartie sur une période déterminée, du montant porté à certains postes du bilan. L’amortissement pour dépréciation est la constatation comptable d’un amoindrissement de la valeur d’un élément d’actif résultant de l’usage, du temps, du changement de technique ou de toute autre cause. C’est en raison des difficultés de mesure de cet amoindrissement que l’amortissement consiste généralement en l’étalement, sur une durée probable de vie, de la valeur des biens amortissables.",
+      "paragraph_2": "D’un point de vue des collectivités, conformément aux dispositions de l’article L.2321-2-27° du CGCT, l’application de la mise en place des amortissements est adaptée comme suit :",
+      "paragraph_3": "Par ailleurs, conformément à l’article R.2321-1 du CGCT, les dotations aux amortissements des immobilisations suivantes constituent des dépenses obligatoires pour les communes, les groupements et les établissements susmentionnés :",
+      "paragraph_4": "Concernant les immobilisations incorporelles les comptes définis semblent être exhaustifs, en revanche le problème vient des immobilisations corporelles pour lesquelles tous les comptes significatifs sont omis tels les 2131 « Constructions de Bâtiments publics », 2153 « Installations, matériel et outillage techniques » … qui représentent la majorité des dépenses publiques d’investissement.",
+      "paragraph_5": "MyCityCO2 ne peut donc se fier au mécanisme de gestion des amortissements tel qu’il est défini dans la comptabilité des collectivités. Ainsi, les amortissements passés dans le budget de fonctionnement aux comptes 68 doivent être ignorés et l’ensemble des amortissements recréés virtuellement en partant des dépenses d’investissement.",
+      "paragraph_6": "MyCityCO2 génère ainsi pour chaque dépense d’investissement les amortissements associés.",
+      "checklist_1": [
+        "les communes dont la population est égale ou supérieure à 3.500 habitants",
+        "les groupements de communes dont la population totale est égale ou supérieure à ce seuil",
+        "ainsi que leurs établissements publics ; dès lors, un centre communal d’action sociale et une caisse des écoles dont la commune de rattachement répond aux critères ci-dessus amortit également ses immobilisations."
+      ],
+      "checklist_2": [
+        "s’agissant des immobilisations incorporelles (20), celles figurant aux comptes 202 \"Frais d’études, d’élaboration, de modifications et de révisions des documents d’urbanisme\", 2031 \"Frais d’études\" (non suivis de réalisation), 2032 \"Frais de recherche et de développement\", 2033 \"Frais d’insertion\" (non suivis de réalisation), 204 \"Subventions d’équipement versées\", 205 \"Concessions et droits similaires, brevets, licences, marques, procédés, logiciels, droits et valeurs similaires\" et 208 \"Autres immobilisations incorporelles\" à l’exception des immobilisations qui font l’objet d’une provision",
+        "s’agissant des immobilisations corporelles (21), les biens figurant aux comptes 2156 \"matériel et outillages d’incendie et de défense civile\", 2157 \"matériel et outillage de voirie\", 2158 \"autres installations, matériel et outillage techniques\" et 218 \"autres immobilisations corporelles\"."
+      ]
+    },
+    "amortization_periods": {
+      "title": "Durées d’amortissement",
+      "paragraph_1": "Les durées d’amortissement des immobilisations corporelles et incorporelles sont fixées pour chaque bien ou chaque catégorie de biens par l’assemblée délibérante, à l’exception toutefois :",
+      "paragraph_2": "Pour les autres immobilisations, l’assemblée peut se référer au barème indicatif ci-après :",
+      "paragraph_3": "MyCityCO2 respecte les mêmes durées d’amortissement en définissant néanmoins une durée maximale de 7 ans pour les amortissements les plus longs. MyCityCO2 ne pouvant se fier au mécanisme de gestion des amortissements (cf ci-dessus), il faut reconstruire l’historique des amortissements pour constituer une image fidèle l’état des amortissements. Les données sont fournies depuis 2010, en générant les amortissements dès la date de l’investissement, cela nous permet après 7 exercices, soit en 2016, d’avoir une vision complète des émissions des collectivités. C’est en 2016 que l’Accord de Paris est entré en vigueur, c’est donc depuis 2016 que la trajectoire des collectivités pourra être mesurée.",
+      "table_headers": {
+        "type": "Type",
+        "assets": "Immobilisations",
+        "duration": "Durée"
+      },
+      "rules": [
+        "des frais relatifs aux documents d’urbanisme visés à l’article L.121-7 du code de l’urbanisme qui sont amortis sur une durée maximale de 10 ans",
+        "des frais d’études et des frais d’insertion non suivis de réalisation qui sont amortis sur une durée maximale de 5 ans",
+        "des frais de recherche et de développement qui sont amortis sur une durée maximale de 5 an",
+        "des brevets qui sont amortis sur la durée du privilège dont ils bénéficient ou sur la durée effective de leur utilisation si elle est plus brève",
+        "des subventions d’équipement versées qui sont amorties sur une durée maximale de 5 ans lorsque le bénéficiaire est une personne de droit privé, ou de quinze ans lorsque le bénéficiaire est un organisme publi"
+      ],
+      "table_rules": [
+        {
+          "name": "Incorporelles",
+          "rules": [
+            {
+              "name": "Logiciels",
+              "duration": "2 ans"
+            }
+          ]
+        },
+        {
+          "name": "Corporelles",
+          "rules": [
+            {
+              "name": "Voitures",
+              "duration": "5 à 10 ans"
+            },
+            {
+              "name": "Camions et véhicules industriels",
+              "duration": "4 à 8 ans"
+            },
+            {
+              "name": "Mobilier",
+              "duration": "10 à 15 ans"
+            },
+            {
+              "name": "Matériel de bureau électrique ou électronique",
+              "duration": "5 à 10 ans"
+            },
+            {
+              "name": "Matériel informatique",
+              "duration": "2 à 5 ans"
+            },
+            {
+              "name": "Matériels classiques",
+              "duration": "6 à 10 ans"
+            },
+            {
+              "name": "Coffre-fort",
+              "duration": "20 à 30 ans"
+            },
+            {
+              "name": "Installations et appareils de chauffage",
+              "duration": "10 à 20 ans"
+            },
+            {
+              "name": "Appareils de levage-ascenseurs",
+              "duration": "20 à 30 ans"
+            },
+            {
+              "name": "Appareils de laboratoire",
+              "duration": "5 à 10 ans"
+            },
+            {
+              "name": "Equipements de garages et ateliers",
+              "duration": "10 à 15 ans"
+            },
+            {
+              "name": "Equipement des cuisines",
+              "duration": "10 à 15 ans"
+            },
+            {
+              "name": "Equipements sportifs",
+              "duration": "10 à 15 ans"
+            },
+            {
+              "name": "Installations de voirie",
+              "duration": "20 à 30 ans"
+            },
+            {
+              "name": "Plantations",
+              "duration": "15 à 20 ans"
+            },
+            {
+              "name": "Autres agencements et aménagements de terrains",
+              "duration": "15 à 30 ans"
+            },
+            {
+              "name": "Terrains de gisement (mines et carrières)",
+              "duration": "sur la durée du contrat d’exploitation"
+            },
+            {
+              "name": "Constructions sur sol d’autrui",
+              "duration": "sur la durée du bail à construction"
+            },
+            {
+              "name": "Bâtiments légers, abris",
+              "duration": "10 à 15 ans"
+            },
+            {
+              "name": "Agencements et aménagements de bâtiment, installations électriques et téléphoniques",
+              "duration": "15 à 20 ans"
+            }
+          ]
+        }
+      ]
+    },
+    "accounts_config": {
+      "title": "Configuration des comptes",
+      "paragraph_1": "En ce qui concerne les dépenses d’investissement seuls les comptes de la classe 2 « comptes d’immobilisations » sont pris en considération. Les comptes suivants sont exclus du calcul :",
+      "paragraph_2": "Pour ce qui est des dépenses de fonctionnement, seuls les comptes de la classe 6 « comptes de charges » sont pris en compte. Les comptes suivants sont exclus du calcul :",
+      "config_items": [
+        "22 – Immobilisations reçues en affectation : fait référence à des biens ou des actifs qui sont transférés à une entité publique par une autre entité, généralement l'État ou une collectivité territoriale, dans le cadre d'une affectation spécifique. On considère que ces investissements sont venus impacter le compte carbone de la collectivité qui l’a construite et sont donc ignorés au moment du transfert.",
+        "23 – Immobilisations en cours : ce qui est en cours de construction. On en prendra compte uniquement au moment quand la construction sera terminée.",
+        "24 – Immobilisations affectées, concédées, affermées ou mises à disposition : les mises à disposition sont ignorées de la même manière que les immobilisations reçues en affectation.",
+        "26 – Participations et créances rattachées à des participations : les prises de participations n’engendrent pas d’émissions. Le pouvoir conféré par la participation au sein d’un autre établissement peut engendrer des émissions liées aux décisions mais elles seront simplement comptabilisées dans la collectivité en question.",
+        "27 – Autres immobilisations financières : que ce soient des prêts, des dépôts, cautionnement… c’est le bénéficiaire qui dans l’utilisation de cette facilité financière utilisera d’une manière ou d’une autre cette facilité et engendrera des émissions.",
+        "28 – Amortissement des immobilisations : les amortissements des immobilisations sont ignorées cf chapitre sur les amortissements.",
+        "29 – Provisions pour dépréciation des immobilisations : les provisions sont des opérations comptables qui ne génèrent pas d’émissions."
+      ],
+      "expense_rules": [
+        "641* – Rémunérations du personnel : la rémunération d’un employé en tant que telle ne génère pas d’émission. C’est ce que va en faire l’employé qui engendrera des émissions.",
+        "68* - Dotations aux amortissements et provisions : comme expliqué dans le chapitre amortissements, cette catégorie est exclue et gérée correctement par MyCityCO2 en s’appuyant sur les dépenses d’investissement."
+      ]
+    },
+    "monetary_emission_factors": {
+      "title": "Facteurs d'émissions monétaires",
+      "paragraphs": [
+        "Les facteurs d'émissions monétaires désignent les coefficients utilisés pour convertir des quantités monétaires en émissions de gaz à effet de serre (GES). Ces facteurs représentent la relation entre une unité monétaire dépensée ou générée et les émissions de GES associées à cette activité ou à ce secteur économique spécifique.",
+        "Les facteurs d'émissions monétaires permettent d'évaluer l'empreinte carbone d'une organisation, d'un produit ou d'un service en prenant en compte non seulement les émissions directes, mais également les émissions indirectes résultant des dépenses monétaires. Ils sont basés sur des données statistiques et des analyses sectorielles qui évaluent les émissions de GES associées à différentes catégories de dépenses, telles que l'énergie, les transports, les matériaux, etc.",
+        "L'utilisation des facteurs d'émissions monétaires offre une approche complète pour évaluer et quantifier l'impact environnemental d'une activité économique ou d'une organisation en prenant en considération l'ensemble des flux monétaires et de leurs conséquences en termes d'émissions de GES. Cela permet de mieux comprendre les sources d'émissions et d'identifier les domaines où des mesures de réduction peuvent être prises pour atténuer l'impact climatique.",
+        "Les facteurs d'émissions monétaires varient en fonction des pays et des années. Exiobase fournit une batterie de plus de 100 facteurs d’émissions monétaires pour l’ensemble des pays de l’Union Européenne ainsi que pour les grandes économies mondiales soit un total de 44 pays avec un historique annuel depuis les années 1990.",
+        "L’association entre les comptes du plan comptable et les facteurs d’émissions monétaires est réalisée via une table de correspondance qui est librement accessible en suivant {link}."
+      ]
+    },
+    "emission_posts": {
+      "title": "Postes d'émissions",
+      "paragraphs": [
+        "Les postes d'émissions font référence aux différentes sources ou catégories d'activités qui contribuent aux émissions de gaz à effet de serre (GES). Ces postes d'émissions permettent de catégoriser et d'analyser les différentes sources d'émissions pour une évaluation complète de l'empreinte carbone d'une organisation, d'un produit, d'un projet ou d'une activité spécifique.",
+        "Les postes d'émissions peuvent inclure une variété de sources d'émissions, telles que les émissions directes de combustion d'énergie (par exemple, les émissions provenant de l'utilisation de carburants fossiles), les émissions indirectes liées à l'électricité consommée, les émissions résultant de l'utilisation de matériaux et de produits chimiques, les émissions liées aux transports, les émissions provenant de la gestion des déchets, etc.",
+        "En identifiant et en détaillant les différents postes d'émissions, il devient possible de quantifier et d'analyser l'impact de chaque source d'émission spécifique sur le total des émissions de GES. Cela permet d'orienter les efforts de réduction des émissions vers les domaines les plus importants et de développer des stratégies spécifiques pour atténuer les impacts environnementaux.",
+        "Il est essentiel d'adapter les postes d'émissions aux spécificités de chaque situation, en prenant en compte les secteurs d'activité, les données disponibles et les objectifs de l'évaluation des émissions de carbone. Une identification rigoureuse des postes d'émissions facilite la cohérence et la comparabilité des calculs des émissions de carbone, permettant ainsi une évaluation précise et une prise de décision éclairée en matière de réduction des émissions.",
+        "L’association entre les comptes du plan comptable et les catégories de postes d’émissions est réalisée via une table de correspondance qui est librement accessible en suivant {link_1} et pour les dépenses d'investissement {link_2}."
+      ]
+    },
+    "limitations": {
+      "title": "Limitations",
+      "rules": [
+        "Facteurs monétaires vs facteurs physiques : les données publiées en open data par la direction générale des finances permet seulement de récupérer les données comptables des collectivités mais pas les consommations physiques associées aux dépenses telle la consommation d’électricité, de gaz, le nombre de kilomètres de voirie rénovées… Ainsi l’utilisation des facteurs d’émissions physiques est impossible. C’est dans une seconde étape que les collectivités pourront passer de leur compte carbone flash à un compte carbone plus précis basé sur les consommations et donc sur des facteurs d’émissions physiques.",
+        "Emissions vs Absorptions : MyCityCO2 à ce stade ne peut pas quantifier les émissions absorbées par la collectivité que ce soit via son patrimoine naturel ou des procédés techniques. Seules les émissions sont comptabilisées.",
+        "Budgets annexes à intégrer : pour cette première version seuls les budgets principaux sont pris en compte.",
+        "Collectivités autres que communes à inclure : à ce jour seules les communes sont prises en compte, l’objectif est d’étendre la couverture et ainsi d’intégrer aussi les EPCI, les syndicats, les départements et les régions."
+      ]
+    },
+    "data_sources": {
+      "title": "Sources de données",
+      "details": "Détails complet de la source de données",
+      "list": [
+        {
+          "name": "Balances comptables des communes",
+          "definition": "Balances des budgets principaux et budgets annexes des communes",
+          "year": "Depuis 2010 jusqu’à 2021 tous les ans",
+          "geo": "Par commune pour toute la France",
+          "vendor": "DGFiP (Direction Générale des Finances Publiques)",
+          "link": "https://data.economie.gouv.fr/explore/?q=balances+comptables+des+communes&sort=title"
+        },
+        {
+          "name": "Facteurs d’émissions monétaires",
+          "definition": "140 facteurs d’émissions par pays couvrant de nombreux secteurs d’activités",
+          "year": "Depuis 1995 jusqu’à 2022 tous les ans",
+          "geo": "44 pays dont les pays de l’UE",
+          "vendor": "Exiobase",
+          "link": "https://zenodo.org/record/5589597"
+        }
+      ]
+    },
+    "usage_license": {
+      "title": "License d'utilisation",
+      "content_title": "Contenus",
+      "content_text": "Sauf mention contraire, le contenu de ce site est publié par MyCityCO2 sous la licence CC BY-NC-SA 4.0 (Creative Commons, Attribution, Pas d’utilisation commerciale, Partage dans les mêmes conditions).",
+      "data_title": "Données",
+      "data_text": "Les données accessibles dans l’application ou via l'API sont mises à disposition sous la licence 'Open Database Licence' (ODbL). Tous les droits sur le contenu individuel de la base de données sont concédés sous la licence de contenu de la base de données. Vous êtes libre de copier, distribuer, transmettre et adapter ces données, à condition que vous créditiez le projet MyCityCO2. Si vous modifiez ou utilisez nos données dans d’autres œuvres dérivées, vous ne pouvez distribuer celles-ci que sous la même licence.",
+      "source_code_title": "Code source",
+      "source_code_text": "Le code de l'application est publié sous la licence AGPL (GNU Affero General Public License), il est accessible",
+      "credit_title": "Comment créditer MyCityCO2",
+      "credit_text": "Citer l’application comme suit : « MyCityCO2, calculateur d'empreinte carbone pour les collectivités. [Application disponible en ligne : https://mycityco2.org (consultée le XX/YY/20ZZ)] »"
+    },
+    "contents": { "title": "Contenus" },
+    "data": { "title": "Données" },
+    "source_code": { "title": "Code source" },
+    "credit": { "title": "Comment créditer MyCityCO2" }
+  },
+  "contact": {
+    "success_title": "Succès !",
+    "success_message": "Le mail a bien été envoyé",
+    "error_message": "Une erreur s'est produite lors de l'envoi de mail !",
+    "contact_us_description": "Vous souhaitez poser une question, faire un commentaire, donner votre avis, nous signaler un problème technique ou autre ? Contactez-nous en complétant ce formulaire.",
+    "email_label": "Email",
+    "first_name_label": "Prénom",
+    "last_name_label": "Nom",
+    "phone_label": "Numéro de téléphone",
+    "company_label": "Société",
+    "subject_label": "Sujet",
+    "message_label": "Message",
+    "send_button": "Envoyer"
+  },
+  "diagnostic": {
+    "title": "Diagnostic",
+    "development_axes": "Les grands axes de développement",
+    "community_development": "Un bien commun qui ne demande qu’à se développer",
+    "no_city_selected": "Aucune commune sélectionnée !",
+    "select_city_to_continue": "Veuillez sélectionner votre commune pour continuer. Vous pouvez la trouver par son nom ou son code postal.",
+    "select": "Sélectionner",
+    "request_city": "Demander une commune",
+    "community_development_description": "MyCityCO2 a vocation à continuer à se développer que ce soit en termes de couverture géographique (union européenne notamment) ou en termes de couverture fonctionnelle, vous êtes les bienvenus pour contribuer au développement de ce bien commun numérique.",
+    "population": "Population en 2022",
+    "emissions": "Émissions en 2022",
+    "average_annual_emissions_evolution": "Évolution annuelle moyenne des émissions {minYear}-2022",
+    "national_low_carbon_strategy": "Stratégie nationale bas-carbone",
+    "co2_emissions_at": "Les émissions de CO2 à {city}",
+    "check_carbon_footprint_of": "Consultez l'empreinte carbone de {city}",
+    "error_occurred": "Une erreur est survenue !",
+    "unable_to_load_data": "Nous n'avons malheureusement pas pu charger les données.",
+    "no_results": "Aucun résultat !",
+    "no_result_found": "Nous n'avons pas pu trouver de résultat pour votre recherche.",
+    "emission_evolution_between": "Évolution des émissions entre {minYear} et 2022",
+    "emission_distribution": "Répartition des émissions en 2022",
+    "emission_by_category": "Émissions par poste en 2022",
+    "co2_eq_per_hab": "en kgCO2eq/hab",
+    "copy_link_title": "Lien copié dans le presse papier !",
+    "copy_link_text": "Vous pouvez le partager via CTRL+V.",
+    "features": [
+      {
+        "name": "Accompagnement des collectivités",
+        "description": "MyCityCO2 va lancer des modules « matières » (énergie, réfection voies, …) et une assistance aux collectivités qui veulent aller plus loin, et affiner leurs comptes en carbones en vue de l’obtention de cerfication. Intéressé ? Contactez-nous."
+      },
+      {
+        "name": "Extension aux autres collectivités territoriales",
+        "description": "Les syndicats, les communautés de communes, les départements et les régions publiant elles aussi leur comptabilité en open data, nous prévoyons aussi de les prendre en compte dans un futur proche."
+      },
+      {
+        "name": "Développement à l’international (Suisse,…)",
+        "description": "MyCityCO2 part de France et de Suisse avec d’emblée une ambition internationale. Sa méthode s’appuie sur la comptabilité financière des collectivités et s’inspire des grands référentiels carbones internationaux."
+      },
+      {
+        "name": "Module projet pour évaluer l’impact de décarbonation d’un projet (nouveau bâtiment, nouvelle infrastructure…)",
+        "description": "Les collectivités locales vont prendre des décisions essentielles dans les 30 ans qui viennent : des outils de mesure partagés sont la meilleure façon de trouver les bons compromis."
+      }
+    ]
+  },
+  "this_link": "ce lien",
+  "class": "Classe",
+  "definition": "Définition",
+  "geography": "Géographie",
+  "supplier": "Fournisseur",
+  "year": "Année | Années",
+  "link": "Lien",
+  "here": "ici",
+  "error_title": "Erreur !",
+  "country": { "FR": "France", "CH": "Suisse" },
+  "actions": {
+    "contribute": "Contribuer",
+    "learn_more": "En savoir plus",
+    "contact_us": "Contactez-nous",
+    "contact": "Contact",
+    "search_city": "Rechercher une ville",
+    "legal_notice": "Mentions légale | Mentions légales",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "footer": {
+    "open_source": "Initiative open source - open data",
+    "copyright": "2023 MyCityCo2 a free and open source tool",
+    "ecoindex": "Afficher cette page génère {n} g CO2e"
+  }
+}

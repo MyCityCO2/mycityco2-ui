@@ -1,0 +1,80 @@
+{
+  "home": {
+    "title": "Accueil",
+    "hero": {
+      "title": "Suivez l’empreinte carbone de votre commune",
+      "text": "Comment améliorer ce qu’on ne sait pas mesurer? MyCityCO2, un outil libre et gratuit de suivi des empreintes carbones des 2172 communes suisses au service de la lutte contre le changement climatique. La stratégie climatique à long terme s’appuie sur la loi sur le CO2 révisée et sur les objectifs qu’elle contient."
+    },
+    "stats": [
+      {
+        "name": "communes suisses analysées soit 90% des communes",
+        "value": "2172"
+      },
+      {
+        "name": "empreinte carbone moyenne générée par les villes suisses",
+        "value": "232 kgCO2eq/hab"
+      },
+      {
+        "name": "des villes respectent la Stratégie climatique à long terme de la Suisse visant à réduire de 50% les émissions en 2030",
+        "value": "24 %"
+      }
+    ],
+    "features": {
+      "subtitle": "Adoptez un outil libre, gratuit et transparent validé par des experts",
+      "title": "1er outil d’empreinte carbone pour les collectivités publiques",
+      "description": "Indépendamment de la grandeur de la commune, MyCityCO2 est le premier outil qui permet de consulter l’empreinte carbone de n’importe quelle ville suisse et ce de manière historique sur les 7 dernières années.",
+      "list": [
+        {
+          "name": "Consulter",
+          "description": "les émissions de gaz à effet de serre de sa commune",
+          "icon": "BookOpenIcon"
+        },
+        {
+          "name": "Évaluer",
+          "description": "la réduction de l’empreinte carbone année après année",
+          "icon": "ScaleIcon"
+        },
+        {
+          "name": "Contribuer",
+          "description": "à atteindre les objectifs définis par la Stratégie climatique à long terme de la Suisse, feuille de route de la Suisse pour respecter l’Accord de Paris",
+          "icon": "UserPlusIcon"
+        },
+        {
+          "name": "Partager",
+          "description": "les résultats de sa commune avec ses proches",
+          "icon": "RadioIcon"
+        }
+      ]
+    },
+    "pre_footer": {
+      "title": "Prêts à aller plus loin ?",
+      "description": "Accédez aux données détaillées de votre commune et identifiez les opportunités de réduction des émissions pour atteindre les objectifs fixés par l’Accord de Paris et implémentés par la Stratégie climatique à long terme de la Suisse."
+    }
+  },
+  "country": { "FR": "France", "CH": "Suisse" },
+  "actions": {
+    "contribute": "Contribuer",
+    "learn_more": "En savoir plus",
+    "contact_us": "Nous contacter",
+    "contact": "Contact",
+    "search_city": "Rechercher une ville",
+    "legal_notice": "Mentions légale | Mentions légales"
+  },
+  "footer": {
+    "open_source": "Initiative open source - open data",
+    "copyright": "2023 MyCityCo2 a free and open source tool",
+    "ecoindex": "Afficher cette page génère {n} g CO2e"
+  },
+  "project": {
+    "title": "Projet"
+  },
+  "help": {
+    "title": "Aide"
+  },
+  "methodology": {
+    "title": "Méthodologie"
+  },
+  "diagnostic": {
+    "title": "Diagnostic"
+  }
+}

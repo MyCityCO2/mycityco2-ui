@@ -1,0 +1,80 @@
+{
+  "home": {
+    "title": "Startseite",
+    "hero": {
+      "title": "Verfolgen Sie den CO2-Fußabdruck Ihrer Gemeinde",
+      "text": "Wie können wir verbessern, was wir nicht messen können? MyCityCO2, ein kostenloses und Open-Source-Tool zur Verfolgung der CO2-Fußabdrücke von 2172 Schweizer Gemeinden im Kampf gegen den Klimawandel. Die langfristige Klimastrategie basiert auf dem überarbeiteten CO2-Gesetz und den darin enthaltenen Zielen."
+    },
+    "stats": [
+      {
+        "name": "analysierte Schweizer Gemeinden, was 90% der Gemeinden entspricht",
+        "value": "2172"
+      },
+      {
+        "name": "durchschnittlicher Kohlenstoff-Fußabdruck, der von Schweizer Städten erzeugt wird",
+        "value": "232 kgCO2eq/Einwohner"
+      },
+      {
+        "name": "der Städte entsprechen der langfristigen Klimastrategie der Schweiz, die darauf abzielt, die Emissionen bis 2030 um 50% zu reduzieren",
+        "value": "24 %"
+      }
+    ],
+    "features": {
+      "subtitle": "Nehmen Sie ein kostenloses, transparentes und von Experten validiertes Tool an",
+      "title": "Erstes CO2-Fußabdruck-Tool für öffentliche Einrichtungen",
+      "description": "Unabhängig von der Größe der Gemeinde ist MyCityCO2 das erste Tool, das die Konsultation des CO2-Fußabdrucks jeder Schweizer Stadt historisch über die letzten 7 Jahre ermöglicht.",
+      "list": [
+        {
+          "name": "Konsultieren",
+          "description": "Treibhausgasemissionen der eigenen Gemeinde",
+          "icon": "BookOpenIcon"
+        },
+        {
+          "name": "Bewerten",
+          "description": "Reduzierung des CO2-Fußabdrucks von Jahr zu Jahr",
+          "icon": "ScaleIcon"
+        },
+        {
+          "name": "Beitragen",
+          "description": "zur Erreichung der Ziele, die von der langfristigen Klimastrategie der Schweiz festgelegt wurden, dem Fahrplan der Schweiz zur Einhaltung des Pariser Abkommens",
+          "icon": "UserPlusIcon"
+        },
+        {
+          "name": "Teilen",
+          "description": "die Ergebnisse der eigenen Gemeinde mit Angehörigen teilen",
+          "icon": "RadioIcon"
+        }
+      ]
+    },
+    "pre_footer": {
+      "title": "Bereit, weiterzugehen?",
+      "description": "Greifen Sie auf detaillierte Daten Ihrer Gemeinde zu und identifizieren Sie Möglichkeiten zur Reduzierung von Emissionen, um die Ziele des Pariser Abkommens zu erreichen, die von der langfristigen Klimastrategie der Schweiz umgesetzt wurden."
+    }
+  },
+  "country": { "FR": "Frankreich", "CH": "Schweiz" },
+  "actions": {
+    "contribute": "Beitragen",
+    "learn_more": "Mehr erfahren",
+    "contact_us": "Kontaktieren Sie uns",
+    "contact": "Kontakt",
+    "search_city": "Eine Stadt suchen",
+    "legal_notice": "Rechtliche Hinweise | Rechtliche Hinweise"
+  },
+  "footer": {
+    "open_source": "Open Source Initiative - Open Data",
+    "copyright": "2023 MyCityCo2 ein kostenloses und Open-Source-Tool",
+    "ecoindex": "Das Anzeigen dieser Seite erzeugt {n} g CO2e"
+  },
+  "project": {
+    "title": "Projekt"
+  },
+  "help": {
+    "title": "Hilfe"
+  },
+  "methodology": {
+    "title": "Methodik"
+  },
+  "diagnostic": {
+    "title": "Diagnose"
+  }
+}
