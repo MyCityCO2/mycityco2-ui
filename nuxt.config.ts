@@ -10,11 +10,10 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vee-validate/nuxt",
     "nuxt-headlessui",
-    "@nuxtjs/robots",
-    "@nuxtjs/sitemap",
     "@nuxtjs/i18n",
     "@nuxtjs/google-fonts",
     "@nuxtjs/color-mode",
+    "@nuxtjs/seo",
   ],
   runtimeConfig: {
     public: {
@@ -43,7 +42,11 @@ export default defineNuxtConfig({
   },
   site: {
     url: process.env.NUXT_BASE_URL,
+    name: "MyCityCO2",
+    description:
+      "A free and open-source tool for monitoring the carbon footprints of the 35,000 French cities, serving the fight against climate change.",
   },
+
   i18n: {
     baseUrl: process.env.NUXT_BASE_URL,
     lazy: true,

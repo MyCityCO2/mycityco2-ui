@@ -4,6 +4,12 @@ const { t, tm, rt } = useI18n()
 definePageMeta({
   layout: "home",
 })
+
+defineOgImageComponent("NuxtSeo", {
+  title: "MyCityCO2",
+  description:
+    "A free and open-source tool for monitoring the carbon footprints of the 35,000 French cities, serving the fight against climate change.",
+})
 </script>
 
 <template>
