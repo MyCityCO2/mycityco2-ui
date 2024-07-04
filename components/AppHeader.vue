@@ -66,7 +66,7 @@ const handleScroll = () => {
         <NuxtLinkLocale to="/" class="-m-1.5 p-1.5">
           <img
             src="/assets/logo_MyCityCo2.png"
-            class="h-16 w-auto text-primary"
+            class="h-14 w-auto text-primary"
             alt="logo MyCityCo2"
           />
         </NuxtLinkLocale>
@@ -75,7 +75,7 @@ const handleScroll = () => {
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white"
           @click="mobileMenuOpen = true"
         >
           <span class="sr-only">Open main menu</span>
@@ -136,7 +136,7 @@ const handleScroll = () => {
                     class="pointer-events-auto w-screen sm:max-w-md"
                   >
                     <div
-                      class="flex h-full flex-col overflow-y-auto px-6 py-6 shadow-xl bg-white"
+                      class="flex h-full flex-col overflow-y-auto px-6 py-6 shadow-xl bg-white dark:bg-neutral-900"
                     >
                       <div class="flex items-center justify-between">
                         <NuxtLinkLocale
@@ -151,7 +151,7 @@ const handleScroll = () => {
                         </NuxtLinkLocale>
                         <button
                           type="button"
-                          class="-m-2.5 rounded-md p-2.5 text-neutral-700"
+                          class="-m-2.5 rounded-md p-2.5 text-neutral-700 dark:text-white"
                           @click="closeMenu()"
                         >
                           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -169,7 +169,7 @@ const handleScroll = () => {
                             >
                               <a
                                 :href="href"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50 hover:text-neutral-900"
                                 @click.prevent="navigate(), closeMenu()"
                                 >{{ t(item.name) }}</a
                               >
@@ -182,7 +182,7 @@ const handleScroll = () => {
                               v-slot="{ href, navigate }"
                               ><a
                                 :href="href"
-                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-neutral-50 hover:text-neutral-900"
                                 @click.prevent="navigate(), closeMenu()"
                               >
                                 {{ t("diagnostic.title") }}
