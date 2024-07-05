@@ -64,26 +64,26 @@ export default defineNuxtConfig({
         code: "en-FR",
         file: "en-FR.json",
       },
-      {
-        name: "FR",
-        code: "fr-CH",
-        file: "fr-CH.json",
-      },
-      {
-        name: "EN",
-        code: "en-CH",
-        file: "en-CH.json",
-      },
-      {
-        name: "DE",
-        code: "de-CH",
-        file: "de-CH.json",
-      },
-      {
-        name: "IT",
-        code: "it-CH",
-        file: "it-CH.json",
-      },
+      // {
+      //   name: "FR",
+      //   code: "fr-CH",
+      //   file: "fr-CH.json",
+      // },
+      // {
+      //   name: "EN",
+      //   code: "en-CH",
+      //   file: "en-CH.json",
+      // },
+      // {
+      //   name: "DE",
+      //   code: "de-CH",
+      //   file: "de-CH.json",
+      // },
+      // {
+      //   name: "IT",
+      //   code: "it-CH",
+      //   file: "it-CH.json",
+      // },
     ],
     vueI18n: "./i18n.config.ts",
   },
